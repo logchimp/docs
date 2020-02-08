@@ -31,5 +31,5 @@ jobs:
           path: 'dist'
 
       - name: Trigger netlify build
-        if: github.status === 'success'
+        if: success()
         run: curl -X POST -d "{}" ${{ secrets.NETLIFY_BUILD_HOOK }}?Github+action
