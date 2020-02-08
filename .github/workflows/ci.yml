@@ -30,6 +30,6 @@ jobs:
           name: 'site'
           path: 'dist'
 
-      - name: Trigger netlify build
+      - name: Trigger build
         if: success()
-        run: curl -X POST -d "{}" ${{ secrets.NETLIFY_BUILD_HOOK }}?Github+action
+        run: curl -X POST -d "{}" ${{ secrets.RENDER_BUILD_HOOK }}
