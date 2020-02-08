@@ -1,6 +1,9 @@
 name: CI
 
-on: push
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -24,5 +27,9 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:
-          name: "site"
-          path: "dist"
+          name: 'site'
+          path: 'dist'
+
+      - name: Trigger netlify build
+        if: github.status === 'success'
+        run: curl -X POST -d "{}" ${{ secrets.NETLIFY_BUILD_HOOK }}?Github+action
