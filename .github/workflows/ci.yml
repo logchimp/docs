@@ -32,4 +32,4 @@ jobs:
 
       - name: Trigger build
         if: success()
-        run: curl -X POST -d "{}" ${{ secrets.RENDER_BUILD_HOOK }}
+        run: curl -X POST -d "{}" ${{ secrets.BUILD_HOOK }}
