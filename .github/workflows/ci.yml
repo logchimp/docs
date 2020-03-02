@@ -28,5 +28,5 @@ jobs:
           path: 'dist'
 
       - name: Trigger build
-        if: branch === 'master' && success()
+        if: contains(github.head_ref, 'master') && success()
         run: curl -X POST -d "{}" ${{ secrets.BUILD_HOOK }}
