@@ -1,15 +1,26 @@
 <template>
-	<div class="docs">
-		<div class="docs__sidebar"></div>
-		<div class="container docs__content">
-			<VueRemarkContent />
+	<div class="container">
+		<div class="docs">
+			<div class="docs__sidebar">
+				<docs-sidebar />
+			</div>
+			<div class="docs__content">
+				<VueRemarkContent />
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+
+// components
+import DocsSidebar from "../components/DocsSidebar";
+
 export default {
-	name: "Docs"
+	name: "Docs",
+	components: {
+		DocsSidebar
+	}
 };
 </script>
 
