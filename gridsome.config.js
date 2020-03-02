@@ -4,5 +4,16 @@ module.exports = {
 	siteUrl: "https://logchimp.codecarrot.net/",
 	titleTemplate: "%s | LogChimp",
 
-	plugins: []
+	plugins: [
+		{
+			use: "@gridsome/vue-remark",
+			options: {
+				typeName: "DocPage",
+				baseDir: "./docs",
+				pathPrefix: "/docs",
+				template: "./src/templates/Docs.vue",
+				index: ["readme"]
+			}
+		}
+	]
 }
