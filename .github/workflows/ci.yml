@@ -1,9 +1,6 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - master
+on: push
 
 jobs:
   build:
@@ -31,5 +28,5 @@ jobs:
           path: 'dist'
 
       - name: Trigger build
-        if: success()
+        if: branch === 'master' && success()
         run: curl -X POST -d "{}" ${{ secrets.BUILD_HOOK }}
