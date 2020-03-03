@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="docs">
 			<div class="docs__sidebar">
-				<docs-sidebar />
+				<docs-sidebar :menu="docsMenu" />
 			</div>
 			<div class="docs__content">
 				<VueRemarkContent />
@@ -12,6 +12,8 @@
 </template>
 
 <script>
+// data
+import DocsMenu from "../../data/docs.json";
 
 // components
 import DocsSidebar from "../components/DocsSidebar";
@@ -20,6 +22,11 @@ export default {
 	name: "Docs",
 	components: {
 		DocsSidebar
+	},
+	computed: {
+		docsMenu() {
+			return DocsMenu;
+		}
 	}
 };
 </script>
