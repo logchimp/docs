@@ -1,0 +1,52 @@
+// docs layout
+.docs
+	display: flex
+
+.docs__sidebar
+	margin-right: 1.5rem
+	max-width: 200px
+	width: 100%
+
+.docs__content
+	width: 100%
+	background-color: $white
+	border-radius: .25rem
+	padding: 2rem 2rem 1rem
+	border: 1px solid #dddddd
+
+// sidebar
+.dsidebar__section
+	margin-bottom: 1.5rem
+
+.dsidebar__title, .dsidebar__items, .dsidebar__item
+	display: flex
+
+.dsidebar__title
+	cursor: pointer
+	font-weight: 700
+	margin-bottom: 0.5rem
+
+.dsidebar__items
+	flex-direction: column
+	margin-left: .257rem
+
+.dsidebar__item
+	margin-bottom: 0.5rem
+	cursor: pointer
+	text-decoration: none
+	color: $black
+
+.dsidebar__item.active--exact
+	background-color: $primary_color
+	color: $white
+	padding: .25rem .5rem
+	border-radius: .2rem
+	font-weight: 600
+	margin-left: -.257rem
+
+// content
+.docs__meta
+	margin-bottom: 1rem
+
+.docs__meta-heading
+	font-size: 2rem
