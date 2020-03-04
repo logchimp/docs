@@ -5,6 +5,11 @@
 				<docs-sidebar :menu="docsMenu" />
 			</div>
 			<div class="docs__content">
+				<div class="docs__meta">
+					<div class="docs__meta-heading">
+						{{ $page.doc.title }}
+					</div>
+				</div>
 				<VueRemarkContent />
 			</div>
 		</div>
