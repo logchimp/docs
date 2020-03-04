@@ -10,7 +10,9 @@
 						{{ $page.doc.title }}
 					</div>
 				</div>
-				<VueRemarkContent />
+				<div class="markdown">
+					<VueRemarkContent />
+				</div>
 			</div>
 		</div>
 	</div>
