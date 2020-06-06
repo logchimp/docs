@@ -1,0 +1,53 @@
+[
+	{
+		"section": "Getting started",
+		"topics": [
+			{
+				"name": "Introduction",
+				"slug": "/"
+			},
+			{
+				"name": "Setup & Guide",
+				"slug": "/setup-guide"
+			},
+			{
+				"name": "Glossary",
+				"slug": "/glossary"
+			}
+		]
+	},
+	{
+		"section": "Authentication",
+		"topics": [
+			{
+				"name": "Signup",
+				"slug": "/auth/signup"
+			},
+			{
+				"name": "Login",
+				"slug": "/auth/login"
+			}
+		]
+	},
+	{
+		"section": "Posts",
+		"topics": [
+			{
+				"name": "GET",
+				"slug": "/posts/get"
+			},
+			{
+				"name": "CREATE",
+				"slug": "/posts/create"
+			},
+			{
+				"name": "UPDATE",
+				"slug": "/posts/update"
+			},
+			{
+				"name": "DELETE",
+				"slug": "/posts/delete"
+			}
+		]
+	}
+]
