@@ -20,11 +20,15 @@
 		"section": "Authentication",
 		"topics": [
 			{
-				"name": "Signup",
+				"name": "Introduction",
+				"slug": "/auth"
+			},
+			{
+				"name": "signup",
 				"slug": "/auth/signup"
 			},
 			{
-				"name": "Login",
+				"name": "login",
 				"slug": "/auth/login"
 			}
 		]
