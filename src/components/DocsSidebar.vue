@@ -8,6 +8,7 @@
 				<g-link
 					:to="`/${route}/${item.slug}`"
 					v-for="item in section.topics"
+					:key="`${route}-${item.name}`"
 					class="dsidebar__item"
 				>
 					{{ item.name }}
