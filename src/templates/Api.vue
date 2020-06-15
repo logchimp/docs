@@ -1,8 +1,9 @@
 <template>
 	<docs-layout
-		:menu="docsMenu"
-		:title="$page.doc.title"
-		route="docs"
+		:menu="apiMenu"
+		:title="$page.api.title"
+		:method="$page.api.method"
+		route="api"
 	>
 		<VueRemarkContent />
 	</docs-layout>
@@ -10,28 +11,29 @@
 
 <script>
 // data
-import DocsMenu from "../../data/docs.json";
+import ApiMenu from "../../data/api.json";
 
 // components
 import DocsLayout from "../layouts/Docs";
 
 export default {
-	name: "Docs",
+	name: "Api",
 	components: {
 		DocsLayout
 	},
 	computed: {
-		docsMenu() {
-			return DocsMenu;
+		apiMenu() {
+			return ApiMenu;
 		}
 	}
 };
 </script>
 
 <page-query>
-query DocPage ($path: String!) {
-	doc: docPage (path: $path) {
+query ApiPage ($path: String!) {
+	api: apiPage (path: $path) {
 		title
+		method
 		path
 		content
 	}

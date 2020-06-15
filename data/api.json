@@ -1,0 +1,65 @@
+[
+	{
+		"section": "Getting started",
+		"topics": [
+			{
+				"name": "Introduction",
+				"slug": "/"
+			},
+			{
+				"name": "Setup & Guide",
+				"slug": "/setup-guide"
+			},
+			{
+				"name": "Glossary",
+				"slug": "/glossary"
+			}
+		]
+	},
+	{
+		"section": "Authentication",
+		"topics": [
+			{
+				"name": "Introduction",
+				"slug": "/auth"
+			},
+			{
+				"name": "signup",
+				"slug": "/auth/signup"
+			},
+			{
+				"name": "login",
+				"slug": "/auth/login"
+			}
+		]
+	},
+	{
+		"section": "Posts",
+		"topics": [
+			{
+				"name": "Introduction",
+				"slug": "/post"
+			},
+			{
+				"name": "filterPost",
+				"slug": "/post/filter-post"
+			},
+			{
+				"name": "getPostBySlug",
+				"slug": "/post/get-post-by-slug"
+			},
+			{
+				"name": "createPost",
+				"slug": "/post/create-post"
+			},
+			{
+				"name": "updatePostById",
+				"slug": "/post/update-post-by-id"
+			},
+			{
+				"name": "deletePostById",
+				"slug": "/post/delete-post-by-id"
+			}
+		]
+	}
+]

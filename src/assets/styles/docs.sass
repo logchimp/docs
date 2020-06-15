@@ -4,11 +4,12 @@
 
 .docs__sidebar
 	margin-right: 1.5rem
-	max-width: 200px
-	width: 100%
+	width: 200px
+	max-width: 100%
 
 .docs__content
-	width: 100%
+	max-width: 100%
+	width: 75%
 	background-color: $white
 	border-radius: .25rem
 	padding: 2rem 2rem 1rem
@@ -18,15 +19,16 @@
 .dsidebar__section
 	margin-bottom: 1.5rem
 
-.dsidebar__title, .dsidebar__items, .dsidebar__item
+.dsidebar__title, .dsidebar__list, .dsidebar__item
 	display: flex
 
 .dsidebar__title
-	cursor: pointer
-	font-weight: 700
+	font-size: .875rem
+	font-weight: 600
+	color: rgba(0, 0, 0, 0.3)
 	margin-bottom: 0.5rem
 
-.dsidebar__items
+.dsidebar__list
 	flex-direction: column
 	margin-left: .257rem
 
@@ -35,6 +37,7 @@
 	cursor: pointer
 	text-decoration: none
 	color: $black
+	user-select: none
 
 .dsidebar__item.active--exact
 	background-color: $primary_color
@@ -46,7 +49,14 @@
 
 // content
 .docs__meta
+	display: flex
 	margin-bottom: 1rem
+	align-items: center
+
+.docs__meta-method
+	font-size: 1.375rem
+	margin-right: 1rem
+	font-weight: 700
 
 .docs__meta-heading
 	font-size: 2rem
