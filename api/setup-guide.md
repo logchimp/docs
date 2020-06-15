@@ -13,5 +13,5 @@ Each API is prefixed with the same path, followed by a specific version. Version
 **For example**
 
 ```
-https://example.com/api/v1/
+https://yourdomain.com/api/v1/
 ```
