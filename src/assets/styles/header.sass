@@ -1,11 +1,12 @@
-header
-	display: flex
-	margin: 1rem 0
-	align-items: center
-	padding-left: 1rem
-	padding-right: 1rem
+.header
+	margin-top: 1rem
+	margin-bottom: 1rem
 
-.header__navbar
+.header__wrapper
+	display: flex
+	align-items: center
+
+.header__navbar, .navbar
 	display: flex
 	align-items: center
 
@@ -30,3 +31,7 @@ header
 
 .header__action
 	margin-left: auto
+
+@media (max-width: 768px)
+	.navbar
+		display: none

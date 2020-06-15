@@ -1,23 +1,27 @@
 <template>
 	<header class="header">
-		<div class="header__navbar">
-			<logo class="header__logo" />
-			<div class="navbar__list">
-				<g-link to="/product" class="navbar__item">
-					Product
-				</g-link>
-				<g-link to="/docs" class="navbar__item">
-					Developers
-				</g-link>
-				<g-link to="/resources" class="navbar__item">
-					Resources
-				</g-link>
+		<div class="container">
+			<div class="header__wrapper">
+				<div class="header__navbar">
+					<logo class="header__logo" />
+					<nav class="navbar">
+						<g-link to="/product" class="navbar__item">
+							Product
+						</g-link>
+						<g-link to="/docs" class="navbar__item">
+							Developers
+						</g-link>
+						<g-link to="/resources" class="navbar__item">
+							Resources
+						</g-link>
+					</nav>
+				</div>
+				<div class="header__action">
+					<primary-button>
+						Get started now
+					</primary-button>
+				</div>
 			</div>
-		</div>
-		<div class="header__action">
-			<primary-button>
-				Get started now
-			</primary-button>
 		</div>
 	</header>
 </template>
