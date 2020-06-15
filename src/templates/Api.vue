@@ -2,6 +2,7 @@
 	<docs-layout
 		:menu="apiMenu"
 		:title="$page.api.title"
+		:method="$page.api.method"
 		route="api"
 	>
 		<VueRemarkContent />
@@ -32,6 +33,7 @@ export default {
 query ApiPage ($path: String!) {
 	api: apiPage (path: $path) {
 		title
+		method
 		path
 		content
 	}
