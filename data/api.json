@@ -37,20 +37,28 @@
 		"section": "Posts",
 		"topics": [
 			{
-				"name": "GET",
-				"slug": "/posts/get"
+				"name": "Introduction",
+				"slug": "/post"
 			},
 			{
-				"name": "CREATE",
-				"slug": "/posts/create"
+				"name": "filterPost",
+				"slug": "/post/filter-post"
 			},
 			{
-				"name": "UPDATE",
-				"slug": "/posts/update"
+				"name": "getPostBySlug",
+				"slug": "/post/get-post-by-slug"
 			},
 			{
-				"name": "DELETE",
-				"slug": "/posts/delete"
+				"name": "createPost",
+				"slug": "/post/create-post"
+			},
+			{
+				"name": "updatePostById",
+				"slug": "/post/update-post-by-id"
+			},
+			{
+				"name": "deletePostById",
+				"slug": "/post/delete-post-by-id"
 			}
 		]
 	}
