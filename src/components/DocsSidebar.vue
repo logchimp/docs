@@ -4,7 +4,7 @@
 			<div class="dsidebar__title">
 				{{ section.section }}
 			</div>
-			<div class="dsidebar__items">
+			<div class="dsidebar__list">
 				<g-link
 					:to="`/docs/${item.slug}`"
 					v-for="item in section.topics"
