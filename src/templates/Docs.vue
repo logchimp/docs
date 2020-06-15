@@ -1,21 +1,11 @@
 <template>
-	<div class="container">
-		<div class="docs">
-			<div class="docs__sidebar">
-				<docs-sidebar :menu="docsMenu" />
-			</div>
-			<div class="docs__content">
-				<div class="docs__meta">
-					<div class="docs__meta-heading">
-						{{ $page.doc.title }}
-					</div>
-				</div>
-				<div class="markdown">
-					<VueRemarkContent />
-				</div>
-			</div>
-		</div>
-	</div>
+	<docs-layout
+		:menu="docsMenu"
+		:title="$page.doc.title"
+		route="docs"
+	>
+		<VueRemarkContent />
+	</docs-layout>
 </template>
 
 <script>
@@ -23,12 +13,12 @@
 import DocsMenu from "../../data/docs.json";
 
 // components
-import DocsSidebar from "../components/DocsSidebar";
+import DocsLayout from "../layouts/Docs";
 
 export default {
 	name: "Docs",
 	components: {
-		DocsSidebar
+		DocsLayout
 	},
 	computed: {
 		docsMenu() {
