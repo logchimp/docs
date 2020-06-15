@@ -6,7 +6,7 @@
 			</div>
 			<div class="dsidebar__list">
 				<g-link
-					:to="`/docs/${item.slug}`"
+					:to="`/${route}/${item.slug}`"
 					v-for="item in section.topics"
 					class="dsidebar__item"
 				>
@@ -26,6 +26,10 @@ export default {
 			default: () => {
 				return [];
 			}
+		},
+		route: {
+			type: String,
+			required: true
 		}
 	}
 };
