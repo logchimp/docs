@@ -1,0 +1,37 @@
+.header
+	margin-top: 1rem
+	margin-bottom: 1rem
+
+.header__wrapper
+	display: flex
+	align-items: center
+
+.header__navbar, .navbar
+	display: flex
+	align-items: center
+
+.header__logo
+	width: 100%
+	max-width: 120px
+	margin-right: 1.5rem
+	cursor: pointer
+
+.navbar__list
+	display: flex
+
+.navbar__item
+	color: $primary_color
+	font-weight: 600
+	margin-right: 0.875rem
+	cursor: pointer
+	text-decoration: none
+
+	&:last-child
+		margin-right: 0
+
+.header__action
+	margin-left: auto
+
+@media (max-width: 768px)
+	.navbar
+		display: none
