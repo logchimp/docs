@@ -7,7 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "gridsome": "^0.7.19"
+    "gridsome": "^0.7.20"
   },
   "devDependencies": {
     "@gridsome/remark-prismjs": "^0.3.0",
