@@ -835,10 +835,10 @@
     unist-util-visit "^1.4.0"
     vfile "^4.0.0"
 
-"@gridsome/vue-remark@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@gridsome/vue-remark/-/vue-remark-0.2.2.tgz#451518e646f0f729a981c44d26788dc22cefebe8"
-  integrity sha512-lnu5bK8HbcfWa4311pO+seOR3vgvhsVQ9xqZ5P6J9GJRe7RtXQJyJ8Ia2Y7SPeWQwkgM72aFxe6tfH4jWhj6mQ==
+"@gridsome/vue-remark@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@gridsome/vue-remark/-/vue-remark-0.2.3.tgz#daebd2ffbcb1da2e89b8a2381835c6135a4eb68b"
+  integrity sha512-aNkyYy+CFu6T4QtOOb8bRm5zSBc4WFsbhQpJhEZIJjxeJK380dr0AW5Rb2KnJ3CTfDuu5L0/UMoZdfATa8Mfkw==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/parser" "^7.0.0"
