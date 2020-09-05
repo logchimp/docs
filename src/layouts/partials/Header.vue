@@ -3,23 +3,21 @@
 		<div class="container">
 			<div class="header__wrapper">
 				<div class="header__navbar">
-					<logo class="header__logo" />
+					<g-link to="/">
+						<logo class="header__logo" />
+					</g-link>
 					<nav class="navbar">
-						<g-link to="/product" class="navbar__item">
+						<!-- <g-link to="/product" class="navbar__item">
 							Product
-						</g-link>
-						<g-link to="/docs" class="navbar__item">
-							Developers
-						</g-link>
-						<g-link to="/resources" class="navbar__item">
+						</g-link> -->
+						<g-link to="/docs" class="navbar__item"> Developers </g-link>
+						<!-- <g-link to="/resources" class="navbar__item">
 							Resources
-						</g-link>
+						</g-link> -->
 					</nav>
 				</div>
 				<div class="header__action">
-					<primary-button>
-						Get started now
-					</primary-button>
+					<primary-button> Get started now </primary-button>
 				</div>
 			</div>
 		</div>
@@ -37,7 +35,7 @@ export default {
 	name: "Header",
 	components: {
 		PrimaryButton,
-		Logo
-	}
+		Logo,
+	},
 };
 </script>
