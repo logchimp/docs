@@ -1,10 +1,11 @@
 ---
-title: Login
+title: Signup
+description:
 method: POST
 ---
 
 ```
-https://yourdomain.com/api/v1/auth/login
+https://yourdomain.com/api/v1/auth/signup
 ```
 
 ## Headers
@@ -25,12 +26,9 @@ https://yourdomain.com/api/v1/auth/login
 ```json
 {
   "email": "email@example.com",
-  "password": "password",
-  "remember_me": false
+  "password": "password"
 }
 ```
-
-> NOTE: `remember_me` is currently not available, it's still working in progress, you can keep track of that feature on [GitHub#8](https://github.com/logchimp/logchimp/issues/8).
 
 ## Response
 
@@ -72,3 +70,5 @@ https://yourdomain.com/api/v1/auth/login
   "token": "token"
 }
 ```
+
+> NOTE: `authToken` you get on signup is only valid for 3 hours

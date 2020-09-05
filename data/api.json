@@ -21,15 +21,15 @@
 		"topics": [
 			{
 				"name": "Introduction",
-				"slug": "/auth"
+				"slug": "/v1/auth"
 			},
 			{
 				"name": "signup",
-				"slug": "/auth/signup"
+				"slug": "/v1/auth/signup"
 			},
 			{
 				"name": "login",
-				"slug": "/auth/login"
+				"slug": "/v1/auth/login"
 			}
 		]
 	},
@@ -38,27 +38,27 @@
 		"topics": [
 			{
 				"name": "Introduction",
-				"slug": "/post"
+				"slug": "/v1/post"
 			},
 			{
 				"name": "filterPost",
-				"slug": "/post/filter-post"
+				"slug": "/v1/post/filter-post"
 			},
 			{
 				"name": "getPostBySlug",
-				"slug": "/post/get-post-by-slug"
+				"slug": "/v1/post/get-post-by-slug"
 			},
 			{
 				"name": "createPost",
-				"slug": "/post/create-post"
+				"slug": "/v1/post/create-post"
 			},
 			{
 				"name": "updatePostById",
-				"slug": "/post/update-post-by-id"
+				"slug": "/v1/post/update-post-by-id"
 			},
 			{
 				"name": "deletePostById",
-				"slug": "/post/delete-post-by-id"
+				"slug": "/v1/post/delete-post-by-id"
 			}
 		]
 	}

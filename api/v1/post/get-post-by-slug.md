@@ -1,10 +1,11 @@
 ---
-title: GET posts
+title: Get post by slug
 method: GET
+description: Fetch all posts
 ---
 
 ```
-https://yourdomain.com/api/v1/posts
+https://yourdomain.com/api/v1/post/:slug
 ```
 
 ## Headers
@@ -13,17 +14,16 @@ https://yourdomain.com/api/v1/posts
 | ------------ | ------------------ | ----------- |
 | Content-Type | `application/json` |             |
 
-## Query
+## Params
 
-| Fields | Type     | Description                                            | Required |
-| ------ | -------- | ------------------------------------------------------ | -------- |
-| status | `Array`  | Status of the post (planned / in progress / completed) | `false`  |
-| sort   | `String` | Sort type (latest / oldest / top / trending)           | `false`  |
+| Fields | Type     | Description | Required |
+| ------ | -------- | ----------- | -------- |
+| slug   | `String` | Post slug   | `true`   |
 
 **Example**
 
 ```
-https://yourdomain.com/api/v1/posts?status=planned&sort=oldest
+https://yourdomain.com/api/v1/post/allow-user-to-upload-image-from-cloud
 ```
 
 ## Response
@@ -32,7 +32,7 @@ https://yourdomain.com/api/v1/posts?status=planned&sort=oldest
 | ----------- | --------- | ----------------------------------- |
 | status.code | `Integer` | Response code from server           |
 | status.type | `String`  | Response status type (success/fail) |
-| posts       | `Array`   | Array of object with filtered posts |
+| posts       | `Object`  | Post data                           |
 
 > You can see post data object in [createPost](/api/post/create-post).
 
@@ -44,13 +44,8 @@ https://yourdomain.com/api/v1/posts?status=planned&sort=oldest
     "code": 200,
     "type": "success"
   },
-  "posts": [
-    {
-      // post data oboject
-    },
-    {
-      // post data oboject
-    }
-  ]
+  "post": {
+    // post data oboject
+  }
 }
 ```
