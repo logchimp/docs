@@ -10,7 +10,7 @@
 						<!-- <g-link to="/product" class="navbar__item">
 							Product
 						</g-link> -->
-						<g-link to="/docs" class="navbar__item"> Developers </g-link>
+						<g-link to="/docs/" class="navbar__item"> Developers </g-link>
 						<!-- <g-link to="/resources" class="navbar__item">
 							Resources
 						</g-link> -->
