@@ -17,7 +17,7 @@
 					</nav>
 				</div>
 				<div class="header__action">
-					<primary-button> Get started now </primary-button>
+					<Button type="primary"> Get started now </Button>
 				</div>
 			</div>
 		</div>
@@ -26,7 +26,7 @@
 
 <script>
 // components
-import PrimaryButton from "../../components/PrimaryButton";
+import Button from "../../components/Button";
 
 // icons
 import Logo from "../../assets/images/logo";
@@ -34,7 +34,7 @@ import Logo from "../../assets/images/logo";
 export default {
 	name: "Header",
 	components: {
-		PrimaryButton,
+		Button,
 		Logo,
 	},
 };
