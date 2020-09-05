@@ -19,13 +19,13 @@ import DocsLayout from "../layouts/Docs";
 export default {
 	name: "Api",
 	components: {
-		DocsLayout
+		DocsLayout,
 	},
 	computed: {
 		apiMenu() {
 			return ApiMenu;
-		}
-	}
+		},
+	},
 };
 </script>
 
@@ -33,6 +33,7 @@ export default {
 query ApiPage ($path: String!) {
 	api: apiPage (path: $path) {
 		title
+		description
 		method
 		path
 		content

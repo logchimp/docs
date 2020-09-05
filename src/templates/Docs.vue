@@ -1,9 +1,5 @@
 <template>
-	<docs-layout
-		:menu="docsMenu"
-		:title="$page.doc.title"
-		route="docs"
-	>
+	<docs-layout :menu="docsMenu" :title="$page.doc.title" route="docs">
 		<VueRemarkContent />
 	</docs-layout>
 </template>
@@ -18,13 +14,13 @@ import DocsLayout from "../layouts/Docs";
 export default {
 	name: "Docs",
 	components: {
-		DocsLayout
+		DocsLayout,
 	},
 	computed: {
 		docsMenu() {
 			return DocsMenu;
-		}
-	}
+		},
+	},
 };
 </script>
 
@@ -32,6 +28,7 @@ export default {
 query DocPage ($path: String!) {
 	doc: docPage (path: $path) {
 		title
+		description
 		path
 		content
 	}
