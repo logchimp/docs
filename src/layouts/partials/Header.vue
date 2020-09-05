@@ -1,10 +1,10 @@
 <template>
-	<header class="header">
+	<header>
 		<div class="container">
 			<div class="header__wrapper">
 				<div class="header__navbar">
-					<g-link to="/">
-						<logo class="header__logo" />
+					<g-link class="header__logo" to="/">
+						<img src="@/assets/images/logo_with_name.svg" alt="LogChimp logo">
 					</g-link>
 					<nav class="navbar">
 						<!-- <g-link to="/product" class="navbar__item">
@@ -28,14 +28,10 @@
 // components
 import Button from "../../components/Button";
 
-// icons
-import Logo from "../../assets/images/logo";
-
 export default {
 	name: "Header",
 	components: {
 		Button,
-		Logo,
 	},
 };
 </script>
