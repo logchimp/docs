@@ -1,24 +1,27 @@
 <template>
-	<div class="container">
-		<div class="docs">
-			<div class="docs__sidebar">
-				<docs-sidebar :menu="menu" :route="route" />
-			</div>
-			<div class="docs__content">
-				<div class="docs__meta">
-					<div
-						v-if="method"
-						:style="{ color: methodColor }"
-						class="docs__meta-method"
-					>
-						{{ method }}
-					</div>
-					<div class="docs__meta-heading">
-						{{ title }}
-					</div>
+	<div>
+		<Header />
+		<div class="container">
+			<div class="docs">
+				<div class="docs__sidebar">
+					<docs-sidebar :menu="menu" :route="route" />
 				</div>
-				<div class="markdown">
-					<slot />
+				<div class="docs__content">
+					<div class="docs__meta">
+						<div
+							v-if="method"
+							:style="{ color: methodColor }"
+							class="docs__meta-api-method"
+						>
+							{{ method }}
+						</div>
+						<h1>
+							{{ title }}
+						</h1>
+					</div>
+					<div class="markdown">
+						<slot />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -27,6 +30,7 @@
 
 <script>
 // components
+import Header from "../layouts/partials/Header";
 import DocsSidebar from "../components/DocsSidebar";
 
 export default {
@@ -36,22 +40,23 @@ export default {
 			type: Array,
 			default: () => {
 				return [];
-			}
+			},
 		},
 		route: {
 			type: String,
-			required: true
+			required: true,
 		},
 		title: {
 			type: String,
-			required: true
+			required: true,
 		},
 		method: {
-			type: String
-		}
+			type: String,
+		},
 	},
 	components: {
-		DocsSidebar
+		Header,
+		DocsSidebar,
 	},
 	computed: {
 		methodColor() {
@@ -67,7 +72,7 @@ export default {
 				default:
 					break;
 			}
-		}
-	}
+		},
+	},
 };
 </script>
