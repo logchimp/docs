@@ -6,6 +6,9 @@
     "develop": "gridsome develop",
     "explore": "gridsome explore"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "dependencies": {
     "gridsome": "^0.7.20"
   },
