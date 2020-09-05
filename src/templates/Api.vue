@@ -18,6 +18,12 @@ import DocsLayout from "../layouts/Docs";
 
 export default {
 	name: "Api",
+	metaInfo() {
+		return {
+			title: this.$page.api.title,
+			description: this.$page.api.description̦,
+		};
+	},
 	components: {
 		DocsLayout,
 	},

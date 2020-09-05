@@ -13,6 +13,12 @@ import DocsLayout from "../layouts/Docs";
 
 export default {
 	name: "Docs",
+	metaInfo() {
+		return {
+			title: this.$page.doc.title,
+			description: this.$page.doc.description,
+		};
+	},
 	components: {
 		DocsLayout,
 	},
