@@ -1,0 +1,31 @@
+
+.DocsSidebar__section
+	margin-bottom: 1.5rem
+
+.DocsSidebar__section-title
+	font-size: .875rem
+	font-weight: 500
+	color: $gray-70
+	margin-bottom: 0.625rem
+
+.DocsSidebar__list
+	display: flex
+	flex-direction: column
+
+.DocsSidebar__item
+	margin-bottom: .25rem
+	cursor: pointer
+	text-decoration: none
+	color: $text
+	user-select: none
+	padding: .5rem .75rem
+	font-weight: 400
+
+	&:last-child
+		margin-bottom: 0
+
+.DocsSidebar__item.active--exact
+	background-color: $brand-color
+	color: $white
+	border-radius: $border-radius
+	font-weight: 500
