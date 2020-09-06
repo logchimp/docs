@@ -9,6 +9,15 @@
 		]
 	},
 	{
+		"section": "Architecture",
+		"topics": [
+			{
+				"name": "Overview",
+				"slug": "/architecture/"
+			}
+		]
+	},
+	{
 		"section": "Roadmap",
 		"topics": [
 			{
