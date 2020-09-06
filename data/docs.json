@@ -1,40 +1,11 @@
 [
-  {
-    "section": "Getting started",
-    "topics": [
-      {
-        "name": "Introduction",
-        "slug": "/"
-      },
-      {
-        "name": "Features",
-        "slug": "/features"
-      },
-      {
-        "name": "Ecosystem",
-        "slug": "/ecosystem"
-      }
-    ]
-  },
-  {
-    "section": "Architecture",
-    "topics": [
-      {
-        "name": "Overview",
-        "slug": "/architecture/overview"
-      },
-      {
-        "name": "Core APIs",
-        "slug": "/architecture/core-api"
-      },
-      {
-        "name": "Admin client",
-        "slug": "/architecture/admin-client"
-      },
-      {
-        "name": "Front-end",
-        "slug": "/architecture/front-end"
-      }
-    ]
-  }
+	{
+		"section": "Getting started",
+		"topics": [
+			{
+				"name": "Introduction",
+				"slug": "/"
+			}
+		]
+	}
 ]
