@@ -14,6 +14,10 @@
 			{
 				"name": "Overview",
 				"slug": "/architecture/"
+			},
+			{
+				"name": "APIs",
+				"slug": "/architecture/api"
 			}
 		]
 	},
