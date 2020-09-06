@@ -7,5 +7,14 @@
 				"slug": "/"
 			}
 		]
+	},
+	{
+		"section": "Roadmap",
+		"topics": [
+			{
+				"name": "Contributing",
+				"slug": "/roadmap/contributing"
+			}
+		]
 	}
 ]
