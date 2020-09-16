@@ -22,6 +22,19 @@
 		]
 	},
 	{
+		"section": "Setup Guide",
+		"topics": [
+			{
+				"name": "Overview",
+				"slug": "/install/"
+			},
+			{
+				"name": "Docker",
+				"slug": "/install/docker"
+			}
+		]
+	},
+	{
 		"section": "Roadmap",
 		"topics": [
 			{
