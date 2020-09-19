@@ -1,0 +1,10 @@
+- id: 1
+  title: "CodeCarrot"
+  link: "https://www.codecarrot.net/"
+  image: "/images/partners/codecarrot.png"
+  description: CodeCarrot is a software agency which brings your idea to life.
+- id: 2
+  title: "KeyCDN"
+  link: "https://www.keycdn.com/"
+  image: "/images/partners/keycdn.jpg"
+  description: KeyCDN is the best way to service your content on global network.
