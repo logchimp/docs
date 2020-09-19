@@ -31,6 +31,10 @@
 			{
 				"name": "Docker",
 				"slug": "/install/docker"
+			},
+			{
+				"name": "Source",
+				"slug": "/install/source"
 			}
 		]
 	},
