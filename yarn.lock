@@ -4611,7 +4611,7 @@ graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
-graphql-compose@^7.3.0:
+graphql-compose@7.20.1:
   version "7.20.1"
   resolved "https://registry.yarnpkg.com/graphql-compose/-/graphql-compose-7.20.1.tgz#9b44c1cae615d760c265ce515b3ddbcfdeaa7bd6"
   integrity sha512-4SQgGGIeNdZn5+XrYgQ3ma+nKUzQG861TGB6tRVQaUALVZ6IraY0wzZtPmypR4un2B0Cvt90HXsF6pDQFNnwTA==
@@ -4655,10 +4655,10 @@ gray-matter@^4.0.2:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-gridsome@^0.7.20:
-  version "0.7.20"
-  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.7.20.tgz#6b45135468db1185e5aea4b3e699d2c2d1e3557d"
-  integrity sha512-htk50W1dHLpoZ3iWQUZtBWki+STJDqzXxnrb/WBpDaGD9nW3gQK7HgPVVTVntqjTiJKoB1PT7q/g5mflJkgWuw==
+gridsome@^0.7.21:
+  version "0.7.21"
+  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.7.21.tgz#8f1ed742a14ee2a88c0286b0d3e623d509d334f2"
+  integrity sha512-PtdVorQDpihsgr4IXeLH6QTySiPVNhadnSjEgQP8zfY+2Ir7goifPpIohOBT65nXJj/j7to9f429PSDTlJUe7w==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.0.0"
@@ -4690,7 +4690,7 @@ gridsome@^0.7.20:
     fs-extra "^7.0.1"
     globby "^9.0.0"
     graphql "^14.4.2"
-    graphql-compose "^7.3.0"
+    graphql-compose "7.20.1"
     graphql-playground-middleware-express "^1.7.12"
     hash-sum "^1.0.2"
     hirestime "^3.2.1"
