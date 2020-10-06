@@ -1,3 +1,4 @@
+import "prismjs/themes/prism.css"
 import "~/styles/main.sass";
 
 import DefaultLayout from "~/layouts/Default.vue"
