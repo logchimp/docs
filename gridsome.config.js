@@ -22,15 +22,11 @@ module.exports = {
 				baseDir: "./api",
 				pathPrefix: "/api",
 				template: "./src/templates/Api.vue",
-				index: ["readme"]
+				index: ["readme"],
+				plugins: [
+					"@gridsome/remark-prismjs"
+				]
 			}
 		}
-	],
-	transformers: {
-		remark: {
-			plugins: [
-				"@gridsome/remark-prismjs"
-			]
-		}
-	}
+	]
 }
