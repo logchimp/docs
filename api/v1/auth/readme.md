@@ -5,7 +5,7 @@ description:
 
 ### Endpoints
 
-| method   | resolver | route                              |
-| -------- | -------- | ---------------------------------- |
-| `POST` | `signup` | [`/auth/signup`](/api/auth/signup) |
-| `POST`   | `login`  | [`/auth/login`](/api/auth/login)   |
+| method | resolver | route                                 |
+| ------ | -------- | ------------------------------------- |
+| `POST` | `signup` | [`/auth/signup`](/api/v1/auth/signup) |
+| `POST` | `login`  | [`/auth/login`](/api/v1/auth/login)   |

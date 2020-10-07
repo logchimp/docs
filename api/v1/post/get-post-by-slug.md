@@ -34,7 +34,7 @@ https://yourdomain.com/api/v1/post/allow-user-to-upload-image-from-cloud
 | status.type | `String`  | Response status type (success/fail) |
 | posts       | `Object`  | Post data                           |
 
-> You can see post data object in [createPost](/api/post/create-post).
+> You can see post data object in [createPost](/api/v1/post/create-post).
 
 **Example**
 

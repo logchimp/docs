@@ -7,13 +7,13 @@ Posts are the primary resource in a LogChimp site. Using the posts endpoint it i
 
 ### Endpoints
 
-| method   | resolver         | route                                                  |
-| -------- | ---------------- | ------------------------------------------------------ |
-| `GET`    | `filterPost`     | [`/posts`](/api/post/filter-post)                      |
-| `GET`    | `getPostBySlug`  | [`/post/{slug}`](/api/post/get-post-by-slug)           |
-| `POST`   | `createPost`     | [`/post/create`](/api/post/create-post)                |
-| `PATCH`  | `updatePostById` | [`/post/update/{postId}`](/api/post/update-post-by-id) |
-| `DELETE` | `deletePostById` | [`/post/delete`](/api/post/delete-post-by-id)          |
+| method   | resolver         | route                                                     |
+| -------- | ---------------- | --------------------------------------------------------- |
+| `GET`    | `filterPost`     | [`/posts`](/api/v1/post/filter-post)                      |
+| `GET`    | `getPostBySlug`  | [`/post/{slug}`](/api/v1/post/get-post-by-slug)           |
+| `POST`   | `createPost`     | [`/post/create`](/api/v1/post/create-post)                |
+| `PATCH`  | `updatePostById` | [`/post/update/{postId}`](/api/v1/post/update-post-by-id) |
+| `DELETE` | `deletePostById` | [`/post/delete`](/api/v1/post/delete-post-by-id)          |
 
 ## Post
 

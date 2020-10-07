@@ -49,7 +49,7 @@ https://yourdomain.com/api/v1/post/update/1
 | status.type | `String`  | Response status type (success/fail) |
 | posts       | `Object`  | Post data                           |
 
-> You can see post data object in [createPost](/api/post/create-post).
+> You can see post data object in [createPost](/api/v1/post/create-post).
 
 **Example**
 
