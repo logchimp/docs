@@ -13,6 +13,10 @@
 			{
 				"name": "Glossary",
 				"slug": "/glossary"
+			},
+			{
+				"name": "Errors",
+				"slug": "/v1/errors"
 			}
 		]
 	},
