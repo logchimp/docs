@@ -17,7 +17,7 @@ First, you'll need to make a fork of the [LogChimp](https://github.com/logchimp/
 
 ### Install dependencies
 
-```sh
+```bash
 yarn install
 ```
 
@@ -35,7 +35,7 @@ You can choose any option you prefer. Just make sure, you are running a Postgres
 
 To set up a database quickly and easily, we suggest you run a Postgres docker container.
 
-```sh
+```bash
 docker run -d \
   --name db \
   -p 5000:5432 \
@@ -47,7 +47,7 @@ docker run -d \
 
 Once you take down the Postgres Docker container all the data is also removed, to persist the data on your machine, you can add this line.
 
-```sh
+```bash
 -v logchimp_db_data:/var/lib/postgresql/data
 ```
 
@@ -82,7 +82,7 @@ VUE_APP_SEVER_URL="http://localhost:$SERVER_PORT"
 
 You need two separate terminal windows to run frontend and backend.
 
-```sh
+```bash
 # in terminal 1
 yarn run frontend:dev
 

@@ -10,13 +10,13 @@ You can easily kick-start your LogChimp site in 3 easy steps.
 
 Here we're creating a network which will be used by both database and LogChimp application.
 
-```sh
+```bash
 docker network create -d bridge logchimp_network
 ```
 
 ##### Step 2. Run `postgres` database
 
-```sh
+```bash
 docker run -d \
 	--name db \
 	-p 5000:5432 \
@@ -37,7 +37,7 @@ Replace `Fig8=Diq1` in `SECRET_KEY=Fig8=Diq1` with a string random hash or ID to
 
 Notice, we're exposing two ports here, the first one `8080:8080` is for frontend and second `3000:3000` is for backend.
 
-```sh
+```bash
 docker run -d \
 	--name your-app-name \
 	-p 8080:8080 \
