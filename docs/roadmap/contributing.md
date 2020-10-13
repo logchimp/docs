@@ -27,4 +27,4 @@ As a [non-profit organization](https://github.com/logchimp/) we're always gratef
 
 ##### Partnerships
 
-Please reach out to us on [LogChimp Discord server](https://discordapp.com/invite/A7mztcC/) if you're interested in partnering with us to help LogChimp.
+We're very happy to [partner with companies](https://logchimp.codecarrot.net/partners) who are able to provide LogChimp with credit, goods and services which help us build free, open software for everyone. Please reach out to us on [LogChimp Discord server](https://discordapp.com/invite/A7mztcC/) if you're interested in partnering with us to help LogChimp.
