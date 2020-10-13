@@ -1,5 +1,6 @@
 ---
 title: CLI
+description: LogChimp CLI is a fully loaded tool to help you setup LogChimp instance and configured.
 ---
 
 A fully loaded tool to help you get LogChimp installed and configured.
