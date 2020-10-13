@@ -41,4 +41,5 @@ Each command is documented in detail on its own page.
 
 You can always run `logchimp --help` or `logchimp help [COMMAND]` to get more detail.
 
+* [logchimp uninstall](/docs/install/cli/uninstall)
 * [logchimp help](/docs/install/cli/help)
