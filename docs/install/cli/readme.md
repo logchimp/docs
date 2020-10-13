@@ -35,3 +35,10 @@ logchimp --help, logchimp -h, logchimp help, logchimp [COMMAND] --help, logchimp
 logchimp version, logchimp --version, logchimp -V, logchimp -v
 ```
 
+# Command list
+
+Each command is documented in detail on its own page.
+
+You can always run `logchimp --help` or `logchimp help [COMMAND]` to get more detail.
+
+* [logchimp help](/docs/install/cli/help)
