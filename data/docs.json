@@ -29,6 +29,10 @@
 				"slug": "/install/"
 			},
 			{
+				"name": "CLI",
+				"slug": "/install/cli"
+			},
+			{
 				"name": "Docker",
 				"slug": "/install/docker"
 			},
