@@ -1,0 +1,21 @@
+previewsEnabled: true
+services:
+  - type: web
+    name: "logchimp.codecarrot.net"
+    env: static
+    buildCommand: yarn build
+    staticPublishPath: ./dist
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: sameorigin
+    routes:
+      - type: redirect
+        source: /github
+        destination: https://github.com/logchimp/logchimp
+      - type: redirect
+        source: /discord
+        destination: https://discord.gg/N34We6e
+    envVars:
+      - key: NODE_VERSION
+        value: 12.18.4
