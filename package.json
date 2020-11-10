@@ -13,7 +13,7 @@
     "gridsome": "^0.7.21"
   },
   "devDependencies": {
-    "@gridsome/remark-prismjs": "^0.4.0",
+    "@gridsome/remark-prismjs": "^0.5.0",
     "@gridsome/vue-remark": "^0.2.5",
     "eslint": "^7.13.0",
     "eslint-config-standard": "^16.0.1",
