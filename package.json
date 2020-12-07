@@ -10,7 +10,7 @@
     "node": ">=12"
   },
   "dependencies": {
-    "gridsome": "^0.7.22"
+    "gridsome": "^0.7.23"
   },
   "devDependencies": {
     "@gridsome/remark-prismjs": "^0.5.0",
