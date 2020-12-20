@@ -42,7 +42,7 @@ Here are some useful options when using the LogChimp install command:
 
 ```bash
 # Install locally for development/testing
-LogChimp install --local
+logchimp install --local
 ```
 
 ##### Options
