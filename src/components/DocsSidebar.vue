@@ -1,36 +1,31 @@
 <template>
-	<div class="DocsSidebar">
-		<div v-for="section in menu" class="DocsSidebar__section">
-			<div class="DocsSidebar__section-title">
-				{{ section.section }}
-			</div>
-			<div class="DocsSidebar__list">
+	<nav class="docs-sidebar">
+		<div class="docs-sidebar-container">
+			<div v-for="section in links" class="docs-sidebar-section">
+				<h5 class="docs-sidebar-section-title">
+					{{ section.title }}
+				</h5>
 				<g-link
-					:to="`/${route}/${item.slug}`"
-					v-for="item in section.topics"
-					:key="`${route}-${item.name}`"
-					class="DocsSidebar__item"
+					:to="item.link"
+					v-for="item in section.items"
+					:key="item.link"
 				>
-					{{ item.name }}
+					{{ item.title }}
 				</g-link>
 			</div>
 		</div>
-	</div>
+	</nav>
 </template>
 
 <script>
 export default {
 	name: "DocsSidebar",
 	props: {
-		menu: {
+		links: {
 			type: Array,
 			default: () => {
 				return [];
 			}
-		},
-		route: {
-			type: String,
-			required: true
 		}
 	}
 };

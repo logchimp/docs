@@ -1,31 +1,40 @@
+.docs-sidebar
+	position: sticky
+	height: auto
+	scroll-behavior: smooth
+	overflow-y: auto
 
-.DocsSidebar__section
+.docs-sidebar-container
+	height: 100vh
+
+.docs-sidebar-section
 	margin-bottom: 1.5rem
 
-.DocsSidebar__section-title
-	font-size: .875rem
-	font-weight: 500
-	color: $gray-70
-	margin-bottom: 0.625rem
+	h5
+		margin: 0 0 .5rem
+		text-transform: uppercase
+		font-size: 0.875rem
+		font-weight: 600
+		letter-spacing: .5px
+		color: $text
 
-.DocsSidebar__list
-	display: flex
-	flex-direction: column
+	a
+		display: block
+		padding: .5rem .5rem
+		color: $gray-70
+		line-height: 1.3em
+		border-radius: 5px
+		text-decoration: none
 
-.DocsSidebar__item
-	margin-bottom: .25rem
-	cursor: pointer
-	text-decoration: none
-	color: $text
-	user-select: none
-	padding: .5rem .75rem
-	font-weight: 400
+		&:hover
+			color: $gray-60
 
-	&:last-child
-		margin-bottom: 0
+	.active--exact
+		color: $brand-color
 
-.DocsSidebar__item.active--exact
-	background-color: $brand-color
-	color: $white
-	border-radius: $border-radius
-	font-weight: 500
+		&:hover
+			color: $brand-color
+
+@media screen and (max-width:  992px)
+	.docs-sidebar
+		display: none
