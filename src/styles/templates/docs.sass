@@ -1,0 +1,20 @@
+.docs
+	margin-left: 4vmin
+	margin-right: 4vmin
+	display: grid
+	grid-gap: 2vmin
+	grid-template-columns: calc(200px + 4vmin) 1fr calc(220px + 2vmin)
+
+.docs-links
+	position: relative
+
+.docs-content
+	width: 100%
+
+@media screen and (max-width: 1200px)
+	.docs
+		grid-template-columns: calc(200px + 4vmin)1fr
+
+@media screen and (max-width:	992px)
+	.docs
+		grid-template-columns: 1fr

@@ -1,7 +1,21 @@
 <template>
-	<docs-layout :menu="docsMenu" :title="$page.doc.title" route="docs">
-		<VueRemarkContent />
-	</docs-layout>
+	<div>
+		<Header />
+		<div class="docs">
+			<aside class="docs-links">
+				<docs-sidebar :links="links" />
+			</aside>
+			<main class="docs-content">
+				<header>
+					<h1>{{ $page.doc.title }}</h1>
+				</header>
+				<div class="markdown">
+					<VueRemarkContent />
+				</div>
+			</main>
+		</div>
+		<Footer />
+	</div>
 </template>
 
 <script>
@@ -9,7 +23,8 @@
 import DocsMenu from "../../data/docs.json";
 
 // components
-import DocsLayout from "../layouts/Docs";
+import Header from "../layouts/partials/Header";
+import DocsSidebar from "../components/DocsSidebar";
 
 export default {
 	name: "Docs",
@@ -20,7 +35,8 @@ export default {
 		};
 	},
 	components: {
-		DocsLayout,
+		Header,
+		DocsSidebar
 	},
 	computed: {
 		docsMenu() {
