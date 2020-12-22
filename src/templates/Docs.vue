@@ -20,7 +20,7 @@
 
 <script>
 // data
-import DocsMenu from "../../data/docs.json";
+import links from "@/data/doc-links.yaml";
 
 // components
 import Header from "../layouts/partials/Header";
@@ -39,9 +39,9 @@ export default {
 		DocsSidebar
 	},
 	computed: {
-		docsMenu() {
-			return DocsMenu;
-		},
+		links() {
+			return links;
+		}
 	},
 };
 </script>
