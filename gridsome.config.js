@@ -14,19 +14,6 @@ module.exports = {
 				template: "./src/templates/Docs.vue",
 				index: ["readme"]
 			}
-		},
-		{
-			use: "@gridsome/vue-remark",
-			options: {
-				typeName: "ApiPage",
-				baseDir: "./api",
-				pathPrefix: "/api",
-				template: "./src/templates/Api.vue",
-				index: ["readme"],
-				plugins: [
-					"@gridsome/remark-prismjs"
-				]
-			}
 		}
 	]
 }
