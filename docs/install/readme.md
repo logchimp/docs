@@ -1,8 +1,13 @@
 ---
-title: Install LogChimp
+title: How to install LogChimp
 ---
 
-Here's are few ways you can install LogChimp.
+<!-- components -->
+import SelfhostInstall from "@/components/SelfhostInstall"
 
-* [Docker](/docs/install/docker)
-* [Source](/docs/install/source)
+There are few ways you can set up a LogChimp site.
+## Self-hosting
+
+If you're running a self-hosted instance, we strongly recommend an Ubuntu server with at least 1GB of memory to run LogChimp.
+
+<SelfhostInstall />
