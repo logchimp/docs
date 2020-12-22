@@ -1,7 +1,8 @@
 ---
 title: logchimp install
-description: The `logchimp install` command is your one-stop-shop to get a running production install of LogChimp.
 ---
+
+The `logchimp install` command is your one-stop-shop to get a running production install of LogChimp.
 
 ```bash
 USAGE

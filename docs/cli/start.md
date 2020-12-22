@@ -1,7 +1,8 @@
 ---
 title: start
-description: Running `logchimp start` will start your LogChimp site in the terminal.
 ---
+
+Running `logchimp start` will start your LogChimp site in the terminal.
 
 ```bash
 USAGE

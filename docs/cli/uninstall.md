@@ -1,7 +1,8 @@
 ---
 title: uninstall
-description: Safely removes a LogChimp installation and all related configuration & data.
 ---
+
+Safely removes a LogChimp installation and all related configuration & data.
 
 ```bash
 USAGE
