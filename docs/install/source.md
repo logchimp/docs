@@ -27,13 +27,13 @@ Once you run the command at the root repository, it will install all the require
 
 ## Setup postgreSQL database
 
-There are few ways to set up a database.
+There are a few ways to set up a database.
 
 * Download the [official Postgres package](https://www.postgresql.org/download/)
 * Run a [postgres docker container](https://hub.docker.com/_/postgres)
 * Use a remote or self-managed database
 
-To spin up a postgres database quickly and easily on your local machine, we recommend you to use PostgreSQL docker image.
+To spin up a database quickly and easily on your local machine, we recommend you to use the PostgreSQL docker image.
 
 ```bash
 docker run -d \
@@ -53,9 +53,9 @@ Once you take down the Postgres Docker container all the data is also removed, t
 
 ## Configuration file
 
-> Starting from v0.4.0 `.env` has been replace with `logchimp.config.json`.
+> Starting from v0.4.0 `.env` has been replaced with `logchimp.config.json`.
 
-You need to create `logchimp.config.json` file at root directory, which will contain all the [configuration](/docs/config) for the LogChimp site.
+Create a `logchimp.config.json` file in the root directory, which will contain all the [configuration](/docs/config) for the LogChimp site.
 
 **NOTE:** The configuration below is just an example and not recommended for production use.
 
