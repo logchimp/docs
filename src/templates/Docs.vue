@@ -10,9 +10,7 @@
 					<header>
 						<h1>{{ $page.doc.title }}</h1>
 					</header>
-					<div class="markdown">
-						<VueRemarkContent />
-					</div>
+					<VueRemarkContent class="markdown" />
 				</main>
 			</div>
 		</div>
