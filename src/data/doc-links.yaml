@@ -11,6 +11,8 @@
       link: /docs/principles
     - title: Architecture
       link: /docs/architecture
+    - title: Configuration
+      link: /docs/config
 
 - title: CLI
   items:
