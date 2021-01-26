@@ -1,7 +1,11 @@
 ---
 title: logchimp install
-description: The `logchimp install` command is your one-stop-shop to get a running production install of LogChimp.
 ---
+
+<!-- components -->
+import Blockquote from "@/components/Blockquote"
+
+The `logchimp install` command is your one-stop-shop to get a running production install of LogChimp.
 
 ```bash
 USAGE
@@ -26,7 +30,9 @@ EXAMPLES
 
 The `logchimp install` command is your one-stop-shop to get a running production install of LogChimp.
 
-> Not ready for production yet? `logchimp install --local` installs LogChimp in development mode.
+<Blockquote type="tip">
+  Not ready for production yet? `logchimp install --local` installs LogChimp in development mode.
+</Blockquote>
 
 ### How it works
 

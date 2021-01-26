@@ -1,6 +1,5 @@
 ---
 title: Post
-description: 
 ---
 
 Posts are the primary resource in a LogChimp site. Using the posts endpoint it is possible to get lists of posts filtered by various criteria.

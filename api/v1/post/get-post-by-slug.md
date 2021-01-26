@@ -1,8 +1,9 @@
 ---
 title: Get post by slug
 method: GET
-description: Fetch all posts
 ---
+
+Fetch all posts
 
 ```
 https://yourdomain.com/api/v1/post/:slug

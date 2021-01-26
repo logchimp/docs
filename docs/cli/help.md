@@ -1,7 +1,8 @@
 ---
-title: help
-description: Use the help command to access the list of possible `logchimp-cli` commands when required.
+title: logchimp help
 ---
+
+Use the help command to access the list of possible `logchimp-cli` commands when required.
 
 ```bash
 USAGE

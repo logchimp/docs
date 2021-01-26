@@ -1,6 +1,6 @@
 <template>
 	<header>
-		<div class="container">
+		<div class="inner">
 			<div class="header__wrapper">
 				<div class="header__navbar">
 					<g-link class="header__logo" to="/">

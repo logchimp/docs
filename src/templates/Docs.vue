@@ -1,15 +1,29 @@
 <template>
-	<docs-layout :menu="docsMenu" :title="$page.doc.title" route="docs">
-		<VueRemarkContent />
-	</docs-layout>
+	<div>
+		<Header />
+		<div class="inner">
+			<div class="docs">
+				<aside class="docs-links">
+					<docs-sidebar :links="links" />
+				</aside>
+				<main class="docs-content">
+					<header>
+						<h1>{{ $page.doc.title }}</h1>
+					</header>
+					<VueRemarkContent class="markdown" />
+				</main>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
 // data
-import DocsMenu from "../../data/docs.json";
+import links from "@/data/doc-links.yaml";
 
 // components
-import DocsLayout from "../layouts/Docs";
+import Header from "../layouts/partials/Header";
+import DocsSidebar from "../components/DocsSidebar";
 
 export default {
 	name: "Docs",
@@ -20,12 +34,13 @@ export default {
 		};
 	},
 	components: {
-		DocsLayout,
+		Header,
+		DocsSidebar
 	},
 	computed: {
-		docsMenu() {
-			return DocsMenu;
-		},
+		links() {
+			return links;
+		}
 	},
 };
 </script>
@@ -34,7 +49,6 @@ export default {
 query DocPage ($path: String!) {
 	doc: docPage (path: $path) {
 		title
-		description
 		path
 		content
 	}

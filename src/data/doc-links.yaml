@@ -1,0 +1,29 @@
+- title: Getting Started
+  items:
+    - title: Introduction
+      link: /docs/introduction
+    - title: Installation
+      link: /docs/install
+
+- title: Core Concepts
+  items:
+    - title: Principles
+      link: /docs/principles
+    - title: Architecture
+      link: /docs/architecture
+    - title: Configuration
+      link: /docs/config
+
+- title: CLI
+  items:
+    - title: Introduction
+      link: /docs/cli
+    - title: Commands
+      link: /docs/cli/commands
+
+- title: Resources
+  items:
+    - title: Contributing
+      link: /docs/contributing
+    - title: Logos
+      link: /docs/logos

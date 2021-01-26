@@ -1,6 +1,5 @@
 ---
 title: GET posts
-description:
 method: GET
 ---
 
