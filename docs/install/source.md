@@ -2,6 +2,9 @@
 title: Install from Source
 ---
 
+<!-- components -->
+import Blockquote from "@/components/Blockquote"
+
 This guide is for installing a local development copy of LogChimp from source code, primarily for development purposes.
 ## Prerequisites
 
@@ -53,7 +56,9 @@ Once you take down the Postgres Docker container all the data is also removed, t
 
 ## Configuration file
 
-> Starting from v0.4.0 `.env` has been replaced with `logchimp.config.json`.
+<Blockquote type="warning">
+  Starting from v0.4.0 `.env` has been replaced with `logchimp.config.json`.
+</Blockquote>
 
 Create a `logchimp.config.json` file in the root directory, which will contain all the [configuration](/docs/config) for the LogChimp site.
 
