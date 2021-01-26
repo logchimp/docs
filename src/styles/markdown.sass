@@ -1,74 +1,38 @@
 .markdown
-	h1, h2, h3, h4, h5, h6
-		margin-top: 1.5rem
-		font-weight: 400
+	& > p:first-child
+		border-bottom: 1px solid $gray-90
+		line-height: 1.4
+		font-size: 1.20rem
+		padding-bottom: 1.25rem
+		color: rgba(black, 0.5)
 
-	h1, h2, h3, h4, h5, h6
-		margin-bottom: 0.625rem
-
-	ol, ul, p, blockquote, table
-		margin-bottom: 1rem
-
-	ol, ul, p
-		line-height: 1.7
-		font-weight: 400
-
-	p
-		margin-bottom: 1.125rem
-
-		&:last-child
-			margin-bottom: 0
-
-	strong
-		font-weight: 600
-
-	p, li
-		word-wrap: break-word
-
-	ol, ul
-		padding-left: 1.2rem
-
-		li
-			margin-bottom: .25rem
+		code
+			font-size: 1rem
 
 	a
-		color: $brand-color
 		font-weight: 500
-		text-decoration: underline
 
-		&:hover
-			color: darken($brand-color, 5%)
+	h2, h3, h4, h5, h6
+		margin-top: 3rem
+		margin-bottom: 1rem
+		font-weight: 600
+		letter-spacing: -0.02rem
 
-	hr
-		margin-top: 4rem
-		margin-bottom: 4rem
-		border: 1px solid $gray-90
-
-	p img
-		display: flex
-		margin: 0 auto 1.5rem
-		max-width: 100%
-
-	blockquote
-		padding: 0.375rem 1.25rem
-		border-left: .25rem solid $gray-90
-		font-size: 1.125rem
-
-		p
-			margin-bottom: 0
-
-	table
+	img
 		width: 100%
-		overflow-x: scroll
+		margin: 0 auto
 
-		thead tr th
-			border-bottom: 1px solid $gray-90
-			padding: .5rem 1rem .5rem 0
-			font-weight: 400
-			color: $gray-60
+	ol, ul, p
+		margin-bottom: 1.25rem
+		color: rgba(black, 0.6)
+		line-height: 1.6
 
-		tbody tr td
-			padding: .5rem 1rem .5rem 0
+	ol, ul
+		padding-left: 1.625rem
 
-		th
-			text-align: left
+		li
+			margin-bottom: 0.625rem
+
+	strong
+		color: $text
+		font-weight: 600
