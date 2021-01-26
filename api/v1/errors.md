@@ -19,3 +19,12 @@ LogChimp uses conventional HTTP response codes to indicate the success or failur
 | 429 - Too Many Requests            | Too many requests hit the API too quickly. We recommend an exponential backoff of your requests. |
 | 500, 502, 503, 504 - Server Errors | Something went wrong on your LogChimp site hosted server.                                        |
 
+### Attributes
+
+#### code `(string)`
+
+For some errors that could be handled programmatically, a short string indicating the error code reported, see the list of error code below.
+
+#### message `(string)`
+
+A human-readable message providing more details about the error.
