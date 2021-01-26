@@ -57,25 +57,6 @@ Once you take down the Postgres Docker container all the data is also removed, t
 
 Create a `logchimp.config.json` file in the root directory, which will contain all the [configuration](/docs/config) for the LogChimp site.
 
-**NOTE:** The configuration below is just an example and not recommended for production use.
-
-```json
-{
-  "database": {
-    "host": "localhost",
-    "user": "lc",
-    "password": "password",
-    "name": "lc_db",
-    "port": 1002,
-    "ssl": false
-  },
-  "server": {
-    "port": 9090,
-    "secretKey": "Maposaketom3Xecysutoxah4Xyzuropivuxuve2"
-  }
-}
-```
-
 ### Start LogChimp
 
 You need two separate terminal windows to run the client and backend separately.

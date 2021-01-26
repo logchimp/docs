@@ -20,6 +20,8 @@ LogChimp supports three environments: **development**, **testing**, **production
 
 There are number of options which are explained in detail below.
 
+**NOTE:** The configuration below is just an example and not recommended for production use.
+
 ```json
 {
   "database": {
