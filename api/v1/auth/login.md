@@ -1,6 +1,5 @@
 ---
 title: Login
-description: 
 method: POST
 ---
 

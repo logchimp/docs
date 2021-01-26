@@ -1,6 +1,5 @@
 ---
 title: Auth
-description: 
 ---
 
 ### Endpoints

@@ -1,7 +1,6 @@
 ---
 title: updatePostById
 method: PATCH
-description:
 ---
 
 ```

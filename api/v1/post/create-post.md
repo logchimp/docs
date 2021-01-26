@@ -1,6 +1,5 @@
 ---
 title: Create posts
-description: 
 method: POST
 ---
 

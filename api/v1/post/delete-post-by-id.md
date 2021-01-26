@@ -1,6 +1,5 @@
 ---
 title: Delete post by ID
-description: 
 method: DELETE
 ---
 

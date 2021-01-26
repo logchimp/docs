@@ -1,6 +1,5 @@
 ---
 title: Signup
-description:
 method: POST
 ---
 

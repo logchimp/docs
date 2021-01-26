@@ -49,7 +49,6 @@ export default {
 query DocPage ($path: String!) {
 	doc: docPage (path: $path) {
 		title
-		description
 		path
 		content
 	}

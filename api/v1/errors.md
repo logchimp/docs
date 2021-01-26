@@ -1,7 +1,8 @@
 ---
 title: Errors
-description: Learn more about common error codes and how to resolve them.
 ---
+
+Learn more about common error codes and how to resolve them.
 
 LogChimp uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the **`2xx`** range indicate success. Codes in the **`4xx`** range indicate an error that failed given the information provided _(e.g., a required parameter was omitted, a post not found, etc.)_. Codes in the **`5xx`** range indicate an error with your LogChimp site hosted server.
 
