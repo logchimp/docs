@@ -20,12 +20,6 @@ export default {
 		return {
 			products: [
 				{
-					title: "Local install",
-					image: "/images/docs/laptop.png",
-					link: "/docs/install/local",
-					label: "MacOS, Windows & Linux"
-				},
-				{
 					title: "Install from Source",
 					image: "/images/docs/terminal-logo.png",
 					link: "/docs/install/source",
