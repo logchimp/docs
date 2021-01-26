@@ -17,7 +17,7 @@
 - title: CLI
   items:
     - title: Introduction
-      link: /docs/cli/introduction
+      link: /docs/cli
     - title: Commands
       link: /docs/cli/commands
 
