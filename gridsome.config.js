@@ -12,7 +12,10 @@ module.exports = {
 				baseDir: "./docs",
 				pathPrefix: "/docs",
 				template: "./src/templates/Docs.vue",
-				index: ["readme"]
+				index: ["readme"],
+				plugins: [
+					"@gridsome/remark-prismjs"
+				]
 			}
 		}
 	]
