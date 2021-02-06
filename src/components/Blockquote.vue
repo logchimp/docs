@@ -4,6 +4,13 @@
 		'blockquote-warning': type === 'warning',
 		'blockquote-alert': type === 'alert'
 	}">
+		<p class="blockquote-type"
+			:style="{
+				color: typeColor
+			}"
+		>
+			{{ type }}
+		</p>
 		<div class="blockquote-content">
 			<slot />
 		</div>
@@ -19,6 +26,19 @@ export default {
 			default: "tip",
 			validator: (value) => {
 				return ["tip", "warning", "alert"].includes(value)
+			}
+		}
+	},
+	computed: {
+		typeColor() {
+			switch (this.type) {
+				case "warning":
+					return "#E8BD43";
+				case "alert":
+					return "#DE544E";
+				case "tip":
+				default:
+					return "#579672";
 			}
 		}
 	}
