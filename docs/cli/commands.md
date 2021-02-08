@@ -15,3 +15,9 @@ Below are the available LogChimp CLI commands. You can always run `logchimp --he
 - [logchimp start](/docs/cli/start)
 - [logchimp uninstall](/docs/cli/uninstall)
 - [logchimp help](/docs/cli/help)
+
+### Config
+
+Command for managing logchimp configuration.
+
+- [logchimp config:generate](/docs/cli/config/generate)
