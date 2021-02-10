@@ -87,8 +87,8 @@ export default {
 				content: 'Build better products by tracking customer feedback with LogChimp.'
 			},
 			{
-				name: 'keywords',
-				content: 'Build better products by tracking customer feedback with LogChimp.'
+				property: 'url',
+				content: 'https://logchimp.codecarrot.net/'
 			},
 
 			// Google
@@ -98,6 +98,10 @@ export default {
 			},
 
 			// Facebook
+			{
+				property: 'og:site_name',
+				content: 'LogChimp'
+			},
 			{
 				property: 'og:title',
 				content: 'Build better products with customer feedback'
@@ -139,6 +143,10 @@ export default {
 			{
 				name: 'twitter:url',
 				content: 'https://logchimp.codecarrot.net/'
+			},
+			{
+				name: 'twitter:card',
+				content: 'summary_large_image'
 			}
 		],
 		link: [
