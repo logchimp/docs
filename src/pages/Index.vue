@@ -16,7 +16,7 @@
 			</div>
 
 			<div class="homepage-hero-image">
-				<g-image src="/images/logchimp-design-home-preview.png" />
+				<g-image alt="LogChimp default theme homepage design preview" src="/images/logchimp-design-home-preview.png" />
 			</div>
 		</div>
 
