@@ -6,6 +6,13 @@
 	cursor: pointer
 	user-select: none
 	display: inline-flex
+	align-items: center
+
+	&-icon
+		margin-right: 0.5rem
+
+	svg
+		display: flex
 
 .button-primary
 	background-color: $brand-color
@@ -16,6 +23,7 @@
 	cursor: not-allowed
 
 .button-outline
+	color: $text
 	border: 1px solid $gray-80
 
 	&:hover
