@@ -80,7 +80,73 @@ export default {
 		DashboardIcon
 	},
 	metaInfo: {
-		title: "Track feedback to build better products",
-	},
+		title: "Build better products with customer feedback",
+		meta: [
+			{
+				name: 'description',
+				content: 'Build better products by tracking customer feedback with LogChimp.'
+			},
+			{
+				name: 'keywords',
+				content: 'Build better products by tracking customer feedback with LogChimp.'
+			},
+
+			// Google
+			{
+				itemprop: 'description',
+				content: 'Build better products by tracking customer feedback with LogChimp.'
+			},
+
+			// Facebook
+			{
+				property: 'og:title',
+				content: 'Build better products with customer feedback'
+			},
+			{
+				property: 'og:description',
+				content: 'Build better products by tracking customer feedback with LogChimp.'
+			},
+			{
+				property: 'og:url',
+				content: 'https://logchimp.codecarrot.net/'
+			},
+			{
+				property: 'og:type',
+				content: 'website'
+			},
+			{
+				name: 'og:image',
+				content: 'https://logchimp.codecarrot.net/images/logchimp-social.png'
+			},
+
+			// Twitter
+			{
+				name: 'twitter:title',
+				content: 'Build better products with customer feedback'
+			},
+			{
+				name: 'twitter:description',
+				content: 'Build better products by tracking customer feedback with LogChimp.'
+			},
+			{
+				name: 'twitter:image',
+				content: 'https://logchimp.codecarrot.net/images/logchimp-social.png'
+			},
+			{
+				name: 'twitter:site',
+				content: '@logchimp'
+			},
+			{
+				name: 'twitter:url',
+				content: 'https://logchimp.codecarrot.net/'
+			}
+		],
+		link: [
+			{
+				rel: "canonical",
+				href: "https://logchimp.codecarrot.net/"
+			}
+		]
+	}
 };
 </script>
