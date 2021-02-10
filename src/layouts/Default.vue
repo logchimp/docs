@@ -16,6 +16,14 @@ export default {
 	components: {
 		Header,
 		Footer
+	},
+	metaInfo: {
+		meta: [
+			{
+				name: "robots",
+				content: "index, follow"
+			}
+		]
 	}
 }
 </script>
