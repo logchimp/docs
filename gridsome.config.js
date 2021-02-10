@@ -9,6 +9,15 @@ module.exports = {
 
 	plugins: [
 		{
+			use: '@gridsome/plugin-google-analytics',
+			options: {
+				id: 'G-VWDTQGN6J4',
+				debug: {
+					sendHitTask: process.env.NODE_ENV === 'production'
+				}
+			}
+		},
+		{
 			use: "@gridsome/vue-remark",
 			options: {
 				typeName: "DocPage",

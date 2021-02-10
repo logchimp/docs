@@ -10,6 +10,7 @@
     "node": ">=12"
   },
   "dependencies": {
+    "@gridsome/plugin-google-analytics": "^0.1.2",
     "gridsome": "^0.7.23",
     "lucide-vue": "^0.13.0-beta.0"
   },
