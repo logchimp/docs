@@ -1,20 +1,17 @@
 <template>
-	<div>
-		<Header />
-		<div class="inner">
-			<div class="docs">
-				<aside class="docs-links">
-					<docs-sidebar :links="links" />
-				</aside>
-				<main class="docs-content">
-					<header>
-						<h1>{{ $page.doc.title }}</h1>
-					</header>
-					<VueRemarkContent class="markdown" />
-				</main>
-			</div>
+	<Layout>
+		<div class="docs">
+			<aside class="docs-links">
+				<docs-sidebar :links="links" />
+			</aside>
+			<main class="docs-content">
+				<header>
+					<h1>{{ $page.doc.title }}</h1>
+				</header>
+				<VueRemarkContent class="markdown" />
+			</main>
 		</div>
-	</div>
+	</Layout>
 </template>
 
 <script>
