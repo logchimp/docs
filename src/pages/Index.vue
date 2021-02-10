@@ -2,10 +2,10 @@
 	<Layout>
 		<div class="homepage-hero">
 			<div class="homepage-hero-content">
-				<h1>Track feedback to build better products</h1>
+				<h1>Build better products with customer feedback</h1>
 				<p class="small-text">
-					Make better product decisions by track, manage, engage, and analyze
-					with ease.
+					Make product decisions by track, manage, engage, and analyze your
+					customers feedback with ease.
 				</p>
 
 				<div class="homepage-hero-cta">
@@ -25,7 +25,10 @@
 				<heart-icon style="stroke: #d75a5a" />
 				<div>
 					<h5>We <3 open source</h5>
-					<p>LogChimp is open source from day-one and ready for your contributions.</p>
+					<p>
+						LogChimp is open source from day-one and ready for your
+						contributions.
+					</p>
 				</div>
 			</div>
 			<div class="homepage-features-item">
