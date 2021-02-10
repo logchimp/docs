@@ -9,14 +9,17 @@
 				</p>
 
 				<div class="homepage-hero-cta">
-					<Button click="$router.push('/docs')" type="primary"
-						>Get started</Button
-					>
+					<Button @click="$router.push('/docs')" type="primary">
+						Get started
+					</Button>
 				</div>
 			</div>
 
 			<div class="homepage-hero-image">
-				<g-image alt="LogChimp default theme homepage design preview" src="/images/logchimp-design-home-preview.png" />
+				<g-image
+					alt="LogChimp default theme homepage design preview"
+					src="/images/logchimp-design-home-preview.png"
+				/>
 			</div>
 		</div>
 

@@ -1,23 +1,25 @@
 .button
-	position: relative
 	padding: .875rem 1.5rem
 	border-radius: $border-radius
 	font-weight: 500
-	display: flex
-	justify-content: center
+	text-align: center
 	cursor: pointer
 	user-select: none
+	display: inline-flex
 
-.button__primary
+.button-primary
 	background-color: $brand-color
 	color: $white
 
-.button__outline
-	border: 1px solid rgba($white, .5)
+.button-disabled
+	opacity: .7
+	cursor: not-allowed
+
+.button-outline
+	border: 1px solid $gray-80
 
 	&:hover
-		border-color: $white
+		border-color: $gray-70
 
-.button__primary-disabled
-	opacity: .7
-	cursor: default
+.button-outline-disabled
+	background-color: $gray-80
