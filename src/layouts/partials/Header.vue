@@ -1,24 +1,16 @@
 <template>
 	<header>
-		<div class="inner">
-			<div class="header__wrapper">
-				<div class="header__navbar">
-					<g-link class="header__logo" to="/">
-						<img src="@/assets/images/logo_with_name.svg" alt="LogChimp logo">
-					</g-link>
-					<nav class="navbar">
-						<!-- <g-link to="/product" class="navbar__item">
-							Product
-						</g-link> -->
-						<g-link to="/docs/" class="navbar__item"> Developers </g-link>
-						<!-- <g-link to="/resources" class="navbar__item">
-							Resources
-						</g-link> -->
-					</nav>
-				</div>
-				<div class="header__action">
-					<Button type="primary"> Get started now </Button>
-				</div>
+		<div class="header__wrapper">
+			<div class="header__navbar">
+				<logo />
+			</div>
+			<div class="header__action">
+				<Button @click="githubRepository" type="outline">
+					<template #icon>
+						<github-icon width="1.5rem" height="1.5rem" fill="#1A1A1A" />
+					</template>
+					GitHub
+				</Button>
 			</div>
 		</div>
 	</header>
@@ -26,12 +18,25 @@
 
 <script>
 // components
+import Logo from "../../components/Logo";
 import Button from "../../components/Button";
+
+// icons
+import GithubIcon from "../../components/icons/github";
 
 export default {
 	name: "Header",
 	components: {
+		Logo,
 		Button,
+
+		// icons
+		GithubIcon
 	},
+	methods: {
+		githubRepository() {
+			window.location.href = "https://github.com/logchimp/logchimp"
+		}
+	}
 };
 </script>

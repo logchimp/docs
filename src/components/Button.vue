@@ -1,5 +1,8 @@
 <template>
-	<div class="button" :class="[`button__${type}`]" @click="$emit('click')">
+	<div class="button" :class="[`button-${type}`]" @click="$emit('click')">
+		<div class="button-icon">
+			<slot name="icon" />
+		</div>
 		<slot />
 	</div>
 </template>
@@ -11,7 +14,7 @@ export default {
 		type: {
 			type: String,
 			required: true,
-		},
-	},
+		}
+	}
 };
 </script>
