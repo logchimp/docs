@@ -3,6 +3,9 @@ module.exports = {
 	siteDescription: "Track user feedback to build better products",
 	siteUrl: "https://logchimp.codecarrot.net/",
 	titleTemplate: "%s | LogChimp",
+	css: {
+		split: true
+	},
 
 	plugins: [
 		{
