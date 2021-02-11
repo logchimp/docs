@@ -1,17 +1,18 @@
 <template>
-	<header>
-		<div class="header__wrapper">
-			<div class="header__navbar">
-				<logo />
-			</div>
-			<div class="header__action">
-				<Button @click="githubRepository" type="outline">
+	<header class="header">
+		<div class="header-wrapper">
+			<logo />
+			<nav class="header-navbar">
+				<g-link to="/features" class="navbar-item">
+					Features
+				</g-link>
+				<Button @click="githubRepository" type="outline" class="navbar-item">
 					<template #icon>
 						<github-icon width="1.5rem" height="1.5rem" fill="#1A1A1A" />
 					</template>
 					GitHub
 				</Button>
-			</div>
+			</nav>
 		</div>
 	</header>
 </template>
