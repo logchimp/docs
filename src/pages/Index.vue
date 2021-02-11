@@ -105,10 +105,6 @@ export default {
 
 			// Facebook
 			{
-				property: 'og:site_name',
-				content: 'LogChimp'
-			},
-			{
 				property: 'og:title',
 				content: 'Build better products with customer feedback'
 			},
@@ -119,14 +115,6 @@ export default {
 			{
 				property: 'og:url',
 				content: 'https://logchimp.codecarrot.net/'
-			},
-			{
-				property: 'og:type',
-				content: 'website'
-			},
-			{
-				name: 'og:image',
-				content: 'https://logchimp.codecarrot.net/images/logchimp-social.png'
 			},
 
 			// Twitter
@@ -139,20 +127,8 @@ export default {
 				content: 'Build better products by tracking customer feedback with LogChimp.'
 			},
 			{
-				name: 'twitter:image',
-				content: 'https://logchimp.codecarrot.net/images/logchimp-social.png'
-			},
-			{
-				name: 'twitter:site',
-				content: '@logchimp'
-			},
-			{
 				name: 'twitter:url',
 				content: 'https://logchimp.codecarrot.net/'
-			},
-			{
-				name: 'twitter:card',
-				content: 'summary_large_image'
 			}
 		],
 		link: [

@@ -24,12 +24,6 @@ import DocsSidebar from "../components/DocsSidebar";
 
 export default {
 	name: "Docs",
-	metaInfo() {
-		return {
-			title: this.$page.doc.title,
-			description: this.$page.doc.description,
-		};
-	},
 	components: {
 		Header,
 		DocsSidebar
@@ -39,6 +33,46 @@ export default {
 			return links;
 		}
 	},
+	metaInfo() {
+		return {
+			title: `${this.$page.doc.title} | Documentation `,
+			description: this.$page.doc.description,
+			meta: [
+				{
+					name: "robots",
+					content: "index, follow"
+				},
+
+				// Facebook
+				{
+					property: 'og:site_name',
+					content: 'LogChimp'
+				},
+				{
+					property: 'og:type',
+					content: 'website'
+				},
+				{
+					name: 'og:image',
+					content: 'https://logchimp.codecarrot.net/images/logchimp-social.png'
+				},
+
+				// Twitter
+				{
+					name: 'twitter:image',
+					content: 'https://logchimp.codecarrot.net/images/logchimp-social.png'
+				},
+				{
+					name: 'twitter:site',
+					content: '@logchimp'
+				},
+				{
+					name: 'twitter:card',
+					content: 'summary_large_image'
+				}
+			]
+		};
+	}
 };
 </script>
 
