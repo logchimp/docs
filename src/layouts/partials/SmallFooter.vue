@@ -1,5 +1,6 @@
 <template>
 	<footer>
+		<sponsor-strap />
 		<div class="footer-container">
 			<div class="footer-col">
 				<logo />
@@ -37,11 +38,13 @@
 <script>
 // components
 import Logo from "../../components/Logo";
+import SponsorStrap from '../../components/SponsorStrap';
 
 export default {
 	name: "SmallFooter",
 	components: {
-		Logo
+		Logo,
+		SponsorStrap
 	}
 }
 </script>

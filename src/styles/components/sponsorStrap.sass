@@ -1,0 +1,36 @@
+.sponsor-strap
+	display: grid
+	align-items: center
+	padding-bottom: 2rem
+	padding: 2rem
+	border-radius: 1.5rem
+	border: 1px solid $gray-90
+	margin-bottom: 4rem
+
+.sponsor-strap-content
+	margin-bottom: 2rem
+
+.sponsor-strap-heading
+	display: flex
+	align-items: center
+	margin-bottom: 0.5rem
+
+	svg
+		margin-right: 0.5rem
+		stroke: #db61a2
+		stroke-width: 3
+
+.sponsor-strap-cta
+	display: flex
+	justify-content: flex-start
+
+@media screen and (min-width: 768px)
+	.sponsor-strap
+		padding: 4rem
+		grid-template-columns: 1fr 1fr
+
+	.sponsor-strap-content
+		margin-bottom: 0
+
+	.sponsor-strap-cta
+		justify-content: flex-end
