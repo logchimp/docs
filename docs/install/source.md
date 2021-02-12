@@ -20,6 +20,13 @@ You can read more about engine requirements from [package.json](https://github.c
 
 First, you'll need to make a fork of the [LogChimp](https://github.com/logchimp/logchimp) repository. Click on the fork button right at the top, wait for a copy to be created over on your personal GitHub account, and you should be all set!
 
+<Blockquote type="tip">
+  You'll also need a LogChimp theme as client to intract with LogChimp APIs.
+</Blockquote>
+
+* LogChimp Core - https://github.com/logchimp/logchimp
+* LogChimp default theme - https://github.com/logchimp/theme
+
 ## Install dependencies
 
 ```bash
@@ -67,9 +74,9 @@ Create a `logchimp.config.json` file in the root directory, which will contain a
 You need two separate terminal windows to run the client and backend separately.
 
 ```bash
-# in terminal 1
-yarn run frontend:dev
+# in terminal 1 - to run logchimp core
+yarn run dev
 
-# in terminal 2
-yarn run server:dev
+# in terminal 2 - to run logchimp theme
+yarn run dev
 ```
