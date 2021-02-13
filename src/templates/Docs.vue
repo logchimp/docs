@@ -70,6 +70,23 @@ export default {
 					name: 'twitter:card',
 					content: 'summary_large_image'
 				}
+			],
+			link: [
+				{
+					rel: "alternate icon",
+					type: "image/png",
+					href: "https://logchimp.codecarrot.net/images/favicon.png"
+				},
+				{
+					rel: "shortcut icon",
+					type: "image/icon",
+					href: "https://logchimp.codecarrot.net/images/favicon.ico"
+				},
+				{
+					rel: "icon",
+					type: "image/svg+xml",
+					href: "https://logchimp.codecarrot.net/images/favicon.svg"
+				}
 			]
 		};
 	}
