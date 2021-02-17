@@ -12,7 +12,7 @@
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.2",
     "gridsome": "^0.7.23",
-    "lucide-vue": "^0.13.0-beta.0"
+    "lucide-vue": "^0.13.0-beta.1"
   },
   "devDependencies": {
     "@gridsome/remark-prismjs": "^0.5.0",
