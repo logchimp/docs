@@ -3,6 +3,9 @@
 		<div class="header-wrapper">
 			<logo />
 			<nav class="header-navbar">
+				<g-link to="/docs" class="navbar-item">
+					Docs
+				</g-link>
 				<g-link to="/features" class="navbar-item">
 					Features
 				</g-link>
