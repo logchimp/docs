@@ -23,7 +23,7 @@
 			</div>
 		</div>
 
-		<div class="homepage-features">
+		<div class="homepage-features homepage-section">
 			<div class="homepage-features-item">
 				<heart-icon style="stroke: #d75a5a" />
 				<div>
