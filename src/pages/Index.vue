@@ -9,7 +9,7 @@
 				</p>
 
 				<div class="homepage-hero-cta">
-					<Button @click="$router.push('/docs')" type="primary">
+					<Button @click="$router.push('/get-started')" type="primary">
 						Get started
 					</Button>
 				</div>
