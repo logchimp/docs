@@ -1,15 +1,19 @@
 <template>
 	<nav class="docs-sidebar">
+		<div class="docs-sidebar-category">
+			<g-link to="/docs">
+				<div class="docs-sidebar-category-icon">
+					<file-icon />
+				</div>
+				<p>Documentation</p>
+			</g-link>
+		</div>
 		<div class="docs-sidebar-container">
 			<div v-for="section in links" class="docs-sidebar-section">
 				<h5 class="docs-sidebar-section-title">
 					{{ section.title }}
 				</h5>
-				<g-link
-					:to="item.link"
-					v-for="item in section.items"
-					:key="item.link"
-				>
+				<g-link :to="item.link" v-for="item in section.items" :key="item.link">
 					{{ item.title }}
 				</g-link>
 			</div>
@@ -18,6 +22,10 @@
 </template>
 
 <script>
+import {
+	FileText as FileIcon
+} from "lucide-vue";
+
 export default {
 	name: "DocsSidebar",
 	props: {
@@ -27,6 +35,9 @@ export default {
 				return [];
 			}
 		}
+	},
+	components: {
+		FileIcon
 	}
 };
 </script>
