@@ -38,6 +38,59 @@ export default {
 		// icons
 		ServerIcon,
 		CheckIcon
+	},
+	metaInfo: {
+		title: "Get Started with LogChimp - Self-hosted collecting customer feedback software",
+		meta: [
+			{
+				name: 'description',
+				content: 'Get started using LogChimp today. Download our self-managed software, try it for free.'
+			},
+			{
+				property: 'url',
+				content: 'https://logchimp.codecarrot.net/get-started/'
+			},
+
+			// Google
+			{
+				itemprop: 'description',
+				content: 'Get started using LogChimp today. Download our self-managed software, try it for free.'
+			},
+
+			// Facebook
+			{
+				property: 'og:title',
+				content: 'Get Started with LogChimp - Self-hosted collecting customer feedback software'
+			},
+			{
+				property: 'og:description',
+				content: 'Get started using LogChimp today. Download our self-managed software, try it for free.'
+			},
+			{
+				property: 'og:url',
+				content: 'https://logchimp.codecarrot.net/get-started/'
+			},
+
+			// Twitter
+			{
+				name: 'twitter:title',
+				content: 'Get Started with LogChimp - Self-hosted collecting customer feedback software'
+			},
+			{
+				name: 'twitter:description',
+				content: 'Get started using LogChimp today. Download our self-managed software, try it for free.'
+			},
+			{
+				name: 'twitter:url',
+				content: 'https://logchimp.codecarrot.net/get-started/'
+			}
+		],
+		link: [
+			{
+				rel: "canonical",
+				href: "https://logchimp.codecarrot.net/get-started/"
+			}
+		]
 	}
 }
 </script>
