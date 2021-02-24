@@ -12,7 +12,7 @@
 			<div class="features">
 				<div class="features-item">
 					<g-image
-						src="/images/features/branding.jpg"
+						src="@/assets/images/features/branding.jpg"
 						alt="LogChimp feature brand"
 					/>
 					<div class="features-item-content">
@@ -23,7 +23,7 @@
 
 				<div class="features-item">
 					<g-image
-						src="/images/features/dashboard.jpg"
+						src="@/assets/images/features/dashboard.jpg"
 						alt="LogChimp feature brand"
 					/>
 					<div class="features-item-content">
@@ -34,7 +34,7 @@
 
 				<div class="features-item">
 					<g-image
-						src="/images/features/boards.jpg"
+						src="@/assets/images/features/boards.jpg"
 						alt="LogChimp feature brand"
 					/>
 					<div class="features-item-content">
@@ -45,7 +45,7 @@
 
 				<div class="features-item">
 					<g-image
-						src="/images/features/roadmaps.jpg"
+						src="@/assets/images/features/roadmaps.jpg"
 						alt="LogChimp feature brand"
 					/>
 					<div class="features-item-content">
@@ -56,7 +56,7 @@
 
 				<div class="features-item">
 					<g-image
-						src="/images/features/users.jpg"
+						src="@/assets/images/features/users.jpg"
 						alt="LogChimp feature brand"
 					/>
 					<div class="features-item-content">
