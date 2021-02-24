@@ -1,0 +1,33 @@
+.open-source-item
+	display: flex
+	margin-bottom: 1.5rem
+	flex-direction: column
+
+	&:last-child
+		margin-bottom: 0
+
+	img
+		flex-grow: 1
+		width: 100%
+
+@media screen and (min-width: 768px)
+	.open-source-item
+		flex-direction: row
+		align-items: center
+
+		&:nth-child(2n)
+			flex-direction: row-reverse
+
+		img
+			width: 50%
+
+.open-source-item-content
+	flex-grow: 3
+
+	h2
+		margin-bottom: 1rem
+
+	p
+		color: $gray-60
+		line-height: 1.5
+		font-size: 1.125rem
