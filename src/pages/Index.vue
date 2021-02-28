@@ -18,14 +18,14 @@
 			<div class="homepage-hero-image">
 				<g-image
 					alt="LogChimp default theme homepage design preview"
-					src="/images/logchimp-design-home-preview.png"
+					src="@/assets/images/home/logchimp-design-home-preview.png"
 				/>
 			</div>
 		</div>
 
 		<div class="homepage-post-preview homepage-section">
 			<img
-				src="@/assets/images/homepage-lc-post-card.png"
+				src="@/assets/images/home/homepage-lc-post-card.png"
 				alt="LogChimp post card"
 			/>
 			<div class="homepage-post-preview-content">
