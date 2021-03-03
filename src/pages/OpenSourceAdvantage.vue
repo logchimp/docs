@@ -22,7 +22,9 @@
 							community with {{ $page.repo.stargazers_count }} stars 🤩. We
 							release all our code and intellectual property under an open
 							source license. Not only do you retain total control over data —
-							but you have full access to source code, and core APIs.
+							but you have full access to
+							<a href="https://github.com/logchimp/logchimp">source code</a>,
+							and core APIs.
 						</p>
 					</div>
 				</div>
@@ -48,8 +50,12 @@
 					<div class="open-source-item-content">
 						<h2>Vulnerability Scanning</h2>
 						<p>
-							LogChimp performs CodeQL analytics using GitHub Actions to continuously scan
-							for vulnerabilities.
+							LogChimp performs
+							<a
+								href="https://github.com/logchimp/logchimp/actions/workflows/codeql-analysis.yml"
+								>CodeQL analytics using GitHub Actions</a
+							>
+							to continuously scan for vulnerabilities.
 						</p>
 					</div>
 				</div>
