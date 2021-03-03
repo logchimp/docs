@@ -1,15 +1,17 @@
 <template>
 	<Layout>
-		<div class="docs">
-			<aside class="docs-links">
-				<docs-sidebar :links="links" />
-			</aside>
-			<main class="docs-content">
-				<header>
-					<h1>{{ $page.doc.title }}</h1>
-				</header>
-				<VueRemarkContent class="markdown" />
-			</main>
+		<div class="inner">
+			<div class="docs">
+				<aside class="docs-links">
+					<docs-sidebar :links="links" />
+				</aside>
+				<main class="docs-content">
+					<header>
+						<h1>{{ $page.doc.title }}</h1>
+					</header>
+					<VueRemarkContent class="markdown" />
+				</main>
+			</div>
 		</div>
 	</Layout>
 </template>
@@ -45,30 +47,30 @@ export default {
 
 				// Facebook
 				{
-					property: 'og:site_name',
-					content: 'LogChimp'
+					property: "og:site_name",
+					content: "LogChimp"
 				},
 				{
-					property: 'og:type',
-					content: 'website'
+					property: "og:type",
+					content: "website"
 				},
 				{
-					name: 'og:image',
-					content: 'https://logchimp.codecarrot.net/images/logchimp-social.png'
+					name: "og:image",
+					content: "https://logchimp.codecarrot.net/images/logchimp-social.png"
 				},
 
 				// Twitter
 				{
-					name: 'twitter:image',
-					content: 'https://logchimp.codecarrot.net/images/logchimp-social.png'
+					name: "twitter:image",
+					content: "https://logchimp.codecarrot.net/images/logchimp-social.png"
 				},
 				{
-					name: 'twitter:site',
-					content: '@logchimp'
+					name: "twitter:site",
+					content: "@logchimp"
 				},
 				{
-					name: 'twitter:card',
-					content: 'summary_large_image'
+					name: "twitter:card",
+					content: "summary_large_image"
 				}
 			],
 			link: [

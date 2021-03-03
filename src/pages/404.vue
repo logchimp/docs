@@ -1,8 +1,10 @@
 <template>
 	<Layout>
-		<div class="error-page">
-			<h1>🤯 404 🤯</h1>
-			<p>Page not found</p>
+		<div class="inner">
+			<div class="error-page">
+				<h1>🤯 404 🤯</h1>
+				<p>Page not found</p>
+			</div>
 		</div>
 	</Layout>
 </template>
@@ -10,7 +12,7 @@
 <script>
 export default {
 	name: "404ErrorPage"
-}
+};
 </script>
 
 <style lang="sass">

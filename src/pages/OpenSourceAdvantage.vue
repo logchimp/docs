@@ -1,6 +1,6 @@
 <template>
 	<Layout>
-		<div class="container">
+		<div class="inner">
 			<header class="static-layout-header">
 				<h2 class="static-layout-heading">Why open source?</h2>
 				<p class="small-text">
