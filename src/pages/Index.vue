@@ -53,6 +53,28 @@
 			</div>
 		</div>
 
+		<div class="homepage-block homepage-section">
+			<div class="inner">
+				<div class="homepage-post-preview">
+					<g-image
+						src="@/assets/images/home/homepage-open-source.png"
+						alt="LogChimp post card"
+					/>
+					<div class="homepage-post-preview-content">
+						<h2>The open source advantage</h2>
+						<p>
+							LogChimp is the open source software written in Node.js and Vue
+							and runs as any Linux-based operating system with PostgreSQL. Use
+							the features you like, for example, branding, dashboard, roadmaps, boards, and RBAC, with full access to source code.
+						</p>
+						<div style="margin-top: 1rem;">
+							<g-link to="/open-source-advantage">Learn more -></g-link>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="inner">
 			<div class="homepage-features homepage-section">
 				<div class="homepage-features-item">
