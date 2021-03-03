@@ -87,13 +87,13 @@
 
 				<div class="open-source-item">
 					<img
-						src="@/assets/images/logchimp-github-repo.png"
+						src="@/assets/images/logchimp-scalability.png"
 						alt="LogChimp Github repository"
 					/>
 					<div class="open-source-item-content">
 						<h2>Scalability</h2>
 						<p>
-							Mattermost was built ground-up for enterprise with a single-tenant
+							LogChimp was built ground-up for enterprise with a single-tenant
 							private cloud architecture offering high availability and
 							horizontal scaling. Tens of thousands of users can operate out of
 							a single team and hundreds of teams can be deployed in an
