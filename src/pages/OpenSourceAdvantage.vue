@@ -18,10 +18,11 @@
 					<div class="open-source-item-content">
 						<h2>Open source</h2>
 						<p>
-							An open source software means your team retains control over the
-							service’s technical roadmap and your team is free to develop
-							additional features without restriction. Supported by a vibrant
-							open source community.
+							LogChimp is an open source software that is supported by a vibrant
+							community with {{ $page.repo.stargazers_count }} stars 🤩. We
+							release all our code and intellectual property under an open
+							source license. Not only do you retain total control over data —
+							but you have full access to source code, and core APIs.
 						</p>
 					</div>
 				</div>
@@ -149,3 +150,11 @@ export default {
 	}
 };
 </script>
+
+<page-query>
+query {
+  repo: logchimpRepository(id: "234876564") {
+    stargazers_count
+  }
+}
+</page-query>
