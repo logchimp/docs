@@ -71,16 +71,16 @@
 
 				<div class="open-source-item">
 					<img
-						src="@/assets/images/logchimp-github-repo.png"
+						src="@/assets/images/logchimp-privacy.png"
 						alt="LogChimp Github repository"
 					/>
 					<div class="open-source-item-content">
 						<h2>Privacy</h2>
 						<p>
-							Your IP address, your usage patterns, the contents of your
-							messages—SaaS services know more about your company than you do.
-							In contrast, Mattermost provides the benefits of modern
-							communication without sacrificing privacy.
+							Other service provider may track your IP address, usage patterns,
+							logs, and know more about your company than you do. In contrast,
+							LogChimp provides the benefits of modern software without
+							sacrificing privacy.
 						</p>
 					</div>
 				</div>
