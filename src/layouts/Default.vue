@@ -61,7 +61,7 @@ export default {
 			{
 				rel: "shortcut icon",
 				type: "image/icon",
-				href: "https://logchimp.codecarrot.net/images/favicon.ico"
+				href: "https://logchimp.codecarrot.net/favicon.ico"
 			},
 			{
 				rel: "icon",
