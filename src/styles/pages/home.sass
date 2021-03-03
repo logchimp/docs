@@ -19,6 +19,34 @@
 	border-radius: $border-radius
 	width: 100%
 
+// logchimp post preview
+.homepage-post-preview
+	display: flex
+	flex-direction: column
+
+	img
+		margin-bottom: 2rem
+
+.homepage-post-preview-content
+
+	h2
+		margin-bottom: 1rem
+
+	p
+		color: $gray-60
+		line-height: 1.5
+		font-size: 1.125rem
+
+@media screen and (min-width: 768px)
+	.homepage-post-preview
+		flex-direction: row
+		align-items: center
+
+		img
+			width: 50%
+			margin-right: 3rem
+			margin-bottom: 0
+
 
 // features
 .homepage-features

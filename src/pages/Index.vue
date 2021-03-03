@@ -18,8 +18,34 @@
 			<div class="homepage-hero-image">
 				<g-image
 					alt="LogChimp default theme homepage design preview"
-					src="/images/logchimp-design-home-preview.png"
+					src="@/assets/images/home/logchimp-design-home-preview.png"
 				/>
+			</div>
+		</div>
+
+		<div class="homepage-post-preview homepage-section">
+			<img
+				src="@/assets/images/home/homepage-lc-post-card.png"
+				alt="LogChimp post card"
+			/>
+			<div class="homepage-post-preview-content">
+				<h2>Collect your customers feedback with confidence</h2>
+				<p>
+					LogChimp helps you to collect, analyze, and organise your customers
+					feedback.
+				</p>
+
+				<div class="check-list">
+					<check-item>
+						<p>Open source</p>
+					</check-item>
+					<check-item>
+						<p>Self-hosted</p>
+					</check-item>
+					<check-item>
+						<p>Secure and full control of data</p>
+					</check-item>
+				</div>
 			</div>
 		</div>
 
@@ -66,6 +92,7 @@
 // packages
 import {
 	Heart as HeartIcon,
+	Check as CheckIcon,
 	Image as BrandIcon,
 	Server as ServerIcon,
 	LayoutDashboard as DashboardIcon
@@ -73,13 +100,16 @@ import {
 
 // components
 import Button from "../components/Button";
+import CheckItem from "../components/CheckItem";
 
 export default {
 	title: "Homepage",
 	components: {
 		Button,
+		CheckItem,
 
 		// icons
+		CheckIcon,
 		HeartIcon,
 		BrandIcon,
 		ServerIcon,
