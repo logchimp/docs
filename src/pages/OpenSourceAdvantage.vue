@@ -42,6 +42,20 @@
 
 				<div class="open-source-item">
 					<img
+						src="@/assets/images/logchimp-vulnerability-scanning.png"
+						alt="LogChimp Github repository"
+					/>
+					<div class="open-source-item-content">
+						<h2>Vulnerability Scanning</h2>
+						<p>
+							LogChimp performs CodeQL analytics using GitHub Actions to continuously scan
+							for vulnerabilities.
+						</p>
+					</div>
+				</div>
+
+				<div class="open-source-item">
+					<img
 						src="@/assets/images/logchimp-security.png"
 						alt="LogChimp Github repository"
 					/>
