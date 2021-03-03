@@ -42,7 +42,7 @@
 
 				<div class="open-source-item">
 					<img
-						src="@/assets/images/logchimp-github-repo.png"
+						src="@/assets/images/logchimp-security.png"
 						alt="LogChimp Github repository"
 					/>
 					<div class="open-source-item-content">
