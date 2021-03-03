@@ -45,6 +45,41 @@ export default {
 	components: {
 		GithubIcon,
 		TwitterIcon
+	},
+	// Meet the Team
+	metaInfo: {
+		title: "Meet the Team",
+		meta: [
+			{
+				property: "url",
+				content: "https://logchimp.codecarrot.net/team"
+			},
+			// Facebook
+			{
+				property: "og:title",
+				content: "Meet the Team"
+			},
+			{
+				property: "og:url",
+				content: "https://logchimp.codecarrot.net/team"
+			},
+
+			// Twitter
+			{
+				name: "twitter:title",
+				content: "Meet the Team"
+			},
+			{
+				name: "twitter:url",
+				content: "https://logchimp.codecarrot.net/team"
+			}
+		],
+		link: [
+			{
+				rel: "canonical",
+				href: "https://logchimp.codecarrot.net/team"
+			}
+		]
 	}
-}
+};
 </script>
