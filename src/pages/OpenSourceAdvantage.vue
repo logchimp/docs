@@ -12,7 +12,7 @@
 			<div class="open-source-list">
 				<div class="open-source-item">
 					<img
-						src="@/assets/images/logchimp-github-repo.jpg"
+						src="@/assets/images/logchimp-github-repo.png"
 						alt="LogChimp Github repository"
 					/>
 					<div class="open-source-item-content">
@@ -28,20 +28,20 @@
 
 				<div class="open-source-item">
 					<img
-						src="@/assets/images/logchimp-github-repo.jpg"
+						src="@/assets/images/logchimp-github-repo.png"
 						alt="LogChimp Github repository"
 					/>
 					<div class="open-source-item-content">
 						<h2>Data ownership</h2>
 						<p>
-							
+
 						</p>
 					</div>
 				</div>
 
 				<div class="open-source-item">
 					<img
-						src="@/assets/images/logchimp-github-repo.jpg"
+						src="@/assets/images/logchimp-github-repo.png"
 						alt="LogChimp Github repository"
 					/>
 					<div class="open-source-item-content">
@@ -56,7 +56,7 @@
 
 				<div class="open-source-item">
 					<img
-						src="@/assets/images/logchimp-github-repo.jpg"
+						src="@/assets/images/logchimp-github-repo.png"
 						alt="LogChimp Github repository"
 					/>
 					<div class="open-source-item-content">
@@ -72,7 +72,7 @@
 
 				<div class="open-source-item">
 					<img
-						src="@/assets/images/logchimp-github-repo.jpg"
+						src="@/assets/images/logchimp-github-repo.png"
 						alt="LogChimp Github repository"
 					/>
 					<div class="open-source-item-content">
