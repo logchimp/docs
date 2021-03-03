@@ -11,7 +11,7 @@
 
 			<div class="open-source-list">
 				<div class="open-source-item">
-					<img
+					<g-image
 						src="@/assets/images/logchimp-github-repo.png"
 						alt="LogChimp Github repository"
 					/>
@@ -30,7 +30,7 @@
 				</div>
 
 				<!-- <div class="open-source-item">
-					<img
+					<g-image
 						src="@/assets/images/logchimp-github-repo.png"
 						alt="LogChimp Github repository"
 					/>
@@ -43,7 +43,7 @@
 				</div> -->
 
 				<div class="open-source-item">
-					<img
+					<g-image
 						src="@/assets/images/logchimp-vulnerability-scanning.png"
 						alt="LogChimp Github repository"
 					/>
@@ -61,7 +61,7 @@
 				</div>
 
 				<div class="open-source-item">
-					<img
+					<g-image
 						src="@/assets/images/logchimp-security.png"
 						alt="LogChimp Github repository"
 					/>
@@ -76,7 +76,7 @@
 				</div>
 
 				<div class="open-source-item">
-					<img
+					<g-image
 						src="@/assets/images/logchimp-privacy.png"
 						alt="LogChimp Github repository"
 					/>
@@ -92,7 +92,7 @@
 				</div>
 
 				<div class="open-source-item">
-					<img
+					<g-image
 						src="@/assets/images/logchimp-scalability.png"
 						alt="LogChimp Github repository"
 					/>
