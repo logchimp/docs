@@ -27,7 +27,7 @@
 					</div>
 				</div>
 
-				<div class="open-source-item">
+				<!-- <div class="open-source-item">
 					<img
 						src="@/assets/images/logchimp-github-repo.png"
 						alt="LogChimp Github repository"
@@ -38,7 +38,7 @@
 
 						</p>
 					</div>
-				</div>
+				</div> -->
 
 				<div class="open-source-item">
 					<img
