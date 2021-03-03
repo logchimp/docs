@@ -93,6 +93,59 @@
 
 <script>
 export default {
-	name: "OpenSourceAdvantagePage"
-}
+	name: "OpenSourceAdvantagePage",
+	metaInfo: {
+		title: "How open source bring advantage to LogChimp?",
+		meta: [
+			// {
+			// 	name: 'description',
+			// 	content: 'Build better products by tracking customer feedback with LogChimp.'
+			// },
+			{
+				property: "url",
+				content: "https://logchimp.codecarrot.net/open-source-advantage/"
+			},
+
+			// Google
+			// {
+			// 	itemprop: 'description',
+			// 	content: 'Build better products by tracking customer feedback with LogChimp.'
+			// },
+
+			// Facebook
+			{
+				property: "og:title",
+				content: "How open source bring advantage to LogChimp?"
+			},
+			// {
+			// 	property: 'og:description',
+			// 	content: 'Build better products by tracking customer feedback with LogChimp.'
+			// },
+			{
+				property: "og:url",
+				content: "https://logchimp.codecarrot.net/open-source-advantage/"
+			},
+
+			// Twitter
+			{
+				name: "twitter:title",
+				content: "How open source bring advantage to LogChimp?"
+			},
+			// {
+			// 	name: 'twitter:description',
+			// 	content: 'Build better products by tracking customer feedback with LogChimp.'
+			// },
+			{
+				name: "twitter:url",
+				content: "https://logchimp.codecarrot.net/open-source-advantage/"
+			}
+		],
+		link: [
+			{
+				rel: "canonical",
+				href: "https://logchimp.codecarrot.net/open-source-advantage/"
+			}
+		]
+	}
+};
 </script>
