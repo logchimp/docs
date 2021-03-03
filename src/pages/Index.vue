@@ -27,7 +27,7 @@
 
 		<div class="inner">
 			<div class="homepage-post-preview homepage-section">
-				<img
+				<g-image
 					src="@/assets/images/home/homepage-lc-post-card.png"
 					alt="LogChimp post card"
 				/>
