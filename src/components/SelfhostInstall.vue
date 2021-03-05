@@ -24,6 +24,12 @@ export default {
 					image: "/images/docs/terminal-logo.png",
 					link: "/docs/install/source",
 					label: "For developing LogChimp"
+				},
+				{
+					title: "Gitpod",
+					image: "/images/docs/gitpod.png",
+					link: "/docs/install/gitpod",
+					label: "Try it for a spin"
 				}
 			]
 		}
