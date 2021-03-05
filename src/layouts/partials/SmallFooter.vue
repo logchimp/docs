@@ -22,14 +22,37 @@
 						<a
 							href="https://github.com/logchimp/logchimp"
 							class="footer-col-item"
+							target="_blank"
 						>
-							<img src="@/assets/images/github.svg" alt="GitHub icon" />
+							<github-icon />
 						</a>
-						<a href="https://discord.gg/A7mztcC" class="footer-col-item">
-							<img src="@/assets/images/discord.svg" alt="Discord icon" />
+						<a
+							href="https://www.patreon.com/mittalyashu"
+							class="footer-col-item"
+							target="_blank"
+						>
+							<patreon-icon />
 						</a>
-						<a href="https://twitter.com/logchimp" class="footer-col-item">
-							<img src="@/assets/images/twitter.svg" alt="Twitter icon" />
+						<a
+							href="https://opencollective.com/logchimp"
+							class="footer-col-item"
+							target="_blank"
+						>
+							<opencollective-icon />
+						</a>
+						<a
+							href="https://discord.gg/A7mztcC"
+							class="footer-col-item"
+							target="_blank"
+						>
+							<discord-icon />
+						</a>
+						<a
+							href="https://twitter.com/logchimp"
+							class="footer-col-item"
+							target="_blank"
+						>
+							<twitter-icon />
 						</a>
 					</div>
 				</div>
@@ -43,11 +66,25 @@
 import Logo from "../../components/Logo";
 import SponsorStrap from "../../components/SponsorStrap";
 
+// icons
+import GithubIcon from "../../components/icons/github";
+import DiscordIcon from "../../components/icons/Discord";
+import PatreonIcon from "../../components/icons/Patreon";
+import TwitterIcon from "../../components/icons/Twitter";
+import OpencollectiveIcon from "../../components/icons/Opencollective";
+
 export default {
 	name: "SmallFooter",
 	components: {
 		Logo,
-		SponsorStrap
+		SponsorStrap,
+
+		// icons
+		GithubIcon,
+		DiscordIcon,
+		PatreonIcon,
+		TwitterIcon,
+		OpencollectiveIcon
 	}
 };
 </script>
