@@ -10,10 +10,10 @@
     "node": ">=12"
   },
   "dependencies": {
-    "@gridsome/plugin-google-analytics": "^0.1.2",
     "@octokit/rest": "^18.3.3",
     "gridsome": "^0.7.23",
-    "lucide-vue": "^0.14.0"
+    "lucide-vue": "^0.14.0",
+    "vue-gtag": "^1.11.0"
   },
   "devDependencies": {
     "@gridsome/remark-prismjs": "^0.5.0",
