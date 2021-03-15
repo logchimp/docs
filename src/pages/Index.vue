@@ -9,11 +9,10 @@
 						customers feedback with ease.
 					</p>
 
-					<div class="homepage-hero-cta">
-						<Button @click="$router.push('/docs')" type="primary">
-							Get started
-						</Button>
-					</div>
+				<div class="homepage-hero-cta">
+					<g-link class="button button-primary" to="/get-started">
+						Get started
+					</g-link>
 				</div>
 
 				<div class="homepage-hero-image">
@@ -127,13 +126,11 @@ import {
 } from "lucide-vue";
 
 // components
-import Button from "../components/Button";
 import CheckItem from "../components/CheckItem";
 
 export default {
 	title: "Homepage",
 	components: {
-		Button,
 		CheckItem,
 
 		// icons
