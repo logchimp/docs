@@ -104,6 +104,61 @@ export default {
 		}
 	},
 	metaInfo: {
+		title: "LogChimp Valet - Premium Support, Updates & Maintenance",
+		meta: [
+			{
+				name: "description",
+				content:
+					"Support from the creators of LogChimp to easily install the latest software, keep it up to date, secure, and fast. Both one-off service & ongoing maintenance."
+			},
+			{
+				property: "url",
+				content: "https://logchimp.codecarrot.net/valet/"
+			},
+
+			// Google
+			{
+				itemprop: "description",
+				content:
+					"Support from the creators of LogChimp to easily install the latest software, keep it up to date, secure, and fast. Both one-off service & ongoing maintenance."
+			},
+
+			// Facebook
+			{
+				property: "og:title",
+				content: "LogChimp Valet - Premium Support, Updates & Maintenance"
+			},
+			{
+				property: "og:description",
+				content:
+					"Support from the creators of LogChimp to easily install the latest software, keep it up to date, secure, and fast. Both one-off service & ongoing maintenance."
+			},
+			{
+				property: "og:url",
+				content: "https://logchimp.codecarrot.net/valet/"
+			},
+
+			// Twitter
+			{
+				name: "twitter:title",
+				content: "LogChimp Valet - Premium Support, Updates & Maintenance"
+			},
+			{
+				name: "twitter:description",
+				content:
+					"Support from the creators of LogChimp to easily install the latest software, keep it up to date, secure, and fast. Both one-off service & ongoing maintenance."
+			},
+			{
+				name: "twitter:url",
+				content: "https://logchimp.codecarrot.net/valet/"
+			}
+		],
+		link: [
+			{
+				rel: "canonical",
+				href: "https://logchimp.codecarrot.net/valet/"
+			}
+		],
 		script: [
 			{
 				async: true,
