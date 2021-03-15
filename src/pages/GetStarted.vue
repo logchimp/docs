@@ -8,9 +8,7 @@
 				<h1>Self-Managed</h1>
 				<p class="get-started-label">Download and try our open source self-hosted version.</p>
 
-				<Button @click="$router.push('/download')" type="primary">
-					Download
-				</Button>
+				<g-link class="button button-primary" to="/download"> Download </g-link>
 
 				<div class="check-list">
 					<div class="check-list-item">
@@ -40,49 +38,56 @@ export default {
 		CheckIcon
 	},
 	metaInfo: {
-		title: "Get Started with LogChimp - Self-hosted collecting customer feedback software",
+		title:
+			"Get Started with LogChimp - Self-hosted collecting customer feedback software",
 		meta: [
 			{
-				name: 'description',
-				content: 'Get started using LogChimp today. Download our self-managed software, try it for free.'
+				name: "description",
+				content:
+					"Get started using LogChimp today. Download our self-managed software, try it for free."
 			},
 			{
-				property: 'url',
-				content: 'https://logchimp.codecarrot.net/get-started/'
+				property: "url",
+				content: "https://logchimp.codecarrot.net/get-started/"
 			},
 
 			// Google
 			{
-				itemprop: 'description',
-				content: 'Get started using LogChimp today. Download our self-managed software, try it for free.'
+				itemprop: "description",
+				content:
+					"Get started using LogChimp today. Download our self-managed software, try it for free."
 			},
 
 			// Facebook
 			{
-				property: 'og:title',
-				content: 'Get Started with LogChimp - Self-hosted collecting customer feedback software'
+				property: "og:title",
+				content:
+					"Get Started with LogChimp - Self-hosted collecting customer feedback software"
 			},
 			{
-				property: 'og:description',
-				content: 'Get started using LogChimp today. Download our self-managed software, try it for free.'
+				property: "og:description",
+				content:
+					"Get started using LogChimp today. Download our self-managed software, try it for free."
 			},
 			{
-				property: 'og:url',
-				content: 'https://logchimp.codecarrot.net/get-started/'
+				property: "og:url",
+				content: "https://logchimp.codecarrot.net/get-started/"
 			},
 
 			// Twitter
 			{
-				name: 'twitter:title',
-				content: 'Get Started with LogChimp - Self-hosted collecting customer feedback software'
+				name: "twitter:title",
+				content:
+					"Get Started with LogChimp - Self-hosted collecting customer feedback software"
 			},
 			{
-				name: 'twitter:description',
-				content: 'Get started using LogChimp today. Download our self-managed software, try it for free.'
+				name: "twitter:description",
+				content:
+					"Get started using LogChimp today. Download our self-managed software, try it for free."
 			},
 			{
-				name: 'twitter:url',
-				content: 'https://logchimp.codecarrot.net/get-started/'
+				name: "twitter:url",
+				content: "https://logchimp.codecarrot.net/get-started/"
 			}
 		],
 		link: [
@@ -92,5 +97,5 @@ export default {
 			}
 		]
 	}
-}
+};
 </script>
