@@ -18,6 +18,12 @@ This the official guide for self-hosting LogChimp using our recommended stack of
 
 You can use this 👉 [DigitalOcean](https://m.do.co/c/bb349ea15324) 👈 link and get **free $100 credits**.
 
+<Blockquote type="tip">
+Save time with LogChimp VALET.
+
+This is a detailed manual install guide for developers. If you don't want to deal setting up LogChimp yourself, we offer <a href="/valet">LogChimp VALET</a> services.
+</Blockquote>
+
 ## Prerequisites
 
 The officially recommended production installation requires the following stack:
