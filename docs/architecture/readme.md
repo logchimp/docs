@@ -2,7 +2,7 @@
 title: Overview
 ---
 
-LogChimp is structured with a robust JSON API at its core, with a beautiful Vue.js client app with a powerful dashboard on the front-end – find out more!
+LogChimp is built on a modern technology stack of Node.js for powering its robust JSON API, PostgreSQL database as a data storage layer, with a beautiful Vue.js client app including a powerful dashboard on the client-side – find out more!
 
 LogChimp is structure as a modern web application.
 

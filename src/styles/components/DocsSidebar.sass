@@ -4,6 +4,41 @@
 	scroll-behavior: smooth
 	overflow-y: auto
 
+.docs-sidebar-category-icon
+	width: 2rem
+	height: 2rem
+	border-radius: 0.45rem
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	margin-right: 0.5rem
+	background-color: #fe5f55
+
+	svg
+		width: 1.25rem
+		height: 1.25rem
+		stroke: white
+		stroke-width: 1px
+
+.docs-sidebar-category
+	margin-bottom: 2rem
+
+	a
+		display: flex
+		align-items: center
+		margin-bottom: 0.75rem
+
+		&:last-child
+			margin-bottom: 0
+
+		p
+			color: $gray-70
+
+	.active--exact
+		p
+			font-weight: 500
+			color: black
+
 .docs-sidebar-container
 	height: 100vh
 
