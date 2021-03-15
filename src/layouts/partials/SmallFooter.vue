@@ -1,7 +1,7 @@
 <template>
 	<footer>
 		<div class="inner">
-			<sponsor-strap />
+			<valet-strap />
 			<div class="footer-container">
 				<div class="footer-col">
 					<logo />
@@ -64,7 +64,7 @@
 <script>
 // components
 import Logo from "../../components/Logo";
-import SponsorStrap from "../../components/SponsorStrap";
+import ValetStrap from "../../components/ValetStrap";
 
 // icons
 import GithubIcon from "../../components/icons/github";
@@ -77,7 +77,7 @@ export default {
 	name: "SmallFooter",
 	components: {
 		Logo,
-		SponsorStrap,
+		ValetStrap,
 
 		// icons
 		GithubIcon,
