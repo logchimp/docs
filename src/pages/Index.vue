@@ -9,10 +9,11 @@
 						customers feedback with ease.
 					</p>
 
-				<div class="homepage-hero-cta">
-					<g-link class="button button-primary" to="/get-started">
-						Get started
-					</g-link>
+					<div class="homepage-hero-cta">
+						<g-link class="button button-primary" to="/get-started">
+							Get started
+						</g-link>
+					</div>
 				</div>
 
 				<div class="homepage-hero-image">
