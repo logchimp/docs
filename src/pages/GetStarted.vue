@@ -6,7 +6,7 @@
 			<div class="card get-started-product">
 				<server-icon stroke="#f56565" width="2.5rem" height="2.5rem" />
 				<h1>Self-Managed</h1>
-				<p>Download and try our open source self-hosted version.</p>
+				<p class="get-started-label">Download and try our open source self-hosted version.</p>
 
 				<Button @click="$router.push('/download')" type="primary">
 					Download
