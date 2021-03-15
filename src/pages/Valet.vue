@@ -70,7 +70,12 @@ export default {
 	name: "ValetPage",
 	data() {
 		return {
-			checkoutErrorMessage: ""
+			checkoutErrorMessage: "",
+			price: {
+				standard: {
+					id: "price_1IV8izGOTd7mZjviFDBdjwZF"
+				}
+			}
 		};
 	},
 	components: {
@@ -83,7 +88,7 @@ export default {
 				.redirectToCheckout({
 					lineItems: [
 						{
-							price: "price_1IV8izGOTd7mZjviFDBdjwZF",
+							price: this.price.standard.id,
 							quantity: 1
 						}
 					],
