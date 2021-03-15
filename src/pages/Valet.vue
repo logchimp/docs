@@ -3,6 +3,9 @@
 		<div class="valet-page">
 			<div class="valet-page-bg">
 				<div class="inner">
+					<div v-if="showCheckoutSuccess" class="valet-success">
+						Thank you for purchasing LogChimp VALET plan. Our team will get back to within 24-48 hours.
+					</div>
 					<h2
 						class="valet-strap-heading"
 					>
@@ -70,6 +73,7 @@ export default {
 	name: "ValetPage",
 	data() {
 		return {
+			showCheckoutSuccess: false,
 			checkoutErrorMessage: "",
 			price: {
 				standard: {
@@ -93,7 +97,7 @@ export default {
 						}
 					],
 					mode: "subscription",
-					successUrl: "https://logchimp.codecarrot.net/success",
+					successUrl: "https://logchimp.codecarrot.net/valet?stripe=success",
 					cancelUrl: "https://logchimp.codecarrot.net/valet?stripe=cancel"
 				})
 				.then(function(result) {
@@ -101,6 +105,16 @@ export default {
 						this.checkoutErrorMessage = result.error.message;
 					}
 				});
+		}
+	},
+	mounted() {
+		if (this.$route.query.stripe === "success") {
+			this.showCheckoutSuccess = true;
+
+			setTimeout(() => {
+				this.showCheckoutSuccess = false;
+				this.$router.push("/valet");
+			}, 3000);
 		}
 	},
 	metaInfo: {
