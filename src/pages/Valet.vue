@@ -94,7 +94,7 @@ export default {
 					],
 					mode: "subscription",
 					successUrl: "https://logchimp.codecarrot.net/success",
-					cancelUrl: "https://logchimp.codecarrot.net/valet"
+					cancelUrl: "https://logchimp.codecarrot.net/valet?stripe=cancel"
 				})
 				.then(function(result) {
 					if (result.error) {
