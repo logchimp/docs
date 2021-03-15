@@ -83,7 +83,7 @@ export default {
 				.redirectToCheckout({
 					lineItems: [
 						{
-							price: "price_1IV8uwGOTd7mZjvi5qpRhA5y",
+							price: "price_1IV8izGOTd7mZjviFDBdjwZF",
 							quantity: 1
 						}
 					],
