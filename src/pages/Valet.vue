@@ -78,12 +78,12 @@ export default {
 	},
 	methods: {
 		standardPlan() {
-			var stripe = Stripe(process.env.STRIPE_ACCOUNT_PRODUCT_ID);
+			var stripe = Stripe("pk_live_DLEhVwauymdEAIPdN07BsLEx00hNZ8kcwt");
 			stripe
 				.redirectToCheckout({
 					lineItems: [
 						{
-							price: process.env.STRIPE_PRODUCTS_VALET_STANDARD_PLAN,
+							price: "price_1IV8uwGOTd7mZjvi5qpRhA5y",
 							quantity: 1
 						}
 					],
