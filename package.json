@@ -10,7 +10,7 @@
     "node": ">=12"
   },
   "dependencies": {
-    "@octokit/rest": "^18.5.0",
+    "@octokit/rest": "^18.5.2",
     "gridsome": "^0.7.23",
     "lucide-vue": "^0.15.0",
     "vue-gtag": "^1.11.0"
