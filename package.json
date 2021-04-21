@@ -12,7 +12,7 @@
   "dependencies": {
     "@octokit/rest": "^18.5.2",
     "gridsome": "^0.7.23",
-    "lucide-vue": "^0.15.1",
+    "lucide-vue": "^0.15.5",
     "vue-gtag": "^1.14.0"
   },
   "devDependencies": {
