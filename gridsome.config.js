@@ -1,7 +1,7 @@
 module.exports = {
 	siteName: "LogChimp",
 	siteDescription: "Track user feedback to build better products",
-	siteUrl: "https://logchimp.codecarrot.net/",
+	siteUrl: "https://logchimp.codecarrot.net",
 	titleTemplate: "%s | LogChimp",
 	css: {
 		split: true
@@ -20,6 +20,9 @@ module.exports = {
 					"@gridsome/remark-prismjs"
 				]
 			}
+		},
+		{
+			use: "@gridsome/plugin-sitemap"
 		}
 	]
 }
