@@ -6379,10 +6379,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-lucide-vue@^0.15.17:
-  version "0.15.17"
-  resolved "https://registry.yarnpkg.com/lucide-vue/-/lucide-vue-0.15.17.tgz#1d4877e7e78677676fa3180ec31c1da01137fc1f"
-  integrity sha512-J3Yboo1WjuoxyRdYNOzmP9AxTK66hmv0R6HmHzw6sxkXPTX7EBwrzprVHWqjZWsm+FPks9iEkgL+6hpIPzeF0g==
+lucide-vue@^0.15.18:
+  version "0.15.18"
+  resolved "https://registry.yarnpkg.com/lucide-vue/-/lucide-vue-0.15.18.tgz#8ab6aa640aec3e7f053c4937b5ca1e034535f4b4"
+  integrity sha512-IQ43Yrb7UZy4ICXaSKC0VDOf9H7l3UrJt8P+w7CYZPSUc7TkipqB5w0MqGCOlW6/G1xzDN6P8c/yST4aoZsRUw==
   dependencies:
     vue "^2.6.12"
 
