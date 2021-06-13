@@ -16,6 +16,3 @@ services:
       - type: redirect
         source: /discord
         destination: https://discord.gg/N34We6e
-    envVars:
-      - key: NODE_VERSION
-        value: 12
