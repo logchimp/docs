@@ -15,6 +15,10 @@
 						<check-icon />
 						<p>Fully-featured LogChimp instance</p>
 					</div>
+					<div class="check-list-item">
+						<check-icon />
+						<p>No maintenance fees</p>
+					</div>
 				</div>
 			</div>
 		</div>
