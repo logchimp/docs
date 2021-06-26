@@ -8,7 +8,13 @@ LogChimp is an open-source software to capture your customers feedback and infor
 
 ![LogChimp homepage](/images/docs/logchimp_homepage.png)
 
-## Background
+## Quick start
+
+* Read more about LogChimp's architecture and key features.
+* [Setup LogChimp](/docs/install) on your own servers.
+* We would love to see you contribute to LogChimp. Get more information on [how to contribute](/docs/contributing).
+
+### Background
 
 LogChimp was created by [Yashu Mittal](https://twitter.com/mittalyashu77) in [early 2020](https://github.com/logchimp/logchimp/commit/fb7190a4aa8e1da9ec977dd1d4c8dfab9d536be4) with the idea to build an open-source tool for collecting user feedback.
 
