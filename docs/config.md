@@ -5,7 +5,7 @@ title: Configuration
 <!-- components -->
 import Blockquote from "@/components/Blockquote"
 
-You can configure LogChimp site using `logchimp.config.json` file.
+Step by step guide for you to configure LogChimp site using `logchimp.config.json` file.
 
 ## Overview
 
