@@ -53,9 +53,10 @@
 							LogChimp performs
 							<a
 								href="https://github.com/logchimp/logchimp/actions/workflows/codeql-analysis.yml"
-								>CodeQL analytics using GitHub Actions</a
 							>
-							to continuously scan for vulnerabilities.
+								CodeQL analytics
+							</a>
+							on every commit using GitHub Actions to continuously scan for vulnerabilities.
 						</p>
 					</div>
 				</div>
