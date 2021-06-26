@@ -5,7 +5,7 @@
 				<div class="docs-sidebar-category-icon">
 					<file-icon />
 				</div>
-				<p>Documentation</p>
+				<p>Docs</p>
 			</g-link>
 		</div>
 		<div class="docs-sidebar-container">
