@@ -4,15 +4,15 @@
       link: /docs/introduction
     - title: Installation
       link: /docs/install
+    - title: Configuration
+      link: /docs/config
+    - title: Architecture
+      link: /docs/architecture
 
 - title: Core Concepts
   items:
     - title: Principles
       link: /docs/principles
-    - title: Architecture
-      link: /docs/architecture
-    - title: Configuration
-      link: /docs/config
 
 - title: CLI
   items:
