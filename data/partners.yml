@@ -11,6 +11,12 @@
   description: MacStadium provides enterprise-class cloud solutions for Mac and iOS app development.
 
 - id: 3
+  title: "BrowserStack"
+  link: "https://www.browserstack.com/"
+  image: "/images/partners/browserstack.png"
+  description: Speed up your release cycles and deploy bug-free websites and mobile apps with BrowserStack.
+
+- id: 4
   title: "KeyCDN"
   link: "https://www.keycdn.com/"
   image: "/images/partners/keycdn.jpg"
