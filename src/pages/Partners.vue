@@ -18,6 +18,8 @@
 					>
 						<a
 							:href="`${partner.link}?utm_source=website&utm_medium=referral&company=logchimp`"
+							target="_blank"
+							rel="noopener noreferrer"
 						>
 							<img
 								:src="partner.image"

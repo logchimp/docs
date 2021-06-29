@@ -1,4 +1,5 @@
 .partners-list
+	--lc-logo-size: 60px
 	display: grid
 	grid-gap: 2rem
 
@@ -12,13 +13,16 @@
 	max-width: 300px
 
 	a
-		display: inline-block
-		margin-bottom: 5px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 10px
+		height: var(--lc-logo-size)
 
 	img
 		max-width: 100%
 		width: auto
-		height: 30px
+		max-height: var(--lc-logo-size)
 
 	p
 		color: $gray-60
