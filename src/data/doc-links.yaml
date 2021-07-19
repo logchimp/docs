@@ -21,6 +21,8 @@
 
 - title: Resources
   items:
+    - title: Support
+      link: /docs/support
     - title: Contributing
       link: /docs/contributing
     - title: Logos
