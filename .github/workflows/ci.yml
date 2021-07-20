@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: JustinBeckwith/linkinator-action@v1
+        name: Lint links
+        with:
+          paths: "**/*"
+          recurse: true
+          directoryListing: true
