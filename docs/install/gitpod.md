@@ -3,6 +3,7 @@ title: Run LogChimp in Gitpod
 ---
 
 <!-- components -->
+
 import Blockquote from "@/components/Blockquote"
 
 Want to give a quick spin to LogChimp?

@@ -22,9 +22,7 @@
 </template>
 
 <script>
-import {
-	FileText as FileIcon
-} from "lucide-vue";
+import { FileText as FileIcon } from "lucide-vue";
 
 export default {
 	name: "DocsSidebar",

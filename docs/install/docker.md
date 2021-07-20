@@ -62,5 +62,7 @@ Here's an LogChimp Docker image structure for you to understand _(if you're curi
 
 ### Resources
 
-* [LogChimp Docker image on GitHub](https://github.com/orgs/logchimp/packages/container/package/logchimp)
-* [Reporting issues](https://github.com/logchimp/docker)
+- [LogChimp Docker image on GitHub](https://github.com/orgs/logchimp/packages)
+- Reporting issues
+  - [logchimp-server](https://github.com/logchimp/logchimp)
+  - [logchimp-theme](https://github.com/logchimp/theme)

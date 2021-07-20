@@ -3,6 +3,7 @@ title: logchimp install
 ---
 
 <!-- components -->
+
 import Blockquote from "@/components/Blockquote"
 
 The `logchimp install` command is your one-stop-shop to get a running production install of LogChimp.

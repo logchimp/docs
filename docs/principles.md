@@ -10,6 +10,6 @@ We've maintained a track of 4-6 months of product roadmap which defines the over
 
 Currently our primary focus is:
 
-* Making LogChimp more flexible and easy to integrate with other apps & services
-* Creating a sustainable business models for team to continue working on LogChimp
-* Refining and improving the core functionality of the product
+- Making LogChimp more flexible and easy to integrate with other apps & services
+- Creating a sustainable business models for team to continue working on LogChimp
+- Refining and improving the core functionality of the product

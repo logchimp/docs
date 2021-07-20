@@ -3,6 +3,7 @@ title: uninstall
 ---
 
 <!-- components -->
+
 import Blockquote from "@/components/Blockquote"
 
 Safely removes a LogChimp installation and all related configuration & data.
@@ -31,9 +32,9 @@ The following prompts appear:
 
 The following tasks are performed:
 
-* Remove content folder
-* Remove configuration files
-* Remove LogChimp instance
+- Remove content folder
+- Remove configuration files
+- Remove LogChimp instance
 
 <Blockquote type="warning">
   Running `logchimp uninstall -f` or `logchimp uninstall --force` will skip the warning and remove LogChimp without a prompt.

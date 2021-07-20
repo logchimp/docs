@@ -14,6 +14,6 @@ jobs:
       - uses: JustinBeckwith/linkinator-action@v1
         name: Lint links
         with:
-          paths: "**/*"
+          paths: '**/*'
           recurse: true
           directoryListing: true

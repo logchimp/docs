@@ -1,7 +1,7 @@
 previewsEnabled: true
 services:
   - type: web
-    name: "logchimp.codecarrot.net"
+    name: 'logchimp.codecarrot.net'
     env: static
     buildCommand: yarn build
     staticPublishPath: ./dist

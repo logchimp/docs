@@ -10,9 +10,9 @@ LogChimp is an open-source software to capture your customers feedback and infor
 
 ## Quick start
 
-* Read more about LogChimp's architecture and key features.
-* [Setup LogChimp](/docs/install) on your own servers.
-* We would love to see you contribute to LogChimp. Get more information on [how to contribute](/docs/contributing).
+- Read more about LogChimp's architecture and key features.
+- [Setup LogChimp](/docs/install) on your own servers.
+- We would love to see you contribute to LogChimp. Get more information on [how to contribute](/docs/contributing).
 
 ### Background
 

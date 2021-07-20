@@ -3,6 +3,7 @@ title: Commands
 ---
 
 <!-- components -->
+
 import Blockquote from "@/components/Blockquote"
 
 Below are the available LogChimp CLI commands. You can always run `logchimp --help` or `logchimp help [COMMAND]` to get more detail.

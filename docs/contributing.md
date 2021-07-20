@@ -16,9 +16,9 @@ Or, if you're looking for something a little more challenging, there's a broader
 
 The primary way to contribute to LogChimp is by writing code, but if you're not a developer here are still ways you can help. We always need help with:
 
-* Maintaining documentation
-* Testing and quality assurance
-* Promoting LogChimp to others
+- Maintaining documentation
+- Testing and quality assurance
+- Promoting LogChimp to others
 
 ### Donations
 

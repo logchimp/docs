@@ -29,7 +29,6 @@ https://yourdomain.com/api/v1/auth/login
 }
 ```
 
-
 ## Response
 
 | Fields                 | Type      | Description                                      |

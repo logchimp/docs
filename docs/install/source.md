@@ -3,16 +3,18 @@ title: Install from Source
 ---
 
 <!-- components -->
+
 import Blockquote from "@/components/Blockquote"
 
 This guide is for installing a local development copy of LogChimp from source code, primarily for development purposes.
+
 ## Prerequisites
 
 Before getting started, you'll need these global packages to be installed:
 
-* [Node.js](https://nodejs.org/) (v12) - easiest way to install via [nvm](https://github.com/creationix/nvm#install-script)
-* [Yarn](https://yarnpkg.com/en/docs/install#alternatives-tab) - to manage dependencies
-* [PostgreSQL](#setup-postgresql-database) (v12) - postgres database
+- [Node.js](https://nodejs.org/) (v12) - easiest way to install via [nvm](https://github.com/creationix/nvm#install-script)
+- [Yarn](https://yarnpkg.com/en/docs/install#alternatives-tab) - to manage dependencies
+- [PostgreSQL](#setup-postgresql-database) (v12) - postgres database
 
 You can read more about engine requirements from [package.json](https://github.com/logchimp/logchimp/blob/master/package.json) on GitHub.
 
@@ -24,8 +26,8 @@ First, you'll need to make a fork of the [LogChimp](https://github.com/logchimp/
   You'll also need a LogChimp theme as client to intract with LogChimp APIs.
 </Blockquote>
 
-* LogChimp Core - https://github.com/logchimp/logchimp
-* LogChimp default theme - https://github.com/logchimp/theme
+- LogChimp Core - https://github.com/logchimp/logchimp
+- LogChimp default theme - https://github.com/logchimp/theme
 
 ## Install dependencies
 
@@ -39,9 +41,9 @@ Once you run the command at the root repository, it will install all the require
 
 There are a few ways to set up a database.
 
-* Download the [official Postgres package](https://www.postgresql.org/download/)
-* Run a [postgres docker container](https://hub.docker.com/_/postgres)
-* Use a remote or self-managed database
+- Download the [official Postgres package](https://www.postgresql.org/download/)
+- Run a [postgres docker container](https://hub.docker.com/_/postgres)
+- Use a remote or self-managed database
 
 To spin up a database quickly and easily on your local machine, we recommend you to use the PostgreSQL docker image.
 

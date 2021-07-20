@@ -22,6 +22,7 @@ You can use this 👉 [DigitalOcean](https://m.do.co/c/bb349ea15324) 👈 link a
 Save time with LogChimp VALET.
 
 This is a detailed manual install guide for developers. If you don't want to deal setting up LogChimp yourself, we offer <a href="/valet">LogChimp VALET</a> services.
+
 </Blockquote>
 
 ## Prerequisites
