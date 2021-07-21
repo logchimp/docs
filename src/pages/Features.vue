@@ -17,7 +17,10 @@
 							alt="LogChimp feature brand"
 						/>
 						<div class="features-item-content">
-							<h5>Comments</h5>
+							<div class="features-title">
+								<h5>Comments</h5>
+								<div class="beta-badge">BETA</div>
+							</div>
 							<p>Engage with your customers using comments.</p>
 						</div>
 					</div>
