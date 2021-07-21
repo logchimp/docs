@@ -13,6 +13,17 @@
 				<div class="features">
 					<div class="features-item">
 						<g-image
+							src="@/assets/images/features/comments.jpg"
+							alt="LogChimp feature brand"
+						/>
+						<div class="features-item-content">
+							<h5>Comments</h5>
+							<p>Engage with your customers using comments.</p>
+						</div>
+					</div>
+
+					<div class="features-item">
+						<g-image
 							src="@/assets/images/features/branding.jpg"
 							alt="LogChimp feature brand"
 						/>
@@ -65,7 +76,7 @@
 						/>
 						<div class="features-item-content">
 							<h5>Users</h5>
-							<p>Organise the posts with boards.</p>
+							<p>Get clear view at what your customers are doing.</p>
 						</div>
 					</div>
 
