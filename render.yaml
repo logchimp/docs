@@ -9,6 +9,12 @@ services:
       - path: /*
         name: X-Frame-Options
         value: sameorigin
+      - path: /*
+        name: Referrer-Policy
+        value: sameorigin
+      - path: /*
+        name: Strict-Transport-Security
+        value: max-age=2592000
     routes:
       - type: redirect
         source: /github
