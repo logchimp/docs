@@ -6,7 +6,7 @@
 				<div class="footer-col">
 					<logo />
 					<p class="small-text">
-						© Copyright {{ new Date().getFullYear() }} CodeCarrot, Inc
+						© Copyright {{ new Date().getFullYear() }} CodeCarrot
 					</p>
 				</div>
 
