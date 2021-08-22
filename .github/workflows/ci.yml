@@ -14,6 +14,5 @@ jobs:
       - uses: JustinBeckwith/linkinator-action@v1
         name: Lint links
         with:
-          paths: '**/*'
+          paths: "https://logchimp.codecarrot.net/"
           recurse: true
-          directoryListing: true
