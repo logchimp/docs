@@ -14,6 +14,6 @@ jobs:
       - uses: JustinBeckwith/linkinator-action@v1
         name: Lint links
         with:
-          paths: '**/*'
+          paths: 'https://logchimp.codecarrot.net/'
           recurse: true
-          directoryListing: true
+          linksToSkip: 'https://render.com, https://m.do.co, https://github.com, https://www.postgresql.org, https://opencollective.com, https://gitpod.io, https://www.keycdn.com, https://www.browserstack.com, https://hub.docker.com, https://nodejs.org,  https://discordapp.com,  https://www.patreon.com, https://twitter.com, https://js.stripe.com/v3, https://www.macstadium.com, https://discord.gg, https://yarnpkg.com, https://www.codecarrot.net'
