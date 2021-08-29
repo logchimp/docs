@@ -3,12 +3,35 @@
 	grid-gap: 2vmin
 	grid-template-columns: calc(200px + 4vmin) 1fr calc(220px + 2vmin)
 
+.docs-header
+	margin-left: -4vmin
+	margin-right: -4vmin
+	position: sticky
+	top: 0
+	background: white
+
+.page-divider
+	border-top: 1px solid #e5e5e5
+	margin-top: -1.5rem	
+	margin-left: -4vmin
+	margin-right: -4vmin
+	position: sticky
+	top: 80px
+
 .docs-links
-	position: relative
+	position: sticky
+	height: calc(100vh - 81px)
+	overflow-y: auto
+	border-right: 1px solid #e5e5e5
+	top: 81px
 
 .docs-content
 	width: 100%
 	overflow: auto
+	padding-top: 2rem
+
+.docs-footer > footer > .inner
+	padding: unset
 
 @media screen and (max-width: 1200px)
 	.docs
@@ -17,3 +40,11 @@
 @media screen and (max-width:	992px)
 	.docs
 		grid-template-columns: 1fr
+	.docs-content
+		padding-top: unset
+	.page-divider
+		position: unset
+	.docs-links
+		display: none
+	.docs-header
+		position: unset
