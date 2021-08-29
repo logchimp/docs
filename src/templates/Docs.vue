@@ -9,10 +9,12 @@
 				<docs-sidebar :links="links" />
 			</aside>
 			<main class="docs-content">
-				<header>
-					<h1>{{ $page.doc.title }}</h1>
-				</header>
-				<VueRemarkContent class="markdown" />
+				<div class="docs-content-inner">
+					<header>
+						<h1>{{ $page.doc.title }}</h1>
+					</header>
+					<VueRemarkContent class="markdown" />
+				</div>
 				<div class="docs-footer">
 					<SmallFooter />
 				</div>
