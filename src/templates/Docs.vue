@@ -1,5 +1,5 @@
 <template>
-	<div class="inner">
+	<div class="docs-page">
 		<div class="docs-header">
 			<Header />
 		</div>
