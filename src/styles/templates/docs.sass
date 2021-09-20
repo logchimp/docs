@@ -9,15 +9,9 @@
 	margin: 0 auto
 	width: 100%
 
-.docs-content-inner
-	padding-left: 4rem
-	padding-right: 4rem
-
 .docs-header
 	margin-left: -4vmin
 	margin-right: -4vmin
-	position: sticky
-	top: 0
 	background: white
 
 .page-divider
@@ -25,7 +19,6 @@
 	margin-top: -1.5rem
 	margin-left: -4vmin
 	margin-right: -4vmin
-	position: sticky
 	top: 80px
 
 .docs-links
@@ -50,14 +43,18 @@
 @media screen and (max-width:	992px)
 	.docs
 		grid-template-columns: 1fr
-	.docs-content
-		padding-top: unset
-	.page-divider
-		position: unset
+
 	.docs-links
 		display: none
+
+@media screen and (min-width:	992px)
 	.docs-header
-		position: unset
+		position: sticky
+		top: 0
+
+	.page-divider
+		position: sticky
+
 	.docs-content-inner
-		padding-left: unset
-		padding-right: unset
+		padding-left: 4rem
+		padding-right: 4rem
