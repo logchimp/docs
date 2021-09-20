@@ -15,7 +15,7 @@
     "@gridsome/plugin-sitemap": "^0.4.0",
     "@octokit/rest": "^18.10.0",
     "gridsome": "^0.7.23",
-    "lucide-vue": "^0.15.34",
+    "lucide-vue": "^0.16.1",
     "vue-gtag": "^1.16.1"
   },
   "devDependencies": {
