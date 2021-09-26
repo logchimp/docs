@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@gridsome/plugin-sitemap": "^0.4.0",
-    "@octokit/rest": "^18.10.0",
+    "@octokit/rest": "^18.11.0",
     "gridsome": "^0.7.23",
-    "lucide-vue": "^0.15.31",
+    "lucide-vue": "^0.16.1",
     "vue-gtag": "^1.16.1"
   },
   "devDependencies": {
@@ -25,10 +25,10 @@
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-standard": "^5.0.0",
-    "eslint-plugin-vue": "^7.17.0",
+    "eslint-plugin-vue": "^7.18.0",
     "husky": "^7.0.2",
     "node-sass": "^4.14.1",
-    "prettier": "^2.3.2",
+    "prettier": "^2.4.1",
     "sass-loader": "7.3.1"
   }
 }
