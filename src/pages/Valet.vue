@@ -2,7 +2,7 @@
 	<Layout>
 		<div class="valet-page">
 			<div class="valet-page-bg">
-				<div class="inner">
+				<div class="inner-max">
 					<div v-if="showCheckoutSuccess" class="valet-success">
 						Thank you for purchasing LogChimp VALET plan. Our team will get back to within 24-48 hours.
 					</div>
