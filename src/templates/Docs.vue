@@ -1,7 +1,7 @@
 <template>
 	<div class="docs-page">
 		<div class="docs-header">
-			<Header />
+			<Header :full-width="true" />
 		</div>
 		<div class="page-divider"></div>
 		<div class="docs">
