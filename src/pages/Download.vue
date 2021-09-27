@@ -1,6 +1,6 @@
 <template>
 	<Layout>
-		<div class="inner">
+		<div class="inner-max">
 			<header class="static-layout-header">
 				<h2 class="static-layout-heading">Download self-managed software</h2>
 				<p class="small-text">

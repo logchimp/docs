@@ -1,6 +1,6 @@
 <template>
 	<footer>
-		<div class="inner">
+		<div class="inner-max">
 			<valet-strap />
 			<div class="footer-container">
 				<div class="footer-col">

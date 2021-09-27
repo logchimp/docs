@@ -34,12 +34,18 @@ hr
 	border: 0
 	border-top: 1px solid $gray-90
 
-.inner
+%inner
 	padding-left: 4vmin
 	padding-right: 4vmin
 	margin: 0 auto
-	max-width: 1372px
 	width: 100%
+
+.inner-full
+	@extend %inner
+
+.inner-max
+	@extend %inner
+	max-width: 1372px
 
 .logo
 	display: flex

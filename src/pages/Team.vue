@@ -1,6 +1,6 @@
 <template>
 	<Layout>
-		<div class="inner">
+		<div class="inner-max">
 			<div class="static-layout">
 				<header class="static-layout-header">
 					<h3 class="static-layout-heading">Team</h3>

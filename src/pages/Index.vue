@@ -1,6 +1,6 @@
 <template>
 	<Layout>
-		<div class="inner">
+		<div class="inner-max">
 			<div class="homepage-hero">
 				<div class="homepage-hero-content">
 					<h1>Build better products with customer feedback</h1>
@@ -25,7 +25,7 @@
 			</div>
 		</div>
 
-		<div class="inner">
+		<div class="inner-max">
 			<div class="homepage-post-preview homepage-section">
 				<g-image
 					src="@/assets/images/home/homepage-lc-post-card.png"
@@ -54,7 +54,7 @@
 		</div>
 
 		<div class="homepage-block homepage-section">
-			<div class="inner">
+			<div class="inner-max">
 				<div class="homepage-post-preview">
 					<g-image
 						src="@/assets/images/home/homepage-open-source.png"
@@ -75,7 +75,7 @@
 			</div>
 		</div>
 
-		<div class="inner">
+		<div class="inner-max">
 			<div class="homepage-features homepage-section">
 				<div class="homepage-features-item">
 					<heart-icon style="stroke: #d75a5a" />
