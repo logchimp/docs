@@ -20,6 +20,12 @@ export default {
 		return {
 			products: [
 				{
+					title: "Railway",
+					image: "/images/docs/railway-logo.png",
+					link: "/docs/install/railway",
+					label: "One click deploy"
+				},
+				{
 					title: "Render",
 					image: "/images/docs/render-logo.png",
 					link: "/docs/install/render",
