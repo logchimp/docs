@@ -18,6 +18,7 @@ EXAMPLES
 
 - `-f` or `--force` - Overwrite the existing configuration file, if present.
 - `-i` or `--interactive` - Use interactive mode
+- `--env` - Generates `logchimp.config.json` file using environment variable.
 
 **Server**
 
