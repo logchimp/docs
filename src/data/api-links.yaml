@@ -1,4 +1,4 @@
 - title: Endpoints
   items:
     - title: Posts
-      link: /api/posts
+      link: /api/v1/posts
