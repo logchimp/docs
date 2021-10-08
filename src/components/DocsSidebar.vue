@@ -69,5 +69,5 @@ export default {
 		width: 1.25rem
 		height: 1.25rem
 		stroke: white
-		stroke-width: 1px
+		stroke-width: 2px
 </style>
