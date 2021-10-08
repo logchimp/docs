@@ -4,11 +4,9 @@ title: Posts
 
 The Posts API enables you to do more than just CRUD operations.
 
-Posts is the primary resource in a LogChimp. Using the posts endpoint it is possible to get lists of posts filtered by various criteria. Below you can see full list of endpoints avaiable.
+Posts is the primary resource in a LogChimp. Using the posts endpoint it is possible to get lists of posts filtered by various criteria.
 
-| method | route                    |
-| ------ | ------------------------ |
-| `GET`  | [`/posts`](#filter-post) |
+- [Filter posts](#filter-post)
 
 <!-- | `GET`    | [`/post/{slug}`](/api/v1/post/get-post-by-slug)           |
 | `POST`   | [`/post/create`](/api/v1/post/create-post)                |
