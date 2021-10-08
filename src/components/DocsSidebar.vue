@@ -1,14 +1,14 @@
 <template>
 	<nav class="docs-sidebar">
 		<div class="docs-sidebar-category">
-			<g-link :class="$style['category-item']" to="/docs">
-				<div :class="$style['category-icon']">
+			<g-link class="docs-sidebar-category-item" to="/docs">
+				<div class="docs-sidebar-category-icon">
 					<file-icon />
 				</div>
 				<p>Docs</p>
 			</g-link>
-			<g-link :class="$style['category-item']" to="/api">
-				<div :class="$style['category-icon']">
+			<g-link class="docs-sidebar-category-item" to="/api">
+				<div class="docs-sidebar-category-icon">
 					<api-icon />
 				</div>
 				<p>APIs</p>
@@ -47,27 +47,3 @@ export default {
 	},
 }
 </script>
-
-<style module lang='sass'>
-.category-item
-	&:nth-child(1) .category-icon
-		background-color: #fe5f55
-
-	&:nth-child(2) .category-icon
-		background-color: #9333ea
-
-.category-icon
-	width: 2rem
-	height: 2rem
-	border-radius: 0.45rem
-	display: inline-flex
-	align-items: center
-	justify-content: center
-	margin-right: 0.5rem
-
-	svg
-		width: 1.25rem
-		height: 1.25rem
-		stroke: white
-		stroke-width: 2px
-</style>
