@@ -1,11 +1,17 @@
 <template>
 	<nav class="docs-sidebar">
 		<div class="docs-sidebar-category">
-			<g-link to="/docs">
+			<g-link class="docs-sidebar-category-item" to="/docs">
 				<div class="docs-sidebar-category-icon">
 					<file-icon />
 				</div>
 				<p>Docs</p>
+			</g-link>
+			<g-link class="docs-sidebar-category-item" to="/api">
+				<div class="docs-sidebar-category-icon">
+					<api-icon />
+				</div>
+				<p>APIs</p>
 			</g-link>
 		</div>
 		<div class="docs-sidebar-container">
@@ -22,20 +28,22 @@
 </template>
 
 <script>
-import { FileText as FileIcon } from "lucide-vue";
+import { FileText as FileIcon, Binary as ApiIcon } from 'lucide-vue'
 
 export default {
-	name: "DocsSidebar",
+	name: 'DocsSidebar',
 	props: {
 		links: {
 			type: Array,
 			default: () => {
-				return [];
-			}
-		}
+				return []
+			},
+		},
 	},
 	components: {
-		FileIcon
-	}
-};
+		// icons
+		FileIcon,
+		ApiIcon,
+	},
+}
 </script>

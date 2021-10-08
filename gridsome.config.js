@@ -22,6 +22,19 @@ module.exports = {
 			}
 		},
 		{
+			use: "@gridsome/vue-remark",
+			options: {
+				typeName: "APIpage",
+				baseDir: "./api",
+				pathPrefix: "/api",
+				template: "./src/templates/api.vue",
+				index: ["readme"],
+				plugins: [
+					"@gridsome/remark-prismjs"
+				]
+			}
+		},
+		{
 			use: "@gridsome/plugin-sitemap"
 		}
 	]

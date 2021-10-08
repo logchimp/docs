@@ -4,6 +4,13 @@
 	scroll-behavior: smooth
 	padding-top: 2rem
 
+.docs-sidebar-category-item
+	&:nth-child(1) .docs-sidebar-category-icon
+		background-color: #fe5f55
+
+	&:nth-child(2) .docs-sidebar-category-icon
+		background-color: #9333ea
+
 .docs-sidebar-category-icon
 	width: 2rem
 	height: 2rem
@@ -12,13 +19,12 @@
 	align-items: center
 	justify-content: center
 	margin-right: 0.5rem
-	background-color: #fe5f55
 
 	svg
 		width: 1.25rem
 		height: 1.25rem
 		stroke: white
-		stroke-width: 1px
+		stroke-width: 2px
 
 .docs-sidebar-category
 	margin-bottom: 2rem
@@ -34,7 +40,7 @@
 		p
 			color: $gray-70
 
-	.active--exact
+	.active
 		p
 			font-weight: 500
 			color: black
