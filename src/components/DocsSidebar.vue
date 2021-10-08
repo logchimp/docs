@@ -1,11 +1,17 @@
 <template>
 	<nav class="docs-sidebar">
 		<div class="docs-sidebar-category">
-			<g-link to="/docs">
-				<div class="docs-sidebar-category-icon">
+			<g-link :class="$style['category-item']" to="/docs">
+				<div :class="$style['category-icon']">
 					<file-icon />
 				</div>
 				<p>Docs</p>
+			</g-link>
+			<g-link :class="$style['category-item']" to="/api">
+				<div :class="$style['category-icon']">
+					<api-icon />
+				</div>
+				<p>APIs</p>
 			</g-link>
 		</div>
 		<div class="docs-sidebar-container">
@@ -22,20 +28,46 @@
 </template>
 
 <script>
-import { FileText as FileIcon } from "lucide-vue";
+import { FileText as FileIcon, Binary as ApiIcon } from 'lucide-vue'
 
 export default {
-	name: "DocsSidebar",
+	name: 'DocsSidebar',
 	props: {
 		links: {
 			type: Array,
 			default: () => {
-				return [];
-			}
-		}
+				return []
+			},
+		},
 	},
 	components: {
-		FileIcon
-	}
-};
+		// icons
+		FileIcon,
+		ApiIcon,
+	},
+}
 </script>
+
+<style module lang='sass'>
+.category-item
+	&:nth-child(1) .category-icon
+		background-color: #fe5f55
+
+	&:nth-child(2) .category-icon
+		background-color: #9333ea
+
+.category-icon
+	width: 2rem
+	height: 2rem
+	border-radius: 0.45rem
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	margin-right: 0.5rem
+
+	svg
+		width: 1.25rem
+		height: 1.25rem
+		stroke: white
+		stroke-width: 1px
+</style>
