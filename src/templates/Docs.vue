@@ -3,7 +3,7 @@
 		<div class="docs-header">
 			<Header :full-width="true" />
 		</div>
-		<div class="page-divider"></div>
+		<div class="page-divider" />
 		<div class="docs">
 			<aside class="docs-links">
 				<docs-sidebar :links="links" />
@@ -46,7 +46,7 @@ export default {
 	},
 	metaInfo() {
 		return {
-			title: `${this.$page.doc.title} | Documentation `,
+			title: `${this.$page.doc.title} - Documentation `,
 			description: this.$page.doc.description,
 			meta: [
 				{

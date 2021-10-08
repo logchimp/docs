@@ -3,7 +3,7 @@
 		<div class="docs-header">
 			<Header :full-width="true" />
 		</div>
-		<div class="page-divider"></div>
+		<div class="page-divider" />
 		<div class="docs">
 			<aside class="docs-links">
 				<docs-sidebar :links="links" />
@@ -46,7 +46,7 @@ export default {
 	},
 	metaInfo() {
 		return {
-			title: `${this.$page.api.title} | APIs | LogChimp`,
+			title: `${this.$page.api.title} - APIs`,
 			description: this.$page.api.description,
 			meta: [
 				{
