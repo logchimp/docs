@@ -21,11 +21,16 @@ This is one of them endpoints used to access posts in different parts of the app
 GET: /posts
 ```
 
-| Name      | Type   | In   | Description                                |
-| --------- | ------ | ---- | ------------------------------------------ |
-| `created` | string | body |                                            |
-| `page`    | number | body | Page number of the results to fetch.       |
-| `limit`   | number | body | Number of results to fetch in single page. |
+**Parameters**
+
+| Name        | Type            | In   | Description                                                                        |
+| ----------- | --------------- | ---- | ---------------------------------------------------------------------------------- |
+| `userId`    | string          | body | Used to get vote info for the user                                                 |
+| `boardId`   | array of string | body | Search posts from selected boards. Will search all the boards if not provided.     |
+| `roadmapId` | array of string | body | Search posts from selected roadmaps. Will search all the roadmaps if not provided. |
+| `created`   | string          | body |                                                                                    |
+| `page`      | number          | body | Page number of the results to fetch.                                               |
+| `limit`     | number          | body | Number of results to fetch in single page.                                         |
 
 **Response**
 
