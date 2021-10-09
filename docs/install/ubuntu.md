@@ -8,7 +8,6 @@ import Blockquote from "@/components/Blockquote"
 
 A full guide for installing, configuring and running LogChimp on your **Ubuntu 20.04** server, for use in production.
 
-
 ## Overview
 
 This the official guide for self-hosting LogChimp using our recommended stack of Ubuntu 20.04. If you’re comfortable installing, maintaining and updating your own software, this is the place for you. By the end of this guide you’ll have a fully configured LogChimp install running in production.
@@ -120,7 +119,6 @@ CREATE DATABASE <database name>;
   Wrap your password in single quotes. Also, do not forget to add the semicolon at the end of commands.
 </Blockquote>
 
-
 ```bash
 # Then exit postgresql prompt
 \q
@@ -197,12 +195,11 @@ sudo yarn
   The name of the unzipped folder may change after new releases. To confirm the name of the unzipped folder, type the command ls and press enter. The folder will be shown alongside logchimp-server.tar.gz. 
 </Blockquote>
 
-
 #### Configuration
 
 You will now create the `logchimp.config.json` [configuation file](/docs/config) in the current directory. There are three ways to create the configuration file.
 
-The first to create it manually. To do this, run the command `sudo nano logchimp.config.js` and type in the configuration manually. Press Ctrl/Command + X to save and exit. 
+The first to create it manually. To do this, run the command `sudo nano logchimp.config.js` and type in the configuration manually. Press Ctrl/Command + X to save and exit.
 
 The other two ways use the `logchimp-cli` tool.
 
@@ -248,7 +245,7 @@ LOGCHIMP_MAIL_PASSWORD=mail_password
 
 Be sure to set the correct values for the database user, password and database, and choose a random value for LOGCHIMP_SECRET_KEY as it is used for hashing.
 
-Press Ctrl/Command + X  then Y to save the file.
+Press Ctrl/Command + X then Y to save the file.
 
 Run the following command which creates the configuration file based on environment variables you set in .env.
 
@@ -264,7 +261,7 @@ You can run the following command to see the contents of the configuration file 
 cat logchimp.config.json
 ```
 
-###  Initializing database tables
+### Initializing database tables
 
 Run the following command to set creates all the tables that logchimp needs in your database:
 
@@ -338,10 +335,9 @@ yarn
 yarn build
 ```
 
-After a successful build, a  `dist` folder should be created in your current directory. This folder contains the frontend code that your user's browsers will receive when they visit your site.
+After a successful build, a `dist` folder should be created in your current directory. This folder contains the frontend code that your user's browsers will receive when they visit your site.
 
 To customise the build, you can download the source code directly from [GitHub](https://github.com/logchimp/theme).
-
 
 ## Setup Nginx
 
@@ -401,6 +397,6 @@ sudo certbot --nginx -d <your_domain>
 <Blockquote type="warning">
   Enter the same domain name you've used while creating Nginx configuration.
 </Blockquote>
-`certbot` will ask how you would like to configure your HTTPS settings. Select `2` (redirect) and hit `Enter`. The configuration will be updated, and Nginx will reload to pick up the new settings.
+Finally, `certbot` will ask how you would like to configure your HTTPS settings. Select `2` (redirect) and hit `Enter`. The configuration will be updated, and Nginx will reload to pick up the new settings.
 
 **🎉 Congrats!** You've successfully setup your own LogChimp site. You can now visit your domain to see your LogChimp site and create the admin account.
