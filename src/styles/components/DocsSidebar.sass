@@ -3,8 +3,12 @@
 	height: auto
 	scroll-behavior: smooth
 	padding-top: 2rem
+	padding-right: 4vmin
 
 .docs-sidebar-category-item
+	display: flex
+	justify-content: space-between
+
 	&:nth-child(1) .docs-sidebar-category-icon
 		background-color: #fe5f55
 
@@ -25,6 +29,15 @@
 		height: 1.25rem
 		stroke: white
 		stroke-width: 2px
+
+.docs-sidebar-category-draft
+	text-transform: uppercase
+	font-size: 0.75rem;
+	padding: 0.25rem 0.5rem
+	font-weight: 600
+	color: $gray-70
+	background-color: $gray-90
+	border-radius: 2rem
 
 .docs-sidebar-category
 	margin-bottom: 2rem
