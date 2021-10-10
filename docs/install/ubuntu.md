@@ -12,7 +12,7 @@ A full guide for installing, configuring and running LogChimp on your **Ubuntu 2
 
 This the official guide for self-hosting LogChimp using our recommended stack of Ubuntu 20.04. If you’re comfortable installing, maintaining and updating your own software, this is the place for you. By the end of this guide you’ll have a fully configured LogChimp install running in production.
 
-You can use this 👉 [DigitalOcean](https://m.do.co/c/bb349ea15324) 👈 link and get **free $100 credit** to run your servers.
+You can use this 👉 [DigitalOcean](https://m.do.co/c/bb349ea15324) 👈 link and get **free $100 credit** to self-host.
 
 <Blockquote type="tip">
 Save time with LogChimp VALET.
