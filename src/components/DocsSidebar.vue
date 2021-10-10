@@ -1,27 +1,33 @@
 <template>
 	<nav class="docs-sidebar">
-		<div class="docs-sidebar-category">
-			<g-link class="docs-sidebar-category-item" to="/docs">
-				<div :class="$style['category-item-group']">
-					<div class="docs-sidebar-category-icon">
+		<!-- category -->
+		<div class="section-wrapper category-wrapper">
+			<g-link class="item-group" to="/docs">
+				<div class="left-content">
+					<div class="icon">
 						<file-icon />
 					</div>
 					<p>Docs</p>
 				</div>
 			</g-link>
-			<g-link class="docs-sidebar-category-item" to="/api">
-				<div :class="$style['category-item-group']">
-					<div class="docs-sidebar-category-icon">
+			<g-link class="item-group" to="/api">
+				<div class="left-content">
+					<div class="icon">
 						<api-icon />
 					</div>
 					<p>APIs</p>
 				</div>
-				<div class="docs-sidebar-category-draft">
-					draft
+
+				<div class="right-content">
+					<div class="badge">draft</div>
 				</div>
 			</g-link>
 		</div>
-		<div class="docs-sidebar-container">
+		<!-- static links -->
+		<div class="section-wrapper">
+			<g-link to="/docs/sponsor" class="sidebar-links"> About this project </g-link>
+		</div>
+		<div class="section-wrapper">
 			<div v-for="section in links" class="docs-sidebar-section">
 				<h5 class="docs-sidebar-section-title">
 					{{ section.title }}
@@ -74,9 +80,3 @@ export default {
 	},
 }
 </script>
-
-<style module lang='sass'>
-.category-item-group
-	display: flex
-	align-items: center
-</style>

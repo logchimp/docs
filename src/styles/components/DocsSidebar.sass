@@ -5,58 +5,78 @@
 	padding-top: 2rem
 	padding-right: 4vmin
 
-.docs-sidebar-category-item
-	display: flex
-	justify-content: space-between
+	.section-wrapper
+		margin-bottom: 2rem
 
-	&:nth-child(1) .docs-sidebar-category-icon
-		background-color: #fe5f55
+		.item-group
+			display: flex
+			align-items: center
+			justify-content: space-between
 
-	&:nth-child(2) .docs-sidebar-category-icon
-		background-color: #9333ea
+			.left-content
+				display: flex
+				align-items: center
 
-.docs-sidebar-category-icon
-	width: 2rem
-	height: 2rem
-	border-radius: 0.45rem
-	display: inline-flex
-	align-items: center
-	justify-content: center
-	margin-right: 0.5rem
+			.right-content
 
-	svg
-		width: 1.25rem
-		height: 1.25rem
-		stroke: white
-		stroke-width: 2px
+			// this badge style can be shared between left-content and right-content
+			.badge
+				text-transform: uppercase
+				font-size: 0.75rem
+				padding: 0.25rem 0.5rem
+				font-weight: 600
+				color: $gray-70
+				background-color: $gray-90
+				border-radius: 2rem
 
-.docs-sidebar-category-draft
-	text-transform: uppercase
-	font-size: 0.75rem;
-	padding: 0.25rem 0.5rem
-	font-weight: 600
-	color: $gray-70
-	background-color: $gray-90
-	border-radius: 2rem
 
-.docs-sidebar-category
-	margin-bottom: 2rem
+	.category-wrapper
+		a
+			display: flex
+			align-items: center
+			margin-bottom: 0.75rem
 
-	a
-		display: flex
-		align-items: center
-		margin-bottom: 0.75rem
+			&:last-child
+				margin-bottom: 0
 
-		&:last-child
-			margin-bottom: 0
+			p
+				color: $gray-70
 
-		p
-			color: $gray-70
+		.active
+			p
+				font-weight: 500
+				color: black
 
-	.active
-		p
+		.item-group
+			&:nth-child(1) .left-content .icon
+				background-color: #fe5f55
+
+			&:nth-child(2) .left-content .icon
+				background-color: #9333ea
+
+			.left-content
+				.icon
+					width: 2rem
+					height: 2rem
+					border-radius: 0.45rem
+					display: inline-flex
+					align-items: center
+					justify-content: center
+					margin-right: 0.5rem
+
+					svg
+						width: 1.25rem
+						height: 1.25rem
+						stroke: white
+						stroke-width: 2px
+
+	// this style doesn't include category section
+	.sidebar-links
+		color: $gray-70
+
+		&.active--exact
 			font-weight: 500
-			color: black
+			color: $text
 
 .docs-sidebar-section
 	margin-bottom: 1.5rem
@@ -86,6 +106,6 @@
 		&:hover
 			color: $brand-color
 
-@media screen and (max-width:  992px)
+@media screen and (max-width:	992px)
 	.docs-sidebar
 		display: none
