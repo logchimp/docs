@@ -3,7 +3,6 @@ title: Configuration
 ---
 
 <!-- components -->
-
 import Blockquote from "@/components/Blockquote"
 
 Step by step guide for you to configure LogChimp site using `logchimp.config.json` file.
@@ -25,7 +24,7 @@ LogChimp supports three environments: **development**, **testing**, **production
 There are number of options which are explained in detail below.
 
 <Blockquote type="alert">
-  The configuration below is just an example and not recommended for production use.
+The configuration below is just an example and not recommended for production use.
 </Blockquote>
 
 ```json
