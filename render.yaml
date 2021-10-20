@@ -3,7 +3,7 @@ services:
   - type: web
     name: 'logchimp.codecarrot.net'
     env: static
-    buildCommand: npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build
+    buildCommand: pnpm run build
     staticPublishPath: ./dist
     headers:
       - path: /*
