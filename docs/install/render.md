@@ -8,6 +8,12 @@ import Blockquote from "@/components/Blockquote"
 
 A full guide for running LogChimp on Render with a click of a button.
 
+## TOC
+
+- v0.6
+
+### v0.6
+
 Clicking on "Deploy to Render" button will redirect you to confirmation page.
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/logchimp/deploy-buttons)
