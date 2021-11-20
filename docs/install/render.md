@@ -32,9 +32,9 @@ Click "apply" button, 🎉 Voilà!
 
 Now, the deployed services needs to be connected together.
 
-On your machine, we'll use logchimp-cli tool to [generate configuration](/docs/cli/config/generate).
+On your machine, you need to use logchimp-cli tool to [generate configuration](/docs/cli/config/generate).
 
-In services page, open **logchimp-api**, go to Environment tab, scroll to Secret Files section.
+In your Render dashboard, open **logchimp-api**, go to Environment tab, scroll to Secret Files section.
 
 ![Render services secret file section](/images/docs/render-secret-file-section.png)
 
@@ -52,11 +52,9 @@ You're doing great 💪, just one more step.
 
 Open **logchimp-client**, go to Redriects/Rewrites tab.
 
+Click "Add rule", enter `/api/*` as source, and paste your **logchimp-api** URL as destination `https://logchimp-api.onrender.com/api*`.
+
 ![Render services redirect section](/images/docs/render-services-redirect-section.png)
-
-Click "Add rule", at source enter `/api/*` paste your **logchimp-api** deployment url.
-
-![Render services redirect API at top](/images/docs/render-services-redirect-api.png)
 
 <Blockquote type="warning">
   Make sure /api/* source is at top
