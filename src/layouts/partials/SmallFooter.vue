@@ -1,7 +1,6 @@
 <template>
 	<footer>
 		<div class="inner-max">
-			<valet-strap />
 			<div class="footer-container">
 				<div class="footer-col">
 					<logo />
@@ -64,7 +63,6 @@
 <script>
 // components
 import Logo from "../../components/Logo";
-import ValetStrap from "../../components/ValetStrap";
 
 // icons
 import GithubIcon from "../../components/icons/github";
@@ -77,7 +75,6 @@ export default {
 	name: "SmallFooter",
 	components: {
 		Logo,
-		ValetStrap,
 
 		// icons
 		GithubIcon,
