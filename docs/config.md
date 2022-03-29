@@ -28,7 +28,7 @@ There are number of options which are explained in detail below.
 The configuration below is just an example and not recommended for production use.
 </Blockquote>
 
-```json
+```json lines
 {
   "database": {
     "host": "database.domain.com/postgresql",
@@ -42,6 +42,17 @@ The configuration below is just an example and not recommended for production us
     "port": 3000,
     "secretKey": "Diq1-Xir9"
   },
+  // ...
+}
+```
+
+### Mail
+
+LogChimp uses SMPT connection for sending emails programmatically.
+
+```json lines
+{
+  // ...
   "mail": {
     "service": "awesomeMail",
     "host": "smtp.domain.com",
@@ -51,3 +62,7 @@ The configuration below is just an example and not recommended for production us
   }
 }
 ```
+
+**Does LogChimp support SMPT connection URL?**
+
+No, currently it's not supported. But you're most welcome to [submit a feature request](https://github.com/logchimp/logchimp) anytime.
