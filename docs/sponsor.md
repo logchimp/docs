@@ -35,7 +35,7 @@ Please use GitHub issues to make everything accessible to the whole community if
 
 ##### Can we have call?
 
-We can always have a chat on our [LogChimp Discord server](https://discord.gg/A7mztcC). If you really need to reach out in private, send us an email at [opensource@codecarrot.net](mailto:opensource@codecarrot.net), but no teachnical email support 😉
+We can always have a chat on our [LogChimp Discord server](https://discord.gg/A7mztcC). If you really need to reach out in private, send us an email at [opensource@codecarrot.net](mailto:opensource@codecarrot.net), but no technical email support 😉
 
 ##### I can't use GitHub. How can I support you?
 
