@@ -6437,10 +6437,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-lucide-vue@^0.20.0:
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/lucide-vue/-/lucide-vue-0.20.0.tgz#4db9a68e70cfa419fe4c0b2dbfc5508021fb27dc"
-  integrity sha512-NyrWPxTR2+H6v6dJ6Bnm604J1E3uj8vX0Hp/Y3ACWhNTLYlE7qkCksPLCsTfE22HptZ6IosHqXjF0u13mFUkhg==
+lucide-vue@^0.22.0:
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/lucide-vue/-/lucide-vue-0.22.0.tgz#72d195fc87c19fb3e534ba302c6f5ad21535e55a"
+  integrity sha512-9dAZrlYI4YFkWHq+ewEmSOtt0ixYtdQVlHFP43Eg4zJB1KJOOzUr4X7bhiJVO+HVS1nc7y2piUMc4WZ2zvhN8w==
 
 make-dir@^1.0.0, make-dir@^1.2.0:
   version "1.3.0"
