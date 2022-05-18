@@ -29,6 +29,6 @@
     "husky": "7.0.4",
     "node-sass": "^4.14.1",
     "prettier": "2.6.2",
-    "sass-loader": "7.3.1"
+    "sass-loader": "13.0.0"
   }
 }
