@@ -10,7 +10,7 @@ USAGE
 
 EXAMPLES
   $ logchimp config:get --key database.port
-  $ logchimp config:get --key server.secretkey
+  $ logchimp config:get --key server.secretKey
 ```
 
 ### Options

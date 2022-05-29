@@ -24,7 +24,7 @@ EXAMPLES
 
 - `--local` - Run LogChimp for local development/testing
 - `--port=port` - [default: 3000] Server port to listen on
-- `--secretkey=secretkey` - Secret key for password validation _(default auto generate random string)_
+- `--secretKey=secretKey` - Secret key for password validation _(default auto generate random string)_
 
 **Database**
 
