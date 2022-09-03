@@ -2,7 +2,16 @@
 title: Docker
 ---
 
+<!-- components -->
+import Blockquote from "@/components/Blockquote"
+
 [LogChimp docker image](https://github.com/orgs/logchimp/packages/container/package/logchimp) is an official package maintained by core team.
+
+<Blockquote type="warning">
+  Experience with [Docker Compose](https://docs.docker.com/compose/) is required.
+</Blockquote>
+
+If `Docker` or `Docker Compose` is not installed on your machine/server, refer to [Docker Compose](https://docs.docker.com/engine/install/) installation docs.
 
 You can easily kick-start your LogChimp site in 3 easy steps.
 
