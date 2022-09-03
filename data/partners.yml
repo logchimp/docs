@@ -4,11 +4,11 @@
   image: '/images/partners/codecarrot.png'
   description: CodeCarrot is a software agency which brings your idea to life.
 
-- id: 2
-  title: 'MacStadium'
-  link: 'https://www.macstadium.com/'
-  image: '/images/partners/macstadium.png'
-  description: MacStadium provides enterprise-class cloud solutions for Mac and iOS app development.
+#- id: 2
+#  title: 'MacStadium'
+#  link: 'https://www.macstadium.com/'
+#  image: '/images/partners/macstadium.png'
+#  description: MacStadium provides enterprise-class cloud solutions for Mac and iOS app development.
 
 - id: 3
   title: 'BrowserStack'
