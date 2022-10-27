@@ -4,7 +4,8 @@
     "prod": "npm run build && npm run server:prod",
     "build": "vite build",
     "server": "ts-node ./server",
-    "server:prod": "cross-env NODE_ENV=production ts-node ./server"
+    "server:prod": "cross-env NODE_ENV=production ts-node ./server",
+	"rome:format": "rome format --write ."
   },
   "dependencies": {
     "@types/compression": "^1.7.2",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
+    "rome": "0.10.1-next",
     "tailwindcss": "^3.2.1"
   }
 }
