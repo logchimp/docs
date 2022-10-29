@@ -62,21 +62,21 @@ Currently, LogChimp doesn’t have integration with third-party services to uplo
 The trick is to directly update the LogChimp site logo URL directly from database, upload your logo to any image hosting service (for example, AWS S3 bucket), and grab the image url.
 
 1. Go to PostgreSQL plugin > Data tab > click "settings" database table
-   ![Open settings database table from Railway UI](/images/docs/install/railway/settings-database-table.jpg)
+   ![Open settings database table from Railway UI](../images/docs/install/railway/settings-database-table.jpg)
 
 2. Click on the first row in "settings" table, that should open that row in edit mode
    Paste the image url you've copied and click the save button.
-   ![Change logo URL from settings database table](/images/docs/install/railway/change-logo-url-from-database.jpg)
+   ![Change logo URL from settings database table](../images/docs/install/railway/change-logo-url-from-database.jpg)
 
 ### How to add custom domain?
 
 You can even attach a **[custom domain](https://docs.railway.app/deployment/custom-domains)** to your LogChimp site.
 
 1. Go to variables page and click on edit button from dropdown for the environment variable of `LOGCHIMP_SERVER_HOST`.
-   ![Edit server_host env variable](/images/docs/install/railway/edit-server-host-env.jpg)
+   ![Edit server_host env variable](../images/docs/install/railway/edit-server-host-env.jpg)
 
 2. Enter your custom domain and click on checkmark icon.
-   ![change to custom domain](/images/docs/install/railway/change-to-custom-domain.jpg)
+   ![change to custom domain](../images/docs/install/railway/change-to-custom-domain.jpg)
 
 > 🚨 Make sure to prefix `https://` protocol before your custom domain.
 
@@ -88,7 +88,7 @@ You can take a look at this demo deployment at: [https://logchimp-production.up.
   New sign up has been disabled from this demo site to protect from spam and abuse.
 </Blockquote>
 
-![deployment preview](/images/docs/install/railway/deployment-preview.jpg)
+![deployment preview](../images/docs/install/railway/deployment-preview.jpg)
 
 ## Conclusion
 

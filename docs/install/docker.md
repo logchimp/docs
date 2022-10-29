@@ -68,7 +68,7 @@ After running these command successfully, you can access your LogChimp site at `
 
 Here's an LogChimp Docker image structure for you to understand _(if you're curious)_, what's happening behind the scenes.
 
-![LogChimp Docker image structure](/images/docs/logchimp-docker-structure.png)
+![LogChimp Docker image structure](../images/docs/logchimp-docker-structure.png)
 
 ### Resources
 

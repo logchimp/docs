@@ -26,7 +26,7 @@ AND you should hire us if you want to design and build an amazing web applicatio
 
 But here are the friendly faces of our core contributors of LogChimp, [Yashu Mittal](https://github.com/mittalyashu). You've probably read our names in the thousands of commits, pull requets, comments or Tweets already.
 
-![Yashu Mittal on trip](/images/yashu-mittal-on-trip.jpg)
+![Yashu Mittal on trip](../images/yashu-mittal-on-trip.jpg)
 
 ### Frequently asked questions
 

@@ -17,4 +17,4 @@ You can click the "Open in Gitpod" button to get started.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/logchimp/logchimp)
 
-![Gitpod deployment preview](/images/docs/install/gitpod/gitpod-deployment-preview.jpg)
+![Gitpod deployment preview](../images/docs/install/gitpod/gitpod-deployment-preview.jpg)
