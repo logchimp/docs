@@ -9,7 +9,7 @@ Learn how to setup, customize and run a LogChimp site successfully.
 
 LogChimp is an open-source software to capture your customers feedback and inform your product decisions.
 
-![LogChimp homepage](/images/docs/logchimp_homepage.png)
+![LogChimp homepage](../images/docs/logchimp_homepage.png)
 
 ## Quick start
 
