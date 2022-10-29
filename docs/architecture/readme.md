@@ -13,7 +13,7 @@ A high-level view of LogChimp's architecture is as shown:
 
 These five areas work together to make every LogChimp site function smoothly.
 
-1. Robust REST APIs
+1. [Robust REST APIs](/docs/architecture/api)
 2. Beautiful Vue.js client app
 3. Powerful Dashboard
 4. PostgreSQL Database
