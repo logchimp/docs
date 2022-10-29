@@ -9,7 +9,7 @@ LogChimp is an independent, built on a modern technology stack of Node.js for po
 
 A high-level view of LogChimp's architecture is as shown:
 
-![LogChimp Architecture](../images/docs/logchimp-architecture.png)
+![LogChimp Architecture](../../images/docs/architecture/logchimp-architecture.png)
 
 These five areas work together to make every LogChimp site function smoothly.
 
