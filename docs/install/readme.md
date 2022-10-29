@@ -1,5 +1,6 @@
 ---
 title: Get started with LogChimp
+slug: /docs/install
 ---
 
 <!-- components -->

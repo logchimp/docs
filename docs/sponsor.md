@@ -1,5 +1,6 @@
 ---
 title: About this project
+slug: /docs/sponsor
 ---
 
 Give back to the open source community and [sponsor us on GitHub](https://github.com/sponsors/logchimp)! ❤️

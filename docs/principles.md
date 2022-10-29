@@ -1,5 +1,6 @@
 ---
 title: Principles
+slug: /docs/principles
 ---
 
 Developing LogChimp as a product is a complex process undertaken by a [small number of people](https://github.com/logchimp/logchimp/graphs/contributors) with a great deal of care.

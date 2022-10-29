@@ -1,5 +1,6 @@
 ---
 title: Contributing
+slug: /docs/contributing
 ---
 
 LogChimp is completely open-source software build almost entirely by volunteer contributors for product owners to build a better version of their product.

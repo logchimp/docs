@@ -1,5 +1,6 @@
 ---
 title: logchimp help
+slug: /docs/cli/help
 ---
 
 Use the help command to access the list of possible `logchimp` commands when required.

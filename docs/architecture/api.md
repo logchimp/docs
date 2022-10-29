@@ -1,5 +1,6 @@
 ---
 title: APIs
+slug: /docs/architecture/api
 ---
 
 At its core, LogChimp is powered by RESTful JSON API.

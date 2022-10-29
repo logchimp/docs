@@ -1,5 +1,6 @@
 ---
 title: logchimp config:set
+slug: /docs/cli/config/set
 ---
 
 Set a specific value in the configuration file

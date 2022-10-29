@@ -1,5 +1,6 @@
 ---
 title: logchimp config:get
+slug: /docs/cli/config/get
 ---
 
 Get a specific value from the configuration file.

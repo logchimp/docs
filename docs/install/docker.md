@@ -1,5 +1,6 @@
 ---
 title: Docker
+slug: /docs/install/docker
 ---
 
 <!-- components -->

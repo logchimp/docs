@@ -1,5 +1,6 @@
 ---
 title: How to deploy LogChimp on Railway?
+slug: /docs/install/railway
 ---
 
 <!-- components -->

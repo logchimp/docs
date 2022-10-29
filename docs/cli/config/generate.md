@@ -1,5 +1,6 @@
 ---
 title: logchimp config:generate
+slug: /docs/cli/config/generate
 ---
 
 Generate a new configuration for a LogChimp instance.

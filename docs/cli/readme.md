@@ -1,5 +1,6 @@
 ---
 title: CLI
+slug: /docs/cli
 ---
 
 An all-in-one tool to help you configure and making it super easy to spin up a new LogChimp site.

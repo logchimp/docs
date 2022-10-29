@@ -1,5 +1,6 @@
 ---
 title: Run LogChimp in Gitpod
+slug: /docs/install/gitpod
 ---
 
 <!-- components -->

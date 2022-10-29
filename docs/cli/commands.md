@@ -1,5 +1,6 @@
 ---
 title: Commands
+slug: /docs/cli/commands
 ---
 
 <!-- components -->

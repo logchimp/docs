@@ -1,5 +1,6 @@
 ---
 title: Install from Source
+slug: /docs/install/source
 ---
 
 <!-- components -->

@@ -1,5 +1,6 @@
 ---
 title: How to deploy LogChimp on Render?
+slug: /docs/install/render
 ---
 
 <!-- components -->

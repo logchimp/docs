@@ -1,5 +1,6 @@
 ---
 title: Configuration
+slug: /docs/config
 ---
 
 <!-- components -->

@@ -1,5 +1,6 @@
 ---
 title: logchimp config
+slug: /docs/cli/config
 ---
 
 Generate or modify the LogChimp configuration using `config` command.

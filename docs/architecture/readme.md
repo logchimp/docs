@@ -1,5 +1,6 @@
 ---
 title: Architecture
+slug: /docs/architecture
 ---
 
 How LogChimp works with it's architecture?

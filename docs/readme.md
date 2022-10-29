@@ -1,16 +1,11 @@
 ---
 title: Documentation
+slug: /docs/
 ---
-
-<!-- components -->
-
-import Blockquote from "@/components/Blockquote"
 
 Learn how to setup, customize and run a LogChimp site successfully.
 
-<Blockquote type="warning">
-NOTE: The documentation is very new and may contain some gaps, please help us fill them in by opening issues or better yet, pull-requests when you think something could be explained better.
-</Blockquote>
+> NOTE: The documentation is very new and may contain some gaps, please help us fill them in by opening issues or better yet, pull-requests when you think something could be explained better.
 
 LogChimp is an open-source software to capture your customers feedback and inform your product decisions.
 
