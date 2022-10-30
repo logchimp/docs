@@ -1,9 +1,8 @@
 ---
 title: logchimp config:get
+description: Get a specific value from the configuration file.
 slug: /docs/cli/config/get
 ---
-
-Get a specific value from the configuration file.
 
 ```bash
 USAGE

@@ -1,9 +1,8 @@
 ---
 title: Documentation
+description: Learn how to setup, customize and run a LogChimp site successfully.
 slug: /docs/
 ---
-
-Learn how to setup, customize and run a LogChimp site successfully.
 
 > NOTE: The documentation is very new and may contain some gaps, please help us fill them in by opening issues or better yet, pull-requests when you think something could be explained better.
 

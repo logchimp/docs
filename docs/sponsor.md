@@ -1,5 +1,6 @@
 ---
 title: About this project
+description: Open source from day one
 slug: /docs/sponsor
 ---
 

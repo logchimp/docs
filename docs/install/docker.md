@@ -1,5 +1,6 @@
 ---
 title: Docker
+description: Install LogChimp via Docker
 slug: /docs/install/docker
 ---
 

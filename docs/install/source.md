@@ -1,13 +1,12 @@
 ---
 title: Install from Source
+description: This guide is for installing a local development copy of LogChimp from source code, primarily for development purposes.
 slug: /docs/install/source
 ---
 
 <!-- components -->
 
 import Blockquote from "@/components/Blockquote"
-
-This guide is for installing a local development copy of LogChimp from source code, primarily for development purposes.
 
 ## Prerequisites
 

@@ -1,13 +1,11 @@
 ---
 title: How to deploy LogChimp on Railway?
+description: Guide to know your LogChimp site successfully on Railway
 slug: /docs/install/railway
 ---
 
 <!-- components -->
-
 import Blockquote from "@/components/Blockquote"
-
-Guide to know your LogChimp site successfully on Railway
 
 <Blockquote type="alert">
   This uses `v0.7.0-beta.0` version.

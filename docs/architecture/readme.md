@@ -1,9 +1,8 @@
 ---
 title: Architecture
+description: How LogChimp works with it's architecture?
 slug: /docs/architecture
 ---
-
-How LogChimp works with it's architecture?
 
 LogChimp is an independent, built on a modern technology stack of Node.js for powering its robust JSON API, stand-alone system with dependency only on the database (PostgreSQL) as a data storage layer, with a beautiful and rich client app written in Vue.js including a powerful dashboard - find out more.
 

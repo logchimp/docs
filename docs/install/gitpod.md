@@ -1,13 +1,11 @@
 ---
 title: Run LogChimp in Gitpod
+description: Want to give a quick spin to LogChimp?
 slug: /docs/install/gitpod
 ---
 
 <!-- components -->
-
 import Blockquote from "@/components/Blockquote"
-
-Want to give a quick spin to LogChimp?
 
 <Blockquote type="alert">
   It's not recommended to use Gitpod for production usage.
