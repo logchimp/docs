@@ -4,6 +4,8 @@ description: This guide is for installing a local development copy of LogChimp f
 slug: /docs/install/source
 ---
 
+import { Alert } from "../../../src/components/Documentation/Alert.tsx"
+
 ## Prerequisites
 
 Before getting started, you'll need these global packages to be installed:

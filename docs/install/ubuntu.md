@@ -4,6 +4,8 @@ description: Install LogChimp on Ubuntu
 slug: /docs/install/ubuntu
 ---
 
+import { Alert } from "../../../src/components/Documentation/Alert.tsx"
+
 A full guide for installing, configuring and running LogChimp on your **Ubuntu 20.04** server, for use in production.
 
 <Alert type="tip">

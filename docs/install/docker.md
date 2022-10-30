@@ -4,6 +4,8 @@ description: Install LogChimp via Docker
 slug: /docs/install/docker
 ---
 
+import { Alert } from "../../../src/components/Documentation/Alert.tsx"
+
 [LogChimp docker image](https://github.com/orgs/logchimp/packages/container/package/logchimp) is an official package maintained by core team.
 
 <Alert type="warning">

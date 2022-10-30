@@ -4,6 +4,8 @@ description: Want to give a quick spin to LogChimp?
 slug: /docs/install/gitpod
 ---
 
+import { Alert } from "../../../src/components/Documentation/Alert.tsx"
+
 <Alert type="error">
   It's not recommended to use Gitpod for production usage.
 </Alert>

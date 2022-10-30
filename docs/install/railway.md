@@ -4,6 +4,8 @@ description: Guide to know your LogChimp site successfully on Railway
 slug: /docs/install/railway
 ---
 
+import { Alert } from "../../../src/components/Documentation/Alert.tsx"
+
 <Alert type="error">
   This uses `v0.7.0-beta.0` version.
 </Alert>
