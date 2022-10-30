@@ -4,12 +4,9 @@ description: Guide to know your LogChimp site successfully on Railway
 slug: /docs/install/railway
 ---
 
-<!-- components -->
-import Blockquote from "@/components/Blockquote"
-
-<Blockquote type="alert">
+<Alert type="error">
   This uses `v0.7.0-beta.0` version.
-</Blockquote>
+</Alert>
 
 There are many ways to [install LogChimp](/docs/install), with Railway, you can get started with 3 easy steps, click the button, enter environment variables and hit deploy. This will automatically provisioning a PostgreSQL database and deploy single instance of LogChimp for you.
 
@@ -23,7 +20,9 @@ _Disclaimer: The above link contains a referral code which gives referral credit
 
 To get most of LogChimp, you can customise using environment variables.
 
-> 💡 Don't want to deal with environment variables? You can configure LogChimp using `logchimp.config.json` file, you can read more about it [here](/docs/config).
+<Alert type="tip">
+Don't want to deal with environment variables? You can configure LogChimp using `logchimp.config.json` file, you can read more about it [here](/docs/config).
+</Alert>
 
 **SERVER**
 
@@ -82,9 +81,9 @@ You can even attach a **[custom domain](https://docs.railway.app/deployment/cust
 
 You can take a look at this demo deployment at: [https://logchimp-production.up.railway.app](https://logchimp-production.up.railway.app/).
 
-<Blockquote type="warning">
+<Alert type="warning">
   New sign up has been disabled from this demo site to protect from spam and abuse.
-</Blockquote>
+</Alert>
 
 ![deployment preview](../images/docs/install/railway/deployment-preview.jpg)
 

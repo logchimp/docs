@@ -4,10 +4,6 @@ description: This guide is for installing a local development copy of LogChimp f
 slug: /docs/install/source
 ---
 
-<!-- components -->
-
-import Blockquote from "@/components/Blockquote"
-
 ## Prerequisites
 
 Before getting started, you'll need these global packages to be installed:
@@ -22,9 +18,9 @@ You can read more about engine requirements from [package.json](https://github.c
 
 First, you'll need to make a fork of the [LogChimp](https://github.com/logchimp/logchimp) repository. Click on the fork button right at the top, wait for a copy to be created over on your personal GitHub account, and you should be all set!
 
-<Blockquote type="tip">
+<Alert type="tip">
   You'll also need a LogChimp theme as client to intract with LogChimp APIs.
-</Blockquote>
+</Alert>
 
 - LogChimp Core - https://github.com/logchimp/logchimp
 - LogChimp default theme - https://github.com/logchimp/theme
@@ -65,9 +61,9 @@ Once you take down the Postgres Docker container all the data is also removed, t
 
 ## Configuration file
 
-<Blockquote type="warning">
+<Alert type="warning">
   Starting from v0.4.0 `.env` has been replaced with `logchimp.config.json`.
-</Blockquote>
+</Alert>
 
 Create a `logchimp.config.json` file in the root directory, which will contain all the [configuration](/docs/config) for the LogChimp site.
 
