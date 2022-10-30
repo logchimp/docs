@@ -1,5 +1,6 @@
 ---
 title: Logos
+description: LogChimp brand assets and usage guidelines.
 slug: /docs/logos
 ---
 

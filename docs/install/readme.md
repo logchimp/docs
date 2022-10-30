@@ -1,14 +1,12 @@
 ---
 title: Get started with LogChimp
+description: This will help you get started with LogChimp and start collecting feedback from your customers.
 slug: /docs/install
 ---
 
 <!-- components -->
-
 import SelfhostInstall from "@/components/SelfhostInstall"
 import CloudHosting from "@/components/CloudHosting"
-
-This will help you get started with LogChimp and start collecting feedback from your customers.
 
 LogChimp is open-source, fast, flexible, and reliable software that is ideal for capturing user feedback and informing product choices.
 

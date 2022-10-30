@@ -1,9 +1,8 @@
 ---
 title: logchimp config:set
+description: Set a specific value in the configuration file
 slug: /docs/cli/config/set
 ---
-
-Set a specific value in the configuration file
 
 ```bash
 USAGE

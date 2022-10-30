@@ -1,5 +1,6 @@
 ---
 title: How to install LogChimp on Ubuntu?
+description: Install LogChimp on Ubuntu
 slug: /docs/install/ubuntu
 ---
 

@@ -1,12 +1,11 @@
 ---
 title: Configuration
+description: Step by step guide for you to configure LogChimp site using `logchimp.config.json` file.
 slug: /docs/config
 ---
 
 <!-- components -->
 import Blockquote from "@/components/Blockquote"
-
-Step by step guide for you to configure LogChimp site using `logchimp.config.json` file.
 
 <Blockquote type="warning">
 NOTE: The documentation is very new and may contain some gaps, please help us fill them in by opening issues or better yet, pull-requests when you think something could be explained better.

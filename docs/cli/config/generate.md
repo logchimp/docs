@@ -1,9 +1,8 @@
 ---
 title: logchimp config:generate
+description: Generate a new configuration for a LogChimp instance.
 slug: /docs/cli/config/generate
 ---
-
-Generate a new configuration for a LogChimp instance.
 
 ```bash
 USAGE

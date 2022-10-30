@@ -1,13 +1,12 @@
 ---
 title: How to deploy LogChimp on Render?
+description: A full guide for running LogChimp on Render with a click of a button.
 slug: /docs/install/render
 ---
 
 <!-- components -->
 
 import Blockquote from "@/components/Blockquote"
-
-A full guide for running LogChimp on Render with a click of a button.
 
 ## TOC
 

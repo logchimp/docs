@@ -1,9 +1,8 @@
 ---
 title: CLI
+description: An all-in-one tool to help you configure and making it super easy to spin up a new LogChimp site.
 slug: /docs/cli
 ---
-
-An all-in-one tool to help you configure and making it super easy to spin up a new LogChimp site.
 
 We understand that some users are going to want more flexibility, so the CLI has a whole set of flags and options that allow you to break the steps down and adjust what they do.
 
