@@ -6,11 +6,11 @@ slug: /docs/sponsor
 
 Give back to the open source community and [sponsor us on GitHub](https://github.com/sponsors/logchimp)! ❤️
 
-### Introduction
+## Introduction
 
 We put ~~hundred~~ thousands of hours of unpaid effort into LogChimp to provide an excellent user experience. Your funding will help us to make this software more and more financially sustainable. This allows us to give helpful assistance, update our packages, keep things current, and, most importantly, develop new LogChimp features.
 
-### Your benefits as a sponsor
+## Your benefits as a sponsor
 
 - A "sponsor 💖" label on your issues and pull requests _(coming soon)_
 - Perks for the Github tier you pick
@@ -19,7 +19,7 @@ We put ~~hundred~~ thousands of hours of unpaid effort into LogChimp to provide 
 
 Sounds good? [Sponsor us on GitHub](https://github.com/sponsors/logchimp)!
 
-### The maintainers of LogChimp
+## The maintainers of LogChimp
 
 If you're thankful for LogChimp, you should say thank you to the lovely people at [CodeCarrot](https://codecarrot.net). The amazing company that funded the inital development cost of LogChimp.
 
@@ -29,16 +29,16 @@ But here are the friendly faces of our core contributors of LogChimp, [Yashu Mit
 
 ![Yashu Mittal on trip](../images/yashu-mittal-on-trip.jpg)
 
-### Frequently asked questions
+## Frequently asked questions
 
-##### I want to consulting. What's your rate?
+### I want to consulting. What's your rate?
 
 Please use GitHub issues to make everything accessible to the whole community if you have a problem, a question, wish to discuss something through, or anything else. For everything else, reach out to [opensource@codecarrot.net](mailto:opensource@codecarrot.net). We can take on a limited number of custom development and consulting contracts.
 
-##### Can we have call?
+### Can we have call?
 
 We can always have a chat on our [LogChimp Discord server](https://discord.gg/A7mztcC). If you really need to reach out in private, send us an email at [opensource@codecarrot.net](mailto:opensource@codecarrot.net), but no technical email support 😉
 
-##### I can't use GitHub. How can I support you?
+### I can't use GitHub. How can I support you?
 
 No worries. You can support us on [OpenCollective](https://opencollective.com/logchimp).
