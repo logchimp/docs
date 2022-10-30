@@ -4,6 +4,8 @@ description: Below are the available LogChimp CLI commands. You can always run `
 slug: /docs/cli/commands
 ---
 
+import { Alert } from "../../../src/components/Documentation/Alert.tsx"
+
 <Alert type="tip">
   Each command is documented in detail on its own page.
 </Alert>

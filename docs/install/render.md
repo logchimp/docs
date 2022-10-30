@@ -4,6 +4,8 @@ description: A full guide for running LogChimp on Render with a click of a butto
 slug: /docs/install/render
 ---
 
+import { Alert } from "../../../src/components/Documentation/Alert.tsx"
+
 ## TOC
 
 - v0.6

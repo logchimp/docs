@@ -4,6 +4,8 @@ description: Step by step guide for you to configure LogChimp site using `logchi
 slug: /docs/config
 ---
 
+import { Alert } from "../../src/components/Documentation/Alert.tsx"
+
 <Alert type="tip" title="Help us improve!">
 **NOTE:** The documentation is very new and may contain some gaps, please help us fill them in by opening issues or better yet, pull-requests when you think something could be explained better.
 </Alert>
