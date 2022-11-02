@@ -18,10 +18,6 @@ The two required options are `database` and `server` which are configurated duri
 
 In article explains about each configuration and its uses.
 
-## Node environment
-
-LogChimp supports three environments: **development**, **testing**, **production**. A public LogChimp site should always run in production mode, development is used for building LogChimp locally and testing is only used in CI/CD to run tests.
-
 ## Options
 
 There are number of options which are explained in detail below.

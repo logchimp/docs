@@ -17,3 +17,7 @@ These five areas work together to make every LogChimp site function smoothly.
 3. Powerful Dashboard
 4. PostgreSQL Database
 5. Disk storage space
+
+## Node environment
+
+LogChimp supports three environments: `development`, `testing`, `production`. A public LogChimp site should always run in **production** mode, development is used for building LogChimp locally and testing is only used in CI/CD to run tests.
