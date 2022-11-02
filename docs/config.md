@@ -12,19 +12,26 @@ import { Alert } from "../../src/components/Documentation/Alert.tsx"
 
 ## Overview
 
-A custom configuration file must be a valid JSON file located in the root folder. When you install LogChimp using [LogChimp CLI](/docs/cli), a configuration file is created with the options provided. There are some configuration options which are required by default, and few options configuration.
+There are some configuration options which is pre-filled by default at installation process via [one-click deploy](/docs/install) button, and other options needs to be configured manually, _for example secret credentials_.
 
-The two required options are `database` and `server` which are configurated during installation process.
+There are two ways to configure your LogChimp site:
 
-In article explains about each configuration and its uses.
+1. `logchimp.config.json` file 
+2. Environment variables
 
-## Options
+<Alert type="tip">
+Configuring your LogChimp site is one time task and is not required for you to update often, unless you're rotating your secret credentials.
+</Alert>
 
-There are number of options which are explained in detail below.
+## `logchimp.config.json` file
 
-<Alert type="error">
+A custom configuration file must be a valid JSON file located in the root folder.
+
+<Alert type="warning">
 The configuration below is just an example and not recommended for production use.
 </Alert>
+
+The two required options are `database` and `server` which are configurated during installation process.
 
 ```json lines
 {
