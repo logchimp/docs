@@ -6,17 +6,81 @@ slug: /docs/install/railway
 
 import { Alert } from "../../../src/components/Documentation/Alert.tsx"
 
-<Alert type="error">
-  This uses `v0.7.0-beta.0` version.
+<Alert type="warning">
+  By default, it will deploy directly from `master` branch of [logchimp/logchimp](https://github.com/logchimp/logchimp). You can always create a [custom Railway template](https://railway.app/button) to deploy the required LogChimp version.
 </Alert>
 
-There are many ways to [install LogChimp](/docs/install), with Railway, you can get started with 3 easy steps, click the button, enter environment variables and hit deploy. This will automatically provisioning a PostgreSQL database and deploy single instance of LogChimp for you.
+There are many ways to [install LogChimp](/docs/install), with Railway, you can get started with few easy steps, click the button[^1], enter environment variables and hit deploy.
 
-Clicking "Deploy on Railway" will auto provision a PostgreSQL database, and deploy a LogChimp site for you.
+The first step is to deploy the LogChimp APIs followed by LogChimp Theme.
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/3Bm-Un?referralCode=mittalyashu)
+## APIs
 
-_Disclaimer: The above link contains a referral code which gives referral credits to [@mittalyashu](https://github.com/mittalyashu)._
+Clicking "Deploy on Railway" will auto provision a PostgreSQL database, and deploy a LogChimp backend for you.
+
+  [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/3Bm-Un?referralCode=mittalyashu)
+
+Enter the required environment variables and click **Deploy**.
+
+  ![LogChimp Railway template](../../images/docs/install/railway/01_logchimp-railway-template.png)
+
+  Railway will automatically provisioning a PostgreSQL database and deploy LogChimp API service for you.
+
+  ![Railway deploy LogChimp server](../../images/docs/install/railway/02_deploy-logchimp-service.png)
+
+## Theme    
+
+Now its time to deploy the theme.
+
+The theme is build as a generated SPA _(single page application)_, making it easier to deploy on any CDN _(content delivery network)_.
+
+* AWS Cloudfront
+* Vercel
+* Netlify
+* [Render](/docs/install/render)
+
+_Just to name a few..._
+
+Here we'll use Vercel as an example to deploy the theme. Feel free to choose any other option of your choice.
+
+Go to vercel dashboard and create a new project, select the git provider where you cloned the LogChimp repository using Railway.
+
+![Railway template repository details](../../images/docs/install/railway/03_railway-template-repository-details.png)
+
+Search with the same repository name as used in Railway and click **import**.
+
+![Vercel select repository to deploy](../../images/docs/install/railway/04_vercel-select-repository-to-deploy.png)
+
+There is no requirement for any configuration. Vercel will automatically detech the framework presets and apply base configuration for deploying.
+
+![Vercel project configuration](../../images/docs/install/railway/05_vercel-project-configuration.png)
+
+But feel free to look around and tweak the configuration accordingly and hit **Deploy**.
+
+![Vercel theme deployment completed](../../images/docs/install/railway/06_vercel-theme-deployment-completed.gif)
+
+The last step is to add a API rewrite for your client app, in your source code by create a new file `vercel.json` in `packages/theme` directory.
+
+```json
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://<subdomain>.up.railway.app/api/:path*"
+    },
+  ]
+}
+```
+
+<Alert type="warning">
+  Replace the part of destination URL `https://<subdomain>.up.railway.app` with LogChimp API URL from railway.
+</Alert>
+
+and there you go... 🚄
+
+Your LogChimp site is ready to accept **your customers feedback** with ease.
+
+![LogChimp live site preview](../../images/docs/install/railway/07_logchimp-live-site-preview.png)
 
 ## FAQ
 
@@ -47,16 +111,4 @@ You can even attach a **[custom domain](https://docs.railway.app/deployment/cust
 		Make sure to prefix `https://` protocol before your custom domain.
 	</Alert>
 
-## Demo
-
-You can take a look at this demo deployment at: [https://logchimp-production.up.railway.app](https://logchimp-production.up.railway.app/).
-
-<Alert type="warning">
-  New sign up has been disabled from this demo site to protect from spam and abuse.
-</Alert>
-
-![deployment preview](../../images/docs/install/railway/deployment-preview.jpg)
-
-## Conclusion
-
-And with that you should have all the information you need to set up LogChimp on Railway. You should be able to accept your customers feedback with ease.
+[^1]: The above link contains a referral code which gives referral credits to [@mittalyashu](https://github.com/mittalyashu).
