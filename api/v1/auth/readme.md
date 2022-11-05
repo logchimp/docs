@@ -1,5 +1,6 @@
 ---
 title: Auth
+slug: /api/v1/auth/
 ---
 
 ### Endpoints

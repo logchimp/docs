@@ -1,6 +1,7 @@
 ---
 title: Get post by slug
 method: GET
+slug: /api/v1/posts/get-post-by-slug
 ---
 
 Fetch all posts

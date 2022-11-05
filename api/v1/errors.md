@@ -1,5 +1,6 @@
 ---
 title: Errors
+slug: /api/v1/errors
 ---
 
 Learn more about common error codes and how to resolve them.

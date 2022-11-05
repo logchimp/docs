@@ -1,5 +1,6 @@
 ---
 title: Introduction
+slug: /api/
 ---
 
 import { Alert } from "../../src/components/Documentation/Alert.tsx"

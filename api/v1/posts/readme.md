@@ -1,5 +1,6 @@
 ---
 title: Posts
+slug: /api/v1/posts
 ---
 
 The Posts API enables you to do more than just CRUD operations.
@@ -8,10 +9,10 @@ Posts is the primary resource in a LogChimp. Using the posts endpoint it is poss
 
 - [Filter posts](#filter-post)
 
-<!-- | `GET`    | [`/post/{slug}`](/api/v1/post/get-post-by-slug)           |
+| `GET`    | [`/post/{slug}`](/api/v1/post/get-post-by-slug)           |
 | `POST`   | [`/post/create`](/api/v1/post/create-post)                |
 | `PATCH`  | [`/post/update/{postId}`](/api/v1/post/update-post-by-id) |
-| `DELETE` | [`/post/delete`](/api/v1/post/delete-post-by-id)          | -->
+| `DELETE` | [`/post/delete`](/api/v1/post/delete-post-by-id)          |
 
 #### Filter posts
 
