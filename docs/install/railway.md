@@ -97,18 +97,4 @@ The trick is to directly update the LogChimp site logo URL directly from databas
 	Paste the image url you've copied and click the save button.
 	![Change logo URL from settings database table](../../images/docs/install/railway/change-logo-url-from-database.jpg)
 
-### How to add custom domain?
-
-You can even attach a **[custom domain](https://docs.railway.app/deployment/custom-domains)** to your LogChimp site.
-
-1. Go to variables page and click on edit button from dropdown for the environment variable of `LOGCHIMP_SERVER_HOST`.
-	![Edit server_host env variable](../../images/docs/install/railway/edit-server-host-env.jpg)
-
-2. Enter your custom domain and click on checkmark icon.
-	![change to custom domain](../../images/docs/install/railway/change-to-custom-domain.jpg)
-
-	<Alert type="warning">
-		Make sure to prefix `https://` protocol before your custom domain.
-	</Alert>
-
 [^1]: The above link contains a referral code which gives referral credits to [@mittalyashu](https://github.com/mittalyashu).
