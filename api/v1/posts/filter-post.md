@@ -1,6 +1,7 @@
 ---
 title: GET posts
 method: GET
+slug: /api/v1/posts/filter-post
 ---
 
 ```

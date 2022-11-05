@@ -1,5 +1,6 @@
 ---
 title: Setup guide
+slug: /api/setup-guide
 ---
 
 ## Path & Version

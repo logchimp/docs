@@ -1,6 +1,7 @@
 ---
 title: Delete post by ID
 method: DELETE
+slug: /api/v1/posts/delete-post-by-id
 ---
 
 ```
