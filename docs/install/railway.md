@@ -13,9 +13,13 @@ Guide to know your LogChimp site successfully on Railway
   This uses `v0.7.0-beta.0` version.
 </Blockquote>
 
-There are many ways to [install LogChimp](/docs/install), with Railway, you can get started with 3 easy steps, click the button, enter environment variables and hit deploy. This will automatically provisioning a PostgreSQL database and deploy single instance of LogChimp for you.
+There are many ways to [install LogChimp](/docs/install), with Railway, you can get started with few easy steps, click the button, enter environment variables and hit deploy.
 
-Clicking "Deploy on Railway" will auto provision a PostgreSQL database, and deploy a LogChimp site for you.
+The first step is to deploy the LogChimp APIs followed by LogChimp Theme.
+
+## APIs
+
+Clicking "Deploy on Railway" will auto provision a PostgreSQL database, and deploy a LogChimp backend for you.
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/3Bm-Un?referralCode=mittalyashu)
 
@@ -23,7 +27,7 @@ _Disclaimer: The above link contains a referral code which gives referral credit
 
 ## Environment variables
 
-To get most of LogChimp, you can customise using environment variables.
+Enter the required environment variables and click **Deploy**.
 
 > 💡 Don't want to deal with environment variables? You can configure LogChimp using `logchimp.config.json` file, you can read more about it [here](/docs/config).
 
@@ -53,6 +57,62 @@ You've have to provide SMPT mail authentication details.
 - `LOGCHIMP_MAIL_HOST`, `LOGCHIMP_MAIL_USER`, and `LOGCHIMP_MAIL_PASSWORD`
 - `LOGCHIMP_MAIL_PORT`: SMPT port provided by the service provider; default to `587`
 
+![LogChimp Railway template](/images/docs/install/railway/01_logchimp-railway-template.png)
+
+Railway will automatically provisioning a PostgreSQL database and deploy LogChimp API service for you.
+
+![Railway deploy LogChimp server](/images/docs/install/railway/02_deploy-logchimp-service.png)
+
+## Theme
+
+Now its time to deploy the theme.
+
+The theme is build as a generated SPA _(single page application)_, making it easier to deploy on any CDN _(content delivery network)_.
+
+- AWS Cloudfront
+- Vercel
+- Netlify
+- [Render](/docs/install/render)
+
+_Just to name a few..._
+
+Here we'll use Vercel as an example to deploy the theme. Feel free to choose any other option of your choice.
+
+Go to vercel dashboard and create a new project, select the git provider where you cloned the LogChimp repository using Railway.
+
+![Railway template repository details](/images/docs/install/railway/03_railway-template-repository-details.png)
+
+Search with the same repository name as used in Railway and click **import**.
+
+![Vercel select repository to deploy](/images/docs/install/railway/04_vercel-select-repository-to-deploy.png)
+
+There is no requirement for any configuration. Vercel will automatically detech the framework presets and apply base configuration for deploying.
+
+![Vercel project configuration](/images/docs/install/railway/05_vercel-project-configuration.png)
+
+But feel free to look around and tweak the configuration accordingly and hit **Deploy**.
+
+![Vercel theme deployment completed](/images/docs/install/railway/06_vercel-theme-deployment-completed.gif)
+
+The last step is to add a API rewrite for your client app, in your source code by create a new file `vercel.json` in `packages/theme` directory.
+
+```json
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://<subdomain>.up.railway.app/api/:path*"
+    }
+  ]
+}
+```
+
+and there you go... 🚄
+
+Your LogChimp site is ready to accept **your customers feedback** with ease.
+
+![LogChimp live site preview](/images/docs/install/railway/07_logchimp-live-site-preview.png)
+
 ## FAQ
 
 ### How to upload custom Logo?
@@ -70,25 +130,9 @@ The trick is to directly update the LogChimp site logo URL directly from databas
 
 ### How to add custom domain?
 
-You can even attach a **[custom domain](https://docs.railway.app/deployment/custom-domains)** to your LogChimp site.
+You can attach a custom domain to your LogChimp site.
 
-1. Go to variables page and click on edit button from dropdown for the environment variable of `LOGCHIMP_SERVER_HOST`.
-   ![Edit server_host env variable](/images/docs/install/railway/edit-server-host-env.jpg)
-
-2. Enter your custom domain and click on checkmark icon.
-   ![change to custom domain](/images/docs/install/railway/change-to-custom-domain.jpg)
-
-> 🚨 Make sure to prefix `https://` protocol before your custom domain.
-
-## Demo
-
-You can take a look at this demo deployment at: [https://logchimp-production.up.railway.app](https://logchimp-production.up.railway.app/).
-
-<Blockquote type="warning">
-  New sign up has been disabled from this demo site to protect from spam and abuse.
-</Blockquote>
-
-![deployment preview](/images/docs/install/railway/deployment-preview.jpg)
+The process of assigning custom domain can vary upon the platform where you're deploying the LogChimp theme.
 
 ## Conclusion
 
