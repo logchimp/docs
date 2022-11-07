@@ -6,7 +6,7 @@ slug: /guide/roadmaps
 
 import { Alert } from "../../src/components/Documentation/Alert.tsx"
 
-![Roadmap](../images/guide/roadmaps.jpg)
+![Roadmap](../images/guide/roadmaps.webp)
 
 ## Overview
 

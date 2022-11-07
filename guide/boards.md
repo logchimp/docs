@@ -4,7 +4,7 @@ description: Organise your customers feedback with boards
 slug: /guide/boards
 ---
 
-![Boards](../images/guide/boards.jpg)
+![Boards](../images/guide/boards.webp)
 
 ## Overview
 
