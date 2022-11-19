@@ -5,8 +5,9 @@ slug: /guide/roadmaps
 ---
 
 import { Alert } from "../../src/components/Documentation/Alert.tsx"
+import RoadmapImage from "../images/guide/roadmaps.webp"
 
-![Roadmap](../images/guide/roadmaps.jpg)
+<img src={RoadmapImage} alt="Roadmap" className="rounded-2xl border" />
 
 ## Overview
 

@@ -4,7 +4,9 @@ description: Organise your customers feedback with boards
 slug: /guide/boards
 ---
 
-![Boards](../images/guide/boards.jpg)
+import BoardImage from "../images/guide/boards.webp"
+
+<img src={BoardImage} alt="Boards" className="rounded-2xl border" />
 
 ## Overview
 
@@ -14,4 +16,4 @@ Boards can set as **public** or **private**. Public boards are visible in your L
 
 Go to `<logchimp-site.com>/dashboard/boards` to **create**, **edit**, and **delete** boards.
 
-Until [roamdaps](/guide/roadmaps) you cannot re-arrange the order of boards.
+Unlike [roamdaps](/guide/roadmaps) you cannot re-arrange the order of boards.
