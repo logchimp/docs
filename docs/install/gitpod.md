@@ -1,20 +1,17 @@
 ---
 title: Run LogChimp in Gitpod
+description: Want to give a quick spin to LogChimp?
 slug: /docs/install/gitpod
 ---
 
-<!-- components -->
+import { Alert } from "../../../src/components/Documentation/Alert.tsx"
 
-import Blockquote from "@/components/Blockquote"
-
-Want to give a quick spin to LogChimp?
-
-<Blockquote type="alert">
+<Alert type="error">
   It's not recommended to use Gitpod for production usage.
-</Blockquote>
+</Alert>
 
 You can click the "Open in Gitpod" button to get started.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/logchimp/logchimp)
 
-![Gitpod deployment preview](/images/docs/install/gitpod/gitpod-deployment-preview.jpg)
+![Gitpod deployment preview](../../images/docs/install/gitpod/deployment-preview.jpg)

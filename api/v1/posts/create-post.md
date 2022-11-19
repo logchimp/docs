@@ -1,6 +1,7 @@
 ---
 title: Create posts
 method: POST
+slug: /api/v1/posts/create-post
 ---
 
 ```

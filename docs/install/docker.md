@@ -1,16 +1,16 @@
 ---
 title: Docker
+description: Install LogChimp via Docker
 slug: /docs/install/docker
 ---
 
-<!-- components -->
-import Blockquote from "@/components/Blockquote"
+import { Alert } from "../../../src/components/Documentation/Alert.tsx"
 
 [LogChimp docker image](https://github.com/orgs/logchimp/packages/container/package/logchimp) is an official package maintained by core team.
 
-<Blockquote type="warning">
+<Alert type="warning">
   Experience with [Docker Compose](https://docs.docker.com/compose/) is required.
-</Blockquote>
+</Alert>
 
 If `Docker` or `Docker Compose` is not installed on your machine/server, refer to [Docker Compose](https://docs.docker.com/engine/install/) installation docs.
 
@@ -68,7 +68,7 @@ After running these command successfully, you can access your LogChimp site at `
 
 Here's an LogChimp Docker image structure for you to understand _(if you're curious)_, what's happening behind the scenes.
 
-![LogChimp Docker image structure](/images/docs/logchimp-docker-structure.png)
+![LogChimp Docker image structure](../../images/docs/install/docker/deployment-structure.png)
 
 ### Resources
 

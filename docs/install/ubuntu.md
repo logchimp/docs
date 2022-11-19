@@ -1,17 +1,16 @@
 ---
 title: How to install LogChimp on Ubuntu?
+description: Install LogChimp on Ubuntu
 slug: /docs/install/ubuntu
 ---
 
-<!-- components -->
-
-import Blockquote from "@/components/Blockquote"
+import { Alert } from "../../../src/components/Documentation/Alert.tsx"
 
 A full guide for installing, configuring and running LogChimp on your **Ubuntu 20.04** server, for use in production.
 
-<Blockquote type="tip">
+<Alert type="tip">
   This installation guide is not suitable for local use or development.
-</Blockquote>
+</Alert>
 
 ## Overview
 
@@ -108,9 +107,9 @@ CREATE ROLE <user> PASSWORD '<password>' SUPERUSER;
 CREATE DATABASE <database name>;
 ```
 
-<Blockquote type="warning">
+<Alert type="warning">
   Wrap your password in single quotes.
-</Blockquote>
+</Alert>
 
 ```bash
 # Then exit postgresql prompt
@@ -133,24 +132,6 @@ sudo npm install yarn@latest -g
 ```
 
 ## Install LogChimp
-
-<!-- ### Create a directory
-
-LogChimp must be installed with a proper owner and permissions.
-
-```bash
-# Create directory: Change `sitename` to whatever you like
-sudo mkdir -p /var/www/sitename
-
-# Set directory owner: Replace <user> with the name of your user
-sudo chown <user>:<user> /var/www/sitename
-
-# Set the correct permissions
-sudo chmod 775 /var/www/sitename
-
-# Then navigate into it
-cd /var/www/sitename
-``` -->
 
 ### Install LogChimp server
 
@@ -179,9 +160,9 @@ yarn
 
 Create `logchimp.config.json` [configuation file](/docs/config) in current directory using LogChimp CLI.
 
-<Blockquote type="alert">
+<Alert type="error">
   Use the same database name as you've used above while creating LogChimp configuration.
-</Blockquote>
+</Alert>
 
 #### Running in background
 
@@ -238,9 +219,9 @@ yarn build
 
 To customise the build, you can download the source code directly from [GitHub](https://github.com/logchimp/theme).
 
-<Blockquote type="tip">
+<Alert type="tip">
   Check for `dist` folder in the current directory.
-</Blockquote>
+</Alert>
 
 ## Setup Nginx
 
@@ -297,9 +278,9 @@ Obtaining an SSL certificate
 sudo certbot --nginx -d <your_domain>
 ```
 
-<Blockquote type="warning">
+<Alert type="warning">
   Enter the same domain name you've used while creating Nginx configuration.
-</Blockquote>
+</Alert>
 
 Lastly, `certbot` will ask how you’d like to configure your HTTPS settings. Select `2` and hit `Enter`. The configuration will be updated, and Nginx will reload to pick up the new settings.
 

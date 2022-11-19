@@ -1,6 +1,7 @@
 ---
 title: Signup
 method: POST
+slug: /api/v1/auth/signup
 ---
 
 ```

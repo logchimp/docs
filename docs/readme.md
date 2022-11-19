@@ -1,15 +1,18 @@
 ---
 title: Documentation
+description: Learn how to setup, customize and run a LogChimp site successfully.
 slug: /docs/
 ---
 
-Learn how to setup, customize and run a LogChimp site successfully.
+import { Alert } from "../../src/components/Documentation/Alert.tsx"
 
-> NOTE: The documentation is very new and may contain some gaps, please help us fill them in by opening issues or better yet, pull-requests when you think something could be explained better.
+<Alert type="tip" title="Help us improve!">
+**NOTE:** The documentation is very new and may contain some gaps, please help us fill them in by opening issues or better yet, pull-requests when you think something could be explained better.
+</Alert>
 
 LogChimp is an open-source software to capture your customers feedback and inform your product decisions.
 
-![LogChimp homepage](/images/docs/logchimp_homepage.png)
+![LogChimp homepage](../images/docs/logchimp_homepage.png)
 
 ## Quick start
 

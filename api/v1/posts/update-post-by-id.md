@@ -1,6 +1,7 @@
 ---
 title: updatePostById
 method: PATCH
+slug: /api/v1/posts/update-post-by-id
 ---
 
 ```

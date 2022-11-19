@@ -1,9 +1,8 @@
 ---
 title: logchimp help
+description: Use the help command to access the list of possible `logchimp` commands when required.
 slug: /docs/cli/help
 ---
-
-Use the help command to access the list of possible `logchimp` commands when required.
 
 This command is your port of call when you want to discover a list of available commands in the LogChimp CLI.
 
