@@ -1,4 +1,0 @@
-User-agent: *
-Allow: *
-
-Sitemap: https://logchimp.codecarrot.net/sitemap.xml
