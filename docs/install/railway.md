@@ -18,26 +18,26 @@ The first step is to deploy the LogChimp APIs followed by LogChimp Theme.
 
 Clicking "Deploy on Railway" will auto provision a PostgreSQL database, and deploy a LogChimp backend for you.
 
-  [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/3Bm-Un?referralCode=mittalyashu)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/3Bm-Un?referralCode=mittalyashu)
 
 Enter the required environment variables and click **Deploy**.
 
-  ![LogChimp Railway template](../../images/docs/install/railway/01_logchimp-railway-template.png)
+![LogChimp Railway template](../../images/docs/install/railway/01_logchimp-railway-template.png)
 
-  Railway will automatically provisioning a PostgreSQL database and deploy LogChimp API service for you.
+Railway will automatically provisioning a PostgreSQL database and deploy LogChimp API service for you.
 
-  ![Railway deploy LogChimp server](../../images/docs/install/railway/02_deploy-logchimp-service.png)
+![Railway deploy LogChimp server](../../images/docs/install/railway/02_deploy-logchimp-service.png)
 
-## Theme    
+## Theme
 
 Now its time to deploy the theme.
 
 The theme is build as a generated SPA _(single page application)_, making it easier to deploy on any CDN _(content delivery network)_.
 
-* AWS Cloudfront
-* Vercel
-* Netlify
-* [Render](/docs/install/render)
+- AWS Cloudfront
+- Vercel
+- Netlify
+- [Render](/docs/install/render)
 
 _Just to name a few..._
 
@@ -67,7 +67,7 @@ The last step is to add a API rewrite for your client app, in your source code b
     {
       "source": "/api/:path*",
       "destination": "https://<subdomain>.up.railway.app/api/:path*"
-    },
+    }
   ]
 }
 ```
@@ -91,10 +91,10 @@ Currently, LogChimp doesn’t have integration with third-party services to uplo
 The trick is to directly update the LogChimp site logo URL directly from database, upload your logo to any image hosting service (for example, AWS S3 bucket), and grab the image url.
 
 1. Go to PostgreSQL plugin > Data tab > click "settings" database table
-	![Open settings database table from Railway UI](../../images/docs/install/railway/settings-database-table.jpg)
+   ![Open settings database table from Railway UI](../../images/docs/install/railway/settings-database-table.jpg)
 
 2. Click on the first row in "settings" table, that should open that row in edit mode
-	Paste the image url you've copied and click the save button.
-	![Change logo URL from settings database table](../../images/docs/install/railway/change-logo-url-from-database.jpg)
+   Paste the image url you've copied and click the save button.
+   ![Change logo URL from settings database table](../../images/docs/install/railway/change-logo-url-from-database.jpg)
 
 [^1]: The above link contains a referral code which gives referral credits to [@mittalyashu](https://github.com/mittalyashu).

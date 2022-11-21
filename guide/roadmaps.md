@@ -20,7 +20,6 @@ Roadmaps help you make decisions and plan as you see projects and their expected
 ## Configure
 
 Go to `<logchimp-site.com>/dashboard/roadmaps` to **create**, **edit**, and **delete** roadmaps.
- 
 
 <Alert type="tip">
 You can even re-arrange the order of your roadmap from dashboard.

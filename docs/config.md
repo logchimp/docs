@@ -12,7 +12,7 @@ There are some configuration options which is pre-filled by default at installat
 
 There are two ways to configure your LogChimp site:
 
-1. `logchimp.config.json` file 
+1. `logchimp.config.json` file
 2. Environment variables
 
 <Alert type="tip">
@@ -42,7 +42,7 @@ The two required options are `database` and `server` which are configurated duri
   "server": {
     "port": 3000,
     "secretKey": "Diq1-Xir9"
-  },
+  }
   // ...
 }
 ```
