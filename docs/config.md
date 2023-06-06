@@ -27,7 +27,7 @@ A custom configuration file must be a valid JSON file located in the root folder
 The configuration below is just an example and not recommended for production use.
 </Alert>
 
-The two required options are `database` and `server` which are configurated during installation process.
+The two required options are `database` and `server` which are configured during installation process.
 
 ```json lines
 {
@@ -49,7 +49,7 @@ The two required options are `database` and `server` which are configurated duri
 
 ### Mail
 
-LogChimp uses SMPT connection for sending emails programmatically.
+LogChimp uses SMTP connection for sending emails programmatically.
 
 ```json lines
 {
@@ -86,12 +86,12 @@ You can use your own PostgreSQL database or use PostgreSQL plugin provided by Ra
 
 **MAIL**
 
-You've have to provide SMPT mail authentication details.
+You've have to provide SMTP mail authentication details.
 
 - `LOGCHIMP_MAIL_SERVICE`: Name of the email service provider
 - `LOGCHIMP_MAIL_HOST`, `LOGCHIMP_MAIL_USER`, and `LOGCHIMP_MAIL_PASSWORD`
-- `LOGCHIMP_MAIL_PORT`: SMPT port provided by the service provider; default to `587`
+- `LOGCHIMP_MAIL_PORT`: SMTP port provided by the service provider; default to `587`
 
-**Does LogChimp support SMPT connection URL?**
+**Does LogChimp support SMTP connection URL?**
 
 No, currently it's not supported. But you're most welcome to [submit a feature request](https://github.com/logchimp/logchimp) anytime.
