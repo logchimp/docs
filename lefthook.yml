@@ -1,0 +1,12 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
+
+pre-commit:
+  parallel: true
+  commands:
+    prettier:
+      glob: '*.{yaml,yml,md}'
+      run: pkgx +nodejs.org@20 +pnpm.io pnpm prettier --write {staged_files}
+      stage_fixed: true

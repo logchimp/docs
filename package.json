@@ -1,15 +1,16 @@
 {
-  "name": "website",
+  "name": "@logchimp/docs",
   "private": true,
   "scripts": {
     "prettier": "prettier --write \"**/*.{yaml,yml,md}\"",
     "prepare": "husky install"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=20"
   },
   "devDependencies": {
     "husky": "7.0.4",
+    "lefthook": "^1.6.7",
     "prettier": "2.6.2"
   }
 }
