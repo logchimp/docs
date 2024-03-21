@@ -1,6 +1,6 @@
 ---
-title: Get started with LogChimp
-description: This will help you get started with LogChimp and start collecting feedback from your customers.
+title: Get Started with LogChimp
+description: This guide will help you start using LogChimp and collecting feedback from your customers.
 slug: /docs/install
 ---
 
@@ -15,12 +15,12 @@ There are a few ways listed below for setting up a LogChimp site.
 
 ### Self-hosting
 
-If you're running a self-hosted instance, we strongly recommend an Ubuntu server with at least 1GB of memory to run LogChimp.
+If you're running a self-hosted instance, we strongly recommend using an Ubuntu server with at least 1GB of memory to run LogChimp.
 
 <SelfhostInstall />
 
 ### Cloud hosting
 
-You can also use **one click** deploy button to get started with LogChimp immediately.
+You can also use the **one-click deploy** button to get started with LogChimp immediately.
 
 <CloudHosting />

@@ -1,13 +1,13 @@
 ---
-title: Run LogChimp in Gitpod
-description: Want to give a quick spin to LogChimp?
+title: Running LogChimp in Gitpod
+description: Want to quickly try out LogChimp?
 slug: /docs/install/gitpod
 ---
 
 import { Alert } from "../../../src/components/Documentation/Alert.tsx"
 
 <Alert type="error">
-  It's not recommended to use Gitpod for production usage.
+  It's not recommended to use Gitpod for production.
 </Alert>
 
 You can click the "Open in Gitpod" button to get started.

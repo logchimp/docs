@@ -1,13 +1,13 @@
 ---
 title: APIs
-description: At its core, LogChimp is powered by RESTful JSON API.
+description: LogChimp's foundation lies in its powerfull RESTful JSON API.
 slug: /docs/architecture/api
 ---
 
-At its core, LogChimp is a RESTful JSON API - designed to track, manage, engage, and analyze user feedback with ease.
+LogChimp's foundation lies in its RESTful JSON API, designed to effortlessly track, manage, engage, and analyze user feedback.
 
-To know more about [LogChimp APIs](/api).
+To learn more about [LogChimp APIs](/api).
 
 ### Versioning
 
-Each major version of LogChimp ships with multiple versions of the APIs. We maintain a stable APIs so that you can be sure about depending on them in production.
+Each major version of LogChimp ships with multiple versions of the APIs. We maintain stable APIs so that you can confidently depend on them in production.

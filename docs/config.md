@@ -1,6 +1,6 @@
 ---
 title: Configuration
-description: Step by step guide for you to configure LogChimp site using `logchimp.config.json` file.
+description: Step-by-step guide for configuring LogChimp site using `logchimp.config.json` file.
 slug: /docs/config
 ---
 
@@ -8,15 +8,15 @@ import { Alert } from "../../src/components/Documentation/Alert.tsx"
 
 ## Overview
 
-There are some configuration options which is pre-filled by default at installation process via [one-click deploy](/docs/install) button, and other options needs to be configured manually, _for example secret credentials_.
+Some configuration options are pre-filled by default during the installation process via the [one-click deploy](/docs/install) button, while others need to be configured manually, such as secret credentials.
 
 There are two ways to configure your LogChimp site:
 
-1. `logchimp.config.json` file
-2. Environment variables
+1. Using the `logchimp.config.json` file
+2. Using environment variables
 
 <Alert type="tip">
-Configuring your LogChimp site is one time task and is not required for you to update often, unless you're rotating your secret credentials.
+Configuring your LogChimp site is a one-time task and is not required to be updated frequently, unless you're rotating your secret credentials.
 </Alert>
 
 ## `logchimp.config.json` file
@@ -24,10 +24,10 @@ Configuring your LogChimp site is one time task and is not required for you to u
 A custom configuration file must be a valid JSON file located in the root folder.
 
 <Alert type="warning">
-The configuration below is just an example and not recommended for production use.
+The configuration below is just an example and is not recommended for production use.
 </Alert>
 
-The two required options are `database` and `server` which are configurated during installation process.
+The two required options are `database` and `server`, which are configured during the installation process.
 
 ```json lines
 {
@@ -49,7 +49,7 @@ The two required options are `database` and `server` which are configurated duri
 
 ### Mail
 
-LogChimp uses SMPT connection for sending emails programmatically.
+LogChimp uses SMTP connection for sending emails programmatically.
 
 ```json lines
 {
@@ -64,34 +64,34 @@ LogChimp uses SMPT connection for sending emails programmatically.
 }
 ```
 
-## Environment variables
+## Environment Variables
 
 **SERVER**
 
-- `LOGCHIMP_SECRET_KEY`: Railway provides an easy way to generate 32-char secret key, by pressing `Command + K` (on MacOS) or `Ctrl + K` (on windows). Of course, you can provide your own secret key as well.
+- `LOGCHIMP_SECRET_KEY`: Railway provides an easy way to generate a 32-character secret key by pressing `Command + K` (on MacOS) or `Ctrl + K` (on Windows). Of course, you can provide your own secret key as well.
 - `PORT`: Please do not change the pre-filled value.
-- `LOGCHIMP`: This tells LogChimp to use environment variables instead of [configuration file](/docs/config). Please do not change the pre-filled value.
-- `LOGCHIMP_THEME_STANDALONE`: LogChimp allows you to run on single port or split API and theme. If you're using Railway deploy button, you can leave the value to `false`.
+- `LOGCHIMP`: This tells LogChimp to use environment variables instead of a [configuration file](/docs/config). Please do not change the pre-filled value.
+- `LOGCHIMP_THEME_STANDALONE`: LogChimp allows you to run on a single port or split API and theme. If you're using the Railway deploy button, you can leave the value as `false`.
 
 **DATABASE**
 
-You can use your own PostgreSQL database or use PostgreSQL plugin provided by Railway. If you're using Railway plugin, you don't have to change the pre-filled values.
+You can use your own PostgreSQL database or use the PostgreSQL plugin provided by Railway. If you're using the Railway database, you don't have to change the pre-filled values.
 
-- `LOGCHIMP_DB_HOST`: Database host; default to `${{ PGHOST }}`
-- `LOGCHIMP_DB_DATABASE`: Database name; default to `${{ PGDATABASE }}`
-- `LOGCHIMP_DB_PORT`: Database port; default to `${{ PGPORT }}`
-- `LOGCHIMP_DB_USER`: Database user; default to `${{ PGUSER }}`
-- `LOGCHIMP_DB_PASSWORD`: Database password; default to `${{ PGPASSWORD }}`
-- `LOGCHIMP_DB_SSL`: Database SSL; default to `true`
+- `LOGCHIMP_DB_HOST`: Database host; defaults to `${{ PGHOST }}`
+- `LOGCHIMP_DB_DATABASE`: Database name; defaults to `${{ PGDATABASE }}`
+- `LOGCHIMP_DB_PORT`: Database port; defaults to `${{ PGPORT }}`
+- `LOGCHIMP_DB_USER`: Database user; defaults to `${{ PGUSER }}`
+- `LOGCHIMP_DB_PASSWORD`: Database password; defaults to `${{ PGPASSWORD }}`
+- `LOGCHIMP_DB_SSL`: Database SSL; defaults to `true`
 
 **MAIL**
 
-You've have to provide SMPT mail authentication details.
+You have to provide SMTP mail authentication details.
 
 - `LOGCHIMP_MAIL_SERVICE`: Name of the email service provider
 - `LOGCHIMP_MAIL_HOST`, `LOGCHIMP_MAIL_USER`, and `LOGCHIMP_MAIL_PASSWORD`
-- `LOGCHIMP_MAIL_PORT`: SMPT port provided by the service provider; default to `587`
+- `LOGCHIMP_MAIL_PORT`: SMTP port provided by the service provider; defaults to `587`
 
-**Does LogChimp support SMPT connection URL?**
+**Does LogChimp support SMTP connection URL?**
 
 No, currently it's not supported. But you're most welcome to [submit a feature request](https://github.com/logchimp/logchimp) anytime.

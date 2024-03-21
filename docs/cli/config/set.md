@@ -11,5 +11,5 @@ USAGE
 
 ### Options
 
-- `-k` or `--key=key` - name to print
-- `-v` or `--value=value` - name to print
+- `-k` or `--key=key` - Key to set in the configuration file
+- `-v` or `--value=value` - Value to set in the configuration file
