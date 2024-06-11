@@ -16,4 +16,4 @@ Boards can set as **public** or **private**. Public boards are visible in your L
 
 Go to `<logchimp-site.com>/dashboard/boards` to **create**, **edit**, and **delete** boards.
 
-Unlike [roamdaps](/guide/roadmaps) you cannot re-arrange the order of boards.
+Unlike [roadmaps](/guide/roadmaps) you cannot re-arrange the order of boards.
