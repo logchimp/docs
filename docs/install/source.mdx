@@ -8,8 +8,8 @@ slug: /docs/install/source
 
 Before getting started, you'll need these global packages installed:
 
-- [Node.js](https://nodejs.org/) (v12) - the easiest way to install is via [nvm](https://github.com/creationix/nvm#install-script)
-- [pNpm](https://pnpm.io/) - for managing dependencies
+- [Node.js](https://nodejs.org/) (v22) - the easiest way to install is via [nvm](https://github.com/creationix/nvm#install-script)
+- [pnpm](https://pnpm.io/) - for managing dependencies
 - [PostgreSQL](#setup-postgresql-database) (v12) - PostgreSQL database
 
 You can read more about the engine requirements from the [package.json](https://github.com/logchimp/logchimp/blob/master/package.json) on GitHub.
@@ -18,11 +18,7 @@ You can read more about the engine requirements from the [package.json](https://
 
 First, you'll need to make a fork of the [LogChimp](https://github.com/logchimp/logchimp) repository. Click on the fork button at the top right, wait for a copy to be created on your personal GitHub account, and you should be all set!
 
-<Alert type="tip">
-  You'll also need a LogChimp theme as a client to interact with LogChimp APIs.
-</Alert>
-
-- LogChimp Core APIs - https://github.com/logchimp/logchimp/tree/master/packages/server
+- LogChimp APIs - https://github.com/logchimp/logchimp/tree/master/packages/server
 - LogChimp default theme (including dashboard) - https://github.com/logchimp/logchimp/tree/master/packages/theme
 
 ## Install dependencies
@@ -50,7 +46,7 @@ docker run -d \
   -e POSTGRES_DB=$database_name \
   -e POSTGRES_USER=$database_user \
   -e POSTGRES_PASSWORD=$strong_password \
-  postgres:12.4
+  postgres:12
 ```
 
 Once you take down the Postgres Docker container, all the data is also removed. To persist the data on your machine, you can add this line.
@@ -59,15 +55,19 @@ Once you take down the Postgres Docker container, all the data is also removed. 
 -v logchimp_db_data:/var/lib/postgresql/data
 ```
 
-## Configuration file
+## Environment variables
 
-<Alert type="warning">
-  Starting from v0.4.0, `.env` has been replaced with `logchimp.config.json`.
-</Alert>
+LogChimp support both `.env` file and `logchimp.config.json` file.
+
+#### `.env` file
+
+🚧 Work in progress
+
+#### `logchimp.config.json` file
 
 Create a `logchimp.config.json` file in the root directory, which will contain all the [configuration](/docs/config) for the LogChimp site.
 
-### Start LogChimp
+## Start LogChimp
 
 You need two separate terminal windows to run the client and backend separately.
 
