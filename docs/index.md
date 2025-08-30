@@ -1,7 +1,7 @@
 ---
 title: Documentation
 description: Learn how to set up, customize, and run a LogChimp site successfully.
-slug: /docs/
+icon: FileText
 ---
 
 import { Alert } from "../../src/components/Documentation/Alert.tsx"
