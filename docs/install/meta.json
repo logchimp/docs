@@ -1,0 +1,6 @@
+{
+  "title": "Install",
+  "icon": "Rocket",
+  "pages": ["getting-started", "docker", "ubuntu", "railway", "render"],
+  "defaultOpen": true
+}

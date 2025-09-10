@@ -1,0 +1,9 @@
+{
+  "root": true,
+  "pages": [
+		"---Getting Started---",
+		"what-is-logchimp",
+		"install"
+	],
+  "defaultOpen": true
+}
