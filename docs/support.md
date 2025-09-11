@@ -1,6 +1,6 @@
 ---
-title: How to get Support for LogChimp?
-slug: /docs/support
+title: Support
+description: How to get Support for LogChimp?
 ---
 
 Please **do not** raise an issue on GitHub for help or support 😄. We use GitHub solely for bug-tracking and ongoing feature development.

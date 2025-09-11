@@ -1,12 +1,11 @@
 ---
 title: APIs
-description: LogChimp's foundation lies in its powerfull RESTful JSON API.
-slug: /docs/architecture/api
+description: LogChimp's foundation lies in its powerful REST-full JSON API.
 ---
 
-LogChimp's foundation lies in its RESTful JSON API, designed to effortlessly track, manage, engage, and analyze user feedback.
+LogChimp's foundation lies in its REST-full JSON API, designed to effortlessly track, manage, engage, and analyze user feedback.
 
-To learn more about [LogChimp APIs](/api).
+[//]: # 'To learn more about [LogChimp APIs](/api).'
 
 ### Versioning
 

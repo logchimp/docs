@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "pages": [
+    "---Start guide---",
+    "glossary",
+    "---Posts---",
+    "posts/index",
+    "...posts",
+    "---Boards---",
+    "boards/index",
+    "---Roadmaps---",
+    "roadmaps/index",
+    "---Dashboard---",
+    "dashboard/index",
+    "dashboard/role-permission",
+    "dashboard/labs"
+  ],
+  "defaultOpen": true
+}

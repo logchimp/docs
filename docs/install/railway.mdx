@@ -1,7 +1,6 @@
 ---
 title: Railway
 description: Guide to deploying your LogChimp site successfully on Railway
-slug: /docs/install/railway
 ---
 
 <Alert type="warning">
@@ -20,7 +19,11 @@ Clicking "Deploy on Railway" will automatically provision a PostgreSQL database 
 
 Enter the required environment variables and click **Deploy**.
 
-**NOTE:** It is required to enter SMTP credentials to receive emails. Without them, LogChimp may not function properly.
+Railway provides an easy way to generate a 32-character secret key by pressing `Command + K` (on MacOS) or `Ctrl + K` (on Windows). Of course, you can provide your own secret key as well.
+
+<Alert type="tip">
+	You will need to set-up SMTP configuration to let your users get emails to reset password, account verification, notifications and more.
+</Alert>
 
 ![LogChimp Railway template](../../images/docs/install/railway/01_logchimp-railway-template.png)
 

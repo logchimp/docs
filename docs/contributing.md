@@ -1,10 +1,10 @@
 ---
 title: Contributing
-description: LogChimp is entirely open-source software built almost entirely by volunteer contributors for product owners to build a better version of their product.
+description: LogChimp is open-source software built for product owners to build a better version of their product.
 slug: /docs/contributing
 ---
 
-The best part about open-sourcing software in this manner is that not only does everyone gain access to the source code without restrictions, but people from all over the world also contribute to its improvement.
+The best part about open-sourcing software allows people from all over the world contribute to its improvement.
 
 ### Development Guide
 
@@ -19,11 +19,3 @@ While the primary means of contributing to LogChimp is through coding, there are
 - Maintaining documentation
 - Testing and quality assurance
 - Promoting LogChimp to others
-
-### Donations
-
-As a [non-profit organization](https://github.com/logchimp/), we're always grateful to receive donations to support our work.
-
-##### Partnerships
-
-We're delighted to [partner with companies](https://logchimp.codecarrot.net/partners) that can provide LogChimp with credit, goods, and services to aid in building free, open software for everyone. If you're interested in partnering with us to support LogChimp, please reach out to us on the [LogChimp Discord server](https://discordapp.com/invite/A7mztcC/).

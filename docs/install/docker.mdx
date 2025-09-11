@@ -2,72 +2,45 @@
 title: Docker
 description: Install LogChimp using Docker Compose
 icon: Container
-slug: /docs/install/docker
 ---
+
+import {Step, Steps} from 'fumadocs-ui/components/steps';
 
 The [Docker Compose Community](https://github.com/logchimp/logchimp/blob/master/docker/community/docker-compose.yml) is officially maintained by the core team.
 
 If `Docker` or `Docker Compose` is not installed on your machine/server, refer to the [Docker Compose](https://docs.docker.com/engine/install/) installation docs.
 
-You can easily kick-start your LogChimp site in 3 easy steps.
+You can easily kick-start your LogChimp site in 2 easy steps.
 
-##### Step 1. Create a Docker network
+<Steps>
+	<Step>
+		## Step 1. Prepare `.env` file
 
-Here, we're creating a network that will be used by both the database and the LogChimp application.
+		Prepare the `.env` file on your server by copying the contents from the `/docker/community/.env.example` file of
+		[LogChimp repository](https://github.com/logchimp/logchimp).
 
-```bash
-docker network create -d bridge logchimp_network
-```
+		<Alert type="tip">
+			You can refer to [Environment Variables](/docs/environment-variables) page to see full list of variables along
+			with its description and default values.
+		</Alert>
+	</Step>
 
-##### Step 2. Run the `postgres` database
+	<Step>
+		## Step 2. Run Docker services
 
-```bash
-docker run -d \
-	--name db \
-	-p 5000:5432 \
-	--net logchimp_network \
-	-e POSTGRES_DB=database_name \
-	-e POSTGRES_USER=database_user \
-	-e POSTGRES_PASSWORD=strong_password \
-	postgres:12.4
-```
+		```bash
+		docker compose \
+		-f ./docker/community/docker-compose.yml \
+		--env-file ./docker/community/.env \
+		up -d
+		```
+	</Step>
+</Steps>
 
-##### Step 3. Run the `logchimp` application
+After running these commands successfully, you can access your LogChimp at `http://localhost:3000`.
 
-Make sure you're using the correct URL for the LogChimp Docker image `ghcr.io/logchimp/logchimp`.
+## Resources
 
-As for the PostgreSQL environment variable, it should match in both Step 2 and Step 3.
-
-Replace `Fig8=Diq1` in `SECRET_KEY=Fig8=Diq1` with a randomly generated string or ID to enhance your LogChimp site security.
-
-Notice, we're exposing two ports here: the first one `8080:8080` is for the frontend and the second `3000:3000` is for the backend.
-
-```bash
-docker run -d \
-	--name your-app-name \
-	-p 8080:8080 \
-	-p 3000:3000 \
-	--net logchimp_network \
-	-e PG_HOST=db \
-	-e PG_USER=database_user \
-	-e PG_DATABASE=database_name \
-	-e PG_PASSWORD=strong_password \
-	-e PG_PORT=5432 \
-	-e SECRET_KEY=Fig8=Diq1 \
-	ghcr.io/logchimp/logchimp
-```
-
-After running these commands successfully, you can access your LogChimp site at `http://localhost:8080/`.
-
----
-
-Here's a LogChimp Docker image structure for you to understand _(if you're curious)_ what's happening behind the scenes.
-
-![LogChimp Docker image structure](../../images/docs/install/docker/deployment-structure.png)
-
-### Resources
-
-- [LogChimp Docker image on GitHub](https://github.com/orgs/logchimp/packages)
-- Reporting issues
-  - [logchimp-server](https://github.com/logchimp/logchimp)
-  - [logchimp-theme](https://github.com/logchimp/theme)
+- LogChimp Docker images:
+- APIs - [link](https://github.com/orgs/logchimp/packages/container/package/logchimp%2Fapi)
+- Theme - [link](https://github.com/orgs/logchimp/packages/container/package/logchimp%2Ftheme)
