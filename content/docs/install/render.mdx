@@ -1,63 +1,32 @@
 ---
 title: Render
 description: A comprehensive guide for deploying LogChimp on Render with just a click.
-slug: /docs/install/render
 ---
-
-## Table of Contents
-
-- v0.6
-
-## v0.6
 
 Clicking the "Deploy to Render" button will redirect you to the Render blueprint confirmation page.
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/logchimp/deploy-buttons)
-
-![Render deploy confirmation page](/images/docs/install/render/deploy-confirmation.png)
-
 <Alert type="tip">
-  Please review the changes before deploying the following services.
+  Please review the changes before deploying the services.
 </Alert>
+
+You will need to set-up SMTP configuration to let your users get emails to reset password, account verification, notifications and more.
+
+All the environment variables are pre-configured for you. You can learn more about them [here](/docs/environment-variables).
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/logchimp/deploy-buttons)
 
 Click the "apply" button, 🎉 Voilà!
 
-## Configuration
+That was one any only step. Your LogChimp site is ready to accept **your customers' feedback** with ease.
 
-### logchimp-api
+![LogChimp live site preview](/images/docs/install/railway/07_logchimp-live-site-preview.png)
 
-Now, the deployed services need to be connected.
+## Behind the scenes
 
-![Deployed service](/images/docs/install/render/services-deploy-preview.png)
+The blueprint will auto-provision the following services for you:
 
-On your machine, you need to use the logchimp-cli tool to [generate configuration](/docs/cli/config/generate).
+1. PostgreSQL database
+2. LogChimp API service
+3. LogChimp Theme service
 
-In your Render dashboard, open **logchimp-api**, go to the Environment tab, and scroll to the Secret Files section.
-
-![Render services secret file section](/images/docs/install/render/secret-file-section.png)
-
-Click "Add Secret File", at filename enter `logchimp.config.json`, paste the LogChimp configuration in Contents.
-
-**NOTE:** It is required to enter SMTP credentials to receive emails. Without them, LogChimp may not function properly.
-
-![Render secret file contents preview](/images/docs/install/render/secret-file-content-preview.png)
-
-Click "Save", scroll to the top.
-
-Copy the deployment URL, for example, `https://logchimp-api.onrender.com`.
-
-### logchimp-client
-
-You're doing great 💪, just one more step.
-
-Open **logchimp-client**, go to Redirects/Rewrites tab.
-
-Click "Add rule", enter `/api/*` as the source, and paste your **logchimp-api** URL as the destination `https://logchimp-api.onrender.com/api*`.
-
-![Render services redirect section](/images/docs/install/render/services-redirect-section.png)
-
-<Alert type="warning">
-  Make sure /api/* source is at the top.
-</Alert>
-
-Click "Save Changes".
+Render automatically provisions the secure secret keys for the required variables.
