@@ -1,0 +1,8 @@
+{
+	"title": "OpenAPI Example",
+	"description": "A demo for Fumadocs OpenAPI",
+	"root": true,
+	"pages": [
+		"...index"
+	]
+}
