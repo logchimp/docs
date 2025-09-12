@@ -18,6 +18,11 @@ const config = {
       },
     ];
   },
+
+	images: {
+		// Use Cloudflare Image Resizing instead of bundling image optimization
+		unoptimized: true,
+	},
 };
 
 export default withMDX(config);
