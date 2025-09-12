@@ -8,7 +8,7 @@ LogChimp is an independent system built on a modern technology stack. It utilize
 
 A high-level overview of LogChimp's architecture is shown below:
 
-![LogChimp Architecture](../../images/docs/architecture/architecture.png)
+![LogChimp Architecture](/images/docs/architecture/architecture.png)
 
 These four parts work together seamlessly to ensure the smooth functioning of every LogChimp site:
 
