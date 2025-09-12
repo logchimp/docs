@@ -10,4 +10,20 @@ Welcome to the LogChimp API Reference.
 - See request/response examples and schemas
 - Try out endpoints using the interactive sandboxes (where available)
 
-If you’re new to LogChimp, start with the Guide, then come back here for details on specific endpoints.
+If you’re new to LogChimp, start with the [Guide](/guide), then come back here for details on specific endpoints.
+
+LogChimp uses REST-ful APIs to build the backend on which it delivers content to the client side.
+
+## Path & Version
+
+```
+/api/{version}/
+```
+
+Each API is prefixed with the same path, followed by a specific version. Version strings are required and always start with `v`. The api versioning guide explains the current available versions and stability index.
+
+**For example**
+
+```
+https://yourdomain.com/api/v1/
+```

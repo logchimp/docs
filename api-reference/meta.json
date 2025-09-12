@@ -1,8 +1,11 @@
 {
 	"title": "OpenAPI Example",
-	"description": "A demo for Fumadocs OpenAPI",
 	"root": true,
 	"pages": [
+		"---Getting Started---",
+		"overview",
+		"glossary",
+		"errors",
 		"...index"
 	]
 }
