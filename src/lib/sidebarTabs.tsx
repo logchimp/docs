@@ -2,7 +2,7 @@ import type { PropsWithChildren } from "react";
 import type { DocsLayoutProps } from "fumadocs-ui/layouts/docs";
 import { BookIcon, MapIcon, TerminalIcon } from "lucide-react";
 
-export const tabs: NonNullable<DocsLayoutProps["sidebar"]>["tabs"] =  [
+export const tabs: NonNullable<DocsLayoutProps["sidebar"]>["tabs"] = [
   {
     title: "Documentation",
     description: "Setup your LogChimp",
