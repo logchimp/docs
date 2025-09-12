@@ -1,0 +1,11 @@
+{
+	"title": "OpenAPI Example",
+	"root": true,
+	"pages": [
+		"---Getting Started---",
+		"overview",
+		"glossary",
+		"errors",
+		"...index"
+	]
+}

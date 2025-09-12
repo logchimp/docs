@@ -1,7 +1,16 @@
 pre-commit:
   parallel: true
-  commands:
-    prettier:
-      glob: '*.{yaml,yml,md}'
-      run: pkgx +nodejs.org@20 +pnpm.io pnpm prettier --write {staged_files}
+  jobs:
+    - run: pkgx +nodejs.org@20 +pnpm.io pnpm prettier --write {staged_files}
+      glob: '*.{yaml,yml,md,mdx}'
+      stage_fixed: true
+
+    - run: |
+        if [ -x "$(command -v pnpm)" ]; then
+          pnpm biome format --write {staged_files}
+        else
+          pkgx +nodejs.org@20 +pnpm.io \
+            pnpm biome format --write {staged_files}
+        fi
+      glob: "*.{js,jsx,ts,tsx,vue,json}"
       stage_fixed: true

@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
+
+@layer base {
+  body {
+    background-color: var(--page-background) !important;
+  }
+
+  aside {
+    background-color: var(--sidebar-background) !important;
+  }
+}
+
+:root {
+  --page-background: #ffffff;
+  --sidebar-background: #ffffff;
+
+  .dark {
+    --page-background: #05050b;
+    --sidebar-background: #05050b;
+  }
+}

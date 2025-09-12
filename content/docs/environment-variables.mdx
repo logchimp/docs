@@ -1,0 +1,61 @@
+---
+title: Environment Variables
+description: All environment variables used in the LogChimp.
+icon: SquareAsterisk
+---
+
+Deployment with [one-click deploy](/docs/install) buttons by-default pre-fills most of the environment variables during the deployment process; only a few of the environment variables need to be configured manually, such as secret credentials.
+
+<Alert type="tip">
+	Configuring your LogChimp site is a one-time task and is not required to be updated frequently, unless you're rotating
+	your secret credentials.
+
+	Remember to restart the instance after making changes to ensure they take effect.
+</Alert>
+
+### General
+
+| Variable                     | Description                                                                                                                  | Default value |
+|------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------|
+| `LOGCHIMP_SECRET_KEY`        | Secret key used for various cryptographic operations like session handling, token generation. Should be long, random string. |               |
+| `LOGCHIMP_MACHINE_SIGNATURE` | Unique identifier for your instance, used for licensing and authentication.                                                  |               |
+| `LOGCHIMP_PROTOCOL`          | Protocol to be used, either `http` or `https`.                                                                               | `http`        |
+
+### API
+
+| Variable                  | Description                                                       | Default value           |
+|---------------------------|-------------------------------------------------------------------|-------------------------|
+| `API_PORT`                |                                                                   | `8000`                  |
+| `NODE_ENV`                |                                                                   | `production`            |
+| `LOGCHIMP_WEB_URL`        | The complete base URL for the web application including protocol. | `http://localhost:3000` |
+| `LOGCHIMP_IS_SELF_HOSTED` |                                                                   | `true`                  |
+
+### Theme
+
+| Variable              | Description                                               | Default value           |
+|-----------------------|-----------------------------------------------------------|-------------------------|
+| `NODE_ENV`            |                                                           | `production`            |
+| `THEME_PORT`          |                                                           | `3000`                  |
+| `LOGCHIMP_API_URL`    | The complete base URL at which the backend is running on. | `http://localhost:8000` |
+| `VITE_IS_SELF_HOSTED` |                                                           | `true`                  |
+
+### Database
+
+| Variable               | Description                                                                               | Default value |
+|------------------------|-------------------------------------------------------------------------------------------|---------------|
+| `LOGCHIMP_DB_HOST`     | Hostname or IP address of your PostgreSQL server.                                         | `db`          |
+| `LOGCHIMP_DB_DATABASE` | Name of the PostgreSQL database LogChimp will use.                                        | `logchimp`    |
+| `LOGCHIMP_DB_PORT`     | TCP port your PostgreSQL server is listening on.                                          | `5432`        |
+| `LOGCHIMP_DB_USER`     | Username for PostgreSQL authentication.                                                   | `logchimp`    |
+| `LOGCHIMP_DB_PASSWORD` | Password for PostgreSQL authentication. **Critical:** Use a strong, unique password here. | `logchimp`    |
+
+### Mail
+
+You will need to set-up SMTP configuration to let your users get emails to reset password, account verification, notifications and more.
+
+| Variable                 | Description                                           | Default value |
+|--------------------------|-------------------------------------------------------|---------------|
+| `LOGCHIMP_MAIL_HOST`     | The address of your SMTP server.                      |               |
+| `LOGCHIMP_MAIL_USER`     | Specify the username for the SMTP configuration here. |               |
+| `LOGCHIMP_MAIL_PASSWORD` | Specify the password for the SMTP configuration here. |               |
+| `LOGCHIMP_MAIL_PORT`     | The port for outgoing emails.                         | `587`         |

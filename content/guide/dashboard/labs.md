@@ -1,0 +1,4 @@
+---
+title: Labs
+icon: FlaskConical
+---
