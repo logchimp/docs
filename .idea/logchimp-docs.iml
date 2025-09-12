@@ -3,9 +3,11 @@
   <component name="Go" enabled="true" />
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/temp" />
-      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
-      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/.nitro" />
+      <excludeFolder url="file://$MODULE_DIR$/.output" />
+      <excludeFolder url="file://$MODULE_DIR$/.tanstack" />
+      <excludeFolder url="file://$MODULE_DIR$/.next" />
+      <excludeFolder url="file://$MODULE_DIR$/.wrangler" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
