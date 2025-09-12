@@ -1,7 +1,7 @@
 ---
 title: Contributing
 description: LogChimp is open-source software built for product owners to build a better version of their product.
-slug: /docs/contributing
+icon: HandHelping
 ---
 
 The best part about open-sourcing software allows people from all over the world contribute to its improvement.
