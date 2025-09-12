@@ -16,9 +16,9 @@
 :root {
   --page-background: #ffffff;
   --sidebar-background: #ffffff;
+}
 
-  .dark {
-    --page-background: #05050b;
-    --sidebar-background: #05050b;
-  }
+.dark {
+  --page-background: #05050b;
+  --sidebar-background: #05050b;
 }
