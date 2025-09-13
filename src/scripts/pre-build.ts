@@ -5,6 +5,7 @@ import * as path from "node:path";
 import { openapi } from "@/src/lib/openapi";
 
 const apiReferencePath = "./content/api-reference";
+
 export async function generateDocs() {
   await rimraf(apiReferencePath, {
     filter: createPreserveFilter([
@@ -22,7 +23,8 @@ export async function generateDocs() {
     OpenAPI.generateFiles({
       input: openapi,
       output: apiReferencePath,
-      // per: "operation",
+      per: "operation",
+      groupBy: "tag",
       includeDescription: true,
     }),
   ]);

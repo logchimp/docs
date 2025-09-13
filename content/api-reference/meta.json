@@ -6,6 +6,11 @@
 		"overview",
 		"glossary",
 		"errors",
-		"...index"
+
+		"---Auth---",
+		"...auth/userSignup",
+
+		"---Boards---",
+		"...boards/filterBoards"
 	]
 }
