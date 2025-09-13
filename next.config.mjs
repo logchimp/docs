@@ -29,4 +29,4 @@ export default withMDX(config);
 
 // added by create cloudflare to enable calling `getCloudflareContext()` in `next dev`
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
-initOpenNextCloudflareForDev();
+process.env.CF_WORKER === "1" ? initOpenNextCloudflareForDev() : undefined;
