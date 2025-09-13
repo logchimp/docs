@@ -1,82 +1,257 @@
 openapi: 3.1.0
 info:
-  title: LogChimp API
-  version: 1.0.0
-  description: |
-    Minimal example OpenAPI definition for LogChimp. Replace with the real spec when available.
+  title: LogChimp
+  description: "Meet a next-generation software turning feedback into a future roadmap. LogChimp makes every customer voice count."
+  version: 0.1.0
+  contact:
+    name: CodeCarrot
+    email: logchimp@codecarrot.net
 servers:
-  - url: https://api.logchimp.com
-    description: Production API
-  - url: http://localhost:8000
-    description: Local development
+  - url: https://api.<your-domain>.com/api/v1
+    description: ""
 tags:
-  - name: Health
-    description: Service health endpoints
-  - name: Posts
-    description: Endpoints related to posts
+  - name: auth
+    description: "Endpoints related to account authentication via email and password"
+  - name: users
+    description: "Endpoints related to users"
+  - name: posts
+    description: "Endpoints related to posts"
+  - name: comments
+    description: "Endpoints related to posts comments and posts activities"
+  - name: boards
+    description: "Endpoints related to boards"
+  - name: roadmaps
+    description: "Endpoints related to roadmaps"
+  - name: roles
+    description: "Endpoints related to roles and permissions"
+  - name: settings
+    description: "Endpoints related to LogChimp settings"
+
 paths:
-  /health:
-    get:
-      summary: Health check
-      description: Returns the health status of the service.
+  /auth/signup:
+    post:
       tags:
-        - Health
-      operationId: getHealth
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    enum: [ok]
-                    example: ok
-  /posts:
-    get:
-      summary: List posts
-      tags:
-        - Posts
-      operationId: listPosts
+        - auth
+      summary: Sign up
+      description: Create a new user account.
+      operationId: userSignup
       parameters:
-        - in: query
-          name: limit
-          schema:
-            type: integer
-            minimum: 1
-            maximum: 100
-            default: 20
-          description: Number of items to return
+        - $ref: '#/components/parameters/contentTypeJson'
+        - $ref: '#/components/parameters/origin'
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: "string"
+                  format: "email"
+                  example: mike@example.com
+                password:
+                  type: string
+                  format: password
+                  example: "password"
+        required: true
       responses:
-        '200':
-          description: A list of posts
+        201:
+          description: ''
           content:
             application/json:
               schema:
                 type: object
                 properties:
-                  data:
+                  user:
+                    type: object
+                    properties:
+                      authToken:
+                        type: string
+                        example: |
+                          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxZjEzN2QyMy04NDYzLTQ5NjEtYjY2NS1hNWQ4ZjE2NzVlNzciLCJlbWFpbCI6ImFkbWluQG1lLm1lIiwidHlwZSI6ImVtYWlsVmVyaWZpY2F0aW9uIiwiaWF0IjoxNzU3MzQ2NzE3LCJleHAiOjE3NTc1MTk1MTd9.2lmZpMdltMSk3PSyGOFR5dUuy4RMjxAzDgaFaNUmeNo
+                      userId:
+                        type: string
+                        example: 1f137d23-8463-4961-b665-a5d8f1675e77
+                      name:
+                        type: string
+                        example: "Mike"
+                      username:
+                        type: string
+                        example: mike
+                      email:
+                        type: string
+                        example: mike@example.com
+                      avatar:
+                        type: string
+                        example: >-
+                          https://www.gravatar.com/avatar/fc51027a642571734eaaefd103b2f00c
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - type: object
+                    description: Invalid email address
+                    properties:
+                      message:
+                        type: "string"
+                        example: "Enter valid email"
+                      code:
+                        type: "string"
+                        example: "EMAIL_INVALID"
+                  - type: object
+                    description: Missing password
+                    properties:
+                      message:
+                        type: "string"
+                        example: "No password provided"
+                      code:
+                        type: "string"
+                        example: "PASSWORD_MISSING"
+                  - type: object
+                    properties:
+                      message:
+                        type: string
+                        example: "You do not have permission to perform this action."
+                      code:
+                        type: string
+                        example: SIGNUP_NOT_ALLOWED
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+        500:
+          $ref: "#/components/responses/InternalServerError"
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+      security: [ ]
+  /boards:
+    get:
+      tags:
+        - boards
+      summary: List all boards
+      description: Get all the boards
+      operationId: filterBoards
+      parameters:
+        - name: created
+          in: query
+          schema:
+            type: string
+            default: "desc"
+            description: "Borders are sorted by date creation."
+        - name: limit
+          in: query
+          schema:
+            type: string
+            default: "10"
+            description: ""
+        - name: page
+          in: query
+          schema:
+            type: string
+            default: "1"
+            description: ""
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+            default: application/json
+            description: ""
+      requestBody:
+        description: Get all the boards
+        content:
+          application/json:
+            schema:
+              type: object
+        required: false
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  boards:
                     type: array
                     items:
-                      $ref: '#/components/schemas/Post'
+                      type: object
+                      $ref: '#/components/schemas/BoardDetail'
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+        500:
+          $ref: "#/components/responses/InternalServerError"
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+      security: [ ]
 components:
+  headers:
+    contentTypeJson:
+      description: ''
+      schema:
+        type: string
+        example: application/json
+  parameters:
+    contentTypeJson:
+      name: Content-Type
+      in: header
+      schema:
+        type: string
+        default: application/json
+        description: ''
+    origin:
+      name: origin
+      in: header
+      schema:
+        type: string
+        default: 'https://example.com'
+        description: ''
   schemas:
-    Post:
+    Board:
       type: object
       properties:
-        id:
+        boardId:
           type: string
           format: uuid
-          example: 'c2a6763e-7d1b-4b85-9b12-2a1f7f4fd6dd'
-        title:
+          example:
+        name:
           type: string
-          example: 'First post'
-        body:
+          example: "🔗 Integrations"
+        color:
           type: string
-          example: 'Hello, world!'
+          format: color
+          example: "4A90E2"
+        url:
+          type: string
+          example: 'integrations-dsgksdIUYO'
         createdAt:
           type: string
           format: date-time
-          example: '2025-01-01T12:34:56Z'
+    BoardDetail:
+      allOf:
+        -  $ref: "#/components/schemas/Board"
+        - type: object
+          properties:
+            post_count:
+              type: string
+              example: "42"
+  responses:
+    InternalServerError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: "Something went wrong!"
+              code:
+                type: string
+                example: "SERVER_ERROR"

@@ -1,7 +1,7 @@
 import { createElement } from "react";
 import { loader } from "fumadocs-core/source";
 import { icons } from "lucide-react";
-import { docs, guide } from "@/.source";
+import { apiReference, docs, guide } from "@/.source";
 
 export const docsSource = loader({
   source: docs.toFumadocsSource(),
@@ -27,7 +27,7 @@ export const guideSource = loader({
   },
 });
 
-// export const openApiSource = loader({
-//   source: apiReference.toFumadocsSource(),
-//   baseUrl: "/api-reference",
-// });
+export const openApiSource = loader({
+  source: apiReference.toFumadocsSource(),
+  baseUrl: "/api-reference",
+});
