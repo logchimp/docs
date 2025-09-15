@@ -1,8 +1,14 @@
 openapi: 3.1.0
 info:
   title: LogChimp
-  description: "Meet a next-generation software turning feedback into a future roadmap. LogChimp makes every customer voice count."
-  version: 0.1.0
+  description: |
+    "Meet a next-generation software turning feedback into a future roadmap. LogChimp makes every customer voice count."
+
+    Getting started and learn more:
+    * [Website](https://logchimp.codecarrot.net)
+    * [Documentation](https://docs.logchimp.codecarrot.net)
+    * [GitHub](https://github.com/logchimp/logchimp)
+  version: 0.2.0
   contact:
     name: CodeCarrot
     email: logchimp@codecarrot.net
@@ -28,6 +34,68 @@ tags:
     description: "Endpoints related to LogChimp settings"
 
 paths:
+  /auth/login:
+    post:
+      tags:
+        - auth
+      summary: Login
+      description: 'Login to account using email and password.'
+      operationId: userSignin
+      parameters:
+        - $ref: '#/components/parameters/contentTypeJson'
+        - $ref: '#/components/parameters/origin'
+      requestBody:
+        $ref: '#/components/requestBodies/Login'
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user:
+                    type: object
+                    $ref: "#/components/schemas/AuthUser"
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/EmailInvalidErrorCode"
+                  - $ref: "#/components/schemas/InvalidUserIdErrorCode"
+                  - $ref: "#/components/schemas/UserBlockedErrorCode"
+                  - type: object
+                    description: No password provided
+                    properties:
+                      message:
+                        type: "string"
+                        example: "No password provided"
+                      code:
+                        type: "string"
+                        example: "PASSWORD_MISSING"
+                  - type: object
+                    description: Incorect password
+                    properties:
+                      message:
+                        type: "string"
+                        example: "Incorect password"
+                      code:
+                        type: "string"
+                        example: "INCORRECT_PASSWORD"
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+        500:
+          $ref: "#/components/responses/InternalServerError"
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+      security: []
   /auth/signup:
     post:
       tags:
@@ -39,21 +107,7 @@ paths:
         - $ref: '#/components/parameters/contentTypeJson'
         - $ref: '#/components/parameters/origin'
       requestBody:
-        description: ''
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: "string"
-                  format: "email"
-                  example: mike@example.com
-                password:
-                  type: string
-                  format: password
-                  example: "password"
-        required: true
+        $ref: '#/components/requestBodies/Login'
       responses:
         201:
           description: ''
@@ -64,27 +118,7 @@ paths:
                 properties:
                   user:
                     type: object
-                    properties:
-                      authToken:
-                        type: string
-                        example: |
-                          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxZjEzN2QyMy04NDYzLTQ5NjEtYjY2NS1hNWQ4ZjE2NzVlNzciLCJlbWFpbCI6ImFkbWluQG1lLm1lIiwidHlwZSI6ImVtYWlsVmVyaWZpY2F0aW9uIiwiaWF0IjoxNzU3MzQ2NzE3LCJleHAiOjE3NTc1MTk1MTd9.2lmZpMdltMSk3PSyGOFR5dUuy4RMjxAzDgaFaNUmeNo
-                      userId:
-                        type: string
-                        example: 1f137d23-8463-4961-b665-a5d8f1675e77
-                      name:
-                        type: string
-                        example: "Mike"
-                      username:
-                        type: string
-                        example: mike
-                      email:
-                        type: string
-                        example: mike@example.com
-                      avatar:
-                        type: string
-                        example: >-
-                          https://www.gravatar.com/avatar/fc51027a642571734eaaefd103b2f00c
+                    $ref: "#/components/schemas/AuthUser"
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
@@ -94,15 +128,8 @@ paths:
             application/json:
               schema:
                 oneOf:
-                  - type: object
-                    description: Invalid email address
-                    properties:
-                      message:
-                        type: "string"
-                        example: "Enter valid email"
-                      code:
-                        type: "string"
-                        example: "EMAIL_INVALID"
+                  - $ref: "#/components/schemas/MailConfigurationErrorCode"
+                  - $ref: "#/components/schemas/EmailInvalidErrorCode"
                   - type: object
                     description: Missing password
                     properties:
@@ -129,6 +156,110 @@ paths:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
       security: [ ]
+  /auth/setup:
+    get:
+      tags:
+        - auth
+      summary: Site setup
+      description: 'Get site setup information.'
+      operationId: getSiteSetup
+      parameters:
+        - $ref: '#/components/parameters/contentTypeJson'
+        - $ref: '#/components/parameters/origin'
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  is_setup:
+                    type: boolean
+                    example: true
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+        500:
+          $ref: "#/components/responses/InternalServerError"
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+      security: []
+    post:
+      tags:
+        - auth
+      summary: Site setup
+      description: 'Setup the site by creating the owner account.'
+      operationId: siteSetup
+      parameters:
+        - $ref: '#/components/parameters/contentTypeJson'
+        - $ref: '#/components/parameters/origin'
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: '#/components/schemas/Login'
+                - type: object
+                  properties:
+                    siteTitle:
+                      type: string
+                      description: This will be shown across the website on public pages and dashboard.
+                      example: "LogChimp"
+                    name:
+                      type: string
+                      example: "Mike"
+        required: true
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user:
+                    type: object
+                    $ref: "#/components/schemas/AuthUser"
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/MailConfigurationErrorCode"
+                  - $ref: "#/components/schemas/EmailInvalidErrorCode"
+                  - type: object
+                    description: Missing password
+                    properties:
+                      message:
+                        type: "string"
+                        example: "No password provided"
+                      code:
+                        type: "string"
+                        example: "PASSWORD_MISSING"
+                  - type: object
+                    properties:
+                      message:
+                        type: string
+                        example: "Setup has already been completed."
+                      code:
+                        type: string
+                        example: SETUP_COMPLETED
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+        500:
+          $ref: "#/components/responses/InternalServerError"
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+      security: []
   /boards:
     get:
       tags:
@@ -190,6 +321,67 @@ paths:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
       security: [ ]
+  /auth/email/verify:
+    post:
+      tags:
+        - auth
+      summary: Send verification email
+      description: |
+        Send a verification email to the user email address.
+        The email is only sent if have configured [SMTP mail server](https://docs.logchimp.codecarrot.net/docs/environment-variables#mail) are configured at the time of deploying LogChimp.
+      operationId: sendVerificationEmail
+      parameters:
+        - $ref: '#/components/parameters/contentTypeJson'
+        - $ref: '#/components/parameters/origin'
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: "mike@example.com"
+        required: true
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  verify:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                        example: true
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/MailConfigurationErrorCode"
+                  - $ref: "#/components/schemas/EmailInvalidErrorCode"
+                  - $ref: "#/components/schemas/InvalidUserIdErrorCode"
+                  - $ref: "#/components/schemas/UserNotFoundErrorCode"
+                  - $ref: "#/components/schemas/EmailVerifiedErrorCode"
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+        500:
+          $ref: "#/components/responses/InternalServerError"
+          headers:
+            Content-Type:
+              $ref: '#/components/headers/contentTypeJson'
+      security: [ ]
 components:
   headers:
     contentTypeJson:
@@ -213,6 +405,78 @@ components:
         default: 'https://example.com'
         description: ''
   schemas:
+    UserBlockedErrorCode:
+      type: object
+      required:
+        -  message
+        -  code
+      properties:
+        message:
+          type: string
+          example: "User is Blocked"
+        code:
+          type: string
+          example: "USER_BLOCKED"
+    InvalidUserIdErrorCode:
+      type: object
+      required:
+        -  message
+        -  code
+      properties:
+        message:
+          type: string
+          example: "Invalid user ID"
+        code:
+          type: string
+          example: "INVALID_USER_ID"
+    UserNotFoundErrorCode:
+      type: object
+      required:
+        -  message
+        -  code
+      properties:
+        message:
+          type: string
+          example: "User not found"
+        code:
+          type: string
+          example: "USER_NOT_FOUND"
+    EmailInvalidErrorCode:
+      type: object
+      required:
+        -  message
+        -  code
+      properties:
+        message:
+          type: string
+          example: "Enter valid email"
+        code:
+          type: string
+          example: "EMAIL_INVALID"
+    EmailVerifiedErrorCode:
+      type: object
+      required:
+        -  message
+        -  code
+      properties:
+        message:
+          type: string
+          example: "Your email has already been verified."
+        code:
+          type: string
+          example: "EMAIL_VERIFIED"
+    MailConfigurationErrorCode:
+      type: object
+      required:
+        -  message
+        -  code
+      properties:
+        message:
+          type: string
+          example: "Mail configuration missing"
+        code:
+          type: string
+          example: "MAIL_CONFIG_MISSING"
     Board:
       type: object
       properties:
@@ -241,6 +505,50 @@ components:
             post_count:
               type: string
               example: "42"
+    AuthUser:
+      type: object
+      properties:
+        authToken:
+          type: string
+          example: |
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxZjEzN2QyMy04NDYzLTQ5NjEtYjY2NS1hNWQ4ZjE2NzVlNzciLCJlbWFpbCI6ImFkbWluQG1lLm1lIiwidHlwZSI6ImVtYWlsVmVyaWZpY2F0aW9uIiwiaWF0IjoxNzU3MzQ2NzE3LCJleHAiOjE3NTc1MTk1MTd9.2lmZpMdltMSk3PSyGOFR5dUuy4RMjxAzDgaFaNUmeNo
+        userId:
+          type: string
+          example: 1f137d23-8463-4961-b665-a5d8f1675e77
+        name:
+          type: string
+          example: "Mike"
+        username:
+          type: string
+          example: mike
+        email:
+          type: string
+          format: email
+          example: mike@example.com
+        avatar:
+          type: string
+          format: url
+          example: >-
+            https://www.gravatar.com/avatar/fc51027a642571734eaaefd103b2f00c
+    Login:
+      type: object
+      properties:
+        email:
+          type: "string"
+          format: "email"
+          example: mike@example.com
+        password:
+          type: string
+          format: password
+          example: "password"
+  requestBodies:
+    Login:
+      description: Login to account using email and password.
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Login"
   responses:
     InternalServerError:
       description: Internal server error
