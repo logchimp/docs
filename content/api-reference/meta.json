@@ -1,5 +1,4 @@
 {
-	"title": "OpenAPI Example",
 	"root": true,
 	"pages": [
 		"---Getting Started---",
@@ -8,7 +7,13 @@
 		"errors",
 
 		"---Auth---",
+		".../auth/userSignin",
 		"...auth/userSignup",
+		".../auth/sendVerificationEmail",
+
+		"---Site---",
+		".../auth/getSiteSetup",
+		".../auth/siteSetup",
 
 		"---Boards---",
 		"...boards/filterBoards"
