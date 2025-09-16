@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { RocketIcon } from "lucide-react";
+import { RocketIcon, TerminalIcon } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -28,6 +28,25 @@ export default function HomePage() {
             </h3>
             <p className="mt-2 text-sm text-gray-500 dark:text-zinc-500">
               Learn how to get started with LogChimp.
+            </p>
+          </Link>
+        </div>
+
+        {/* API References	*/}
+        <div className="link group cursor-pointer p-6 border rounded-2xl bg-white hover:scale-105 transition-all">
+          <Link
+            href="/api-reference"
+            className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
+          >
+            <div className="flex items-center justify-center">
+              <TerminalIcon className="size-12 md:size-24" aria-hidden="true" />
+            </div>
+
+            <h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">
+              API Reference
+            </h3>
+            <p className="mt-2 text-sm text-gray-500 dark:text-zinc-500">
+              Reference for the API.
             </p>
           </Link>
         </div>
