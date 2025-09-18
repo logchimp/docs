@@ -13,8 +13,16 @@ info:
     name: CodeCarrot
     email: logchimp@codecarrot.net
 servers:
-  - url: https://api.<your-domain>.com/api/v1
-    description: ""
+  - url: '{protocol}://{host-with-port}/api/v1'
+    description: "API URL"
+    variables:
+      protocol:
+        enum:
+          - 'http'
+          - 'https'
+        default: 'http'
+      host-with-port:
+        default: 'localhost:8000'
 tags:
   - name: auth
     description: "Endpoints related to account authentication via email and password"
@@ -32,7 +40,6 @@ tags:
     description: "Endpoints related to roles and permissions"
   - name: settings
     description: "Endpoints related to LogChimp settings"
-
 paths:
   /auth/login:
     post:
@@ -47,7 +54,7 @@ paths:
       requestBody:
         $ref: '#/components/requestBodies/Login'
       responses:
-        200:
+        '200':
           description: ''
           content:
             application/json:
@@ -60,7 +67,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        400:
+        '400':
           description: Bad Request
           content:
             application/json:
@@ -90,7 +97,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        500:
+        '500':
           $ref: "#/components/responses/InternalServerError"
           headers:
             Content-Type:
@@ -109,7 +116,7 @@ paths:
       requestBody:
         $ref: '#/components/requestBodies/Login'
       responses:
-        201:
+        '201':
           description: ''
           content:
             application/json:
@@ -122,7 +129,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        400:
+        '400':
           description: Bad Request
           content:
             application/json:
@@ -150,12 +157,12 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        500:
+        '500':
           $ref: "#/components/responses/InternalServerError"
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-      security: [ ]
+      security: []
   /auth/setup:
     get:
       tags:
@@ -167,7 +174,7 @@ paths:
         - $ref: '#/components/parameters/contentTypeJson'
         - $ref: '#/components/parameters/origin'
       responses:
-        200:
+        '200':
           description: ''
           content:
             application/json:
@@ -180,7 +187,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        500:
+        '500':
           $ref: "#/components/responses/InternalServerError"
           headers:
             Content-Type:
@@ -213,7 +220,7 @@ paths:
                       example: "Mike"
         required: true
       responses:
-        200:
+        '200':
           description: ''
           content:
             application/json:
@@ -226,7 +233,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        400:
+        '400':
           description: Bad Request
           content:
             application/json:
@@ -254,7 +261,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        500:
+        '500':
           $ref: "#/components/responses/InternalServerError"
           headers:
             Content-Type:
@@ -300,7 +307,7 @@ paths:
               type: object
         required: false
       responses:
-        200:
+        '200':
           description: ""
           content:
             application/json:
@@ -315,12 +322,12 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        500:
+        '500':
           $ref: "#/components/responses/InternalServerError"
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-      security: [ ]
+      security: []
   /auth/email/verify:
     post:
       tags:
@@ -346,7 +353,7 @@ paths:
                   example: "mike@example.com"
         required: true
       responses:
-        200:
+        '200':
           description: ''
           content:
             application/json:
@@ -362,7 +369,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        400:
+        '400':
           description: Bad Request
           content:
             application/json:
@@ -376,12 +383,12 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        500:
+        '500':
           $ref: "#/components/responses/InternalServerError"
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-      security: [ ]
+      security: []
 components:
   headers:
     contentTypeJson:
@@ -408,8 +415,8 @@ components:
     UserBlockedErrorCode:
       type: object
       required:
-        -  message
-        -  code
+        - message
+        - code
       properties:
         message:
           type: string
@@ -420,8 +427,8 @@ components:
     InvalidUserIdErrorCode:
       type: object
       required:
-        -  message
-        -  code
+        - message
+        - code
       properties:
         message:
           type: string
@@ -432,8 +439,8 @@ components:
     UserNotFoundErrorCode:
       type: object
       required:
-        -  message
-        -  code
+        - message
+        - code
       properties:
         message:
           type: string
@@ -444,8 +451,8 @@ components:
     EmailInvalidErrorCode:
       type: object
       required:
-        -  message
-        -  code
+        - message
+        - code
       properties:
         message:
           type: string
@@ -456,8 +463,8 @@ components:
     EmailVerifiedErrorCode:
       type: object
       required:
-        -  message
-        -  code
+        - message
+        - code
       properties:
         message:
           type: string
@@ -468,8 +475,8 @@ components:
     MailConfigurationErrorCode:
       type: object
       required:
-        -  message
-        -  code
+        - message
+        - code
       properties:
         message:
           type: string
@@ -483,7 +490,7 @@ components:
         boardId:
           type: string
           format: uuid
-          example:
+          example: 11c14790-b4d3-4689-942c-55548cfdd8a6
         name:
           type: string
           example: "🔗 Integrations"
@@ -499,7 +506,7 @@ components:
           format: date-time
     BoardDetail:
       allOf:
-        -  $ref: "#/components/schemas/Board"
+        - $ref: "#/components/schemas/Board"
         - type: object
           properties:
             post_count:
