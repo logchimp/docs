@@ -23,6 +23,8 @@ servers:
         default: 'http'
       host-with-port:
         default: 'localhost:8000'
+security:
+  - bearerAuth: []
 tags:
   - name: auth
     description: "Endpoints related to account authentication via email and password"
@@ -48,9 +50,6 @@ paths:
       summary: Login
       description: 'Login to account using email and password.'
       operationId: userSignin
-      parameters:
-        - $ref: '#/components/parameters/contentTypeJson'
-        - $ref: '#/components/parameters/origin'
       requestBody:
         $ref: '#/components/requestBodies/Login'
       responses:
@@ -110,9 +109,6 @@ paths:
       summary: Sign up
       description: Create a new user account.
       operationId: userSignup
-      parameters:
-        - $ref: '#/components/parameters/contentTypeJson'
-        - $ref: '#/components/parameters/origin'
       requestBody:
         $ref: '#/components/requestBodies/Login'
       responses:
@@ -170,9 +166,6 @@ paths:
       summary: Site setup
       description: 'Get site setup information.'
       operationId: getSiteSetup
-      parameters:
-        - $ref: '#/components/parameters/contentTypeJson'
-        - $ref: '#/components/parameters/origin'
       responses:
         '200':
           description: ''
@@ -199,9 +192,6 @@ paths:
       summary: Site setup
       description: 'Setup the site by creating the owner account.'
       operationId: siteSetup
-      parameters:
-        - $ref: '#/components/parameters/contentTypeJson'
-        - $ref: '#/components/parameters/origin'
       requestBody:
         description: ''
         content:
@@ -330,9 +320,6 @@ paths:
         Send a verification email to the user email address.
         The email is only sent if have configured [SMTP mail server](https://docs.logchimp.codecarrot.net/docs/environment-variables#mail) are configured at the time of deploying LogChimp.
       operationId: sendVerificationEmail
-      parameters:
-        - $ref: '#/components/parameters/contentTypeJson'
-        - $ref: '#/components/parameters/origin'
       requestBody:
         description: ''
         content:
@@ -381,29 +368,18 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-      security: []
 components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: JWT Bearer token authentication
   headers:
     contentTypeJson:
       description: ''
       schema:
         type: string
         example: application/json
-  parameters:
-    contentTypeJson:
-      name: Content-Type
-      in: header
-      schema:
-        type: string
-        default: application/json
-        description: ''
-    origin:
-      name: origin
-      in: header
-      schema:
-        type: string
-        default: 'https://example.com'
-        description: ''
   schemas:
     UserBlockedErrorCode:
       type: object
