@@ -299,13 +299,6 @@ paths:
             type: string
             default: application/json
             description: ""
-      requestBody:
-        description: Get all the boards
-        content:
-          application/json:
-            schema:
-              type: object
-        required: false
       responses:
         '200':
           description: ""
