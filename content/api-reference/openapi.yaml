@@ -320,18 +320,6 @@ paths:
         Send a verification email to the user email address.
         The email is only sent if have configured [SMTP mail server](https://docs.logchimp.codecarrot.net/docs/environment-variables#mail) are configured at the time of deploying LogChimp.
       operationId: sendVerificationEmail
-      requestBody:
-        description: ''
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                  format: email
-                  example: "mike@example.com"
-        required: true
       responses:
         '200':
           description: ''
