@@ -13,6 +13,10 @@ import { Alert } from "@/src/components/Alert";
 import { openApiSource } from "@/src/lib/source";
 import { openapi } from "@/src/lib/openapi";
 
+export const { GET, HEAD, PUT, POST, PATCH, DELETE } = openapi.createProxy({
+  allowedOrigins: ["*"],
+});
+
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
