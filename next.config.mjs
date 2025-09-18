@@ -9,6 +9,7 @@ const config = {
     // Reduce bundle size by optimizing package imports for lucide-react
     optimizePackageImports: ["lucide-react"],
   },
+  allowedDevOrigins: ["localhost"],
   async redirects() {
     return [
       {
@@ -19,10 +20,10 @@ const config = {
     ];
   },
 
-	images: {
-		// Use Cloudflare Image Resizing instead of bundling image optimization
-		unoptimized: true,
-	},
+  images: {
+    // Use Cloudflare Image Resizing instead of bundling image optimization
+    unoptimized: true,
+  },
 };
 
 export default withMDX(config);
