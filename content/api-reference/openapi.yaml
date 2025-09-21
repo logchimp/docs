@@ -13,8 +13,18 @@ info:
     name: CodeCarrot
     email: logchimp@codecarrot.net
 servers:
-  - url: https://api.<your-domain>.com/api/v1
-    description: ""
+  - url: '{protocol}://{host-with-port}/api/v1'
+    description: "API URL"
+    variables:
+      protocol:
+        enum:
+          - 'http'
+          - 'https'
+        default: 'http'
+      host-with-port:
+        default: 'localhost:8000'
+security:
+  - bearerAuth: []
 tags:
   - name: auth
     description: "Endpoints related to account authentication via email and password"
@@ -32,7 +42,6 @@ tags:
     description: "Endpoints related to roles and permissions"
   - name: settings
     description: "Endpoints related to LogChimp settings"
-
 paths:
   /auth/login:
     post:
@@ -41,13 +50,10 @@ paths:
       summary: Login
       description: 'Login to account using email and password.'
       operationId: userSignin
-      parameters:
-        - $ref: '#/components/parameters/contentTypeJson'
-        - $ref: '#/components/parameters/origin'
       requestBody:
         $ref: '#/components/requestBodies/Login'
       responses:
-        200:
+        '200':
           description: ''
           content:
             application/json:
@@ -60,7 +66,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        400:
+        '400':
           description: Bad Request
           content:
             application/json:
@@ -90,7 +96,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        500:
+        '500':
           $ref: "#/components/responses/InternalServerError"
           headers:
             Content-Type:
@@ -103,13 +109,10 @@ paths:
       summary: Sign up
       description: Create a new user account.
       operationId: userSignup
-      parameters:
-        - $ref: '#/components/parameters/contentTypeJson'
-        - $ref: '#/components/parameters/origin'
       requestBody:
         $ref: '#/components/requestBodies/Login'
       responses:
-        201:
+        '201':
           description: ''
           content:
             application/json:
@@ -122,7 +125,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        400:
+        '400':
           description: Bad Request
           content:
             application/json:
@@ -150,12 +153,12 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        500:
+        '500':
           $ref: "#/components/responses/InternalServerError"
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-      security: [ ]
+      security: []
   /auth/setup:
     get:
       tags:
@@ -163,11 +166,8 @@ paths:
       summary: Site setup
       description: 'Get site setup information.'
       operationId: getSiteSetup
-      parameters:
-        - $ref: '#/components/parameters/contentTypeJson'
-        - $ref: '#/components/parameters/origin'
       responses:
-        200:
+        '200':
           description: ''
           content:
             application/json:
@@ -180,7 +180,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        500:
+        '500':
           $ref: "#/components/responses/InternalServerError"
           headers:
             Content-Type:
@@ -192,9 +192,6 @@ paths:
       summary: Site setup
       description: 'Setup the site by creating the owner account.'
       operationId: siteSetup
-      parameters:
-        - $ref: '#/components/parameters/contentTypeJson'
-        - $ref: '#/components/parameters/origin'
       requestBody:
         description: ''
         content:
@@ -213,7 +210,7 @@ paths:
                       example: "Mike"
         required: true
       responses:
-        200:
+        '200':
           description: ''
           content:
             application/json:
@@ -226,7 +223,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        400:
+        '400':
           description: Bad Request
           content:
             application/json:
@@ -254,7 +251,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        500:
+        '500':
           $ref: "#/components/responses/InternalServerError"
           headers:
             Content-Type:
@@ -292,15 +289,8 @@ paths:
             type: string
             default: application/json
             description: ""
-      requestBody:
-        description: Get all the boards
-        content:
-          application/json:
-            schema:
-              type: object
-        required: false
       responses:
-        200:
+        '200':
           description: ""
           content:
             application/json:
@@ -315,12 +305,12 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        500:
+        '500':
           $ref: "#/components/responses/InternalServerError"
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-      security: [ ]
+      security: []
   /auth/email/verify:
     post:
       tags:
@@ -330,23 +320,8 @@ paths:
         Send a verification email to the user email address.
         The email is only sent if have configured [SMTP mail server](https://docs.logchimp.codecarrot.net/docs/environment-variables#mail) are configured at the time of deploying LogChimp.
       operationId: sendVerificationEmail
-      parameters:
-        - $ref: '#/components/parameters/contentTypeJson'
-        - $ref: '#/components/parameters/origin'
-      requestBody:
-        description: ''
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                  format: email
-                  example: "mike@example.com"
-        required: true
       responses:
-        200:
+        '200':
           description: ''
           content:
             application/json:
@@ -362,7 +337,7 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        400:
+        '400':
           description: Bad Request
           content:
             application/json:
@@ -376,40 +351,29 @@ paths:
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-        500:
+        '500':
           $ref: "#/components/responses/InternalServerError"
           headers:
             Content-Type:
               $ref: '#/components/headers/contentTypeJson'
-      security: [ ]
 components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: JWT Bearer token authentication
   headers:
     contentTypeJson:
       description: ''
       schema:
         type: string
         example: application/json
-  parameters:
-    contentTypeJson:
-      name: Content-Type
-      in: header
-      schema:
-        type: string
-        default: application/json
-        description: ''
-    origin:
-      name: origin
-      in: header
-      schema:
-        type: string
-        default: 'https://example.com'
-        description: ''
   schemas:
     UserBlockedErrorCode:
       type: object
       required:
-        -  message
-        -  code
+        - message
+        - code
       properties:
         message:
           type: string
@@ -420,8 +384,8 @@ components:
     InvalidUserIdErrorCode:
       type: object
       required:
-        -  message
-        -  code
+        - message
+        - code
       properties:
         message:
           type: string
@@ -432,8 +396,8 @@ components:
     UserNotFoundErrorCode:
       type: object
       required:
-        -  message
-        -  code
+        - message
+        - code
       properties:
         message:
           type: string
@@ -444,8 +408,8 @@ components:
     EmailInvalidErrorCode:
       type: object
       required:
-        -  message
-        -  code
+        - message
+        - code
       properties:
         message:
           type: string
@@ -456,8 +420,8 @@ components:
     EmailVerifiedErrorCode:
       type: object
       required:
-        -  message
-        -  code
+        - message
+        - code
       properties:
         message:
           type: string
@@ -468,8 +432,8 @@ components:
     MailConfigurationErrorCode:
       type: object
       required:
-        -  message
-        -  code
+        - message
+        - code
       properties:
         message:
           type: string
@@ -483,7 +447,7 @@ components:
         boardId:
           type: string
           format: uuid
-          example:
+          example: 11c14790-b4d3-4689-942c-55548cfdd8a6
         name:
           type: string
           example: "🔗 Integrations"
@@ -499,7 +463,7 @@ components:
           format: date-time
     BoardDetail:
       allOf:
-        -  $ref: "#/components/schemas/Board"
+        - $ref: "#/components/schemas/Board"
         - type: object
           properties:
             post_count:
