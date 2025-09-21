@@ -17,7 +17,7 @@ export default function HomePage() {
         <div className="link group cursor-pointer p-6 border rounded-2xl bg-white hover:scale-105 transition-all">
           <Link
             href="/docs/install/getting-started"
-            className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
+            className="block text-lg font-medium text-gray-900 dark:text-zinc-400 hover:text-gray-600 dark:hover:text-zinc-400"
           >
             <div className="flex items-center justify-center">
               <RocketIcon className="size-12 md:size-24" aria-hidden="true" />
@@ -36,7 +36,7 @@ export default function HomePage() {
         <div className="link group cursor-pointer p-6 border rounded-2xl bg-white hover:scale-105 transition-all">
           <Link
             href="/api-reference"
-            className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
+            className="block text-lg font-medium text-gray-900 dark:text-zinc-400 hover:text-gray-600 dark:hover:text-zinc-400"
           >
             <div className="flex items-center justify-center">
               <TerminalIcon className="size-12 md:size-24" aria-hidden="true" />
