@@ -8,7 +8,7 @@ info:
     * [Website](https://logchimp.codecarrot.net)
     * [Documentation](https://docs.logchimp.codecarrot.net)
     * [GitHub](https://github.com/logchimp/logchimp)
-  version: 0.2.0
+  version: 0.3.0
   contact:
     name: CodeCarrot
     email: logchimp@codecarrot.net
@@ -23,8 +23,10 @@ servers:
         default: 'http'
       host-with-port:
         default: 'localhost:8000'
+
 security:
-  - bearerAuth: []
+  - bearerAuth: [ ]
+
 tags:
   - name: auth
     description: "Endpoints related to account authentication via email and password"
@@ -42,6 +44,7 @@ tags:
     description: "Endpoints related to roles and permissions"
   - name: settings
     description: "Endpoints related to LogChimp settings"
+
 paths:
   /auth/login:
     post:
@@ -53,7 +56,7 @@ paths:
       requestBody:
         $ref: '#/components/requestBodies/Login'
       responses:
-        '200':
+        200:
           description: ''
           content:
             application/json:
@@ -63,10 +66,7 @@ paths:
                   user:
                     type: object
                     $ref: "#/components/schemas/AuthUser"
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-        '400':
+        400:
           description: Bad Request
           content:
             application/json:
@@ -93,15 +93,9 @@ paths:
                       code:
                         type: "string"
                         example: "INCORRECT_PASSWORD"
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-        '500':
+        500:
           $ref: "#/components/responses/InternalServerError"
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-      security: []
+      security: [ ]
   /auth/signup:
     post:
       tags:
@@ -112,7 +106,7 @@ paths:
       requestBody:
         $ref: '#/components/requestBodies/Login'
       responses:
-        '201':
+        201:
           description: ''
           content:
             application/json:
@@ -122,10 +116,7 @@ paths:
                   user:
                     type: object
                     $ref: "#/components/schemas/AuthUser"
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-        '400':
+        400:
           description: Bad Request
           content:
             application/json:
@@ -150,15 +141,9 @@ paths:
                       code:
                         type: string
                         example: SIGNUP_NOT_ALLOWED
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-        '500':
+        500:
           $ref: "#/components/responses/InternalServerError"
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-      security: []
+      security: [ ]
   /auth/setup:
     get:
       tags:
@@ -167,7 +152,7 @@ paths:
       description: 'Get site setup information.'
       operationId: getSiteSetup
       responses:
-        '200':
+        200:
           description: ''
           content:
             application/json:
@@ -177,15 +162,9 @@ paths:
                   is_setup:
                     type: boolean
                     example: true
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-        '500':
+        500:
           $ref: "#/components/responses/InternalServerError"
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-      security: []
+      security: [ ]
     post:
       tags:
         - auth
@@ -198,7 +177,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Login'
+                - $ref: '#/components/schemas/LoginRequest'
                 - type: object
                   properties:
                     siteTitle:
@@ -210,7 +189,7 @@ paths:
                       example: "Mike"
         required: true
       responses:
-        '200':
+        200:
           description: ''
           content:
             application/json:
@@ -220,10 +199,7 @@ paths:
                   user:
                     type: object
                     $ref: "#/components/schemas/AuthUser"
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-        '400':
+        400:
           description: Bad Request
           content:
             application/json:
@@ -248,15 +224,9 @@ paths:
                       code:
                         type: string
                         example: SETUP_COMPLETED
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-        '500':
+        500:
           $ref: "#/components/responses/InternalServerError"
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-      security: []
+      security: [ ]
   /boards:
     get:
       tags:
@@ -289,8 +259,15 @@ paths:
             type: string
             default: application/json
             description: ""
+      requestBody:
+        description: Get all the boards
+        content:
+          application/json:
+            schema:
+              type: object
+        required: false
       responses:
-        '200':
+        200:
           description: ""
           content:
             application/json:
@@ -302,15 +279,9 @@ paths:
                     items:
                       type: object
                       $ref: '#/components/schemas/BoardDetail'
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-        '500':
+        500:
           $ref: "#/components/responses/InternalServerError"
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-      security: []
+      security: [ ]
   /auth/email/verify:
     post:
       tags:
@@ -321,7 +292,7 @@ paths:
         The email is only sent if have configured [SMTP mail server](https://docs.logchimp.codecarrot.net/docs/environment-variables#mail) are configured at the time of deploying LogChimp.
       operationId: sendVerificationEmail
       responses:
-        '200':
+        200:
           description: ''
           content:
             application/json:
@@ -334,10 +305,7 @@ paths:
                       success:
                         type: boolean
                         example: true
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-        '400':
+        400:
           description: Bad Request
           content:
             application/json:
@@ -348,26 +316,16 @@ paths:
                   - $ref: "#/components/schemas/InvalidUserIdErrorCode"
                   - $ref: "#/components/schemas/UserNotFoundErrorCode"
                   - $ref: "#/components/schemas/EmailVerifiedErrorCode"
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
-        '500':
+        500:
           $ref: "#/components/responses/InternalServerError"
-          headers:
-            Content-Type:
-              $ref: '#/components/headers/contentTypeJson'
+      security:
+        - bearerAuth: [ ]
 components:
   securitySchemes:
     bearerAuth:
       type: http
       scheme: bearer
       description: JWT Bearer token authentication
-  headers:
-    contentTypeJson:
-      description: ''
-      schema:
-        type: string
-        example: application/json
   schemas:
     UserBlockedErrorCode:
       type: object
@@ -494,7 +452,7 @@ components:
           format: url
           example: >-
             https://www.gravatar.com/avatar/fc51027a642571734eaaefd103b2f00c
-    Login:
+    LoginRequest:
       type: object
       properties:
         email:
@@ -512,7 +470,7 @@ components:
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/Login"
+            $ref: "#/components/schemas/LoginRequest"
   responses:
     InternalServerError:
       description: Internal server error
