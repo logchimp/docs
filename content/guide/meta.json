@@ -3,6 +3,8 @@
   "pages": [
     "---Start guide---",
     "glossary",
+    "---Site setup---",
+    "setup/site",
     "---Posts---",
     "posts/index",
     "...posts",
