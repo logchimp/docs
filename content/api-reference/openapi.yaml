@@ -23,10 +23,8 @@ servers:
         default: 'http'
       host-with-port:
         default: 'localhost:8000'
-
 security:
-  - bearerAuth: [ ]
-
+  - bearerAuth: []
 tags:
   - name: auth
     description: "Endpoints related to account authentication via email and password"
@@ -44,7 +42,6 @@ tags:
     description: "Endpoints related to roles and permissions"
   - name: settings
     description: "Endpoints related to LogChimp settings"
-
 paths:
   /auth/login:
     post:
@@ -95,7 +92,7 @@ paths:
                         example: "INCORRECT_PASSWORD"
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: [ ]
+      security: []
   /auth/signup:
     post:
       tags:
@@ -143,12 +140,12 @@ paths:
                         example: SIGNUP_NOT_ALLOWED
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: [ ]
+      security: []
   /auth/setup:
     get:
       tags:
         - auth
-      summary: Site setup
+      summary: Site setup status
       description: 'Get site setup information.'
       operationId: getSiteSetup
       responses:
@@ -164,7 +161,7 @@ paths:
                     example: true
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: [ ]
+      security: []
     post:
       tags:
         - auth
@@ -226,7 +223,7 @@ paths:
                         example: SETUP_COMPLETED
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: [ ]
+      security: []
   /boards:
     get:
       tags:
@@ -281,7 +278,7 @@ paths:
                       $ref: '#/components/schemas/BoardDetail'
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: [ ]
+      security: []
   /auth/email/verify:
     post:
       tags:
@@ -319,7 +316,7 @@ paths:
         500:
           $ref: "#/components/responses/InternalServerError"
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
 components:
   securitySchemes:
     bearerAuth:
