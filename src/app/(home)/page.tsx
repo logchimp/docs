@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { RocketIcon, TerminalIcon } from "lucide-react";
+import { clsx } from "clsx";
+
+import { GridPattern } from '@/src/components/GridPattern'
+
 
 export default function HomePage() {
   return (
@@ -14,13 +18,18 @@ export default function HomePage() {
 
       <div className="px-6 lg:px-0 mt-12 lg:mt-24 grid sm:grid-cols-2 gap-x-6 gap-y-4">
         {/* Getting started */}
-        <div className="link group cursor-pointer p-6 border rounded-2xl bg-white hover:scale-105 transition-all">
+        <div
+          className={clsx(
+            "relative link group cursor-pointer p-6 border",
+            "overflow-hidden rounded-2xl hover:scale-105 transition-all",
+          )}
+        >
           <Link
             href="/docs/install/getting-started"
             className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
           >
-            <div className="flex items-center justify-center">
-              <RocketIcon className="size-12 md:size-24" aria-hidden="true" />
+            <div className="flex items-center justify-center" aria-hidden="true">
+              <RocketIcon className="size-12 md:size-24 stroke-cyan-700" />
             </div>
 
             <h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">
@@ -30,16 +39,20 @@ export default function HomePage() {
               Learn how to get started with LogChimp.
             </p>
           </Link>
+          <GridPattern className="stroke-cyan-700/20 dark:stroke-black-600" />
         </div>
 
         {/* API References	*/}
-        <div className="link group cursor-pointer p-6 border rounded-2xl bg-white hover:scale-105 transition-all">
+        <div  className={clsx(
+					"relative link group cursor-pointer p-6 border",
+					"overflow-hidden rounded-2xl hover:scale-105 transition-all",
+				)}>
           <Link
             href="/api-reference"
             className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
           >
-            <div className="flex items-center justify-center">
-              <TerminalIcon className="size-12 md:size-24" aria-hidden="true" />
+            <div className="flex items-center justify-center" aria-hidden="true">
+              <TerminalIcon className="size-12 md:size-24 stroke-slate-700" />
             </div>
 
             <h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">
@@ -49,6 +62,7 @@ export default function HomePage() {
               Reference for the API.
             </p>
           </Link>
+					<GridPattern className="stroke-slate-700/20" />
         </div>
       </div>
     </div>
