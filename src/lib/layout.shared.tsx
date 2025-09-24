@@ -1,8 +1,9 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
+import Image from "next/image";
 
 export const logo = (
   <>
-    <img
+    <Image
       alt="Documentation"
       src="https://logchimp.codecarrot.net/logchimp.svg"
       width={30}

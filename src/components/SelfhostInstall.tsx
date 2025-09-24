@@ -1,23 +1,25 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const self: Item[] = [
   {
     title: "Docker",
-    image: "/images/logos/docker-logo.webp",
+    image: "/images/logos/docker-logo.svg",
     link: "/docs/install/docker",
+    label: "Self host",
   },
 ];
 
 const oneclick: Item[] = [
   {
     title: "Railway",
-    image: "/images/logos/railway-logo.webp",
+    image: "/images/logos/railway-logo.svg",
     link: "/docs/install/railway",
     label: "One click deploy",
   },
   {
     title: "Render",
-    image: "/images/logos/render-logo.png",
+    image: "/images/logos/render-logo.svg",
     link: "/docs/install/render",
     label: "One click deploy",
   },
@@ -69,7 +71,7 @@ function Item({ title, image, link, label }: Item) {
       href={link}
     >
       <div className="h-16">
-        <img src={image} alt={title} className="min-w-16 h-16" loading="lazy" />
+        <Image src={image} alt={title} width={64} height={64} loading="lazy" />
       </div>
       <div className="text-gray-800 text-2xl tracking-tight font-medium mt-4">
         {title}
