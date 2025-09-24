@@ -2,7 +2,6 @@ import defaultMdxComponents from "fumadocs-ui/mdx";
 import { ImageZoom } from "fumadocs-ui/components/image-zoom";
 import { openapi } from "@/src/lib/openapi";
 import { APIPage } from "fumadocs-openapi/ui";
-import type { ComponentProps } from "react";
 import type { ImageProps } from "next/image";
 
 // Custom components
