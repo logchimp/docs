@@ -1,5 +1,6 @@
 import { createElement } from "react";
 import { loader } from "fumadocs-core/source";
+import { transformerOpenAPI } from "fumadocs-openapi/server";
 import { icons } from "lucide-react";
 import { apiReference, docs, guide } from "@/.source";
 
@@ -30,4 +31,7 @@ export const guideSource = loader({
 export const openApiSource = loader({
   source: apiReference.toFumadocsSource(),
   baseUrl: "/api-reference",
+  pageTree: {
+    transformers: [transformerOpenAPI()],
+  },
 });

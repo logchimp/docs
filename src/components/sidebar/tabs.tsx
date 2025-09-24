@@ -15,6 +15,7 @@ export const tabs: NonNullable<DocsLayoutProps["sidebar"]>["tabs"] = [
   },
   {
     title: "Guide",
+    description: "Get started with LogChimp",
     url: "/guide",
     // icon: (
     //   <DropdownItem>
