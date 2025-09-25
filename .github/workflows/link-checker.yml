@@ -3,7 +3,7 @@ name: Linkinator
 on:
   push:
     branches:
-      - master
+      - v0-2
   workflow_dispatch:
 
 jobs:
