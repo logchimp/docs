@@ -3,21 +3,43 @@ title: Railway
 description: Guide to deploy LogChimp on Railway
 ---
 
+import { Cards, Card, } from 'fumadocs-ui/components/card'
+import { MapIcon, CableIcon } from "lucide-react";
+
 There are many ways to [install LogChimp](/docs/install). With Railway, you can get started with just a few easy steps. Click the button[^1], and hit deploy. It's that simple.
 
-<Alert type="tip">
-	You will need to set-up SMTP configuration to let your users get emails to reset password, account verification, notifications and more.
+<Alert type="warning">
+	You will need to set-up SMTP configuration to let your users get emails to reset password, account verification,
+	notifications and more.
 </Alert>
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/3Bm-Un?referralCode=mittalyashu)
 
 All the environment variables are pre-configured for you. You can learn more about them [here](/docs/environment-variables).
 
-And there you go... 🚄
+And there you go... 🚄, you should be able to access LogChimp at `http://localhost:3000`.
 
-That was one any only step. Your LogChimp site is ready to accept **your customers' feedback** with ease.
+Your LogChimp site is ready to accept **your customers' feedback** with ease. 🎉
 
 ![LogChimp live site preview](/images/docs/install/railway/07_logchimp-live-site-preview.png)
+
+## Next steps
+
+The next step is to learn how to use LogChimp.
+
+<Cards>
+	<Card
+		icon={<MapIcon />}
+		href="/guide"
+		title="Learn LogChimp"
+	>
+		Learn how to use LogChimp.
+	</Card>
+
+	<Card icon={<CableIcon />} title="API Reference" href="/api-reference">
+		Connect your application with LogChimp.
+	</Card>
+</Cards>
 
 ## Behind the scenes
 

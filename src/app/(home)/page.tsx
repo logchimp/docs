@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { RocketIcon, TerminalIcon } from "lucide-react";
+import { RocketIcon, CableIcon } from "lucide-react";
 import { clsx } from "clsx";
 
 import { GridPattern } from '@/src/components/GridPattern'
@@ -52,7 +52,7 @@ export default function HomePage() {
             className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
           >
             <div className="flex items-center justify-center" aria-hidden="true">
-              <TerminalIcon className="size-12 md:size-24 stroke-slate-700" />
+              <CableIcon className="size-12 md:size-24 stroke-slate-700" />
             </div>
 
             <h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">
