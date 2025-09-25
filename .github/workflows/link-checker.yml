@@ -1,0 +1,30 @@
+name: Linkinator
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  link-checker:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+
+      # Step 2: Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Step 3: Run Linkinator
+      - name: Lint Links
+        uses: JustinBeckwith/linkinator-action@v1
+        with:
+          paths: 'https://logchimp.codecarrot.net/'
+          recurse: true
+          linksToSkip: ^(?!https?://(?:logchimp\.codecarrot\.net|codecarrot\.net|logchimp\.net)).*
