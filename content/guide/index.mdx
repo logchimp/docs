@@ -3,7 +3,46 @@ title: Guide
 description: Get an overview of LogChimp's features and how to use them.
 ---
 
+
+import {Card, Cards,} from 'fumadocs-ui/components/card'
+import {CableIcon, PanelsTopLeft, RocketIcon} from "lucide-react";
+
+## What is LogChimp?
+
+LogChimp is an open-source software for startups and Enterprises to collect, prioritize, and act on customers' feedback.
+
+By aggregating upvotes and downvotes on user-submitted posts, teams can visualize high-impact ideas and build multi-year product roadmaps.
+
+LogChimp is designed to fit and scale with your existing system by providing a unified API, feedback widget _(coming soon)_ component that can be integrated with a few lines of code.
+
+## Popular
+
+<Cards>
+	<Card
+		icon={<PanelsTopLeft/>}
+		href="/guide/dashboard"
+		title="Dashboard"
+	>
+		Control your LogChimp site with build-in powerful dashboard.
+	</Card>
+
+	<Card
+		href="/docs/install"
+		title="Install LogChimp"
+		icon={<RocketIcon/>}
+	>
+		Learn how to install LogChimp with sef-hosted version.
+	</Card>
+
+	<Card
+		icon={<CableIcon/>}
+		title="API Reference"
+		href="/api-reference"
+	>
+		Connect your application with LogChimp.
+	</Card>
+</Cards>
+
+## LogChimp basics
+
 Your LogChimp site is the go-to place for collecting your customers feedback. Within the LogChimp site you can create [boards](/guide/boards), [roadmaps](/guide/roadmaps), [roles](/guide/dashboard/role-permission) and more.
-
-## Most popular
-
