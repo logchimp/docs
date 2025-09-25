@@ -25,13 +25,13 @@ importers:
         version: 9.3.12(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13)(typescript@5.9.2)
       fumadocs-twoslash:
         specifier: ^3.1.0
-        version: 3.1.7(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(fumadocs-ui@15.7.13(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2)
+        version: 3.1.7(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(fumadocs-ui@15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2)
       fumadocs-typescript:
         specifier: ^4.0.4
-        version: 4.0.9(@types/react@19.1.13)(fumadocs-core@15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(fumadocs-ui@15.7.13(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13))(typescript@5.9.2)
+        version: 4.0.9(@types/react@19.1.13)(fumadocs-core@15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(fumadocs-ui@15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13))(typescript@5.9.2)
       fumadocs-ui:
         specifier: ^15.7.11
-        version: 15.7.13(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13)
+        version: 15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13)
       lucide-react:
         specifier: ^0.544.0
         version: 0.544.0(react@19.1.1)
@@ -2901,41 +2901,6 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  fumadocs-core@15.7.13:
-    resolution: {integrity: sha512-pXSu5/7newNu1nxhz3tp5e0P8jS5oA4jpxWM9o/Rdt6mXjR0FymgHzFDesFVirpSCSjZDTa7RyWDRnyvEOYtvQ==}
-    peerDependencies:
-      '@mixedbread/sdk': ^0.19.0
-      '@oramacloud/client': 1.x.x || 2.x.x
-      '@tanstack/react-router': 1.x.x
-      '@types/react': '*'
-      algoliasearch: 5.x.x
-      next: 14.x.x || 15.x.x
-      react: 18.x.x || 19.x.x
-      react-dom: 18.x.x || 19.x.x
-      react-router: 7.x.x
-      waku: ^0.26.0
-    peerDependenciesMeta:
-      '@mixedbread/sdk':
-        optional: true
-      '@oramacloud/client':
-        optional: true
-      '@tanstack/react-router':
-        optional: true
-      '@types/react':
-        optional: true
-      algoliasearch:
-        optional: true
-      next:
-        optional: true
-      react:
-        optional: true
-      react-dom:
-        optional: true
-      react-router:
-        optional: true
-      waku:
-        optional: true
-
   fumadocs-core@15.8.0:
     resolution: {integrity: sha512-59N456t3OlWskWQS1GUXmi7C74WSaXzc+Ym4NsrCMKinPCz9zzTPh4eidcFD1O92xSJdqQV+pdfTyK+w8ppv7A==}
     peerDependencies:
@@ -3024,22 +2989,6 @@ packages:
       '@types/react':
         optional: true
       fumadocs-ui:
-        optional: true
-
-  fumadocs-ui@15.7.13:
-    resolution: {integrity: sha512-dn+BKqbGyamzVPkeVQb6xDG2J1tlzeCgEXBZQ383kfdCxNA0crnXo7AkS+uvGz674aXSw6mYfjhia91Si6088w==}
-    peerDependencies:
-      '@types/react': '*'
-      next: 14.x.x || 15.x.x
-      react: 18.x.x || 19.x.x
-      react-dom: 18.x.x || 19.x.x
-      tailwindcss: ^3.4.14 || ^4.0.0
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-      next:
-        optional: true
-      tailwindcss:
         optional: true
 
   fumadocs-ui@15.8.0:
@@ -7956,34 +7905,6 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  fumadocs-core@15.7.13(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
-    dependencies:
-      '@formatjs/intl-localematcher': 0.6.1
-      '@orama/orama': 3.1.14
-      '@shikijs/rehype': 3.13.0
-      '@shikijs/transformers': 3.13.0
-      github-slugger: 2.0.0
-      hast-util-to-estree: 3.1.3
-      hast-util-to-jsx-runtime: 2.3.6
-      image-size: 2.0.2
-      negotiator: 1.0.0
-      npm-to-yarn: 3.0.1
-      react-remove-scroll: 2.7.1(@types/react@19.1.13)(react@19.1.1)
-      remark: 15.0.1
-      remark-gfm: 4.0.1
-      remark-rehype: 11.1.2
-      scroll-into-view-if-needed: 3.1.0
-      shiki: 3.13.0
-      unist-util-visit: 5.0.0
-    optionalDependencies:
-      '@tanstack/react-router': 1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@types/react': 19.1.13
-      next: 15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      react: 19.1.1
-      react-dom: 19.1.1(react@19.1.1)
-    transitivePeerDependencies:
-      - supports-color
-
   fumadocs-core@15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       '@formatjs/intl-localematcher': 0.6.1
@@ -8078,11 +7999,11 @@ snapshots:
       - typescript
       - waku
 
-  fumadocs-twoslash@3.1.7(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(fumadocs-ui@15.7.13(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2):
+  fumadocs-twoslash@3.1.7(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(fumadocs-ui@15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2):
     dependencies:
       '@radix-ui/react-popover': 1.1.15(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@shikijs/twoslash': 3.12.2(typescript@5.9.2)
-      fumadocs-ui: 15.7.13(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13)
+      fumadocs-ui: 15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13)
       mdast-util-from-markdown: 2.0.2
       mdast-util-gfm: 3.1.0
       mdast-util-to-hast: 13.2.0
@@ -8098,7 +8019,7 @@ snapshots:
       - supports-color
       - typescript
 
-  fumadocs-typescript@4.0.9(@types/react@19.1.13)(fumadocs-core@15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(fumadocs-ui@15.7.13(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13))(typescript@5.9.2):
+  fumadocs-typescript@4.0.9(@types/react@19.1.13)(fumadocs-core@15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(fumadocs-ui@15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13))(typescript@5.9.2):
     dependencies:
       estree-util-value-to-estree: 3.4.0
       fumadocs-core: 15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -8112,45 +8033,9 @@ snapshots:
       unist-util-visit: 5.0.0
     optionalDependencies:
       '@types/react': 19.1.13
-      fumadocs-ui: 15.7.13(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13)
+      fumadocs-ui: 15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13)
     transitivePeerDependencies:
       - supports-color
-
-  fumadocs-ui@15.7.13(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13):
-    dependencies:
-      '@radix-ui/react-accordion': 1.2.12(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@radix-ui/react-collapsible': 1.1.12(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@radix-ui/react-direction': 1.1.1(@types/react@19.1.13)(react@19.1.1)
-      '@radix-ui/react-navigation-menu': 1.2.14(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@radix-ui/react-popover': 1.1.15(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@radix-ui/react-presence': 1.1.5(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@radix-ui/react-scroll-area': 1.2.10(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@radix-ui/react-slot': 1.2.3(@types/react@19.1.13)(react@19.1.1)
-      '@radix-ui/react-tabs': 1.1.13(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      class-variance-authority: 0.7.1
-      fumadocs-core: 15.7.13(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      lodash.merge: 4.6.2
-      next-themes: 0.4.6(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      postcss-selector-parser: 7.1.0
-      react: 19.1.1
-      react-dom: 19.1.1(react@19.1.1)
-      react-medium-image-zoom: 5.4.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      scroll-into-view-if-needed: 3.1.0
-      tailwind-merge: 3.3.1
-    optionalDependencies:
-      '@types/react': 19.1.13
-      next: 15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      tailwindcss: 4.1.13
-    transitivePeerDependencies:
-      - '@mixedbread/sdk'
-      - '@oramacloud/client'
-      - '@tanstack/react-router'
-      - '@types/react-dom'
-      - algoliasearch
-      - react-router
-      - supports-color
-      - waku
 
   fumadocs-ui@15.8.0(@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13):
     dependencies:
