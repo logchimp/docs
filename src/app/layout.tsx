@@ -3,6 +3,8 @@ import "./global.css";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next/types";
 
+import { Footer } from "@/src/components/Footer";
+
 export const metadata: Metadata = {
   title: {
     template: "%s | LogChimp Docs",
@@ -33,7 +35,10 @@ export default function Layout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <RootProvider>{children}</RootProvider>
+        <RootProvider>
+          {children}
+          <Footer />
+        </RootProvider>
       </body>
     </html>
   );
