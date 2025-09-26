@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { logo } from "@/src/lib/layout.shared";
-import { cn } from "fumadocs-ui/utils/cn";
 import { usePathname } from "fumadocs-core/framework";
 import { useSidebar } from "fumadocs-ui/contexts/sidebar";
 
 type FooterLink = {
   url: string;
   target?: string;
+  badgeText?: string;
 };
 const footerData: Record<string, Record<string, FooterLink>> = {
   LogChimp: {
@@ -26,6 +26,11 @@ const footerData: Record<string, Record<string, FooterLink>> = {
     },
     Brand: {
       url: "https://logchimp.codecarrot.net/brand",
+    },
+    Careers: {
+      url: "https://wellfound.com/company/codecarrot/jobs",
+      target: "_blank",
+      badgeText: "hiring",
     },
   },
   "Use Cases": {
@@ -48,7 +53,7 @@ const footerData: Record<string, Record<string, FooterLink>> = {
     },
   },
   Community: {
-    Github: {
+    GitHub: {
       url: "https://github.com/logchimp/logchimp",
       target: "_blank",
     },
@@ -56,8 +61,8 @@ const footerData: Record<string, Record<string, FooterLink>> = {
       url: "https://discord.com/invite/N34We6e",
       target: "_blank",
     },
-    Twitter: {
-      url: "https://twitter.com/logchimp",
+    "X (Formerly Twitter)": {
+      url: "https://x.com/logchimp",
       target: "_blank",
     },
   },
@@ -71,8 +76,7 @@ export function Footer() {
   return (
     <div className="border-t bg-fd-card/50">
       <footer
-        className={cn(
-          `
+        className="
         	flex flex-1 flex-col
         	transition-[padding]
         	xl:[--fd-toc-width:286px]
@@ -80,8 +84,8 @@ export function Footer() {
         	md:[--fd-sidebar-width:268px]
         	my-6
         	lg:px-36 md:px-16 px-12
-      	`,
-        )}
+        	sticky
+      	"
         style={{
           marginInlineStart: collapsed
             ? "auto"
@@ -101,9 +105,20 @@ export function Footer() {
                       href={urlInfo.url}
                       target={urlInfo?.target}
                       rel="noreferrer"
-                      className="text-fd-muted-foreground hover:text-fd-info"
+                      className="w-fit text-fd-muted-foreground hover:text-fd-info flex items-center gap-x-2"
                     >
                       {linkName}
+                      {urlInfo.badgeText && (
+                        <span
+                          className="text-white rounded-full px-2 py-0.5 text-xs font-bold"
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(to right, #484d7c, #5a5183, #6c5589, #7f598e, #915c91)",
+                          }}
+                        >
+                          {urlInfo.badgeText.toUpperCase()}
+                        </span>
+                      )}
                     </Link>
                   </li>
                 ))}
