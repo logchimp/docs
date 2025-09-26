@@ -6,7 +6,11 @@ import { cn } from "fumadocs-ui/utils/cn";
 import { usePathname } from "fumadocs-core/framework";
 import { useSidebar } from "fumadocs-ui/contexts/sidebar";
 
-const footerData = {
+type FooterLink = {
+  url: string;
+  target?: string;
+};
+const footerData: Record<string, Record<string, FooterLink>> = {
   LogChimp: {
     Home: {
       url: "https://logchimp.codecarrot.net",
@@ -87,25 +91,22 @@ export function Footer() {
         }}
       >
         <div className="grid gap-8 grid-cols-2 lg:grid-cols-4">
-          {Object.keys(footerData).map((section) => (
+          {Object.entries(footerData).map(([section, links]) => (
             <div className="footer-nav" key={section}>
               <h6 className="font-medium">{section}</h6>
               <ul className="mt-4">
-                {Object.keys(footerData[section]).map((linkName) => {
-                  const urlInfo = footerData[section][linkName];
-                  return (
-                    <li className="mt-2.5" key={linkName}>
-                      <Link
-                        href={urlInfo.url}
-                        target={urlInfo?.target}
-                        rel="noreferrer"
-                        className="text-fd-muted-foreground hover:text-fd-info"
-                      >
-                        {linkName}
-                      </Link>
-                    </li>
-                  );
-                })}
+                {Object.entries(links).map(([linkName, urlInfo]) => (
+                  <li className="mt-2.5" key={linkName}>
+                    <Link
+                      href={urlInfo.url}
+                      target={urlInfo?.target}
+                      rel="noreferrer"
+                      className="text-fd-muted-foreground hover:text-fd-info"
+                    >
+                      {linkName}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           ))}
