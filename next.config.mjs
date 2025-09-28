@@ -17,6 +17,11 @@ const config = {
         destination: "/docs/what-is-logchimp",
         permanent: false,
       },
+      {
+        source: "/docs/install",
+        destination: "/docs/install/getting-started",
+        permanent: false,
+      },
     ];
   },
 
