@@ -30,6 +30,7 @@ export function Alert({ type, title, children }: Props) {
         type === "tip" && "bg-green-50 border border-green-200",
         type === "warning" && "bg-yellow-50 border border-yellow-200",
         type === "error" && "bg-red-50 border border-red-200",
+				'[&_*_a]:underline',
       )}
     >
       {type === "tip" ? (
