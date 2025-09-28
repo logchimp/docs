@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { logo } from "@/src/lib/layout.shared";
 import { usePathname } from "fumadocs-core/framework";
@@ -72,6 +73,14 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   const currPath = usePathname();
   const { collapsed } = useSidebar();
+  const [sidebarExists, setSidebarExists] = useState(false);
+
+  useEffect(() => {
+    const exists = !!document?.querySelector(
+      `.\\*\\:w-\\(\\--fd-sidebar-width\\)`,
+    );
+    setSidebarExists(exists);
+  }, [currPath]);
 
   return (
     <div className="border-t bg-fd-card/50">
@@ -89,7 +98,7 @@ export function Footer() {
         style={{
           marginInlineStart: collapsed
             ? "auto"
-            : currPath === "/"
+            : !sidebarExists
               ? ""
               : "var(--fd-sidebar-width)",
         }}
