@@ -28,6 +28,6 @@ jobs:
       - name: Lint Links
         uses: JustinBeckwith/linkinator-action@v1
         with:
-          paths: 'https://logchimp.codecarrot.net/'
+          paths: 'https://docs.logchimp.codecarrot.net/'
           recurse: true
-          linksToSkip: 'logchimp\.codecarrot\.net|codecarrot\.net'
+          linksToSkip: '^https?://(?!docs\.logchimp\.codecarrot\.net).*'
