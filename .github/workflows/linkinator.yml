@@ -30,4 +30,6 @@ jobs:
         with:
           paths: 'https://docs.logchimp.codecarrot.net/'
           recurse: true
-          linksToSkip: '^https?://(?!docs\.logchimp\.codecarrot\.net).*|https?://docs\.logchimp\.codecarrot\.net/_next/.*'
+          linksToSkip: |
+            ^https?://(?!docs\.logchimp\.codecarrot\.net).*
+            https?://docs\.logchimp\.codecarrot\.net/_next/.*
