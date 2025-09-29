@@ -20,9 +20,9 @@ jobs:
 
       # Step 2: Setup Node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 24
 
       # Step 3: Run Linkinator
       - name: Lint Links
