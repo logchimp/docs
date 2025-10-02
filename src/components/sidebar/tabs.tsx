@@ -1,52 +1,44 @@
 import type { PropsWithChildren } from "react";
 import type { DocsLayoutProps } from "fumadocs-ui/layouts/docs";
-import { BookIcon, MapIcon, TerminalIcon } from "lucide-react";
+import { BookIcon, MapIcon, CableIcon } from "lucide-react";
 
 export const tabs: NonNullable<DocsLayoutProps["sidebar"]>["tabs"] = [
-  {
-    title: "Documentation",
-    description: "Setup your LogChimp",
-    url: "/docs",
-    // icon: (
-    //   <DropdownItem>
-    //     <BookIcon />
-    //   </DropdownItem>
-    // ),
-  },
-  {
-    title: "Guide",
-    description: "Get started with LogChimp",
-    url: "/guide",
-    // icon: (
-    //   <DropdownItem>
-    //     <MapIcon />
-    //   </DropdownItem>
-    // ),
-  },
-  {
-    title: "API Reference",
-    description: "Reference for the API",
-    url: "/api-reference",
-    // icon: (
-    //   <DropdownItem>
-    //     <TerminalIcon />
-    //   </DropdownItem>
-    // ),
-  },
+	{
+		title: "Documentation",
+		description: "Setup your LogChimp",
+		url: "/docs",
+		icon: (
+			<DropdownItem>
+				<BookIcon />
+			</DropdownItem>
+		),
+	},
+	{
+		title: "Guide",
+		description: "Get started with LogChimp",
+		url: "/guide",
+		icon: (
+			<DropdownItem>
+				<MapIcon />
+			</DropdownItem>
+		),
+	},
+	{
+		title: "API Reference",
+		description: "Reference for the API",
+		url: "/api-reference",
+		icon: (
+			<DropdownItem>
+				<CableIcon />
+			</DropdownItem>
+		),
+	},
 ];
 
-export const tabss: NonNullable<DocsLayoutProps["sidebar"]>["tabs"] = {
-  transform: (option, node) => {
-    console.log(option, node);
-    return { ...option, icon: node.icon };
-  },
-  // tabs: f,
-};
-
 function DropdownItem({ children }: PropsWithChildren) {
-  return (
-    <div className="size-8 border border-zinc-300 rounded-md [&>svg]:size-4">
-      {children}
-    </div>
-  );
+	return (
+		<div className="[&_svg]:size-full rounded-lg size-full max-md:border max-md:p-1.5">
+			{children}
+		</div>
+	);
 }
