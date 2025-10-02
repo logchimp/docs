@@ -15,7 +15,7 @@
     "---Dashboard---",
     "dashboard/index",
     "dashboard/role-permission",
-		"dashboard/settings",
+    "dashboard/settings",
     "dashboard/labs"
   ],
   "defaultOpen": true

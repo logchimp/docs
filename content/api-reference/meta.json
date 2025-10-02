@@ -1,21 +1,21 @@
 {
-	"root": true,
-	"pages": [
-		"---Getting Started---",
-		"overview",
-		"glossary",
-		"errors",
+  "root": true,
+  "pages": [
+    "---Getting Started---",
+    "overview",
+    "glossary",
+    "errors",
 
-		"---Auth---",
-		".../auth/userSignin",
-		"...auth/userSignup",
-		".../auth/sendVerificationEmail",
+    "---Auth---",
+    ".../auth/userSignin",
+    "...auth/userSignup",
+    ".../auth/sendVerificationEmail",
 
-		"---Site---",
-		".../auth/getSiteSetup",
-		".../auth/siteSetup",
+    "---Site---",
+    ".../auth/getSiteSetup",
+    ".../auth/siteSetup",
 
-		"---Boards---",
-		"...boards/filterBoards"
-	]
+    "---Boards---",
+    "...boards/filterBoards"
+  ]
 }

@@ -2,8 +2,7 @@ import Link from "next/link";
 import { RocketIcon, CableIcon, MapIcon, GlobeIcon } from "lucide-react";
 import { clsx } from "clsx";
 
-import { GridPattern } from '@/src/components/GridPattern'
-
+import { GridPattern } from "@/src/components/GridPattern";
 
 export default function HomePage() {
   return (
@@ -28,7 +27,10 @@ export default function HomePage() {
             href="/docs/install/getting-started"
             className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
           >
-            <div className="flex items-center justify-center" aria-hidden="true">
+            <div
+              className="flex items-center justify-center"
+              aria-hidden="true"
+            >
               <RocketIcon className="size-12 md:size-20 stroke-neutral-600" />
             </div>
 
@@ -42,41 +44,49 @@ export default function HomePage() {
           <GridPattern className="stroke-neutral-600/20 dark:stroke-black-600" />
         </div>
 
-				{/* Guide */}
-				<div
-					className={clsx(
-						"relative link group cursor-pointer p-6 border",
-						"overflow-hidden rounded-2xl hover:scale-105 transition-all",
-					)}
-				>
-					<Link
-						href="/guide"
-						className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
-					>
-						<div className="flex items-center justify-center" aria-hidden="true">
-							<MapIcon className="size-12 md:size-20 stroke-neutral-600" />
-						</div>
+        {/* Guide */}
+        <div
+          className={clsx(
+            "relative link group cursor-pointer p-6 border",
+            "overflow-hidden rounded-2xl hover:scale-105 transition-all",
+          )}
+        >
+          <Link
+            href="/guide"
+            className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
+          >
+            <div
+              className="flex items-center justify-center"
+              aria-hidden="true"
+            >
+              <MapIcon className="size-12 md:size-20 stroke-neutral-600" />
+            </div>
 
-						<h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">
-							Guide
-						</h3>
-						<p className="mt-2 text-sm text-gray-500 dark:text-zinc-500">
-							Learn how to use LogChimp.
-						</p>
-					</Link>
-					<GridPattern className="stroke-neutral-600/20 dark:stroke-black-600" />
-				</div>
+            <h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">
+              Guide
+            </h3>
+            <p className="mt-2 text-sm text-gray-500 dark:text-zinc-500">
+              Learn how to use LogChimp.
+            </p>
+          </Link>
+          <GridPattern className="stroke-neutral-600/20 dark:stroke-black-600" />
+        </div>
 
         {/* API References	*/}
-        <div  className={clsx(
-					"relative link group cursor-pointer p-6 border",
-					"overflow-hidden rounded-2xl hover:scale-105 transition-all",
-				)}>
+        <div
+          className={clsx(
+            "relative link group cursor-pointer p-6 border",
+            "overflow-hidden rounded-2xl hover:scale-105 transition-all",
+          )}
+        >
           <Link
             href="/api-reference"
             className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
           >
-            <div className="flex items-center justify-center" aria-hidden="true">
+            <div
+              className="flex items-center justify-center"
+              aria-hidden="true"
+            >
               <CableIcon className="size-12 md:size-20 stroke-neutral-600" />
             </div>
 
@@ -87,31 +97,36 @@ export default function HomePage() {
               Reference for the API.
             </p>
           </Link>
-					<GridPattern className="stroke-neutral-600/20" />
+          <GridPattern className="stroke-neutral-600/20" />
         </div>
 
-				{/* Go to homepage */}
-				<div  className={clsx(
-					"relative link group cursor-pointer p-6 border",
-					"overflow-hidden rounded-2xl hover:scale-105 transition-all",
-				)}>
-					<Link
-						href="https://logchimp.codecarrot.net"
-						className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
-					>
-						<div className="flex items-center justify-center" aria-hidden="true">
-							<GlobeIcon className="size-12 md:size-20 stroke-neutral-600" />
-						</div>
+        {/* Go to homepage */}
+        <div
+          className={clsx(
+            "relative link group cursor-pointer p-6 border",
+            "overflow-hidden rounded-2xl hover:scale-105 transition-all",
+          )}
+        >
+          <Link
+            href="https://logchimp.codecarrot.net"
+            className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
+          >
+            <div
+              className="flex items-center justify-center"
+              aria-hidden="true"
+            >
+              <GlobeIcon className="size-12 md:size-20 stroke-neutral-600" />
+            </div>
 
-						<h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">
-							LogChimp Website
-						</h3>
-						<p className="mt-2 text-sm text-gray-500 dark:text-zinc-500">
-							Go back to Homepage.
-						</p>
-					</Link>
-					<GridPattern className="stroke-neutral-600/20" />
-				</div>
+            <h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">
+              LogChimp Website
+            </h3>
+            <p className="mt-2 text-sm text-gray-500 dark:text-zinc-500">
+              Go back to Homepage.
+            </p>
+          </Link>
+          <GridPattern className="stroke-neutral-600/20" />
+        </div>
       </div>
     </div>
   );
