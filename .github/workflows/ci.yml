@@ -29,11 +29,6 @@ jobs:
       - name: Install extra dependencies
         run: npm install --global bun@latest vercel@latest
 
-      - name: Static build
-        run: pnpm run build
-        env:
-          NEXT_TELEMETRY_DISABLED: 1
-
       - uses: amondnet/vercel-action@v25
         id: vercel
         with:
