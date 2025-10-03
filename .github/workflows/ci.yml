@@ -1,0 +1,65 @@
+name: ci
+
+on:
+  push:
+    branches: [ v0-2 ]
+  pull_request:
+    types: [ opened, closed, synchronize ]
+  workflow_dispatch:
+
+env:
+  node_version: 24
+  pnpm_version: 10.17.1
+  VERCEL_TELEMETRY_DISABLED: 1
+
+jobs:
+  vercel_deployment:
+    runs-on: ubuntu-latest
+    outputs:
+      DEPLOYMENT_URL: ${{ steps.vercel.outputs.preview-url }}
+
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ env.node_version }}
+
+      - name: Install extra dependencies
+        run: npm install --global bun@latest vercel@latest
+
+      - uses: amondnet/vercel-action@v25
+        id: vercel
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+
+  linkinator:
+    needs: vercel_deployment
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ env.node_version }}
+
+      - name: Run linkinator check
+        env:
+          DEPLOYMENT_URL: ${{ needs.vercel_deployment.outputs.DEPLOYMENT_URL }}
+        run: |
+          echo "Checking: '$DEPLOYMENT_URL'"
+
+          if [ -z "$DEPLOYMENT_URL" ]; then
+            echo "Error: DEPLOYMENT_URL is empty"
+            exit 1
+          fi
+
+          # Extract domain from URL (remove protocol and path)
+          # Escape dots for regex
+            DOMAIN=$(echo "$DEPLOYMENT_URL" | sed -E 's|^https?://([^/]+).*|\1|')
+            DOMAIN_ESCAPED=$(echo "$DOMAIN" | sed 's/\./\\./g')
+
+          npx linkinator "$DEPLOYMENT_URL" \
+            --recurse \
+            --skip "https?://$DOMAIN_ESCAPED/_next/.*" \
+            --skip "^https?://(?!(${DOMAIN_ESCAPED}|voidfull\.com)).*"
