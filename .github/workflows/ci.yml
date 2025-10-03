@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 
 env:
+  DEFAULT_BRANCH: v0-2
   node_version: 24
   pnpm_version: 10.17.1
   VERCEL_TELEMETRY_DISABLED: 1
@@ -32,6 +33,7 @@ jobs:
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-args: ${{ github.ref_name == env.DEFAULT_BRANCH && '--prod' || '' }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
 
   linkinator:
