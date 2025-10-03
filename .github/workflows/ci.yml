@@ -1,5 +1,9 @@
 name: ci
 
+concurrency:
+  group: ${{ startsWith(github.head_ref || github.ref_name, 'renovate/') && 'renovate' || format('{0}-{1}', github.workflow, github.ref_name) }}
+  cancel-in-progress: false
+
 on:
   push:
     branches: [ v0-2 ]
