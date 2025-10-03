@@ -56,7 +56,12 @@ jobs:
             exit 1
           fi
 
+          # Extract domain from URL (remove protocol and path)
+          # Escape dots for regex
+            DOMAIN=$(echo "$DEPLOYMENT_URL" | sed -E 's|^https?://([^/]+).*|\1|')
+            DOMAIN_ESCAPED=$(echo "$DOMAIN" | sed 's/\./\\./g')
+
           npx linkinator "$DEPLOYMENT_URL" \
             --recurse \
-            -s "^https?://(?!docs\.logchimp\.codecarrot\.net).*" \
-            -s "https?://docs\.logchimp\.codecarrot\.net/_next/.*"
+            --skip "https?://$DOMAIN_ESCAPED/_next/.*" \
+            --skip "^https?://(?!(${DOMAIN_ESCAPED}|voidfull\.com)).*"
