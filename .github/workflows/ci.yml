@@ -11,7 +11,6 @@ env:
   DEFAULT_BRANCH: v0-2
   node_version: 24
   pnpm_version: 10.17.1
-  VERCEL_TELEMETRY_DISABLED: 1
 
 jobs:
   vercel_deployment:
@@ -21,15 +20,23 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-node@v5
+      - uses: codecarrotlabs/github-actions/.github/actions/node-pnpm@c7e1e7605a3c05a042093219be7020e35b66f494
         with:
-          node-version: ${{ env.node_version }}
+          node_version: ${{ env.node_version }}
+          pnpm_version: ${{ env.pnpm_version }}
 
       - name: Install extra dependencies
         run: npm install --global bun@latest vercel@latest
 
+      - name: Static build
+        run: pnpm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+
       - uses: amondnet/vercel-action@v25
         id: vercel
+        env:
+          VERCEL_TELEMETRY_DISABLED: 1
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
