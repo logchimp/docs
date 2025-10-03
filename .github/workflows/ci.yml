@@ -58,5 +58,5 @@ jobs:
 
           npx linkinator "$DEPLOYMENT_URL" \
             --recurse \
-            -s ^https?://(?!docs\.logchimp\.codecarrot\.net).* \
-            -s https?://docs\.logchimp\.codecarrot\.net/_next/.*
+            -s "^https?://(?!docs\.logchimp\.codecarrot\.net).*" \
+            -s "https?://docs\.logchimp\.codecarrot\.net/_next/.*"
