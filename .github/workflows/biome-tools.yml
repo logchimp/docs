@@ -1,0 +1,45 @@
+name: "Biome tools"
+
+on:
+  push:
+    branches: [main,master]
+    paths:
+      - content/**
+      - src/**
+      - biome.json
+      - package.json
+      - pnpm-lock.yaml
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - content/**
+      - src/**
+      - biome.json
+      - package.json
+      - pnpm-lock.yaml
+  workflow_dispatch:
+
+jobs:
+  formatter:
+    name: Formatter
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: biomejs/setup-biome@v2
+
+      - name: Formatter
+        run: biome format --max-diagnostics 200 --colors force .
+
+  linter:
+    name: Linter
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: biomejs/setup-biome@v2
+
+      - name: Linter
+        run: biome check --max-diagnostics 200 --colors force .
