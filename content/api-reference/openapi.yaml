@@ -8,7 +8,7 @@ info:
     * [Website](https://logchimp.codecarrot.net)
     * [Documentation](https://docs.logchimp.codecarrot.net)
     * [GitHub](https://github.com/logchimp/logchimp)
-  version: 0.3.0
+  version: 0.4.0
   contact:
     name: CodeCarrot
     email: logchimp@codecarrot.net
@@ -23,8 +23,10 @@ servers:
         default: 'http'
       host-with-port:
         default: 'localhost:8000'
+
 security:
-  - bearerAuth: []
+  - bearerAuth: [ ]
+
 tags:
   - name: auth
     description: "Endpoints related to account authentication via email and password"
@@ -42,6 +44,7 @@ tags:
     description: "Endpoints related to roles and permissions"
   - name: settings
     description: "Endpoints related to LogChimp settings"
+
 paths:
   /auth/login:
     post:
@@ -64,7 +67,7 @@ paths:
                     type: object
                     $ref: "#/components/schemas/AuthUser"
         400:
-          description: Bad Request
+          description: "Bad Request"
           content:
             application/json:
               schema:
@@ -82,7 +85,7 @@ paths:
                         type: "string"
                         example: "PASSWORD_MISSING"
                   - type: object
-                    description: Incorect password
+                    description: Incorrect password
                     properties:
                       message:
                         type: "string"
@@ -92,7 +95,7 @@ paths:
                         example: "INCORRECT_PASSWORD"
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: []
+      security: [ ]
   /auth/signup:
     post:
       tags:
@@ -114,7 +117,7 @@ paths:
                     type: object
                     $ref: "#/components/schemas/AuthUser"
         400:
-          description: Bad Request
+          description: "Bad Request"
           content:
             application/json:
               schema:
@@ -122,7 +125,7 @@ paths:
                   - $ref: "#/components/schemas/MailConfigurationErrorCode"
                   - $ref: "#/components/schemas/EmailInvalidErrorCode"
                   - type: object
-                    description: Missing password
+                    description: "Missing password"
                     properties:
                       message:
                         type: "string"
@@ -137,15 +140,15 @@ paths:
                         example: "You do not have permission to perform this action."
                       code:
                         type: string
-                        example: SIGNUP_NOT_ALLOWED
+                        example: "SIGNUP_NOT_ALLOWED"
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: []
+      security: [ ]
   /auth/setup:
     get:
       tags:
         - auth
-      summary: Site setup status
+      summary: Site setup
       description: 'Get site setup information.'
       operationId: getSiteSetup
       responses:
@@ -159,9 +162,11 @@ paths:
                   is_setup:
                     type: boolean
                     example: true
+        400:
+          description: "Bad request"
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: []
+      security: [ ]
     post:
       tags:
         - auth
@@ -169,7 +174,7 @@ paths:
       description: 'Setup the site by creating the owner account.'
       operationId: siteSetup
       requestBody:
-        description: ''
+        description: 'Site setup request body'
         content:
           application/json:
             schema:
@@ -197,15 +202,14 @@ paths:
                     type: object
                     $ref: "#/components/schemas/AuthUser"
         400:
-          description: Bad Request
+          description: "Bad Request"
           content:
             application/json:
               schema:
                 oneOf:
-                  - $ref: "#/components/schemas/MailConfigurationErrorCode"
                   - $ref: "#/components/schemas/EmailInvalidErrorCode"
                   - type: object
-                    description: Missing password
+                    description: "Missing password"
                     properties:
                       message:
                         type: "string"
@@ -213,6 +217,12 @@ paths:
                       code:
                         type: "string"
                         example: "PASSWORD_MISSING"
+        403:
+          description: "Access denied"
+          content:
+            application/json:
+              schema:
+                oneOf:
                   - type: object
                     properties:
                       message:
@@ -220,10 +230,339 @@ paths:
                         example: "Setup has already been completed."
                       code:
                         type: string
-                        example: SETUP_COMPLETED
+                        example: "SETUP_COMPLETED"
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: []
+        501:
+          description: "Not implemented"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/MailConfigurationErrorCode"
+      security: [ ]
+  /auth/email/verify:
+    post:
+      tags:
+        - auth
+      summary: Send verification email
+      description: |
+        Send a verification email to the user email address.
+        The email is only sent if have configured [SMTP mail server](https://docs.logchimp.codecarrot.net/docs/environment-variables#mail) are configured at the time of deploying LogChimp.
+      operationId: sendVerificationEmail
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  verify:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                        example: true
+        400:
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/EmailInvalidErrorCode"
+                  - $ref: "#/components/schemas/InvalidUserIdErrorCode"
+        404:
+          description: "Not found"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/UserNotFoundErrorCode"
+        409:
+          description: "Conflict"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/EmailVerifiedErrorCode"
+        500:
+          $ref: "#/components/responses/InternalServerError"
+        501:
+          description: "Not implemented"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/MailConfigurationErrorCode"
+      security:
+        - bearerAuth: [ ]
+  /posts:
+    post:
+      tags:
+        - posts
+      summary: Create post
+      description: Create a new post
+      operationId: createPost
+      requestBody:
+        $ref: '#/components/requestBodies/CreatePostRequestBody'
+      responses:
+        201:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  post:
+                    type: object
+                    $ref: '#/components/schemas/CreatePostResponse'
+        403:
+          description: "Access denied"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/NotEnoughPermissionErrorCode"
+        500:
+          $ref: "#/components/responses/InternalServerError"
+      security:
+        - bearerAuth: [ ]
+    patch:
+      tags:
+        - posts
+      summary: Update post
+      description: Update a post
+      operationId: updatePost
+      responses:
+        200:
+          description: "OK"
+        403:
+          description: "Access denied"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/NotEnoughPermissionErrorCode"
+        404:
+          description: "Not found"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/PostNotFoundErrorCode"
+        500:
+          $ref: "#/components/responses/InternalServerError"
+      security:
+        - bearerAuth: [ ]
+    delete:
+      tags:
+        - posts
+      summary: Delete post
+      description: Delete a posts
+      operationId: deletePost
+      requestBody:
+        description: "Delete post request body"
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - id
+              properties:
+                id:
+                  type: string
+      responses:
+        204:
+          description: "Post deletion request accepted."
+        403:
+          description: "Access denied"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/NotEnoughPermissionErrorCode"
+        404:
+          description: "Not found"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/PostNotFoundErrorCode"
+        500:
+          $ref: "#/components/responses/InternalServerError"
+      security:
+        - bearerAuth: [ ]
+  /posts/get:
+    post:
+      tags:
+        - posts
+      summary: List all posts
+      description: Get all the posts
+      operationId: filterPosts
+      requestBody:
+        $ref: '#/components/requestBodies/FilterPostRequestBody'
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  posts:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Post"
+        400:
+          description: "Bad request"
+        500:
+          $ref: "#/components/responses/InternalServerError"
+      security: [ ]
+  /posts/slug:
+    post:
+      tags:
+        - posts
+      summary: Post by Slug
+      description: Get post by Slug
+      operationId: postBySlug
+      requestBody:
+        $ref: '#/components/requestBodies/PostBySlugRequestBody'
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  post:
+                    $ref: '#/components/schemas/DashboardPost'
+        404:
+          description: "Not found"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/PostNotFoundErrorCode"
+        500:
+          $ref: "#/components/responses/InternalServerError"
+      security: [ ]
+  /votes:
+    post:
+      tags:
+        - votes
+      summary: Add Vote to post
+      description: Vote on a post
+      operationId: addVoteToPost
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - postId
+              properties:
+                postId:
+                  type: string
+                  description: "ID of the post to vote on."
+      responses:
+        201:
+          description: "Vote added"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  voters:
+                    $ref: "#/components/schemas/PostVote"
+        403:
+          description: "Access denied"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/NotEnoughPermissionErrorCode"
+        404:
+          description: "Not found"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/PostNotFoundErrorCode"
+        409:
+          description: "Conflict"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - type: object
+                    description: "User has already voted on this post."
+                    properties:
+                      message:
+                        type: string
+                        example: "Vote already exists"
+                      code:
+                        type: string
+                        example: "VOTE_EXISTS"
+        500:
+          $ref: "#/components/responses/InternalServerError"
+      security:
+        -  bearerAuth: [ ]
+    delete:
+      tags:
+        - votes
+      summary: Remove vote from post
+      description: Remove vote from a post
+      operationId: removeVoteFromPost
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - postId
+              properties:
+                postId:
+                  type: string
+                  description: "ID of the post to vote on."
+      responses:
+        200:
+          description: "Vote removed"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  voters:
+                    $ref: "#/components/schemas/PostVote"
+        403:
+          description: "Access denied"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/NotEnoughPermissionErrorCode"
+        404:
+          description: "Not found"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/PostNotFoundErrorCode"
+                  - type: object
+                    description: "Vote has already been removed or does not exist from this post."
+                    properties:
+                      message:
+                        type: string
+                        example: "Vote not found"
+                      code:
+                        type: string
+                        example: "VOTE_NOT_FOUND"
+        500:
+          $ref: "#/components/responses/InternalServerError"
+      security:
+        -  bearerAuth: [ ]
   /boards:
     get:
       tags:
@@ -265,7 +604,7 @@ paths:
         required: false
       responses:
         200:
-          description: ""
+          description: "OK"
           content:
             application/json:
               schema:
@@ -276,54 +615,383 @@ paths:
                     items:
                       type: object
                       $ref: '#/components/schemas/BoardDetail'
+        400:
+          description: "Bad request"
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: []
-  /auth/email/verify:
-    post:
+      security:
+        - bearerAuth: [ ]
+        - { }
+  /roadmaps:
+    get:
       tags:
-        - auth
-      summary: Send verification email
-      description: |
-        Send a verification email to the user email address.
-        The email is only sent if have configured [SMTP mail server](https://docs.logchimp.codecarrot.net/docs/environment-variables#mail) are configured at the time of deploying LogChimp.
-      operationId: sendVerificationEmail
+        - roadmaps
+      summary: Get all roadmaps
+      description: "Get all roadmaps"
+      operationId: filterRoadmaps
+      parameters:
+        - $ref: "#/components/parameters/CursorPaginationFirstParam"
+        - $ref: "#/components/parameters/CursorPaginationAfterParam"
+        - name: visibility
+          in: query
+          description: ""
+          required: false
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/FilterVisibility"
       responses:
         200:
-          description: ''
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/CursorPaginationMeta'
+                  - type: object
+                    required:
+                      - results
+                      - roadmaps
+                    properties:
+                      results:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/RoadmapPrivate"
+                      roadmaps:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/RoadmapPrivate"
+        400:
+          description: "Bad request"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - type: object
+                    description: "Invalid query params"
+                    properties:
+                      code:
+                        type: string
+                        example: "VALIDATION_ERROR"
+                      message:
+                        type: string
+                        example: "Invalid query parameters"
+                      errors:
+                        type: array
+        500:
+          $ref: "#/components/responses/InternalServerError"
+      security:
+        - bearerAuth: [ ]
+        - { }
+  /roadmaps/{url}:
+    get:
+      tags:
+        - roadmaps
+      summary: Roadmap by Url
+      description: Get roadmap by Url
+      operationId: roadmapByUrl
+      parameters:
+        - name: url
+          in: path
+          required: true
+          schema:
+            type: string
+          description: "Roadmap slug"
+      responses:
+        200:
+          description: "OK"
           content:
             application/json:
               schema:
                 type: object
                 properties:
-                  verify:
-                    type: object
-                    properties:
-                      success:
-                        type: boolean
-                        example: true
-        400:
-          description: Bad Request
+                  roadmap:
+                    $ref: '#/components/schemas/Roadmap'
+        404:
+          description: "Not found"
           content:
             application/json:
               schema:
                 oneOf:
-                  - $ref: "#/components/schemas/MailConfigurationErrorCode"
-                  - $ref: "#/components/schemas/EmailInvalidErrorCode"
-                  - $ref: "#/components/schemas/InvalidUserIdErrorCode"
-                  - $ref: "#/components/schemas/UserNotFoundErrorCode"
-                  - $ref: "#/components/schemas/EmailVerifiedErrorCode"
+                  - type: object
+                    description: "Roadmap not found"
+                    properties:
+                      message:
+                        type: string
+                        example: "Roadmap not found"
+                      code:
+                        type: string
+                        example: "ROADMAP_ID_OR_URL_MISSING"
+        500:
+          $ref: "#/components/responses/InternalServerError"
+      security: [ ]
+  /roadmaps/search/{name}:
+    get:
+      tags:
+        - roadmaps
+      summary: Search roadmaps by name
+      description: Search roadmaps by name
+      operationId: searchRoadmaps
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+          description: "Roadmap name"
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  roadmaps:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/RoadmapPrivate'
+        403:
+          description: "Access denied"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/NotEnoughPermissionErrorCode"
         500:
           $ref: "#/components/responses/InternalServerError"
       security:
-        - bearerAuth: []
+        - bearerAuth: [ ]
 components:
+  parameters:
+    CursorPaginationFirstParam:
+      name: first
+      in: query
+      description: Number of items to return in a request
+      required: false
+      schema:
+        type: number
+        minimum: 1
+    CursorPaginationAfterParam:
+      name: after
+      in: query
+      description: Cursor for pagination
+      required: false
+      schema:
+        type: string
   securitySchemes:
     bearerAuth:
       type: http
       scheme: bearer
       description: JWT Bearer token authentication
   schemas:
+    FilterVisibility:
+      enum:
+        - 'public'
+        - 'private'
+    CursorPaginationMeta:
+      type: object
+      required:
+        - page_info
+      properties:
+        page_info:
+          $ref: '#/components/schemas/CursorPaginationPageInfo'
+        total_pages:
+          type: integer
+          nullable: true
+        total_count:
+          type: integer
+          nullable: true
+    CursorPaginationPageInfo:
+      required:
+        - count
+        - current_page
+        - has_next_page
+      properties:
+        count:
+          type: integer
+          description: Number of items in current page
+        current_page:
+          type: integer
+          description: Current page number
+        has_next_page:
+          type: boolean
+          description: Whether there are more pages
+        end_cursor:
+          type: string
+          nullable: true
+          description: Cursor for the last item
+        start_cursor:
+          type: string
+          nullable: true
+          description: Cursor for the first item
+    PostInfo:
+      type: object
+      required:
+        - postId
+        - title
+        - slug
+        - updatedAt
+        - createdAt
+      properties:
+        postId:
+          type: string
+        title:
+          type: string
+        slug:
+          type: string
+        contentMarkdown:
+          type: string
+        createdAt:
+          type: string
+          example: "2025-09-23T13:28:01.611Z"
+        updatedAt:
+          type: string
+          example: "2025-09-23T13:28:01.611Z"
+    Post:
+      allOf:
+        - $ref: "#/components/schemas/PostInfo"
+        - type: object
+          required:
+            - board
+            - author
+            - voters
+          properties:
+            board:
+              $ref: '#/components/schemas/Board'
+            author:
+              $ref: '#/components/schemas/PublicUserInfo'
+            roadmap:
+              $ref: '#/components/schemas/Roadmap'
+            voters:
+              $ref: '#/components/schemas/PostVote'
+    DashboardPost:
+      allOf:
+        - $ref: "#/components/schemas/Post"
+        - type: object
+          required:
+            - slugId
+          properties:
+            slugId:
+              type: string
+    PublicUserInfo:
+      type: object
+      required:
+        - userId
+        - username
+      properties:
+        userId:
+          type: string
+        name:
+          type: string
+        avatar:
+          type: string
+        username:
+          type: string
+    CreatePostResponse:
+      type: object
+      required:
+        - postId
+      properties:
+        postId:
+          type: string
+        title:
+          type: string
+        slug:
+          type: string
+        slugId:
+          type: string
+        contentMarkdown:
+          type: string
+        userId:
+          type: string
+        createdAt:
+          type: string
+          example: "2025-09-23T13:28:01.611Z"
+        updatedAt:
+          type: string
+          example: "2025-09-23T13:28:01.611Z"
+        boardId:
+          type: string
+        roadmap_id:
+          type: string
+    Roadmap:
+      type: object
+      required:
+        - id
+        - name
+        - url
+        - color
+      properties:
+        id:
+          type: object
+        name:
+          type: object
+        url:
+          type: object
+        color:
+          type: object
+    RoadmapPrivate:
+      allOf:
+        - $ref: "#/components/schemas/Roadmap"
+        - type: object
+          required:
+            - index
+            - display
+            - created_at
+          properties:
+            index:
+              type: number
+            display:
+              type: boolean
+            created_at:
+              type: string
+              example: "2025-09-23T13:28:01.611Z"
+    PostVote:
+      type: object
+      required:
+        - votes
+        - votesCount
+      properties:
+        votes:
+          type: array
+          items:
+            $ref: "#/components/schemas/UserVote"
+        votesCount:
+          type: number
+          example: 10
+        viewerVote:
+          $ref: "#/components/schemas/CurrentUserVote"
+    UserVote:
+      allOf:
+        - $ref: "#/components/schemas/CurrentUserVote"
+        - type: object
+          required:
+            - username
+          properties:
+            name:
+              type: string
+            username:
+              type: string
+            avatar:
+              type: string
+    CurrentUserVote:
+      type: object
+      required:
+        - voteId
+        - userId
+        - postId
+        - createdAt
+      properties:
+        voteId:
+          type: string
+        userId:
+          type: string
+        postId:
+          type: string
+        createdAt:
+          type: string
+          example: "2025-09-23T13:28:01.611Z"
     UserBlockedErrorCode:
       type: object
       required:
@@ -348,6 +1016,30 @@ components:
         code:
           type: string
           example: "INVALID_USER_ID"
+    NotEnoughPermissionErrorCode:
+      type: object
+      required:
+        - message
+        - code
+      properties:
+        message:
+          type: string
+          example: "You do not have permission to perform this action."
+        code:
+          type: string
+          example: "NOT_ENOUGH_PERMISSION"
+    PostNotFoundErrorCode:
+      type: object
+      required:
+        - message
+        - code
+      properties:
+        message:
+          type: string
+          example: "Post not found"
+        code:
+          type: string
+          example: "POST_NOT_FOUND"
     UserNotFoundErrorCode:
       type: object
       required:
@@ -398,6 +1090,12 @@ components:
           example: "MAIL_CONFIG_MISSING"
     Board:
       type: object
+      required:
+        - boardId
+        - name
+        - url
+        - color
+        - createdAt
       properties:
         boardId:
           type: string
@@ -415,7 +1113,7 @@ components:
           example: 'integrations-dsgksdIUYO'
         createdAt:
           type: string
-          format: date-time
+          example: "2025-09-23T13:28:01.611Z"
     BoardDetail:
       allOf:
         - $ref: "#/components/schemas/Board"
@@ -451,6 +1149,9 @@ components:
             https://www.gravatar.com/avatar/fc51027a642571734eaaefd103b2f00c
     LoginRequest:
       type: object
+      required:
+        - email
+        - password
       properties:
         email:
           type: "string"
@@ -461,6 +1162,76 @@ components:
           format: password
           example: "password"
   requestBodies:
+    CreatePostRequestBody:
+      description: Create post request body
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - title
+            properties:
+              title:
+                type: string
+              contentMarkdown:
+                type: string
+              boardId:
+                type: string
+              roadmapId:
+                type: string
+    PostBySlugRequestBody:
+      description: "Post by Slug request body"
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - slug
+            properties:
+              slug:
+                type: string
+                example:
+              userId:
+                type: string
+                format: uuid
+                example: "11c14790-b4d3-4689-942c-55548cfdd8a6"
+    FilterPostRequestBody:
+      description: Filter post request body
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - page
+              - created
+            properties:
+              userId:
+                type: string
+                format: uuid
+                example: "11c14790-b4d3-4689-942c-55548cfdd8a6"
+              boardId:
+                type: array
+                description: "Default is all empty array."
+                items:
+                  type: string
+                  format: uuid
+                  example: "11c14790-b4d3-4689-942c-55548cfdd8a6"
+              roadmapId:
+                type: string
+                format: uuid
+                example: "11c14790-b4d3-4689-942c-55548cfdd8a6"
+              page:
+                type: number
+                example: 1
+              limit:
+                type: number
+                example: 10
+                description: |
+                  "Number of posts to return in a single request. Default is 10."
+              created:
+                type: string
+                example: desc
+                description: "Sort posts by creation date in 'asc' or 'desc' order."
     Login:
       description: Login to account using email and password.
       required: true
@@ -470,7 +1241,7 @@ components:
             $ref: "#/components/schemas/LoginRequest"
   responses:
     InternalServerError:
-      description: Internal server error
+      description: "Internal server error"
       content:
         application/json:
           schema:
