@@ -4,7 +4,6 @@ description: Guidelines for responsible disclosure of security vulnerabilities a
 icon: Shield
 ---
 
-
 ## Introduction
 
 At LogChimp, we take security very seriously and appreciate responsible disclosure of vulnerabilities that help us

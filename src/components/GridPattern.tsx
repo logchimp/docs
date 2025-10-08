@@ -21,7 +21,7 @@ export function GridPattern({ className }: { className?: string }) {
       <defs>
         {/*change width/height to adjust spacing, stroke to change line color, stroke-width for line thickness*/}
         <pattern id={id} width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M 40 0 L 0 0 0 40" fill="none" stroke-width="1" />
+          <path d="M 40 0 L 0 0 0 40" fill="none" strokeWidth="1" />
         </pattern>
       </defs>
 

@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from "react";
 import type { DocsLayoutProps } from "fumadocs-ui/layouts/docs";
-import { BookIcon, MapIcon, CableIcon } from "lucide-react";
+import { BookIcon, MapIcon, BracesIcon } from "lucide-react";
 
 export const tabs: NonNullable<DocsLayoutProps["sidebar"]>["tabs"] = [
 	{
@@ -29,7 +29,7 @@ export const tabs: NonNullable<DocsLayoutProps["sidebar"]>["tabs"] = [
 		url: "/api-reference",
 		icon: (
 			<DropdownItem>
-				<CableIcon />
+				<BracesIcon />
 			</DropdownItem>
 		),
 	},
