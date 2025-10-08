@@ -10,10 +10,10 @@
     "resources/ecosystem",
     "resources/architecture",
     "resources/support",
-		"---Miscellaneous---",
+    "---Miscellaneous---",
     "[HandHelping][Contributing](https://github.com/logchimp/logchimp/blob/master/CONTRIBUTING.md)",
-		"miscellaneous/faq",
-		"miscellaneous/security-policy"
+    "miscellaneous/faq",
+    "miscellaneous/security-policy"
   ],
   "defaultOpen": true
 }
