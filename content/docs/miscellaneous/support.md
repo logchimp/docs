@@ -1,6 +1,7 @@
 ---
 title: Support
 description: How to get Support for LogChimp?
+icon: Headset
 ---
 
 Please **do not** raise an issue on GitHub for help or support 😄. We use GitHub solely for bug-tracking and ongoing feature development.

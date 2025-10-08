@@ -1,0 +1,64 @@
+---
+title: FAQs
+description: Comprehensive answers to common questions about LogChimp.
+icon: CircleQuestionMark
+---
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+import { InlineTOC } from 'fumadocs-ui/components/inline-toc';
+
+<InlineTOC items={toc} />
+
+## General
+
+<Accordions type="multiple">
+	<Accordion title="Who is LogChimp for?">
+		LogChimp is ideal for Product managers, developers, and customer success teams who need a way to gather feedback
+		without complex setups.
+	</Accordion>
+
+	<Accordion title="What are key features of LogChimp?">
+		LogChimp offers a set of features centered on feedback collection and management. Here's a breakdown:
+
+		| Feature | Description |
+		| :--- | :--- |
+		| Feedback collection | Create posts for feature requests, bugs, or ideas; users upvote/downvote to signal priority.
+		|
+		| Boards | Group posts into customizable boards (e.g., "Features," "Bugs") for better categorization. |
+		| Roadmaps | Visualize planned work in a simple, public-facing view to keep customers informed. |
+		| Comments | Reply to feedback in real-time (beta) |
+		| Dashboard | Centralized admin panel to manage posts, users, roles, and analytics. |
+		| Custom Branding | Add your logo, colors, and themes—reflects across the entire site. |
+		| Role-Based Access Control (RBAC) | Granular permissions via REST APIs: Site Owner (full access), Admin (manage all), Manager (edit content), User (submit/vote), Viewer (read-only). Built-in for secure collaboration. |
+		| Developer APIs | Self-consuming RESTful JSON APIs for integrations; easy tooling for custom workflows. |
+	</Accordion>
+
+	<Accordion title="Does LogChimp support that feature?">
+		No, currently it's not supported. But you're most welcome to [submit a feature
+		request](https://github.com/logchimp/logchimp) anytime.
+	</Accordion>
+</Accordions>
+
+## Get Started
+
+<Accordions>
+	<Accordion title="How do I install and get started with LogChimp?">
+		We've created detailed [deployment guides](/docs/install/getting-started) for various cloud providers, for you to get started with LogChimp in no time.
+	</Accordion>
+</Accordions>
+
+## Integrations
+
+<Accordions>
+	<Accordion title="Can I integrate LogChimp with other tools?">
+		Yes, LogChimp's [**developer-friendly APIs**](/api-reference) make it easy to integrate with other tools.
+	</Accordion>
+</Accordions>
+
+## Licenses
+
+<Accordions>
+	<Accordion title="Is LogChimp open source, and what does the licensing look like?">
+		Yes, LogChimp is fully open source under a dual licensing model, making it free for most uses while offering commercial options for enterprises.
+	</Accordion>
+</Accordions>
