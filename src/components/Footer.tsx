@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { clsx } from "clsx";
 import { logo } from "@/src/lib/layout.shared";
-import { usePathname } from "fumadocs-core/framework";
 import { useSidebar } from "fumadocs-ui/contexts/sidebar";
 
 type FooterLink = {
@@ -72,7 +71,6 @@ const footerData: Record<string, Record<string, FooterLink>> = {
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const currPath = usePathname();
   const { collapsed } = useSidebar();
   const [sidebarExists, setSidebarExists] = useState(false);
 
@@ -81,7 +79,7 @@ export function Footer() {
       `.\\*\\:w-\\(\\--fd-sidebar-width\\)`,
     );
     setSidebarExists(exists);
-  }, [currPath]);
+  }, []);
 
   return (
     <div className="pt-8 pb-10">
@@ -117,7 +115,7 @@ export function Footer() {
                       className="w-fit text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-white flex items-center gap-x-2"
                     >
                       {linkName}
-                      {urlInfo.badgeText && (
+                      {urlInfo.badgeText ? (
                         <span
                           className="text-white rounded-full px-2 py-0.5 text-xs font-bold"
                           style={{
@@ -127,7 +125,7 @@ export function Footer() {
                         >
                           {urlInfo.badgeText.toUpperCase()}
                         </span>
-                      )}
+                      ) : null}
                     </Link>
                   </li>
                 ))}

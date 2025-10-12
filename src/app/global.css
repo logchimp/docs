@@ -5,10 +5,12 @@
 
 @layer base {
   body {
+    /* biome-ignore lint/complexity/noImportantStyles: <explanation> */
     background-color: var(--page-background) !important;
   }
 
   aside {
+    /* biome-ignore lint/complexity/noImportantStyles: <explanation> */
     background-color: var(--sidebar-background) !important;
   }
 }
