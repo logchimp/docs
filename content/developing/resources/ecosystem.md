@@ -3,7 +3,7 @@ title: Ecosystem
 icon: Sprout
 ---
 
-Before diving into LogChimp's application [architecture](/docs/resources/architecture) in the next section, it's useful to give you a high-level overview of the wider ecosystem and where to find things!
+Before diving into LogChimp's application [architecture](/developing/resources/architecture) in the next section, it's useful to give you a high-level overview of the wider ecosystem and where to find things!
 
 There are a lot of resources and helpful tutorials for working with LogChimp to help get started.
 
@@ -16,7 +16,7 @@ Of course, open-source software is never just about the technology, more than an
 
 ### Social media
 
-We maintain our Twitter social account to keep in touch with people directly and give them updates about what's new with LogChimp. Here are the easiest ways to keep track of LogChimp.
+We maintain our X (formerly Twitter) social account to keep in touch with people directly and give them updates about what's new with LogChimp. Here are the easiest ways to keep track of LogChimp.
 
 - Follow [@logchimp](https://twitter.com/@logchimp) on Twitter.
 - Keep track of [development on GitHub](https://github.com/logchimp/logchimp).

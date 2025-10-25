@@ -1,0 +1,17 @@
+{
+  "root": true,
+  "pages": [
+    "---Getting Started---",
+		"introduction",
+		"local-development",
+		"[FolderTree][Directory Structure](/developing/directory-structure)",
+		"[SquareAsterisk][Environment Variables](/self-hosting/environment-variables)",
+    "---Resources---",
+    "resources/ecosystem",
+    "resources/architecture",
+    "---Additional Resources---",
+    "[HandHelping][Contributing](https://github.com/logchimp/logchimp/blob/master/CONTRIBUTING.md)",
+    "[Shield][Security Reporting Policy](/platform/additional-resources/security-policy)"
+  ],
+  "defaultOpen": true
+}

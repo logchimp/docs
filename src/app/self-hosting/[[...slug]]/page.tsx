@@ -1,4 +1,4 @@
-import { docsSource } from "@/src/lib/source";
+import { selfHostingSource } from "@/src/lib/source";
 import {
   DocsBody,
   DocsDescription,
@@ -13,7 +13,7 @@ export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
   const params = await props.params;
-  const page = docsSource.getPage(params.slug);
+  const page = selfHostingSource.getPage(params.slug);
   if (!page) notFound();
 
   const MDX = page.data.body;
@@ -30,14 +30,14 @@ export default async function Page(props: {
 }
 
 export async function generateStaticParams() {
-  return docsSource.generateParams();
+  return selfHostingSource.generateParams();
 }
 
 export async function generateMetadata(
-  props: PageProps<"/docs/[[...slug]]">,
+  props: PageProps<"/self-hosting/[[...slug]]">,
 ): Promise<Metadata> {
   const params = await props.params;
-  const page = docsSource.getPage(params.slug);
+  const page = selfHostingSource.getPage(params.slug);
   if (!page) notFound();
 
   return {
