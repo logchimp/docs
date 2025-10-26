@@ -10,7 +10,6 @@
     "resources/ecosystem",
     "resources/architecture",
     "---Additional Resources---",
-    "[HandHelping][Contributing](https://github.com/logchimp/logchimp/blob/master/CONTRIBUTING.md)",
     "[Shield][Security Reporting Policy](/platform/additional-resources/security-policy)"
   ],
   "defaultOpen": true
