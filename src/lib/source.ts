@@ -2,7 +2,15 @@ import { createElement } from "react";
 import { loader } from "fumadocs-core/source";
 import { transformerOpenAPI } from "fumadocs-openapi/server";
 import { icons } from "lucide-react";
-import { apiReference, docs, guide, main, selfHosting, platform, developing } from "@/.source";
+import {
+  apiReference,
+  docs,
+  guide,
+  main,
+  selfHosting,
+  platform,
+  developing,
+} from "@/.source";
 
 export const mainSource = loader({
   source: main.toFumadocsSource(),

@@ -3,13 +3,13 @@
   "pages": [
     "---Getting Started---",
     "installation",
-		"environment-variables",
+    "environment-variables",
     "docker",
-		"---Deployments---",
-		"deployments/railway",
-		"deployments/render",
-		"---Additional Resources---",
-		"support"
-	],
+    "---Deployments---",
+    "deployments/railway",
+    "deployments/render",
+    "---Additional Resources---",
+    "support"
+  ],
   "defaultOpen": true
 }

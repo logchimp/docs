@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BracesIcon, MapIcon, GlobeIcon, ServerIcon } from 'lucide-react'
+import { BracesIcon, MapIcon, GlobeIcon, ServerIcon } from "lucide-react";
 import { clsx } from "clsx";
 
 import { GridPattern } from "@/src/components/GridPattern";
