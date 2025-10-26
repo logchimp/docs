@@ -11,7 +11,7 @@ import {
 export const tabs: NonNullable<DocsLayoutProps["sidebar"]>["tabs"] = [
   {
     title: "Platform",
-    url: "/platform/what-is-logchimp",
+    url: "/platform/overview",
     icon: (
       <DropdownItem>
         <BoxesIcon />

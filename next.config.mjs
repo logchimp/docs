@@ -4,7 +4,7 @@ const permanentRedirects = [
   // legacy (docs v0.1)
   {
     source: "/docs/hosting",
-    destination: "/self-hosting/installation",
+    destination: "/self-hosting",
   },
   {
     source: "/docs/user-guide/:path",
@@ -87,6 +87,18 @@ const permanentRedirects = [
   {
     source: "/docs/resources/ecosystem",
     destination: "/developing/resources/ecosystem",
+  },
+  {
+    source: "/platform",
+    destination: "/platform/overview",
+  },
+  {
+    source: "/self-hosting",
+    destination: "/self-hosting/installation",
+  },
+  {
+    source: "/developing",
+    destination: "/developing/introduction",
   },
 ];
 
