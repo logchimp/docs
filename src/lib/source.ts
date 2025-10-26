@@ -4,7 +4,6 @@ import { transformerOpenAPI } from "fumadocs-openapi/server";
 import { icons } from "lucide-react";
 import {
   apiReference,
-  docs,
   guide,
   main,
   selfHosting,
