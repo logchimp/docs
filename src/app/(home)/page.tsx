@@ -25,7 +25,7 @@ export default function HomePage() {
         >
           <Link
             href="/docs/install/getting-started"
-            className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
+            className="block text-lg font-medium text-gray-900 dark:text-zinc-300 hover:text-gray-600 dark:hover:text-zinc-400"
           >
             <div
               className="flex items-center justify-center"
@@ -34,7 +34,7 @@ export default function HomePage() {
               <RocketIcon className="size-12 md:size-20 stroke-neutral-600" />
             </div>
 
-            <h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">
+            <h3 className="mt-5 text-gray-900 dark:text-zinc-600 font-medium">
               Quickstart
             </h3>
             <p className="mt-2 text-sm text-gray-500 dark:text-zinc-500">
@@ -81,7 +81,7 @@ export default function HomePage() {
         >
           <Link
             href="/api-reference"
-            className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
+            className="block text-lg font-medium text-gray-900 dark:text-zinc-300 hover:text-gray-600 dark:hover:text-zinc-400"
           >
             <div
               className="flex items-center justify-center"
@@ -90,7 +90,7 @@ export default function HomePage() {
               <BracesIcon className="size-12 md:size-20 stroke-neutral-600" />
             </div>
 
-            <h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">
+            <h3 className="mt-5 text-gray-900 dark:text-zinc-600 font-medium">
               API Reference
             </h3>
             <p className="mt-2 text-sm text-gray-500 dark:text-zinc-500">
