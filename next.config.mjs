@@ -22,7 +22,7 @@ const permanentRedirects = [
   },
   {
     source: "/docs/install",
-    destination: "/docs/install/getting-started",
+    destination: "/self-hosting/installation",
   },
   {
     source: "/docs/faq",
