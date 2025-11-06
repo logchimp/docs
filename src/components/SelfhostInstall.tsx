@@ -5,7 +5,7 @@ const self: Item[] = [
   {
     title: "Docker",
     image: "/images/logos/docker-logo.svg",
-    link: "/docs/install/docker",
+    link: "/self-hosting/docker",
     label: "Self host",
   },
 ];
@@ -14,13 +14,13 @@ const oneclick: Item[] = [
   {
     title: "Railway",
     image: "/images/logos/railway-logo.svg",
-    link: "/docs/install/railway",
+    link: "/self-hosting/deployments/railway",
     label: "One click deploy",
   },
   {
     title: "Render",
     image: "/images/logos/render-logo.svg",
-    link: "/docs/install/render",
+    link: "/self-hosting/deployments/render",
     label: "One click deploy",
   },
 ];

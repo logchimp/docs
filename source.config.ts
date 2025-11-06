@@ -4,8 +4,12 @@ export const main = defineDocs({
   dir: "content/",
 });
 
-export const docs = defineDocs({
-  dir: "content/docs",
+export const platform = defineDocs({
+  dir: "content/platform",
+});
+
+export const selfHosting = defineDocs({
+  dir: "content/self-hosting",
 });
 
 export const guide = defineDocs({
@@ -14,6 +18,10 @@ export const guide = defineDocs({
 
 export const apiReference = defineDocs({
   dir: "content/api-reference",
+});
+
+export const developing = defineDocs({
+  dir: "content/developing",
 });
 
 export default defineConfig({

@@ -1,12 +1,12 @@
-import { docsSource } from "@/src/lib/source";
+import { selfHostingSource } from "@/src/lib/source";
 import { DocsLayout } from "fumadocs-ui/layouts/notebook";
 import { baseOptions } from "@/src/lib/layout.shared";
 import { tabs } from "@/src/components/sidebar/tabs";
 
-export default function Layout({ children }: LayoutProps<"/docs">) {
+export default function Layout({ children }: LayoutProps<"/self-hosting">) {
   return (
     <DocsLayout
-      tree={docsSource.pageTree}
+      tree={selfHostingSource.pageTree}
       {...baseOptions()}
       sidebar={{
         tabs,

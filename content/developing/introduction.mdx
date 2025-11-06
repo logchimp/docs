@@ -1,0 +1,33 @@
+---
+title: Introduction
+icon: Presentation
+---
+
+import { Cards, Card } from 'fumadocs-ui/components/card';
+import { TerminalIcon, MapIcon, BracesIcon } from "lucide-react";
+
+Thank you for showing an interest in contributing to LogChimp! All kinds on contributions are valuable to us.
+
+If you're a developer looking to contribute but aren't sure where to start, check out the [good first issue](https://github.com/logchimp/logchimp/labels/good%20first%20issue) label on GitHub. It contains small tasks suitable for new contributors. Or, if you're seeking something more challenging, explore the broader [help wanted](https://github.com/logchimp/logchimp/labels/help%20wanted) label, which includes issues that might pique your interest.
+
+<Cards>
+	<Card
+		icon={<TerminalIcon />}
+		href="/developing/local-development"
+		title="Local Development"
+	>
+		Run LogChimp on your local machine.
+	</Card>
+
+	<Card
+		icon={<MapIcon />}
+		href="/guide"
+		title="Learn LogChimp"
+	>
+		Learn how to use LogChimp.
+	</Card>
+
+	<Card icon={<BracesIcon />} title="API Reference" href="/api-reference">
+		Connect your application with LogChimp.
+	</Card>
+</Cards>

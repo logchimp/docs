@@ -1,0 +1,13 @@
+{
+  "root": true,
+  "pages": [
+    "---Introduction---",
+    "overview",
+    "what-is-logchimp",
+    "setup",
+    "---Additional Resources---",
+    "additional-resources/faq",
+    "additional-resources/security-policy"
+  ],
+  "defaultOpen": true
+}

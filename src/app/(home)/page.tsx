@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { RocketIcon, BracesIcon, MapIcon, GlobeIcon } from "lucide-react";
+import { BracesIcon, MapIcon, GlobeIcon, ServerIcon } from "lucide-react";
 import { clsx } from "clsx";
 
 import { GridPattern } from "@/src/components/GridPattern";
@@ -16,7 +16,7 @@ export default function HomePage() {
       </p>
 
       <div className="px-6 lg:px-0 mt-12 lg:mt-24 grid sm:grid-cols-2 gap-x-6 gap-y-4">
-        {/* Getting started */}
+        {/* Self Hosting */}
         <div
           className={clsx(
             "relative link group cursor-pointer p-6 border",
@@ -24,21 +24,21 @@ export default function HomePage() {
           )}
         >
           <Link
-            href="/docs/install/getting-started"
+            href="/self-hosting/installation"
             className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
           >
             <div
               className="flex items-center justify-center"
               aria-hidden="true"
             >
-              <RocketIcon className="size-12 md:size-20 stroke-neutral-600" />
+              <ServerIcon className="size-12 md:size-20 stroke-neutral-600" />
             </div>
 
             <h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">
-              Quickstart
+              Self Hosting
             </h3>
             <p className="mt-2 text-sm text-gray-500 dark:text-zinc-500">
-              Learn how to get started with LogChimp.
+              Learn how to self-host LogChimp.
             </p>
           </Link>
           <GridPattern className="stroke-neutral-600/20 dark:stroke-black-600" />
