@@ -42,12 +42,15 @@ Deployment with [one-click deploy](/self-hosting/installation#one-click-deployme
 ### Database
 
 | Variable               | Description                                                                               | Default value |
-|------------------------|-------------------------------------------------------------------------------------------|---------------|
-| `LOGCHIMP_DB_HOST`     | Hostname or IP address of your PostgreSQL server.                                         | `db`          |
-| `LOGCHIMP_DB_DATABASE` | Name of the PostgreSQL database LogChimp will use.                                        | `logchimp`    |
-| `LOGCHIMP_DB_PORT`     | TCP port your PostgreSQL server is listening on.                                          | `5432`        |
-| `LOGCHIMP_DB_USER`     | Username for PostgreSQL authentication.                                                   | `logchimp`    |
-| `LOGCHIMP_DB_PASSWORD` | Password for PostgreSQL authentication. **Critical:** Use a strong, unique password here. | `logchimp`    |
+|------------------------|-------------------------------------------------------------------------------------------|---------------------------------------------|
+| `LOGCHIMP_DB_URL`      | Complete connection URL of your PostgreSQL server.                                        | `postgresql://lc:password@db:5432/db`       |
+| `LOGCHIMP_DB_HOST`     | Hostname or IP address of your PostgreSQL server.                                         | `db`                                        |
+| `LOGCHIMP_DB_DATABASE` | Name of the PostgreSQL database LogChimp will use.                                        | `logchimp`                                  |
+| `LOGCHIMP_DB_PORT`     | TCP port your PostgreSQL server is listening on.                                          | `5432`                                      |
+| `LOGCHIMP_DB_USER`     | Username for PostgreSQL authentication.                                                   | `logchimp`                                  |
+| `LOGCHIMP_DB_PASSWORD` | Password for PostgreSQL authentication. **Critical:** Use a strong, unique password here. | `logchimp`                                  |
+
+> If `LOGCHIMP_DB_URL` is provided then it will override the individual connection configurations for example `LOGCHIMP_DB_HOST`, `LOGCHIMP_DB_DATABASE`, etc and connect as per the given URL. 
 
 ### Mail
 
