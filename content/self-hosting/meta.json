@@ -1,15 +1,18 @@
 {
-  "root": true,
-  "pages": [
-    "---Getting Started---",
-    "installation",
-    "environment-variables",
-    "docker",
-    "---Deployments---",
-    "deployments/railway",
-    "deployments/render",
-    "---Additional Resources---",
-    "support"
-  ],
-  "defaultOpen": true
+	"root": true,
+	"pages": [
+		"---Getting Started---",
+		"installation",
+		"environment-variables",
+		"docker",
+		"---Deployments---",
+		"deployments/railway",
+		"deployments/render",
+		"---Additional Resources---",
+		"support",
+		"---Miscellaneous---",
+		"[HandHelping][Contributing](https://github.com/logchimp/logchimp/blob/master/CONTRIBUTING.md)",
+		"miscellaneous/breaking-changes-pg18"
+	],
+	"defaultOpen": true
 }

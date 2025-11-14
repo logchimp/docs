@@ -98,3 +98,19 @@ Phew! That was a lot of work! Let's move to next step.
 		Connect your application with LogChimp.
 	</Card>
 </Cards>
+<<<<<<< HEAD:content/self-hosting/docker.mdx
+=======
+
+## Resources
+
+- LogChimp Docker images:
+- APIs - [link](https://github.com/orgs/logchimp/packages/container/package/logchimp%2Fapi)
+- Theme - [link](https://github.com/orgs/logchimp/packages/container/package/logchimp%2Ftheme)	
+
+<Alert type="warning">
+	⚠️ **Breaking Change (PostgreSQL 12 → 18)**  
+	LogChimp now uses PostgreSQL 18 which introduces an incompatible data directory structure.  
+	Existing Docker volumes or databases from PostgreSQL 12 **will not work directly** with this version.  
+	Please review the [Breaking Change – PostgreSQL 12 → 18](/docs/miscellaneous/breaking-changes-pg18) page before upgrading or deploying.
+</Alert>																																																																																																																																																																																																																																																																																
+>>>>>>> a15bdd0 (docs: add PostgreSQL 12→18 breaking change notice and link from Docker page):content/docs/install/docker.mdx
