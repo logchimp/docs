@@ -1,0 +1,19 @@
+{
+	"root": true,
+	"pages": [
+		"---Introduction---",
+		"what-is-logchimp",
+		"---Getting Started---",
+		"install",
+		"environment-variables",
+		"---Resources---",
+		"resources/ecosystem",
+		"resources/architecture",
+		"resources/support",
+		"---Miscellaneous---",
+		"[HandHelping][Contributing](https://github.com/logchimp/logchimp/blob/master/CONTRIBUTING.md)",
+		"miscellaneous/faq",
+		"miscellaneous/security-policy"
+	],
+	"defaultOpen": true
+}
