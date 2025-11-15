@@ -1,0 +1,27 @@
+import type { MetadataRoute } from "next";
+import {
+  mainSource,
+  selfHostingSource,
+  platformSource,
+  guideSource,
+  openApiSource,
+  developingSource,
+} from "../lib/source";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const sources = [
+    mainSource,
+    selfHostingSource,
+    platformSource,
+    guideSource,
+    openApiSource,
+    developingSource,
+  ];
+
+  return sources.flatMap((s) =>
+    s.getPages().map((page) => ({
+      url: `https://docs.logchimp.codecarrot.net${page.url}`,
+      lastModified: new Date().toISOString(),
+    })),
+  );
+}
