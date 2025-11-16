@@ -8,7 +8,7 @@ info:
     * [Website](https://logchimp.codecarrot.net)
     * [Documentation](https://docs.logchimp.codecarrot.net)
     * [GitHub](https://github.com/logchimp/logchimp)
-  version: 0.4.0
+  version: 0.4.2
   contact:
     name: CodeCarrot
     email: logchimp@codecarrot.net
@@ -161,6 +161,7 @@ paths:
                 properties:
                   is_setup:
                     type: boolean
+                    description: Is LogChimp onboarding completed?
                     example: true
         400:
           description: "Bad request"
@@ -508,7 +509,7 @@ paths:
         500:
           $ref: "#/components/responses/InternalServerError"
       security:
-        -  bearerAuth: [ ]
+        - bearerAuth: [ ]
     delete:
       tags:
         - votes
@@ -562,7 +563,7 @@ paths:
         500:
           $ref: "#/components/responses/InternalServerError"
       security:
-        -  bearerAuth: [ ]
+        - bearerAuth: [ ]
   /boards:
     get:
       tags:
@@ -595,13 +596,6 @@ paths:
             type: string
             default: application/json
             description: ""
-      requestBody:
-        description: Get all the boards
-        content:
-          application/json:
-            schema:
-              type: object
-        required: false
       responses:
         200:
           description: "OK"
@@ -838,10 +832,15 @@ components:
           type: string
         title:
           type: string
+          description: "Title of the post."
         slug:
           type: string
         contentMarkdown:
           type: string
+          description: |
+            Post content description in markdown format.
+            **NOTE:** LogChimp does not support markdown in the content description.
+            For now, we only have added `contentMarkdown` property in the OpenAPI specificaton.
         createdAt:
           type: string
           example: "2025-09-23T13:28:01.611Z"
@@ -897,12 +896,17 @@ components:
           type: string
         title:
           type: string
+          description: "Title of the post."
         slug:
           type: string
         slugId:
           type: string
         contentMarkdown:
           type: string
+          description: |
+            Post content description in markdown format.
+            **NOTE:** LogChimp does not support markdown in the content description.
+            For now, we only have added `contentMarkdown` property in the OpenAPI specification.
         userId:
           type: string
         createdAt:
@@ -946,6 +950,7 @@ components:
               type: boolean
             created_at:
               type: string
+              description: "Roadmap creation date"
               example: "2025-09-23T13:28:01.611Z"
     PostVote:
       type: object
@@ -1134,19 +1139,23 @@ components:
           example: 1f137d23-8463-4961-b665-a5d8f1675e77
         name:
           type: string
+          description: "User's full name"
           example: "Mike"
         username:
           type: string
+          description: "User's username"
           example: mike
         email:
           type: string
+          description: "Email address of the user"
           format: email
           example: mike@example.com
         avatar:
           type: string
+          description: "URL of the user's avatar"
           format: url
           example: >-
-            https://www.gravatar.com/avatar/fc51027a642571734eaaefd103b2f00c
+            "https://www.gravatar.com/avatar/fc51027a642571734eaaefd103b2f00c"
     LoginRequest:
       type: object
       required:
@@ -1173,8 +1182,13 @@ components:
             properties:
               title:
                 type: string
+                description: "Title of the post."
               contentMarkdown:
                 type: string
+                description: |
+                  Post content description in markdown format.
+                  **NOTE:** LogChimp does not support markdown in the content description.
+                  For now, we only have added `contentMarkdown` property in the OpenAPI specification.
               boardId:
                 type: string
               roadmapId:
@@ -1208,10 +1222,13 @@ components:
               userId:
                 type: string
                 format: uuid
+                deprecated: true
                 example: "11c14790-b4d3-4689-942c-55548cfdd8a6"
               boardId:
                 type: array
-                description: "Default is all empty array."
+                description: |
+                  Posts will be searched from the list of provided board IDs.
+                  If a value is not provided, it defaults to empty array and posts are searched from all the boards.
                 items:
                   type: string
                   format: uuid
@@ -1222,6 +1239,7 @@ components:
                 example: "11c14790-b4d3-4689-942c-55548cfdd8a6"
               page:
                 type: number
+                description: "Page number of the results to fetch."
                 example: 1
               limit:
                 type: number
