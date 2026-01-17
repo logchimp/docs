@@ -1,18 +1,19 @@
 {
 	"root": true,
 	"pages": [
+		"---Introduction---",
+		"what-is-logchimp",
 		"---Getting Started---",
-		"installation",
+		"install",
 		"environment-variables",
-		"docker",
-		"---Deployments---",
-		"deployments/railway",
-		"deployments/render",
-		"---Additional Resources---",
-		"support",
+		"---Resources---",
+		"resources/ecosystem",
+		"resources/architecture",
+		"resources/support",
 		"---Miscellaneous---",
 		"[HandHelping][Contributing](https://github.com/logchimp/logchimp/blob/master/CONTRIBUTING.md)",
-		"miscellaneous/breaking-changes-pg18"
+		"miscellaneous/faq",
+		"miscellaneous/security-policy"
 	],
 	"defaultOpen": true
 }

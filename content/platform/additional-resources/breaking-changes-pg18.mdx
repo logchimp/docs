@@ -1,0 +1,25 @@
+## Breaking Changes: PostgreSQL 12 → 18
+
+<Alert type="warning">
+	⚠️ **Important Notice:**  
+	Upgrading to PostgreSQL 18 introduces a new cluster storage layout that is **not compatible** with PostgreSQL 12.  
+	Existing Docker volumes or data directories from v12 **will fail to start** unless properly migrated.  
+	Please back up your data and follow the steps below before proceeding with any upgrade.
+</Alert>
+
+## Summary
+PostgreSQL 18 introduces a new cluster storage layout incompatible with version 12.
+
+## Impact
+- Existing Docker volumes from v12 will fail to mount directly.  
+- `pg_upgrade` or data export/import is required.  
+- Environment variables and data paths differ (`/var/lib/postgresql/18/data`).
+
+## Recommended Action
+1. Backup all data from v12.  
+2. Use the official upgrade container or `pg_upgrade`.  
+3. Verify compatibility in staging before production rollout.
+
+## References
+- [PostgreSQL Docker Migration Notes](https://github.com/docker-library/postgres/pull/1259)  
+- [Official PostgreSQL Upgrade Guide](https://www.postgresql.org/docs/18/pgupgrade.html)
