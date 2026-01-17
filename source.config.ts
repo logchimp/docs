@@ -24,6 +24,10 @@ export const developing = defineDocs({
   dir: "content/developing",
 });
 
+export const sitePolicy = defineDocs({
+  dir: "content/site-policy",
+});
+
 export default defineConfig({
   mdxOptions: {},
 });

@@ -9,6 +9,7 @@ import {
   selfHosting,
   platform,
   developing,
+  sitePolicy,
 } from "@/.source";
 
 export const mainSource = loader({
@@ -62,6 +63,16 @@ export const openApiSource = loader({
 export const developingSource = loader({
   source: developing.toFumadocsSource(),
   baseUrl: "/developing",
+  icon(icon) {
+    if (!icon) return;
+
+    if (icon in icons) return createElement(icons[icon as keyof typeof icons]);
+  },
+});
+
+export const sitePolicySource = loader({
+  source: sitePolicy.toFumadocsSource(),
+  baseUrl: "/site-policy",
   icon(icon) {
     if (!icon) return;
 

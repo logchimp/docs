@@ -1,0 +1,5 @@
+{
+  "root": true,
+  "pages": ["logchimp-terms-of-service", "logchimp-privacy-policy"],
+  "defaultOpen": true
+}
