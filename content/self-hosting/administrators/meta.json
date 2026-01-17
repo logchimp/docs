@@ -1,0 +1,8 @@
+{
+	"pages": [
+		"overview",
+		"---Configuration---",
+		"[Enable product metrics](/self-hosting/administrators/configuration/enabling-product-metrics)"
+	],
+	"defaultOpen": false
+}

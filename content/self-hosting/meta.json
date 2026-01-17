@@ -1,6 +1,7 @@
 {
   "root": true,
   "pages": [
+		"[Overview](/self-hosting/overview)",
     "---Getting Started---",
     "installation",
     "environment-variables",
@@ -8,8 +9,13 @@
     "---Deployments---",
     "deployments/railway",
     "deployments/render",
+		"---Administrators---",
+		"administrators",
+    "---License---",
+    "license",
     "---Additional Resources---",
-    "support"
+    "support",
+    "[History][Releases](/self-hosting/all-releases)"
   ],
   "defaultOpen": true
 }
