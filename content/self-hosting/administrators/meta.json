@@ -2,7 +2,7 @@
   "pages": [
     "overview",
     "---Configuration---",
-    "[Enable product metrics](/self-hosting/administrators/configuration/enabling-product-metrics)"
+    "[Enable Product Metrics](/self-hosting/administrators/configuration/enabling-product-metrics)"
   ],
   "defaultOpen": false
 }
