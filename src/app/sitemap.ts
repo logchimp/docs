@@ -8,6 +8,8 @@ import {
   developingSource,
 } from "../lib/source";
 
+const buildTime = new Date().toISOString();
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const sources = [
     mainSource,
@@ -21,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return sources.flatMap((s) =>
     s.getPages().map((page) => ({
       url: `https://docs.logchimp.codecarrot.net${page.url}`,
-      lastModified: new Date().toISOString(),
+      lastModified: buildTime,
     })),
   );
 }
