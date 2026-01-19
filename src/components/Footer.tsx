@@ -150,16 +150,7 @@ export function Footer() {
             <span className="text-lg font-semibold">LogChimp</span>
           </Link>
           <div className="text-sm">
-            Copyright © {currentYear}{" "}
-            <Link
-              target="_blank"
-              href="https://codecarrot.net"
-              aria-label="Go to CodeCarrot"
-              rel="noreferrer"
-            >
-              CodeCarrot
-            </Link>
-            .
+            Copyright © {currentYear} Shinkly Private Limited.
           </div>
         </div>
       </footer>
