@@ -14,7 +14,7 @@ on:
 env:
   DEFAULT_BRANCH: v0-2
   node_version: 24
-  pnpm_version: 10.17.1
+  pnpm_version: 10.28.2
   VERCEL_TELEMETRY_DISABLED: 1
 
 jobs:
