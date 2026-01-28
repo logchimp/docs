@@ -29,8 +29,13 @@ jobs:
         with:
           node-version: ${{ env.node_version }}
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.pnpm_version }}
+          cache: true
+
       - name: Install extra dependencies
-        run: npm install --global bun@latest vercel@latest
+        run: pnpm install --global bun@latest vercel@latest
 
       - uses: amondnet/vercel-action@v41.1.4
         id: vercel
