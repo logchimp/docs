@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { clsx } from "clsx";
 import { logo } from "@/src/lib/layout.shared";
-import { useSidebar } from "fumadocs-ui/contexts/sidebar";
+// import { useSidebar } from "fumadocs-ui/components/sidebar/base";
 
 type FooterLink = {
   url: string;
@@ -71,7 +71,7 @@ const footerData: Record<string, Record<string, FooterLink>> = {
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const { collapsed } = useSidebar();
+  // const { collapsed } = useSidebar();
   const [sidebarExists, setSidebarExists] = useState(false);
 
   useEffect(() => {
@@ -93,13 +93,13 @@ export function Footer() {
           "lg:px-36 md:px-16 px-12",
           "sticky",
         )}
-        style={{
-          marginInlineStart: collapsed
-            ? "auto"
-            : !sidebarExists
-              ? ""
-              : "var(--fd-sidebar-width)",
-        }}
+        // style={{
+        //   marginInlineStart: collapsed
+        //     ? "auto"
+        //     : !sidebarExists
+        //       ? ""
+        //       : "var(--fd-sidebar-width)",
+        // }}
       >
         <div className="grid gap-8 grid-cols-2 lg:grid-cols-4">
           {Object.entries(footerData).map(([section, links]) => (

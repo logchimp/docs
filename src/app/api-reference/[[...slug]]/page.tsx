@@ -10,9 +10,9 @@ import type { Metadata } from "next";
 import { MDXComponents } from "@/src/components/MDXComponents";
 import { openApiSource } from "@/src/lib/source";
 
-export default async function Page(props: {
-  params: Promise<{ slug?: string[] }>;
-}) {
+export default async function Page(
+  props: PageProps<"/api-reference/[[...slug]]">,
+) {
   const params = await props.params;
   const page = openApiSource.getPage(params.slug);
   if (!page) notFound();

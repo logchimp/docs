@@ -1,13 +1,21 @@
 import defaultMdxComponents from "fumadocs-ui/mdx";
 import { ImageZoom } from "fumadocs-ui/components/image-zoom";
 import { openapi } from "@/src/lib/openapi";
-import { APIPage } from "fumadocs-openapi/ui";
+import { createAPIPage } from "fumadocs-openapi/ui";
 import type { ImageProps } from "next/image";
 
 // Custom components
 import { Alert } from "./Alert";
 
-type APIPageProps = Parameters<NonNullable<typeof openapi.getAPIPageProps>>[0];
+const APIPage = createAPIPage(openapi, {
+  shikiOptions: {
+    themes: {
+      dark: "vesper",
+      light: "vitesse-light",
+    },
+  },
+});
+
 export const MDXComponents = {
   ...defaultMdxComponents,
 
@@ -20,9 +28,7 @@ export const MDXComponents = {
   Image: (props: ImageProps) => <ImageZoom {...props} className="" />,
 
   // OpenAPI Doc
-  APIPage: (props: APIPageProps) => (
-    <APIPage {...openapi.getAPIPageProps(props)} />
-  ),
+  APIPage: (props: any) => <APIPage {...props} />,
 
   // Custom components
   Alert,

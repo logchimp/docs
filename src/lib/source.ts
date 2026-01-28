@@ -1,6 +1,7 @@
 import { createElement } from "react";
 import { loader } from "fumadocs-core/source";
-import { transformerOpenAPI } from "fumadocs-openapi/server";
+// import { transformerOpenAPI } from "fumadocs-openapi/server";
+import { lucideIconsPlugin } from "fumadocs-core/source/lucide-icons";
 import { icons } from "lucide-react";
 import {
   apiReference,
@@ -10,72 +11,52 @@ import {
   platform,
   developing,
   sitePolicy,
-} from "@/.source";
+} from "fumadocs-mdx:collections/server";
 
 export const mainSource = loader({
   source: main.toFumadocsSource(),
   baseUrl: "/",
-  icon(icon) {
-    if (!icon) return;
-
-    if (icon in icons) return createElement(icons[icon as keyof typeof icons]);
-  },
+  plugins: [lucideIconsPlugin()],
 });
 
 export const selfHostingSource = loader({
   source: selfHosting.toFumadocsSource(),
   baseUrl: "/self-hosting",
+  plugins: [lucideIconsPlugin()],
   icon(icon) {
-    if (!icon) return;
-
-    if (icon in icons) return createElement(icons[icon as keyof typeof icons]);
+    if (icon && icon in icons)
+      return createElement(icons[icon as keyof typeof icons]);
   },
 });
 
 export const platformSource = loader({
   source: platform.toFumadocsSource(),
   baseUrl: "/platform",
-  icon(icon) {
-    if (!icon) return;
-
-    if (icon in icons) return createElement(icons[icon as keyof typeof icons]);
-  },
+  plugins: [lucideIconsPlugin()],
 });
 
 export const guideSource = loader({
   source: guide.toFumadocsSource(),
   baseUrl: "/guide",
-  icon(icon) {
-    if (!icon) return;
-
-    if (icon in icons) return createElement(icons[icon as keyof typeof icons]);
-  },
+  plugins: [lucideIconsPlugin()],
 });
 
 export const openApiSource = loader({
   source: apiReference.toFumadocsSource(),
   baseUrl: "/api-reference",
   pageTree: {
-    transformers: [transformerOpenAPI()],
+    // transformers: [transformerOpenAPI()],
   },
 });
 
 export const developingSource = loader({
   source: developing.toFumadocsSource(),
   baseUrl: "/developing",
-  icon(icon) {
-    if (!icon) return;
-
-    if (icon in icons) return createElement(icons[icon as keyof typeof icons]);
-  },
+  plugins: [lucideIconsPlugin()],
 });
 
 export const sitePolicySource = loader({
   source: sitePolicy.toFumadocsSource(),
   baseUrl: "/site-policy",
-  icon(icon) {
-    if (!icon) return;
-
-    if (icon in icons) return createElement(icons[icon as keyof typeof icons]);
-  },
+  plugins: [lucideIconsPlugin()],
 });
