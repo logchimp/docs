@@ -1,6 +1,6 @@
 import { createElement } from "react";
-import { loader } from "fumadocs-core/source";
-// import { transformerOpenAPI } from "fumadocs-openapi/server";
+import { loader, multiple } from "fumadocs-core/source";
+import { openapiPlugin, openapiSource } from "fumadocs-openapi/server";
 import { lucideIconsPlugin } from "fumadocs-core/source/lucide-icons";
 import { icons } from "lucide-react";
 import {
@@ -12,6 +12,7 @@ import {
   developing,
   sitePolicy,
 } from "fumadocs-mdx:collections/server";
+import { openapi } from "@/src/lib/openapi";
 
 export const mainSource = loader({
   source: main.toFumadocsSource(),
@@ -23,10 +24,6 @@ export const selfHostingSource = loader({
   source: selfHosting.toFumadocsSource(),
   baseUrl: "/self-hosting",
   plugins: [lucideIconsPlugin()],
-  icon(icon) {
-    if (icon && icon in icons)
-      return createElement(icons[icon as keyof typeof icons]);
-  },
 });
 
 export const platformSource = loader({
@@ -41,13 +38,18 @@ export const guideSource = loader({
   plugins: [lucideIconsPlugin()],
 });
 
-export const openApiSource = loader({
-  source: apiReference.toFumadocsSource(),
-  baseUrl: "/api-reference",
-  pageTree: {
-    // transformers: [transformerOpenAPI()],
+export const openApiSource = loader(
+  multiple({
+    docs: apiReference.toFumadocsSource(),
+    openapi: await openapiSource(openapi, {
+      groupBy: "tag",
+    }),
+  }),
+  {
+    baseUrl: "/api-reference",
+    plugins: [openapiPlugin()],
   },
-});
+);
 
 export const developingSource = loader({
   source: developing.toFumadocsSource(),
