@@ -6,6 +6,7 @@ import {
   guideSource,
   openApiSource,
   developingSource,
+  sitePolicySource,
 } from "../lib/source";
 
 const buildTime = new Date().toISOString();
@@ -18,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     guideSource,
     openApiSource,
     developingSource,
+    sitePolicySource,
   ];
 
   return sources.flatMap((s) =>
