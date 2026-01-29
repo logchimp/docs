@@ -1,6 +1,6 @@
 import { loader } from "fumadocs-core/source";
-import { transformerOpenAPI } from "fumadocs-openapi/server";
 import { lucideIconsPlugin } from "fumadocs-core/source/lucide-icons";
+import { openapiPlugin } from "fumadocs-openapi/server";
 import {
   apiReference,
   guide,
@@ -38,9 +38,7 @@ export const guideSource = loader({
 export const openApiSource = loader({
   source: apiReference.toFumadocsSource(),
   baseUrl: "/api-reference",
-  pageTree: {
-    transformers: [transformerOpenAPI()],
-  },
+  plugins: [openapiPlugin()],
 });
 
 export const developingSource = loader({
