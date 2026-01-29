@@ -1,5 +1,5 @@
 // import { buildRegistry } from "@/scripts/build-registry";
-import * as OpenAPI from "fumadocs-openapi";
+import { generateFiles } from "fumadocs-openapi";
 import { rimraf } from "rimraf";
 import * as path from "node:path";
 import { openapi } from "@/src/lib/openapi";
@@ -9,18 +9,15 @@ const apiReferencePath = "./content/api-reference";
 export async function generateDocs() {
   await rimraf(apiReferencePath, {
     filter: createPreserveFilter([
-      "openapi.yaml",
       "index.mdx",
-      "overview.mdx",
       "glossary.md",
-      "rate-limiting.mdx",
       "errors.md",
       "meta.json",
     ]),
   });
 
   await Promise.all([
-    OpenAPI.generateFiles({
+    generateFiles({
       input: openapi,
       output: apiReferencePath,
       per: "operation",
