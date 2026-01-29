@@ -10,7 +10,7 @@ import {
   platform,
   developing,
   sitePolicy,
-} from "@/.source";
+} from "fumadocs-mdx:collections/server";
 
 export const mainSource = loader({
   source: main.toFumadocsSource(),
