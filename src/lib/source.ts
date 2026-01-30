@@ -1,8 +1,6 @@
-import { createElement } from "react";
 import { loader, multiple } from "fumadocs-core/source";
 import { openapiPlugin, openapiSource } from "fumadocs-openapi/server";
 import { lucideIconsPlugin } from "fumadocs-core/source/lucide-icons";
-import { icons } from "lucide-react";
 import {
   apiReference,
   guide,
