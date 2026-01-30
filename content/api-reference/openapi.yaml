@@ -57,7 +57,7 @@ paths:
         $ref: '#/components/requestBodies/Login'
       responses:
         200:
-          description: ''
+          description: 'OK'
           content:
             application/json:
               schema:
@@ -107,7 +107,7 @@ paths:
         $ref: '#/components/requestBodies/Login'
       responses:
         201:
-          description: ''
+          description: 'Created'
           content:
             application/json:
               schema:
@@ -153,7 +153,7 @@ paths:
       operationId: getSiteSetup
       responses:
         200:
-          description: ''
+          description: 'OK'
           content:
             application/json:
               schema:
@@ -193,7 +193,7 @@ paths:
         required: true
       responses:
         200:
-          description: ''
+          description: 'OK'
           content:
             application/json:
               schema:
@@ -253,7 +253,7 @@ paths:
       operationId: sendVerificationEmail
       responses:
         200:
-          description: ''
+          description: 'OK'
           content:
             application/json:
               schema:
