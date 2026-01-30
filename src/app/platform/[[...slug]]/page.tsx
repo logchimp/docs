@@ -9,9 +9,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { MDXComponents } from "@/src/components/MDXComponents";
 
-export default async function Page(props: {
-  params: Promise<{ slug?: string[] }>;
-}) {
+export default async function Page(props: PageProps<"/platform/[[...slug]]">) {
   const params = await props.params;
   const page = platformSource.getPage(params.slug);
   if (!page) notFound();

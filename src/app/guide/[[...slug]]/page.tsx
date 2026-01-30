@@ -9,9 +9,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { MDXComponents } from "@/src/components/MDXComponents";
 
-export default async function Page(props: {
-  params: Promise<{ slug?: string[] }>;
-}) {
+export default async function Page(props: PageProps<"/guide/[[...slug]]">) {
   const params = await props.params;
   const page = guideSource.getPage(params.slug);
   if (!page) notFound();
@@ -36,8 +34,8 @@ export async function generateStaticParams() {
 export async function generateMetadata(
   props: PageProps<"/guide/[[...slug]]">,
 ): Promise<Metadata> {
-  const params = await props.params;
-  const page = guideSource.getPage(params.slug);
+  const { slug } = await props.params;
+  const page = guideSource.getPage(slug);
   if (!page) notFound();
 
   return {
