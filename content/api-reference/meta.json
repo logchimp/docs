@@ -7,31 +7,31 @@
     "errors",
 
     "---Auth---",
-    ".../auth/userSignin",
-    "...auth/userSignup",
-    ".../auth/sendVerificationEmail",
+    "auth/userSignin",
+    "auth/userSignup",
+    "auth/sendVerificationEmail",
 
     "---Site---",
-    ".../auth/getSiteSetup",
-    ".../auth/siteSetup",
+    "auth/getSiteSetup",
+    "auth/siteSetup",
 
     "---Posts---",
-    "...posts/filterPosts",
-    "...posts/postBySlug",
-    "...posts/createPost",
-    "...posts/updatePost",
-    "...posts/deletePost",
+    "posts/filterPosts",
+    "posts/postBySlug",
+    "posts/createPost",
+    "posts/updatePost",
+    "posts/deletePost",
 
     "---Votes---",
-    "...votes/addVoteToPost",
-    "...votes/removeVoteFromPost",
+    "votes/addVoteToPost",
+    "votes/removeVoteFromPost",
 
     "---Boards---",
-    "...boards/filterBoards",
+    "boards/filterBoards",
 
     "---Roadmaps---",
-    "...roadmaps/filterRoadmaps",
-    "...roadmaps/roadmapByUrl",
-    "...roadmaps/searchRoadmaps"
+    "roadmaps/filterRoadmaps",
+    "roadmaps/roadmapByUrl",
+    "roadmaps/searchRoadmaps"
   ]
 }
