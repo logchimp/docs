@@ -45,7 +45,7 @@ export const openApiSource = loader(
   }),
   {
     baseUrl: "/api-reference",
-    plugins: [openapiPlugin()],
+    plugins: [openapiPlugin(), lucideIconsPlugin()],
   },
 );
 
