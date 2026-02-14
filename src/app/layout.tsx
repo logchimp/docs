@@ -6,16 +6,16 @@ import type { Metadata } from "next/types";
 import { Footer } from "@/src/components/Footer";
 
 export const metadata: Metadata = {
-	metadataBase: "https://docs.logchimp.codecarrot.net/platform/overview",
+  metadataBase: "https://docs.logchimp.codecarrot.net/platform/overview",
   title: {
     template: "%s | LogChimp Docs",
     default: "LogChimp Docs",
   },
   description:
     "Meet a next-generation software turning feedback into a future roadmap. LogChimp makes every customer voice count.",
-	alternates: {
-		canonical: 'platform/overview',
-	},
+  alternates: {
+    canonical: "platform/overview",
+  },
   icons: {
     icon: [
       // favicon
