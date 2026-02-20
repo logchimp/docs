@@ -23,12 +23,21 @@ Deployment with [one-click deploy](/self-hosting/installation#one-click-deployme
 
 ### API
 
-| Variable                  | Description                                                       | Default value           |
-|---------------------------|-------------------------------------------------------------------|-------------------------|
-| `API_PORT`                |                                                                   | `8000`                  |
-| `NODE_ENV`                |                                                                   | `production`            |
-| `LOGCHIMP_WEB_URL`        | The complete base URL for the web application including protocol. | `http://localhost:3000` |
-| `LOGCHIMP_IS_SELF_HOSTED` |                                                                   | `true`                  |
+| Variable                       | Description                                                          | Default value           |
+|--------------------------------|----------------------------------------------------------------------|-------------------------|
+| `API_PORT`                     |                                                                      | `8000`                  |
+| `NODE_ENV`                     |                                                                      | `production`            |
+| `LOGCHIMP_WEB_URL`             | The complete base URL for the web application including protocol.    | `http://localhost:3000` |
+| `LOGCHIMP_IS_SELF_HOSTED`      |                                                                      | `true`                  |
+| `LOGCHIMP_BLACKLISTED_DOMAINS` | This environment variable is available from `v0.8.0` release onward. |                         |
+
+<Alert type="warning">
+	Be very careful when adding domains to the `LOGCHIMP_BLACKLISTED_DOMAINS` environment variable.
+
+	If you include the domain used by the **owner account** email address (e.g. `amce.com` when the owner email is
+	`admin@amce.com`), the owner will be **permanently prevented from logging in** until the blacklist is removed or
+	modified.
+</Alert>
 
 ### Theme
 
