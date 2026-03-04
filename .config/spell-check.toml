@@ -6,5 +6,6 @@ extend-exclude = [
 	"node_modules",
 	"cloudflare-env.d.ts",
 	# Biome config is schema defined
-	"biome.json"
+	"biome.json",
+	"pnpm-lock.yaml"
 ]
