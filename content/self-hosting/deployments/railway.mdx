@@ -6,18 +6,18 @@ description: Guide to deploy LogChimp on Railway
 import { Cards, Card } from 'fumadocs-ui/components/card'
 import { PlaneTakeoff, MapIcon, BracesIcon } from 'lucide-react';
 
-There are many ways to [install LogChimp](/self-hosting/installation). With Railway, you can get started with just a few easy steps. Click the button[^1], and hit deploy. It's that simple.
-
-<Alert type="warning">
-	You will need to set-up SMTP configuration to let your users get emails to reset password, account verification,
-	notifications and more.
-</Alert>
+There are many ways to [install LogChimp](/self-hosting/installation). With Railway, you can get started with just a few easy steps. Click the Deploy button, review the services, and hit deploy. It's that simple.
 
 <a href="https://railway.com/deploy/logchimp">
 	<img src="https://railway.app/button.svg" alt="Deploy on Railway" />
 </a>
 
-All the environment variables are pre-configured for you. You can learn more about them [here](/self-hosting/environment-variables).
+Most the environment variables are pre-configured for you. You can learn more about them [here](/self-hosting/environment-variables).
+
+<Alert type="warning">
+	You will need to set-up SMTP configuration to let your users get emails to reset password, account verification,
+	notifications and more.
+</Alert>
 
 And there you go... ðŸš„, you should be able to access LogChimp.
 
@@ -29,9 +29,11 @@ Your LogChimp site is ready to accept **your customers' feedback** with ease. ðŸ
 
 This template will auto-provision the following services for you:
 
-1. PostgreSQL database
-2. LogChimp API service
-3. LogChimp Theme service
+1. LogChimp API
+2. LogChimp Theme
+3. PostgreSQL database
+4. Valkey Caching
+5. Database migration
 
 You can always customize the secret keys and other environment variables.
 
