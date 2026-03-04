@@ -1,0 +1,11 @@
+[files]
+extend-exclude = [
+	".next",
+	".idea",
+	".source",
+	"node_modules",
+	"cloudflare-env.d.ts",
+	# Biome config is schema defined
+	"biome.json",
+	"pnpm-lock.yaml"
+]

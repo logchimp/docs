@@ -89,7 +89,7 @@ paths:
                     properties:
                       message:
                         type: "string"
-                        example: "Incorect password"
+                        example: "Incorrect password"
                       code:
                         type: "string"
                         example: "INCORRECT_PASSWORD"
@@ -840,7 +840,7 @@ components:
           description: |
             Post content description in markdown format.
             **NOTE:** LogChimp does not support markdown in the content description.
-            For now, we only have added `contentMarkdown` property in the OpenAPI specificaton.
+            For now, we only have added `contentMarkdown` property in the OpenAPI specification.
         createdAt:
           type: string
           example: "2025-09-23T13:28:01.611Z"
