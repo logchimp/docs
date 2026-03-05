@@ -1,6 +1,6 @@
 {
-	"$schema": "https://json.schemastore.org/package.json",
-	"name": "@logchimp/docs",
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@logchimp/docs",
   "version": "0.0.0",
   "private": true,
   "scripts": {
