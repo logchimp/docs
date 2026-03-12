@@ -6,6 +6,7 @@
     "installation",
     "environment-variables",
     "docker",
+    "smtp-for-email",
     "---Deployments---",
     "deployments/railway",
     "deployments/coolify",
