@@ -6,7 +6,14 @@ const self: Item[] = [
     title: "Docker",
     image: "/images/logos/docker-logo.svg",
     link: "/self-hosting/docker",
-    label: "Self host",
+    label: "Install LogChimp using Docker Compose with all required services.",
+  },
+  {
+    title: "Coolify",
+    image: "/images/logos/coolify-logo.svg",
+    link: "/self-hosting/deployments/coolify",
+    label:
+      "Deploy LogChimp using Coolify's platform for simplified container management. ",
   },
 ];
 

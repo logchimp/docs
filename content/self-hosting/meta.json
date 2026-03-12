@@ -8,6 +8,7 @@
     "docker",
     "---Deployments---",
     "deployments/railway",
+    "deployments/coolify",
     "deployments/render",
     "---Administrators---",
     "administrators",
