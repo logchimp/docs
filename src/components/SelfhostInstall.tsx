@@ -13,7 +13,7 @@ const self: Item[] = [
     image: "/images/logos/coolify-logo.svg",
     link: "/self-hosting/deployments/coolify",
     label:
-      "Deploy LogChimp using Coolify's platform for simplified container management. ",
+      "Deploy LogChimp using Coolify's platform for simplified container management.",
   },
 ];
 
