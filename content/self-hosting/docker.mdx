@@ -22,9 +22,13 @@ You can kick-start your LogChimp site in 3 easy steps.
 
 		```bash
 		curl -L -o docker-compose.yml \
-			https://raw.githubusercontent.com/logchimp/logchimp/refs/tags/v0.8.2/docker/community/docker-compose.yml -o .env \
-			https://raw.githubusercontent.com/logchimp/logchimp/refs/tags/v0.8.2/docker/community/.env.example
+			https://raw.githubusercontent.com/logchimp/logchimp/refs/tags/<logchimp-version>/docker/community/docker-compose.yml -o .env \
+			https://raw.githubusercontent.com/logchimp/logchimp/refs/tags/<logchimp-version>/docker/community/.env.example
 		```
+
+		<Alert type="warning">
+			The `<logchimp-version>` value should be v0.8.0 or higher.
+		</Alert>
 	</Step>
 	<Step>
 		## Step 2. Update `.env` file
