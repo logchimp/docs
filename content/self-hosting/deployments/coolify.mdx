@@ -1,0 +1,105 @@
+---
+title: Coolify
+description: Guide to deploy LogChimp on Coolify
+---
+
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import { Cards, Card } from 'fumadocs-ui/components/card'
+import { PlaneTakeoff, MapIcon, BracesIcon } from 'lucide-react';
+
+There are many ways to [install LogChimp](/self-hosting/installation). Deploy LogChimp on Coolify — a self-hosted platform that lets you run applications using Docker on your own infrastructure.
+
+With Coolify, you can deploy LogChimp on your own VPS or server while still enjoying a simple UI for managing deployments, environment variables, and databases.
+
+### Requirements
+
+Before starting, make sure you have a server running with Coolify installed.
+
+<Steps>
+	<Step>
+		## 1. Download the required deployment files
+
+		`coolify-compose.yml` – Defines LogChimp's services and dependencies.
+
+		```shell
+		curl -L -o coolify-compose.yml \
+		https://raw.githubusercontent.com/logchimp/logchimp/refs/tags/<logchimp-version>/docker/community/docker-compose.yml
+		```
+
+		<Alert type="warning">
+			The `<logchimp-version>` value should be v0.8.0 or higher.
+		</Alert>
+	</Step>
+	<Step>
+		## 2. Create a new resource in Coolify
+
+		![Create resource in Coolify](/images/docs/install/coolify/new-resource.webp)
+
+		Create a new project or deploy LogChimp into your existing project.
+
+		Add a new resource to your project.
+	</Step>
+	<Step>
+		## 3. Deployment method
+
+		Select **Docker Compose Empty** as the deployment method.
+
+		Copy and paste the contents of the `coolify-compose.yml` file into the editor.
+	</Step>
+	<Step>
+		## 4. Configure services
+
+		Configure PostgreSQL database, Redis, and any other required environment variables in the UI.
+
+		<Alert type="warning">
+			You will need to set-up SMTP configuration to let your users get emails to reset password, and account verification.
+		</Alert>
+
+		You can refer to [Environment Variables](/self-hosting/environment-variables) page to see full list of variables along with
+		its description and default values.
+	</Step>
+	<Step>
+		## 5. Click deploy
+
+		Deploy to launch your LogChimp instance.
+
+		Once the deployment is complete, your LogChimp instance should be accessible on the configured domain.
+	</Step>
+	<Step>
+		## 6. More features?
+
+		Unlock the full potential of LogChimp with features like [Boards](/guide/boards), and [Roadmaps](/guide/roadmaps).
+
+		[Activate your license key](/self-hosting/license) to unlock premium features.
+	</Step>
+</Steps>
+
+_Some of the screenshots used in this page are referenced from [Coolify Docs](https://coolify.io/docs/applications/build-packs/docker-compose)._
+
+## Next Steps
+
+Congrats on successfully installing LogChimp.
+
+Phew! That was a lot of work! Let's move to next step.
+
+<Cards>
+	<Card
+		icon={<PlaneTakeoff />}
+		href="/platform/setup"
+		title="Onboarding setup"
+	>
+		Setting up your LogChimp site, by creating an owner account.
+	</Card>
+
+	<Card
+		icon={<MapIcon />}
+		href="/guide"
+		title="Learn LogChimp"
+	>
+		Learn how to use LogChimp.
+	</Card>
+
+	<Card icon={<BracesIcon />} title="API Reference" href="/api-reference">
+		Connect your application with LogChimp.
+	</Card>
+</Cards>
