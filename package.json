@@ -28,7 +28,7 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "rimraf": "^6.0.1",
-    "shiki": "^3.12.2"
+    "shiki": "^4.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.4",
