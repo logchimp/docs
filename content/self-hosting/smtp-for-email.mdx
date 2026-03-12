@@ -1,0 +1,24 @@
+---
+title: SMTP for Email
+icon: Mails
+---
+
+You will need to set-up SMTP configuration to let your users get emails to reset password, and account verification.
+
+This is a one-time process which can be done during the installation via Environment Variables.
+
+
+You can refer to [Environment Variables](/self-hosting/environment-variables) page to see full list of variables along with its description and default values.
+
+## Configuration for popular email services providers
+
+### Amazon SES
+
+1. Sign in to https://console.aws.amazon.com/ses.
+2. Navigate to SMTP Settings in the sidebar.
+3. Click Create My SMTP Credentials.
+4. Follow prompts to create a user in the Create User for SMTP dialog box, then click Create.
+5. Select Show User SMTP Credentials to view the user's SMTP credentials.
+6. Return to your LogChimp deployment and enter the SMTP environment variables.
+
+Ensure to review [email quotas](https://docs.aws.amazon.com/ses/latest/dg/quotas.html) for your Amazon SES server. Consider managing email recipients using groups to optimize usage.
