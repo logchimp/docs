@@ -6,13 +6,13 @@ concurrency:
 
 on:
   push:
-    branches: [ v0-2 ]
+    branches: [ main ]
   pull_request:
     types: [ opened, closed, synchronize ]
   workflow_dispatch:
 
 env:
-  DEFAULT_BRANCH: v0-2
+  DEFAULT_BRANCH: main
   node_version: 24
   pnpm_version: 10.28.2
   VERCEL_TELEMETRY_DISABLED: 1
