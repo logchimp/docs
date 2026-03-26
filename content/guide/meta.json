@@ -15,6 +15,7 @@
     "---Dashboard---",
     "dashboard/index",
     "dashboard/role-permission",
+    "dashboard/system-roles",
     "dashboard/settings",
     "dashboard/labs"
   ],
