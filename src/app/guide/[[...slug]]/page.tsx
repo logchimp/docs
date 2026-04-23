@@ -41,5 +41,8 @@ export async function generateMetadata(
   return {
     title: page.data.title,
     description: page.data.description,
+    alternates: {
+      canonical: `/guide/${slug?.join("/") ?? ""}`,
+    },
   };
 }
