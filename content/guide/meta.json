@@ -15,6 +15,7 @@
     "roadmaps/index",
     "---Dashboard---",
     "dashboard/index",
+		"dashboard/system-roles",
     "dashboard/role-permission",
     "dashboard/settings",
     "dashboard/labs"

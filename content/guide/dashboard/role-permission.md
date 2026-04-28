@@ -6,6 +6,10 @@ icon: IdCardLanyard
 LogChimp uses Role-Based Access Control (RBAC) to secure its RESTful JSON APIs, ensuring only authorized users can
 access the data. It's built-in and configurable via the dashboard.
 
+<Alert type="tip">
+To access certain features will require a paid or higher plan. To know more, visit LogChimp [pricing page](https://logchimp.app/pricing).
+</Alert>
+
 ### Roles overview
 
 | Role             | Description                                                         |
