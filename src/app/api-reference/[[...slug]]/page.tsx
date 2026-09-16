@@ -56,5 +56,8 @@ export async function generateMetadata(
   return {
     title: page.data.title,
     description: page.data.description,
+    alternates: {
+      canonical: `/api-reference/${params.slug?.join("/") ?? ""}`,
+    },
   };
 }

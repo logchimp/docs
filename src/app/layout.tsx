@@ -6,6 +6,7 @@ import type { Metadata } from "next/types";
 import { Footer } from "@/src/components/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://docs.logchimp.codecarrot.net"),
   title: {
     template: "%s | LogChimp Docs",
     default: "LogChimp Docs",
