@@ -1,0 +1,23 @@
+---
+title: Easypanel
+description: Guide to deploy LogChimp on Easypanel
+---
+
+There are many [ways to install LogChimp](/self-hosting/installation). Deploy LogChimp on [Easypanel](https://easypanel.io) — a self-hosted Docker deployment platform with a one-click LogChimp template that provisions the API, theme, PostgreSQL, and Valkey services together.
+
+[![Deploy on Easypanel](https://easypanel.io/img/deploy-on-easypanel-40.svg)](https://easypanel.io/templates/logchimp)
+
+### Requirements
+
+Before starting, make sure you have a server running with Easypanel installed. See the [Easypanel installation docs](https://easypanel.io/docs/installation) if you haven't set it up yet.
+
+### Deploying LogChimp
+
+1. Click the button above, or navigate to the LogChimp template on your Easypanel panel.
+2. Review the generated environment variables for the API and theme services. You can refer to the [Environment Variables](/self-hosting/environment-variables) page for the full list and their descriptions.
+3. Click **Deploy**. Easypanel will provision the API, theme, PostgreSQL, and Valkey services and start them.
+4. Once deployment finishes, your LogChimp instance is accessible at the domain Easypanel assigns to the theme service.
+
+## Next Steps
+
+Congrats on successfully installing LogChimp. Head over to [Onboarding setup](/platform/setup) to create your owner account.
