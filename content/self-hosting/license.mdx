@@ -3,4 +3,134 @@ title: License
 icon: KeyRound
 ---
 
-You can purchase a license key for LogChimp Self-Managed from [LogChimp Pilot](https://pilot.logchimp.app).
+
+
+
+import {Step, Steps} from 'fumadocs-ui/components/steps';
+
+LogChimp Self-Managed requires a license key to use any paid feature. This page explains how to purchase a license key, add it to your instance, and manage your subscription.
+
+To learn which features LogChimp offers, read the [features guide](/guide). To compare plans and their support levels, see the [pricing page](https://logchimp.app/pricing/?ref=logchimp-docs).
+
+## Prerequisites
+
+Before you start, make sure you have:
+
+- A Google or GitHub account to sign in to LogChimp Pilot.
+- Your billing and card details.
+- A [running LogChimp Self-Managed instance](/self-hosting/installation) where you can set environment variables and restart the application.
+
+<Steps>
+	<Step>
+		## Purchase a license key
+
+		You purchase license keys from [LogChimp Pilot](https://pilot.logchimp.app?ref=logchimp-docs).
+
+		1. Go to [LogChimp Pilot](https://pilot.logchimp.app?ref=logchimp-docs).
+		2. Sign in with your Google or GitHub account.
+		3. Click **Workspaces** in the left sidebar.
+			![LogChimp Pilot workspaces page](/images/docs/self-managed/license/logchimp-pilot-workspaces.png)
+		4. Click **Buy license** in the top-right corner.
+		5. Select the plan duration: **Monthly** or **Yearly**.
+		6. Select the product: **Pro** or **Business**.
+		7. Enter your billing and card details.
+		8. Complete the checkout.
+
+		After checkout, LogChimp Pilot creates a new workspace for you. It appears in your list of workspaces.
+
+	</Step>
+	<Step>
+		## Find your license key and RSA public key
+
+		1. Click **Workspaces** in the left sidebar.
+		2. Find the new workspace in the list and open it.
+
+		![LogChimp Pilot manage workspace license
+		page](/images/docs/self-managed/license/logchimp-pilot-workspace-manage-license.png)
+
+		The page shows two values:
+
+		- License key
+		- RSA public key
+
+		You need both values in the next section.
+
+		<Alert type="warning">
+			Keep both values private. Do not share them with anyone.
+		</Alert>
+	</Step>
+
+	<Step>
+		## Add the license to your instance
+
+		A license applies to one workspace.
+
+		1. Set these two environment variables in your LogChimp Self-Managed instance:
+
+		| Environment variable | Value |
+		| --- | --- |
+		| `LOGCHIMP_LICENSE_KEY` | Your license key |
+		| `LOGCHIMP_SIGNATURE_TOKEN` | Your RSA public key |
+
+		Example:
+
+		```bash
+		LOGCHIMP_LICENSE_KEY=YOUR_LICENSE_KEY
+		LOGCHIMP_SIGNATURE_TOKEN=YOUR_RSA_PUBLIC_KEY
+		```
+
+		2. Restart the application.
+
+		After the restart, the paid features included in your plan are unlocked. To confirm that the license is active,
+		check
+		that those features are available in your instance.
+
+		For all available environment variables, see [Environment
+		variables](https://docs.logchimp.app/self-hosting/environment-variables#general).
+	</Step>
+
+	<Step>
+		## Manage your subscription
+
+		You manage your license billing in [LogChimp Pilot](https://pilot.logchimp.app?ref=logchimp-docs). There you can
+		renew, cancel, or change your plan.
+
+		Your subscription continues to run until you cancel it or a charge to your card fails.
+	</Step>
+
+	<Step>
+		## License scope
+
+		A license applies to one workspace. Using one license key in multiple workspaces is against the [LogChimp
+		Self-Managed
+		Software Subscription
+		Agreement](https://logchimp.codecarrot.net/terms/self-managed-software-subscription-agreement-global).
+	</Step>
+</Steps>
+
+## Troubleshooting
+
+You lose access to paid features if:
+
+- The license key is missing.
+- The license key is invalid.
+- Your subscription has ended because you canceled it or a charge to your card failed.
+
+The error message you see depends on which of these states applies.
+
+If paid features are still locked after you add the license:
+
+1. Check that `LOGCHIMP_LICENSE_KEY` and `LOGCHIMP_SIGNATURE_TOKEN` are set to the values shown on the **Managed License** page.
+2. Restart the application.
+3. Check that your subscription is active in [LogChimp Pilot](https://pilot.logchimp.app?ref=logchimp-docs).
+
+## Get help
+
+The support you receive depends on your plan.
+
+| Support level | How to reach it |
+| --- | --- |
+| Community support | Join the [LogChimp Community on Discord](https://discord.gg/A7mztcC). |
+| Email support | Write to [support@logchimp.app](mailto:support@logchimp.app). |
+
+To see which support level each plan includes, see the [pricing page](https://logchimp.app/pricing/?ref=logchimp-docs).
