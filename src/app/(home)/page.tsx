@@ -108,7 +108,7 @@ export default function HomePage() {
           )}
         >
           <Link
-            href="https://logchimp.codecarrot.net"
+            href="https://logchimp.app"
             className="block text-lg font-medium text-gray-900 dark:text-zinc-50 hover:text-gray-600 dark:hover:text-zinc-400"
           >
             <div

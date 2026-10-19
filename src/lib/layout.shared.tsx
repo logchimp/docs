@@ -5,7 +5,7 @@ export const logo = (
   <>
     <Image
       alt="Documentation"
-      src="https://logchimp.codecarrot.net/logchimp.svg"
+      src="https://logchimp.app/logchimp.svg"
       width={30}
       height={30}
       aria-label="LogChimp"
@@ -32,13 +32,13 @@ export function baseOptions(): BaseLayoutProps {
       //   type: "menu",
       // text: "Main",
       //
-      //   url: "https://logchimp.codecarrot.net",
+      //   url: "https://logchimp.app",
       //   items: [
       //     {
       //
       //       type: "main",
       //       text: "Get Started",
-      //       url: "https://logchimp.codecarrot.net",
+      //       url: "https://logchimp.app",
       //     },
       //   ],
       // },

@@ -11,7 +11,7 @@ There are a lot of resources and helpful tutorials for working with LogChimp to 
 
 Of course, open-source software is never just about the technology, more than anything it's about the people who make it and use it.
 
-- Join the [LogChimp Community](https://logchimp.codecarrot.net/discord) on Discord.
+- Join the [LogChimp Community](https://logchimp.app/discord) on Discord.
 - Checkout [LogChimp designs on Figma](https://www.figma.com/community/file/816586866419993972/LogChimp-Designs).
 
 ### Social media

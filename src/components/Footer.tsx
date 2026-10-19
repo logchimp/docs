@@ -14,19 +14,19 @@ type FooterLink = {
 const footerData: Record<string, Record<string, FooterLink>> = {
   LogChimp: {
     Home: {
-      url: "https://logchimp.codecarrot.net",
+      url: "https://logchimp.app",
     },
     Mission: {
-      url: "https://logchimp.codecarrot.net/mission",
+      url: "https://logchimp.app/mission",
     },
     Partners: {
-      url: "https://logchimp.codecarrot.net/partners",
+      url: "https://logchimp.app/partners",
     },
     Team: {
-      url: "https://logchimp.codecarrot.net/team",
+      url: "https://logchimp.app/team",
     },
     Brand: {
-      url: "https://logchimp.codecarrot.net/brand",
+      url: "https://logchimp.app/brand",
     },
     Careers: {
       url: "https://wellfound.com/company/codecarrot",
@@ -141,7 +141,7 @@ export function Footer() {
           )}
         >
           <Link
-            href="https://logchimp.codecarrot.net"
+            href="https://logchimp.app"
             target="_blank"
             className="flex items-center gap-x-2"
             aria-label="go to logchimp"
