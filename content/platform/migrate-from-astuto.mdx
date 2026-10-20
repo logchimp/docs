@@ -1,0 +1,66 @@
+---
+title: Migrate from Astuto
+description: Astuto is unsetting on February 8, 2026, so export your data while your instance is still running.
+---
+
+
+import {Step, Steps} from 'fumadocs-ui/components/steps';
+import {BracesIcon, KeyRound, MapIcon, PlaneTakeoff} from 'lucide-react';
+import {Card, Cards} from 'fumadocs-ui/components/card'
+
+This guide explains how you can move your data from Astuto to [LogChimp](https://logchimp.app?ref=logchimp-docs).
+
+If you don't have a LogChimp instance up and running, you can read our [installation guide](/self-hosting/installation) on how to install and run LogChimp Self-Managed.
+
+<Steps>
+	<Step>
+		## Step 1: Create the Astuto API key
+
+		Astuto issues API keys only to administrators and moderators.
+
+		1. Log in to your Astuto site.
+		2. Click your name in the top-right corner, then click Profile settings.
+		3. In the API key section, click Generate API key.
+		4. Copy the key and store it as a secret.
+
+		_Astuto does not show the key again. If you lose it, generate a new one._
+
+		![Astuto admin profile settings create API
+		key](/images/platform/migrate-from-astuto/profile-settings-create-api-key.png)
+	</Step>
+
+	<Step>
+		## Step 2
+
+		Congrats on moving your data from Astuto to LogChimp. Phew! That was a lot of work! Let's move to next step.
+
+		<Cards>
+			<Card
+				icon={<KeyRound/>}
+				href="/"
+				title="Unlock more features"
+			>
+				Unlock more features by purchasing the license key for LogChimp Self-Managed.
+			</Card>
+			<Card
+				icon={<PlaneTakeoff/>}
+				href="/platform/setup"
+				title="Onboarding setup"
+			>
+				Setup your LogChimp site, by creating an owner account.
+			</Card>
+
+			<Card
+				icon={<MapIcon/>}
+				href="/guide"
+				title="Learn LogChimp"
+			>
+				Learn how to use LogChimp.
+			</Card>
+
+			<Card icon={<BracesIcon/>} title="API Reference" href="/api-reference">
+				Connect your application with LogChimp.
+			</Card>
+		</Cards>
+	</Step>
+</Steps>
