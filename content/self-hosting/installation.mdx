@@ -4,23 +4,33 @@ description: This guide will help you start using LogChimp and collecting feedba
 icon: HardDriveDownload
 ---
 
-import { PlaneTakeoff, MapIcon, BracesIcon, KeyRound } from 'lucide-react';
-import { Cards, Card } from 'fumadocs-ui/components/card';
-import { SelfhostInstall, OneClickInstall } from '../../src/components/SelfhostInstall';
 
-There are multiple ways in which you can deploy LogChimp, and integrate LogChimp within their existing software, applications or games.
+
+import {BracesIcon, KeyRound, MapIcon, PlaneTakeoff} from 'lucide-react';
+import {Card, Cards} from 'fumadocs-ui/components/card';
+import {
+	OneClickOfficialInstalls,
+	OneClickUnofficialInstalls,
+	InstallSelfManaged
+} from '../../src/components/InstallSelfManaged';
+
+There are multiple ways in which you can deploy LogChimp Self-Managed, and integrate LogChimp within their existing software, applications or games.
 
 ## Requirements
 
 For production deployments we recommend you to run LogChimp on a Linux as the ideal operating system.
 
-<SelfhostInstall />
+<InstallSelfManaged/>
 
 ## One-Click Deployments
 
-You can also use the **one-click deploy** button to get started with LogChimp immediately.
+The LogChimp team maintains and supports these options.
 
-<OneClickInstall />
+<OneClickOfficialInstalls />
+
+Members of the community maintain these options. The LogChimp team does not maintain or support them. Check the provider's page for current details before you deploy.
+
+<OneClickUnofficialInstalls />
 
 ## Next Steps
 
@@ -30,14 +40,14 @@ Phew! That was a lot of work! Let's move to next step.
 
 <Cards>
 	<Card
-		icon={<KeyRound />}
+		icon={<KeyRound/>}
 		href="/"
 		title="Unlock more features"
 	>
 		Unlock more features by purchasing the license key for LogChimp Self-Managed.
 	</Card>
 	<Card
-		icon={<PlaneTakeoff />}
+		icon={<PlaneTakeoff/>}
 		href="/platform/setup"
 		title="Onboarding setup"
 	>
@@ -45,14 +55,14 @@ Phew! That was a lot of work! Let's move to next step.
 	</Card>
 
 	<Card
-		icon={<MapIcon />}
+		icon={<MapIcon/>}
 		href="/guide"
 		title="Learn LogChimp"
 	>
 		Learn how to use LogChimp.
 	</Card>
 
-	<Card icon={<BracesIcon />} title="API Reference" href="/api-reference">
+	<Card icon={<BracesIcon/>} title="API Reference" href="/api-reference">
 		Connect your application with LogChimp.
 	</Card>
 </Cards>
