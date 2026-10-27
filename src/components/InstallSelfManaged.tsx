@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRightIcon } from "lucide-react";
 import Image from "next/image";
+import { useMemo } from "react";
 
 const self: Item[] = [
   {
@@ -128,10 +129,13 @@ function FeaturedItem({ title, image, link, label }: Item) {
 }
 
 function Item({ title, image, link, label }: Item) {
+  const isExternal = useMemo(() => link.startsWith("http"), [link]);
+
   return (
     <Link
       className="px-4 py-2 border border-neutral-300 rounded-lg flex items-center justify-between bg-white hover:shadow-xs"
       href={link}
+      target={isExternal ? "_blank" : "_self"}
     >
       <div className="flex items-center space-x-4">
         <div className="size-10">
@@ -154,7 +158,7 @@ function Item({ title, image, link, label }: Item) {
       </div>
 
       <div>
-        {link.startsWith("http") ? (
+        {isExternal ? (
           <div aria-hidden="true">
             <ArrowUpRightIcon className="size-5 stroke-neutral-600" />
           </div>
