@@ -20,7 +20,7 @@ I further working on [adding upvotes](https://github.com/logchimp/logchimp/pull/
 
 ## 💻 Contributions
 
-Every one is welcome to contribute to the project after all it's an open source project.
+Everyone is welcome to contribute to the project.
 
 If you have any questions regarding How to contribute or setting up the development environment? You can shoot me a message on [LogChimp discord server](https://discord.gg/A7mztcC).
 

@@ -38,7 +38,7 @@ export default function HomePage() {
               Self Hosting
             </h3>
             <p className="mt-2 text-sm text-gray-500 dark:text-zinc-500">
-              Learn how to self-host LogChimp.
+              Learn how to install LogChimp Self-Managed.
             </p>
           </Link>
           <GridPattern className="stroke-neutral-600/20 dark:stroke-black-600" />
