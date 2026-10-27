@@ -19,7 +19,7 @@ const self: Item[] = [
 ];
 
 const oneclick: Item[] = [
-	// Official
+  // Official
   {
     title: "Railway",
     image: "/images/logos/railway-icon.svg",
@@ -34,19 +34,19 @@ const oneclick: Item[] = [
     label: "One click deploy",
     official: true,
   },
-	// Community-driven
-	{
-		title: "Easypanel",
-		image: "/images/logos/easypanel-icon.svg",
-		link: "https://easypanel.io/templates/logchimp",
-		label: ""
-	},
-	{
-		title: "Railyard",
-		image: "/images/logos/railyard-icon.svg",
-		link: "https://railyard.run/templates/logchimp",
-		label: ""
-	}
+  // Community-driven
+  {
+    title: "Easypanel",
+    image: "/images/logos/easypanel-icon.svg",
+    link: "https://easypanel.io/templates/logchimp",
+    label: "",
+  },
+  {
+    title: "Railyard",
+    image: "/images/logos/railyard-icon.svg",
+    link: "https://railyard.run/templates/logchimp",
+    label: "",
+  },
 ];
 
 export function InstallSelfManaged() {
@@ -148,8 +148,8 @@ function Item({ title, image, link, label }: Item) {
             {title}
           </div>
           <p className="text-neutral-500 text-sm">
-						{label ? label : `Deploy LogChimp on ${title}.`}
-					</p>
+            {label ? label : `Deploy LogChimp on ${title}.`}
+          </p>
         </div>
       </div>
 
