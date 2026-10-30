@@ -1,5 +1,5 @@
 ---
-title: Activity & Comments
+title: Activity & comments
 slug: /guide/posts/comments
 icon: MessageSquareMore
 ---
@@ -9,9 +9,54 @@ icon: MessageSquareMore
 ## Comments
 
 <Alert type="tip">
-**NOTE:** v0.9.0 release onward this feature is stable and generally available.
+Comments are available from LogChimp Self-Managed `v0.9.0` onward.
 
-To access certain features will require a paid or higher plan. To know more, visit LogChimp [pricing page](https://logchimp.app/pricing).
+Some features require a paid plan or higher. To compare plans, see the LogChimp [pricing page](https://logchimp.app/pricing).
 </Alert>
 
-Comments allow you to communicate directly with your customers, keeping your conversation context in-tact and on track in a single view.
+Comments let you talk directly with your customers. The whole conversation stays in one view.
+
+You can post a comment from the public post page or from the dashboard. To post a comment, you need the `comment:create` permission.
+
+## Private comments
+
+Use a private comment to share information with your team that customers should not see.
+
+<Alert type="tip">
+Private comments are available on the **Business** plan.
+</Alert>
+
+### Who can see private comments
+
+Private comments do not appear on the public site. You can only see them in the dashboard.
+
+To view a private comment, a team member needs the `comment:view_internal` permission.
+
+### Create a private comment
+
+Before you start, confirm that you have the `comment:create_internal` permission. Without it, you cannot create a private comment.
+
+1. Open the dashboard.
+2. Select **Posts** in the sidebar.
+3. Open the post you want to comment on.
+4. Scroll down the post page.
+5. Turn on the **Private comment** toggle.
+6. Enter your comment and submit it.
+	![Add private comment in a post](/images/guide/posts/add-private-comment-in-posts.webp)
+
+The comment appears in the dashboard and stays hidden from the public site.
+
+![Private comment posted](/images/guide/posts/private-comment-posted.webp)
+
+## FAQ
+
+### How private comments differ from regular comments
+
+|                   | Regular comments                                           | Private comments                                            |
+|-------------------|------------------------------------------------------------|-------------------------------------------------------------|
+| Who can post      | A user or team member with the `comment:create` permission | A team member with the `comment:create_internal` permission |
+| Where they appear | Public site and dashboard                                  | Dashboard only                                              |
+
+### Which plan do I need for private comments?
+
+You need the **Business** plan. To compare plans, see the LogChimp [pricing page](https://logchimp.app/pricing).
