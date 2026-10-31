@@ -23,7 +23,7 @@ export default async function Page(
         <DocsTitle>{page.data.title}</DocsTitle>
         <DocsDescription>{page.data.description}</DocsDescription>
         <DocsBody>
-          <APIPage {...page.data.getAPIPageProps()} />
+          <APIPage {...page.data.getOpenAPIPageProps()} />
         </DocsBody>
       </DocsPage>
     );
