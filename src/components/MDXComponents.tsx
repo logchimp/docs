@@ -8,12 +8,12 @@ import { Alert } from "./Alert";
 export const MDXComponents = {
   ...defaultMdxComponents,
 
-  // img for markdown
-  img: (props: ImageProps) => (
-    <ImageZoom {...props} className="border-2 rounded-2xl w-fit !important" />
+  // img for markdown - expects standard HTML img attributes but we cast for ImageZoom
+  img: (props: any) => (
+    <ImageZoom {...props} className="border-2 rounded-2xl w-fit" />
   ),
 
-  // img for <Image> from Next/Image
+  // Image component from Next.js
   Image: (props: ImageProps) => <ImageZoom {...props} className="" />,
 
   // Custom components
