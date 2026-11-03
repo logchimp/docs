@@ -1,52 +1,73 @@
 ---
-title: Railway
-description: Guide to deploy LogChimp on Railway
+title: Deploy LogChimp on Railway
+description: Guide to deploy LogChimp on Railway.
 ---
 
-import { Cards, Card } from 'fumadocs-ui/components/card'
-import { PlaneTakeoff, MapIcon, BracesIcon, KeyRound } from 'lucide-react';
+import {Card, Cards} from 'fumadocs-ui/components/card'
+import {Step, Steps} from 'fumadocs-ui/components/steps';
+import {BracesIcon, KeyRound, MapIcon, PlaneTakeoff} from 'lucide-react';
 
 There are many ways to [install LogChimp](/self-hosting/installation). With Railway, you can get started with just a few easy steps. Click the Deploy button, review the services, and hit deploy. It's that simple.
 
-## Before you start
+## Prerequisites
 
 You need a Railway account.
 
-## Deploy LogChimp
+<Steps>
+	<Step>
+		## 1. Sending emails
 
-1. Select **Deploy on Railway**.
+		You will need to set-up SMTP configuration to let your users get emails to reset password, and account verification.
 
-   <a href="https://railway.com/deploy/logchimp">
-   	<img src="https://railway.app/button.svg" alt="Deploy on Railway" />
-   </a>
+		You can read more about [SMTP for Emails](/self-hosting/smtp-for-email).
+	</Step>
+	<Step>
+		## 2. Deploy LogChimp
 
-2. Review the services in the template.
-3. Select **Deploy**.
+		Click on the **Deploy on Railway** button.
 
-Railway starts creating the services and shows them in your Railway dashboard.
+		<a href="https://railway.com/deploy/logchimp">
+			<img src="https://railway.app/button.svg" alt="Deploy on Railway"/>
+		</a>
+	</Step>
+	<Step>
+		## 3. Configure the variables
 
-Railway pre-configures most of the environment variables. To learn more about them, see [environment variables](/self-hosting/environment-variables).
+		The configuration page will display all the services which will be deployed as a part of LogChimp to fully function.
 
-When the deployment finishes, you can open your LogChimp site. Your LogChimp site is ready to accept **your customers' feedback** with ease. 🎉
+		<Alert type="tip">
+			You can generates a 32-character secret key by pressing `Command + K` (macOS) or `Ctrl + K` (Windows), or can also enter your own secret key.
+		</Alert>
 
-![LogChimp live site preview](/images/docs/install/railway/07_logchimp-live-site-preview.png)
+		If you want to add or change existing environment variable for each service, this would be the place before all the services are deployed on Railway.
+		To learn more about them, see [environment variables](/self-hosting/environment-variables).
 
-## Services the template creates
+		Enter the following environment variables by clicking on the "Configure" button next to "LogChimp API" service.
+		- [LogChimp license key](/self-hosting/license) - To unlock paid features
+		- [SMTP email variables](/self-hosting/smtp-for-email) - see **Step 1: Sending emails**
 
-This template will auto-provision the following services for you:
+		The services are automatically configured to communicate internally via private networking, except for LogChimp Theme.
 
+		![Railway template configuration page for LogChimp](/images/docs/install/railway/deploy-logchimp-template-on-railway.png)
+	</Step>
+	<Step>
+		## 4. Ready to deploy?
 
-1. **LogChimp API**: The API that powers your LogChimp site.
-2. **LogChimp Theme**: The theme that powers your LogChimp site.
-3. **PostgreSQL database**: Stores your LogChimp data, including user information, customer feedback, roadmaps, and boards.
-4. **Valkey Caching**: Stores cached data, which helps LogChimp respond faster. It also runs background workers.
-5. **Database migration**: Applies pending database migrations. This service does nothing else.
+		Once you have configured and reviewed all the services, scroll down and click the "Deploy" button.
 
-You can change the secret keys and other environment variables.
+		Railway will start creating the services and shows them in your Railway dashboard.
 
-Railway generates a 32-character secret key when you press `Command + K` (macOS) or `Ctrl + K` (Windows). You can also enter your own secret key.
+		<Alert type="tip">
+			You can also set a custom domain later.
+		</Alert>
 
-![LogChimp Railway template](/images/docs/install/railway/01_logchimp-railway-template.png)
+		When the deployment finishes, you can open your LogChimp site.
+
+		Your LogChimp site is ready to accept **your customers' feedback** with ease. 🎉
+
+		![LogChimp live site preview](/images/docs/install/railway/07_logchimp-live-site-preview.png)
+	</Step>
+</Steps>
 
 ## Unlock more features
 
