@@ -1,41 +1,61 @@
 ---
-title: Render
+title: Deploy LogChimp on Render
 description: A comprehensive guide for deploying LogChimp on Render with just a click.
 ---
 
-
 import {Card, Cards} from 'fumadocs-ui/components/card'
+import {Step, Steps} from 'fumadocs-ui/components/steps';
 import {BracesIcon, KeyRound, MapIcon, PlaneTakeoff} from 'lucide-react';
 
-## Before you start
+There are many ways to [install LogChimp Self-Managed](/self-hosting/installation). With Render, you can get started with just a few easy steps. Click the Deploy button, review the services, and hit deploy. It's that simple.
+
+## Prerequisites
 
 You need a Render account.
 
-## Deploy LogChimp
+<Steps>
+	<Step>
+		## 1. Sending emails
 
-Clicking the "Deploy to Render" button will redirect you to the Render blueprint confirmation page.
+		You will need to set-up SMTP configuration to let your users get emails to reset password, and account verification.
 
-All the environment variables are pre-configured for you. You can learn more about them [here](/self-hosting/environment-variables).
+		You can read more about [SMTP for Emails](/self-hosting/smtp-for-email).
+	</Step>
+	<Step>
+		## 2. Deploy LogChimp
 
-<a href="https://render.com/deploy?repo=https://github.com/logchimp/deploy-buttons">
-	<img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" />
-</a>
+		Clicking the "Deploy to Render" button will redirect you to the Render blueprint confirmation page.
 
-Click the "apply" button, 🎉 Voilà! You should be able to access LogChimp at `http://localhost:3000`.
+		<a href="https://render.com/deploy?repo=https://github.com/logchimp/deploy-buttons">
+			<img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" />
+		</a>
+	</Step>
+	<Step>
+		## 3. Configure the variables
 
-Your LogChimp site is ready to accept **your customers' feedback** with ease.
+		The configuration page will display all the services which will be deployed as a part of LogChimp to fully function.
 
-![LogChimp live site preview](/images/docs/install/railway/07_logchimp-live-site-preview.png)
+		<Alert type="tip">
+			Render automatically provisions the secure secret keys for the required variables.
+		</Alert>
 
-## Behind the scenes
+		If you want to add or change existing environment variable for each service, this would be the place before all the services are deployed on Render.
+		To learn more about them, see [environment variables](/self-hosting/environment-variables).
 
-The blueprint will auto-provision the following services for you:
+		Enter the following environment variables by clicking on the "Configure" button next to "LogChimp API" service.
+		- [LogChimp license key](/self-hosting/license) - To unlock paid features
+		- [SMTP email variables](/self-hosting/smtp-for-email) - see **Step 1: Sending emails**
+	</Step>
+	<Step>
+		## 4. Ready to deploy?
 
-1. PostgreSQL database
-2. LogChimp API service
-3. LogChimp Theme service
+		Click the "apply" button, 🎉 Voilà! You should be able to access LogChimp at `http://localhost:3000`.
 
-Render automatically provisions the secure secret keys for the required variables.
+		Your LogChimp site is ready to accept **your customers' feedback** with ease.
+
+		![LogChimp live site preview](/images/docs/install/railway/07_logchimp-live-site-preview.png)
+	</Step>
+</Steps>
 
 ## Unlock more features
 
