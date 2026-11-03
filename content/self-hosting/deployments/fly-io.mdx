@@ -1,0 +1,288 @@
+---
+title: Deploy LogChimp on Fly.io
+description: Guide to deploy LogChimp on Fly.io.
+---
+
+import {Step, Steps} from 'fumadocs-ui/components/steps';
+import {Card, Cards} from 'fumadocs-ui/components/card'
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion"
+import {BracesIcon, KeyRound, MapIcon, PlaneTakeoff} from 'lucide-react';
+
+There are many ways to [install LogChimp](/self-hosting/installation). In this guide you we will deploy LogChimp on Fly.io
+
+## Prerequisites
+
+Install the Fly CLI (refer to [Fly CLI docs](https://fly.io/docs/hands-on/install-flyctl)) and log in:
+
+```bash
+fly auth login
+```
+
+Choose a unique name prefix (examples below use `my-logchimp`). Replace it everywhere.
+
+Generate secrets locally (you will set them on Fly later):
+
+```bash
+openssl rand -hex 32
+```
+
+<Steps>
+	<Step>
+		## Create Managed Postgres
+
+		```bash
+		fly mpg create
+		```
+
+		Follow the prompts (org, name, region, plan). Note the **cluster ID**.
+
+		Attach it later to the API app (after the app exists). You can also create the app first and attach in one go; the
+		order below is explicit.
+	</Step>
+
+	<Step>
+		## Create Upstash Redis (Valkey-compatible)
+
+		```bash
+		fly redis create
+		```
+
+		Pick the same region as your Postgres if possible.
+
+		After creation, run:
+
+		```bash
+		fly redis status <redis-name>
+		```
+
+		Copy the **private Redis URL** (looks like `redis://default:...@fly-....upstash.io`).
+
+		You will set this as `LOGCHIMP_VALKEY_URL`.
+	</Step>
+
+	<Step>
+		## Create LogChimp API
+
+		We will first create an empty app (no launch yet)
+		```bash
+		fly apps create my-logchimp-api
+		```
+
+		Create a minimal `fly.toml` for the API (in a new directory, e.g. `logchimp-fly/api/`):
+
+		```toml
+		app = "my-logchimp-api"
+		primary_region = "ord" # change to your region
+
+		[deploy]
+	  release_command = "./scripts/migrate.sh"
+
+		[build]
+			image = "ghcr.io/logchimp/logchimp/api:latest"
+
+		[http_service]
+			internal_port = 8000
+			force_https = true
+			auto_stop_machines = "stop"
+			auto_start_machines = true
+			min_machines_running = 0
+			processes = ["app"]
+
+		[[vm]]
+			size = "shared-cpu-1x"
+			memory = "512mb"
+		```
+
+		Deploy the empty shell first so we can attach Postgres and set secrets:
+
+		```bash
+		fly deploy --app my-logchimp-api --image ghcr.io/logchimp/logchimp/api:latest --ha=false
+		```
+	</Step>
+	<Step>
+		If you want to add or change existing environment variable for each service, this would be the place before all the services are deployed on Railway.
+		To learn more about them, see [environment variables](/self-hosting/environment-variables).
+
+		Enter the following environment variables by clicking on the "Configure" button next to "LogChimp API" service.
+		- [LogChimp license key](/self-hosting/license) - To unlock paid features
+
+		```bash
+		fly secrets set \
+			LOGCHIMP_LICENSE_KEY="" \
+			LOGCHIMP_SIGNATURE_TOKEN="" \
+			LOGCHIMP_IS_SELF_HOSTED="true" \
+			LOGCHIMP_SECRET_KEY="<your-openssl-rand-hex-32>" \
+			LOGCHIMP_WEB_URL="https://my-logchimp-theme.fly.dev" \
+			LOGCHIMP_VALKEY_URL="<private-redis-url-from-fly-redis-status>" \
+			LOGCHIMP_API_HOST="0.0.0.0" \
+			NODE_ENV="production" \
+			PORT="8000" \
+			-a my-logchimp-api
+		```
+	</Step>
+	<Step>
+		### Attach Managed Postgres
+
+		```bash
+		fly mpg attach <CLUSTER_ID> -a my-logchimp-api
+		```
+
+		This injects a `DATABASE_URL` secret. LogChimp prefers discrete variables, so we will also set them explicitly.
+	</Step>
+	<Step>
+		### Set Postgres DB variable
+
+		Get the connection string:
+		```bash
+		fly ssh console -a my-logchimp-api -C 'printenv DATABASE_URL'
+		```
+
+		It will looks like:
+		```
+		postgres://fly-user:PASSWORD@pgbouncer.XXXX.flympg.net/fly-db
+		```
+
+		LogChimp support full database URL and split-one, you can use either one.
+
+		<Accordions type="single">
+			<Accordion title="Full database url">
+				```bash
+				fly secrets set \
+					LOGCHIMP_DB_HOST="pgbouncer.XXXX.flympg.net" \
+					-a my-logchimp-api
+				```
+			</Accordion>
+			<Accordion title="Split database variables">
+				```bash
+				fly secrets set \
+					LOGCHIMP_DB_PORT="5432" \
+					LOGCHIMP_DB_USER="fly-user" \
+					LOGCHIMP_DB_PASSWORD="PASSWORD" \
+					LOGCHIMP_DB_DATABASE="fly-db" \
+					LOGCHIMP_DB_SSL="true" \
+					-a my-logchimp-api
+				```
+			</Accordion>
+		</Accordions>
+	</Step>
+	<Step>
+		## Sending emails
+
+		You will need to set-up SMTP configuration to let your users get emails to reset password, and account verification.
+
+		You can read more about [SMTP for Emails](/self-hosting/smtp-for-email).
+
+		```bash
+		fly secrets set \
+			LOGCHIMP_MAIL_HOST="smtp.example.com" \
+			LOGCHIMP_MAIL_USER="..." \
+			LOGCHIMP_MAIL_PASSWORD="..." \
+			LOGCHIMP_MAIL_PORT="587" \
+			-a my-logchimp-api
+		```
+	</Step>
+	<Step>
+		## Create LogChimp Theme
+
+		```bash
+		fly apps create my-logchimp-theme
+		```
+
+		`fly.toml` file for LogChimp Theme app
+
+		```toml
+		app = "my-logchimp-theme"
+		primary_region = "ord"
+
+		[build]
+			image = "ghcr.io/logchimp/logchimp/theme:latest"
+
+		[http_service]
+			internal_port = 3000
+			force_https = true
+			auto_stop_machines = "stop"
+			auto_start_machines = true
+			min_machines_running = 0
+			processes = ["app"]
+
+		[[vm]]
+			size = "shared-cpu-1x"
+			memory = "256mb"
+		```
+	</Step>
+	<Step>
+		### Set theme environment variables
+
+		```bash
+		fly secrets set \
+			NODE_ENV="production" \
+			PORT="3000" \
+			VITE_WEBAPP_URL="https://my-logchimp-theme.fly.dev" \
+			VITE_API_URL="https://my-logchimp-api.fly.dev" \
+			VITE_IS_SELF_HOSTED="true" \
+			-a my-logchimp-theme
+		```
+	</Step>
+	<Step>
+		## Deploy LogChimp
+
+		Trigger a redeploy so the LogChimp API app picks up everything cleanly and deploy the LogChimp Theme docker image.
+
+		```bash
+		fly deploy -a my-logchimp-api
+		fly deploy -a my-logchimp-theme --image ghcr.io/logchimp/logchimp/theme:latest
+		```
+	</Step>
+	<Step>
+		## Set LogChimp API url to LogChimp Theme
+
+		Update the API’s public URLs (now that both apps exist):
+
+		```bash
+		fly secrets set \
+			LOGCHIMP_WEB_URL="https://my-logchimp-theme.fly.dev" \
+			-a my-logchimp-api
+		```
+
+		(You can also set a custom domain later with `fly certs add`.)
+	</Step>
+</Steps>
+
+## Unlock more features
+
+Paid plans add features such as [Boards](/guide/boards) and [Roadmaps](/guide/roadmaps). To compare options, see the [paid plans](https://logchimp.app?ref=logchimp-docs).
+
+To unlock these features, [activate your license key](/self-hosting/license).
+
+## Next step
+
+Congrats on successfully installing LogChimp. Phew! That was a lot of work! Let's move to next step.
+
+<Cards>
+	<Card
+		icon={<KeyRound />}
+		href="/"
+		title="Unlock more features"
+	>
+		Unlock more features by purchasing the license key for LogChimp Self-Managed.
+	</Card>
+	<Card
+		icon={<PlaneTakeoff />}
+		href="/platform/setup"
+		title="Onboarding setup"
+	>
+		Setup your LogChimp site, by creating an owner account.
+	</Card>
+
+	<Card
+		icon={<MapIcon />}
+		href="/guide"
+		title="Learn LogChimp"
+	>
+		Learn how to use LogChimp.
+	</Card>
+
+	<Card icon={<BracesIcon />} title="API Reference" href="/api-reference">
+		Connect your application with LogChimp.
+	</Card>
+</Cards>

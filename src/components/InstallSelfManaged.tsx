@@ -37,6 +37,12 @@ const oneclick: Item[] = [
   },
   // Community-driven
   {
+    title: "Fly.io",
+    image: "/images/logos/fly-io-icon.svg",
+    link: "/self-hosting/deployments/fly-io",
+    label: "",
+  },
+  {
     title: "Easypanel",
     image: "/images/logos/easypanel-icon.svg",
     link: "https://easypanel.io/templates/logchimp",
