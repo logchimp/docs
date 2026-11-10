@@ -31,7 +31,7 @@ Deployment with [one-click deploy](/self-hosting/installation#one-click-deployme
 | `NODE_ENV`                     |                                                                      | `production`            |
 | `LOGCHIMP_WEB_URL`             | The complete base URL for the web application including protocol.    | `http://localhost:3000` |
 | `LOGCHIMP_IS_SELF_HOSTED`      |                                                                      | `true`                  |
-| `LOGCHIMP_BLACKLISTED_DOMAINS` | This environment variable is available from `v0.8.0` release onward. |                         |
+| `LOGCHIMP_BLACKLISTED_DOMAINS` | Comma-separated list of email domains to block from signing up or logging in. Available from `v0.8.0` release onward. |                         |
 
 <Alert type="warning">
 	Be very careful when adding domains to the `LOGCHIMP_BLACKLISTED_DOMAINS` environment variable.
