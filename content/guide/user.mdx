@@ -5,6 +5,51 @@ title: Users
 Users can sign up by creating an account on LogChimp to share their feedback or upvote on existing feedback.
 
 <Alert type="tip">
-
 	Want to disable new signups? Know [here](/guide/dashboard/settings).
 </Alert>
+
+## Domain Blacklist
+
+Administrators can block users from specific email domains from accessing LogChimp.
+This check applies across all user-facing entry points:
+
+- **Sign up**: Users with blacklisted email domains cannot create new accounts.
+- **Login**: Existing users with blacklisted email domains are prevented from logging in.
+- **Workspace setup**:
+The initial workspace setup for LogChimp Self-Managed instances is blocked for blacklisted domains.
+- **Email verification**: Email verification is rejected for blacklisted domains.
+- **Password reset**: Password reset requests are rejected for blacklisted domains.
+
+<Alert type="warning">
+Be very careful when adding domains to the blacklist.
+
+If you include the domain used by the **owner account** email address (e.g., `amce.com`
+when the owner email is `admin@amce.com`), the owner will be **permanently prevented from logging in**
+until the blacklist is removed or modified.
+</Alert>
+
+<Alert type="tip">
+**Team members are also affected**: If a team member (dependent) uses an email address belonging to a blacklisted
+	domain, they will also be blocked from the above actions.
+</Alert>
+
+### Use cases
+
+- **Spam prevention**: Block disposable email providers (e.g., `mailinator.com`, `tempmail.com`)
+that spammers commonly use to create throwaway accounts.
+- **Competitor protection**:
+Prevent known competitor domains from accessing your feedback board and viewing your product roadmap.
+- **Compliance**: Enforce organizational policies that restrict access to approved email domains only.
+- **Cost control**: Reduce noise and storage overhead by filtering out accounts from domains you don't want to serve.
+
+### Benefits
+
+- **Cleaner community**: Fewer spam accounts means higher-quality feedback and discussions.
+- **Reduced maintenance**: Less time spent moderating or deleting abusive accounts.
+- **Data privacy**: Keep sensitive product roadmaps and feedback visible only to legitimate users.
+- **Zero UI overhead**: Configured once at deployment — no ongoing management needed.
+
+### Configuration
+
+The domain blacklist is configured via the `LOGCHIMP_BLACKLISTED_DOMAINS` environment variable during deployment.
+For setup instructions, see [Environment Variables](/self-hosting/environment-variables#api).
