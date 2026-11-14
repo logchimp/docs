@@ -6,9 +6,9 @@ concurrency:
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    types: [ opened, closed, synchronize ]
+    types: [opened, closed, synchronize]
   workflow_dispatch:
 
 env:
@@ -41,9 +41,9 @@ jobs:
         id: vercel
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-org-id: ${{ vars.VERCEL_ORG_ID }}
           vercel-args: ${{ github.ref_name == env.DEFAULT_BRANCH && '--prod' || '' }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-project-id: ${{ vars.VERCEL_PROJECT_ID }}
           vercel-version: 50.8.1
 
   linkinator:
