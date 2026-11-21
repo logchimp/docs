@@ -4,11 +4,11 @@ pre-commit:
     - run: |
         PNPM_CMD=$(command -v pnpm > /dev/null 2>&1 && echo "pnpm" || echo "pkgx +nodejs.org@24 +pnpm.io@10 pnpm")
         $PNPM_CMD prettier --write {staged_files}
-      glob: '*.{yaml,yml,md,mdx}'
+      glob: "*.{yaml,yml}"
       stage_fixed: true
 
     - run: |
         PNPM_CMD=$(command -v pnpm > /dev/null 2>&1 && echo "pnpm" || echo "pkgx +nodejs.org@24 +pnpm.io@10 pnpm")
         $PNPM_CMD biome format --write {staged_files}
-      glob: '*.{js,jsx,ts,tsx,vue,json}'
+      glob: "*.{js,jsx,ts,tsx,vue,json}"
       stage_fixed: true
