@@ -13,19 +13,19 @@ info:
     name: CodeCarrot
     email: logchimp@codecarrot.net
 servers:
-  - url: '{protocol}://{host-with-port}/api/v1'
+  - url: "{protocol}://{host-with-port}/api/v1"
     description: "API URL"
     variables:
       protocol:
         enum:
-          - 'http'
-          - 'https'
-        default: 'http'
+          - "http"
+          - "https"
+        default: "http"
       host-with-port:
-        default: 'localhost:8000'
+        default: "localhost:8000"
 
 security:
-  - bearerAuth: [ ]
+  - bearerAuth: []
 
 tags:
   - name: auth
@@ -51,13 +51,13 @@ paths:
       tags:
         - auth
       summary: Login
-      description: 'Login to account using email and password.'
+      description: "Login to account using email and password."
       operationId: userSignin
       requestBody:
-        $ref: '#/components/requestBodies/Login'
+        $ref: "#/components/requestBodies/Login"
       responses:
         200:
-          description: 'OK'
+          description: "OK"
           content:
             application/json:
               schema:
@@ -95,7 +95,7 @@ paths:
                         example: "INCORRECT_PASSWORD"
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: [ ]
+      security: []
   /auth/signup:
     post:
       tags:
@@ -104,10 +104,10 @@ paths:
       description: Create a new user account.
       operationId: userSignup
       requestBody:
-        $ref: '#/components/requestBodies/Login'
+        $ref: "#/components/requestBodies/Login"
       responses:
         201:
-          description: 'Created'
+          description: "Created"
           content:
             application/json:
               schema:
@@ -143,17 +143,17 @@ paths:
                         example: "SIGNUP_NOT_ALLOWED"
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: [ ]
+      security: []
   /auth/setup:
     get:
       tags:
         - auth
       summary: Site setup
-      description: 'Get site setup information.'
+      description: "Get site setup information."
       operationId: getSiteSetup
       responses:
         200:
-          description: 'OK'
+          description: "OK"
           content:
             application/json:
               schema:
@@ -167,20 +167,20 @@ paths:
           description: "Bad request"
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: [ ]
+      security: []
     post:
       tags:
         - auth
       summary: Site setup
-      description: 'Setup the site by creating the owner account.'
+      description: "Setup the site by creating the owner account."
       operationId: siteSetup
       requestBody:
-        description: 'Site setup request body'
+        description: "Site setup request body"
         content:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/LoginRequest'
+                - $ref: "#/components/schemas/LoginRequest"
                 - type: object
                   properties:
                     siteTitle:
@@ -193,7 +193,7 @@ paths:
         required: true
       responses:
         200:
-          description: 'OK'
+          description: "OK"
           content:
             application/json:
               schema:
@@ -241,7 +241,7 @@ paths:
               schema:
                 oneOf:
                   - $ref: "#/components/schemas/MailConfigurationErrorCode"
-      security: [ ]
+      security: []
   /auth/email/verify:
     post:
       tags:
@@ -253,7 +253,7 @@ paths:
       operationId: sendVerificationEmail
       responses:
         200:
-          description: 'OK'
+          description: "OK"
           content:
             application/json:
               schema:
@@ -297,7 +297,7 @@ paths:
                 oneOf:
                   - $ref: "#/components/schemas/MailConfigurationErrorCode"
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
   /posts:
     post:
       tags:
@@ -306,7 +306,7 @@ paths:
       description: Create a new post
       operationId: createPost
       requestBody:
-        $ref: '#/components/requestBodies/CreatePostRequestBody'
+        $ref: "#/components/requestBodies/CreatePostRequestBody"
       responses:
         201:
           description: ""
@@ -317,7 +317,7 @@ paths:
                 properties:
                   post:
                     type: object
-                    $ref: '#/components/schemas/CreatePostResponse'
+                    $ref: "#/components/schemas/CreatePostResponse"
         403:
           description: "Access denied"
           content:
@@ -328,7 +328,7 @@ paths:
         500:
           $ref: "#/components/responses/InternalServerError"
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
     patch:
       tags:
         - posts
@@ -355,7 +355,7 @@ paths:
         500:
           $ref: "#/components/responses/InternalServerError"
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
     delete:
       tags:
         - posts
@@ -393,7 +393,7 @@ paths:
         500:
           $ref: "#/components/responses/InternalServerError"
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
   /posts/get:
     post:
       tags:
@@ -402,7 +402,7 @@ paths:
       description: Get all the posts
       operationId: filterPosts
       requestBody:
-        $ref: '#/components/requestBodies/FilterPostRequestBody'
+        $ref: "#/components/requestBodies/FilterPostRequestBody"
       responses:
         200:
           description: "OK"
@@ -419,7 +419,7 @@ paths:
           description: "Bad request"
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: [ ]
+      security: []
   /posts/slug:
     post:
       tags:
@@ -428,7 +428,7 @@ paths:
       description: Get post by Slug
       operationId: postBySlug
       requestBody:
-        $ref: '#/components/requestBodies/PostBySlugRequestBody'
+        $ref: "#/components/requestBodies/PostBySlugRequestBody"
       responses:
         200:
           description: "OK"
@@ -438,7 +438,7 @@ paths:
                 type: object
                 properties:
                   post:
-                    $ref: '#/components/schemas/DashboardPost'
+                    $ref: "#/components/schemas/DashboardPost"
         404:
           description: "Not found"
           content:
@@ -448,7 +448,7 @@ paths:
                   - $ref: "#/components/schemas/PostNotFoundErrorCode"
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: [ ]
+      security: []
   /votes:
     post:
       tags:
@@ -509,7 +509,7 @@ paths:
         500:
           $ref: "#/components/responses/InternalServerError"
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
     delete:
       tags:
         - votes
@@ -563,7 +563,7 @@ paths:
         500:
           $ref: "#/components/responses/InternalServerError"
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
   /boards:
     get:
       tags:
@@ -608,14 +608,14 @@ paths:
                     type: array
                     items:
                       type: object
-                      $ref: '#/components/schemas/BoardDetail'
+                      $ref: "#/components/schemas/BoardDetail"
         400:
           description: "Bad request"
         500:
           $ref: "#/components/responses/InternalServerError"
       security:
-        - bearerAuth: [ ]
-        - { }
+        - bearerAuth: []
+        - {}
   /roadmaps:
     get:
       tags:
@@ -641,7 +641,7 @@ paths:
             application/json:
               schema:
                 allOf:
-                  - $ref: '#/components/schemas/CursorPaginationMeta'
+                  - $ref: "#/components/schemas/CursorPaginationMeta"
                   - type: object
                     required:
                       - results
@@ -675,8 +675,8 @@ paths:
         500:
           $ref: "#/components/responses/InternalServerError"
       security:
-        - bearerAuth: [ ]
-        - { }
+        - bearerAuth: []
+        - {}
   /roadmaps/{url}:
     get:
       tags:
@@ -700,7 +700,7 @@ paths:
                 type: object
                 properties:
                   roadmap:
-                    $ref: '#/components/schemas/Roadmap'
+                    $ref: "#/components/schemas/Roadmap"
         404:
           description: "Not found"
           content:
@@ -718,7 +718,7 @@ paths:
                         example: "ROADMAP_ID_OR_URL_MISSING"
         500:
           $ref: "#/components/responses/InternalServerError"
-      security: [ ]
+      security: []
   /roadmaps/search/{name}:
     get:
       tags:
@@ -744,7 +744,7 @@ paths:
                   roadmaps:
                     type: array
                     items:
-                      $ref: '#/components/schemas/RoadmapPrivate'
+                      $ref: "#/components/schemas/RoadmapPrivate"
         403:
           description: "Access denied"
           content:
@@ -755,7 +755,7 @@ paths:
         500:
           $ref: "#/components/responses/InternalServerError"
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
 components:
   parameters:
     CursorPaginationFirstParam:
@@ -781,15 +781,15 @@ components:
   schemas:
     FilterVisibility:
       enum:
-        - 'public'
-        - 'private'
+        - "public"
+        - "private"
     CursorPaginationMeta:
       type: object
       required:
         - page_info
       properties:
         page_info:
-          $ref: '#/components/schemas/CursorPaginationPageInfo'
+          $ref: "#/components/schemas/CursorPaginationPageInfo"
         total_pages:
           type: integer
           nullable: true
@@ -857,13 +857,13 @@ components:
             - voters
           properties:
             board:
-              $ref: '#/components/schemas/Board'
+              $ref: "#/components/schemas/Board"
             author:
-              $ref: '#/components/schemas/PublicUserInfo'
+              $ref: "#/components/schemas/PublicUserInfo"
             roadmap:
-              $ref: '#/components/schemas/Roadmap'
+              $ref: "#/components/schemas/Roadmap"
             voters:
-              $ref: '#/components/schemas/PostVote'
+              $ref: "#/components/schemas/PostVote"
     DashboardPost:
       allOf:
         - $ref: "#/components/schemas/Post"
@@ -1115,7 +1115,7 @@ components:
           example: "4A90E2"
         url:
           type: string
-          example: 'integrations-dsgksdIUYO'
+          example: "integrations-dsgksdIUYO"
         createdAt:
           type: string
           example: "2025-09-23T13:28:01.611Z"
