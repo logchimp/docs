@@ -31,6 +31,14 @@
       "quoteStyle": "double"
     }
   },
+  "markdown": {
+    "formatter": {
+      "enabled": false
+    },
+    "linter": {
+      "enabled": false
+    }
+  },
   "assist": {
     "enabled": true,
     "actions": {
