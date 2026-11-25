@@ -6,31 +6,25 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignoreUnknown": false
+    "ignoreUnknown": true,
+    "includes": [
+      "**/*",
+      "!source.generated.ts",
+      "!worker-configuration.d.ts",
+      "!cloudflare-env.d.ts"
+    ]
   },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
     "indentWidth": 2,
-    "lineWidth": 80,
-    "includes": [
-      "**",
-      "!source.generated.ts",
-      "!worker-configuration.d.ts",
-      "!cloudflare-env.d.ts"
-    ]
+    "lineWidth": 80
   },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true
-    },
-    "includes": [
-      "**",
-      "!source.generated.ts",
-      "!worker-configuration.d.ts",
-      "!cloudflare-env.d.ts"
-    ]
+    }
   },
   "javascript": {
     "formatter": {
