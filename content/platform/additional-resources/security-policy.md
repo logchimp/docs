@@ -22,16 +22,16 @@ LogChimp Core Team privately and works in a secured, isolated repository for tra
 
 To ensure a responsible and ethical reporting process, please adhere to the following:
 
-* **Do not publicly disclose** vulnerabilities until our team has had a reasonable time to address them.
-* **Do not exploit** the vulnerability beyond what is necessary to demonstrate the issue.
-* **Do not access, modify, or delete** data that does not belong to you.
-* **Do not perform** any activity that could disrupt the services of LogChimp, including but not limited to:
-  * DDoS attacks
-  * Brute force attacks
-  * Spamming
-  * Malware distribution
-  * Virus distribution
-  * Other malicious activity
-* **Do not** use any third-party tools to disclose the vulnerability.
+- **Do not publicly disclose** vulnerabilities until our team has had a reasonable time to address them.
+- **Do not exploit** the vulnerability beyond what is necessary to demonstrate the issue.
+- **Do not access, modify, or delete** data that does not belong to you.
+- **Do not perform** any activity that could disrupt the services of LogChimp, including but not limited to:
+  - DDoS attacks
+  - Brute force attacks
+  - Spamming
+  - Malware distribution
+  - Virus distribution
+  - Other malicious activity
+- **Do not** use any third-party tools to disclose the vulnerability.
 
 Thanks for helping make LogChimp safe for everyone 🙏.

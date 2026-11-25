@@ -13,7 +13,7 @@ To access certain features will require a paid or higher plan. To know more, vis
 ### Roles overview
 
 | Role             | Description                                                         |
-|------------------|---------------------------------------------------------------------|
+| ---------------- | ------------------------------------------------------------------- |
 | Site Owner       | Immutable super-admin; full access including billing.               |
 | Admin            | Manage all data, users, and settings.                               |
 | Manager          | Edit posts, invite users, assign boards/roadmaps, moderate content. |
