@@ -24,11 +24,11 @@ You need a Railway account.
 		<Alert type="warning">
 			SMTP is not available on Railway's Free, Trial, Hobby plan.
 
-			Railway blocks outbound SMTP (ports 25, 465, 587 and 2525) on its Free, Trial and Hobby plans to prevent spam and abuse.
+			Railway blocks outbound SMTP (ports 25, 465, 587 and 2525) on its Free, Trial and Hobby plans to prevent spam and abuse. **This is a Railway platform restriction, not a LogChimp issue.**
 
-			**This is a Railway platform restriction, not a LogChimp issue**. If you deploy on one of these plans, LogChimp won't be able to send emails such as password resets and account verification, and SMTP connections will time out.
+      LogChimp sends email over SMTP only and doesn't support HTTP-based email APIs (such as Resend, SendGrid or Mailgun). On a Railway plan that blocks SMTP, LogChimp can't send emails like password resets and account verification, and connections to your SMTP server will time out. Switching to a different SMTP provider won't fix this, because the restriction is on Railway's side.
 
-			To send emails from LogChimp on Railway, you:
+			To send emails, you can:
         1. Upgrade to Railway's Pro plan, which allows outbound SMTP. Redeploy your services after upgrading so the change
 			takes effect.
         2. Deploy LogChimp on another platform that allows outbound SMTP, such as [Coolify](/self-hosting/deployments/coolify), [Render](/self-hosting/deployments/render) or [Fly.io](/self-hosting/deployments/coolify).
