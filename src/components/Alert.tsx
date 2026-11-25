@@ -26,7 +26,7 @@ export function Alert({ type, title, children }: Props) {
   return (
     <div
       className={clsx(
-        "flex items-start gap-4 rounded-lg p-3 [.prose_&]:mb-5",
+        "flex items-start gap-4 rounded-lg p-3 pb-4 [.prose_&]:mb-5",
         type === "tip" && "bg-green-50 border border-green-200",
         type === "warning" && "bg-yellow-50 border border-yellow-200",
         type === "error" && "bg-red-50 border border-red-200",
@@ -50,13 +50,15 @@ export function Alert({ type, title, children }: Props) {
         />
       )}
 
-      <div className="not-prose">
-        <p className="text-black font-medium text-md leading-5">
+      <div>
+        <p className="text-black font-medium text-md leading-5 not-prose">
           {title || defaultTitle}
         </p>
 
         {children ? (
-          <div className="text-sm text-gray-700 mt-2">{children}</div>
+          <div className="text-sm text-gray-700 mt-2 [&>*:last-child]:mb-0">
+            {children}
+          </div>
         ) : null}
       </div>
     </div>
