@@ -2,9 +2,9 @@ name: "CLA Assistant"
 
 on:
   issue_comment:
-    types: [ created ]
+    types: [created]
   pull_request_target:
-    types: [ opened, closed, synchronize ]
+    types: [opened, closed, synchronize]
 
 # explicitly configure permissions, in case your GITHUB_TOKEN workflow permissions are set to read-only in repository settings
 permissions:
@@ -32,6 +32,6 @@ jobs:
           remote-organization-name: "logchimp"
           remote-repository-name: "cla-signatures"
           custom-notsigned-prcomment: |
-            Thank you for your submission, we really appreciate it. This open-source project (“Projects”) made available by Shinkly Private Limited (SPL). We ask that you sign our [Contributor License Agreement](https://github.com/codecarrotlabs/cla-document/blob/main/readme.md) before we can accept your contribution. You can sign the CLA by just posting a Pull Request comment same as the below format. If you have any questions respecting this Agreement, please contact [opensource@codecarrot.net](mailto:opensource@codecarrot.net).
+            Thank you for your submission, we really appreciate it. This open-source project (“Projects”) made available by Shinkly Private Limited (SPL). We ask that you sign our [Contributor License Agreement](https://github.com/codecarrotlabs/cla-document/blob/main/readme.md) before we can accept your contribution. You can sign the CLA by just posting a Pull Request comment same as the below format. If you have any questions respecting this Agreement, please contact [support@logchimp.app](mailto:support@logchimp.app).
           signed-commit-message: |
             $contributorName has signed the CLA in $pullRequestNo
